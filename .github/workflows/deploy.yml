@@ -5,10 +5,16 @@ name: Build and Deploy Professor S. Govindasamy Website
 on:
   push:
     branches: [ main ]
-    paths: [ 'website/**' ]
+    paths:
+      - 'website/**'
+      - '.github/workflows/**'
+      - 'index.html'
   pull_request:
     branches: [ main ]
-    paths: [ 'website/**' ]
+    paths:
+      - 'website/**'
+      - '.github/workflows/**'
+      - 'index.html'
   workflow_dispatch: # Allow manual triggering
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
@@ -48,22 +54,41 @@ jobs:
           cd website
           npm run build
 
-      - name: Copy build to root for GitHub Pages
+      - name: Prepare deployment files
         run: |
-          cp -r website/dist/* .
-          touch .nojekyll
+          # Create deployment directory
+          mkdir -p deploy
 
-      - name: Add .nojekyll file
-        run: |
-          touch website/dist/.nojekyll
+          # Copy built website files
+          if [ -d "website/dist" ]; then
+            cp -r website/dist/* deploy/
+          fi
+
+          # Add .nojekyll for GitHub Pages
+          touch deploy/.nojekyll
+
+          # Copy root index.html if it exists
+          if [ -f "index.html" ]; then
+            cp index.html deploy/
+          fi
 
       - name: Deploy to GitHub Pages (commit to repository)
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
+
+          # Copy deployment files to root
+          cp -r deploy/* .
+          rm -rf deploy
+
+          # Commit and push if there are changes
           git add .
-          git diff --staged --quiet || git commit -m "deploy: update GitHub Pages with latest build"
-          git push
+          if ! git diff --staged --quiet; then
+            git commit -m "deploy: update GitHub Pages with latest build [skip ci]"
+            git push
+          else
+            echo "No changes to deploy"
+          fi
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
