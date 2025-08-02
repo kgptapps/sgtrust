@@ -9,7 +9,6 @@ import {
   Chip,
   TextField,
   InputAdornment,
-  Grid,
   Button,
   Tabs,
   Tab
@@ -175,9 +174,9 @@ const StudentsPage: React.FC = () => {
       </Box>
 
       {/* Students Grid */}
-      <Grid container spacing={3}>
+      <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', md: 'repeat(3, 1fr)' }, gap: 3 }}>
         {displayStudents.map((student) => (
-          <Grid item xs={12} sm={6} md={4} key={student.id}>
+          <Box key={student.id}>
             <Card
               sx={{
                 height: '100%',
@@ -233,9 +232,9 @@ const StudentsPage: React.FC = () => {
                 </Box>
               </CardContent>
             </Card>
-          </Grid>
+          </Box>
         ))}
-      </Grid>
+      </Box>
 
       {displayStudents.length === 0 && (
         <Box sx={{ textAlign: 'center', py: 6 }}>

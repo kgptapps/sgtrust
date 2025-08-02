@@ -173,9 +173,8 @@ const TimelinePage: React.FC = () => {
             <Box
               sx={{
                 width: { xs: 'calc(100% - 80px)', md: '45%' },
-                ml: { xs: '80px', md: 0 },
-                mr: { xs: 0, md: index % 2 === 0 ? '55%' : 0 },
-                ml: { md: index % 2 === 0 ? 0 : '55%' }
+                ml: { xs: '80px', md: index % 2 === 0 ? 0 : '55%' },
+                mr: { xs: 0, md: index % 2 === 0 ? '55%' : 0 }
               }}
             >
               <Card

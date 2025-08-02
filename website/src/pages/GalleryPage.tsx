@@ -7,7 +7,6 @@ import {
   CardMedia,
   Tabs,
   Tab,
-  Grid,
   Dialog,
   DialogContent,
   IconButton,
@@ -17,8 +16,7 @@ import {
   Close as CloseIcon,
   Person as PersonIcon,
   School as SchoolIcon,
-  Event as EventIcon,
-  EmojiEvents as AwardIcon
+  Event as EventIcon
 } from '@mui/icons-material';
 import { useTranslation } from 'react-i18next';
 
@@ -148,7 +146,7 @@ const GalleryPage: React.FC = () => {
           scrollButtons="auto"
           sx={{ mb: 3 }}
         >
-          {categories.map((category, index) => (
+          {categories.map((category) => (
             <Tab
               key={category.key}
               label={
@@ -163,9 +161,9 @@ const GalleryPage: React.FC = () => {
       </Box>
 
       {/* Photo Grid */}
-      <Grid container spacing={3}>
+      <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', md: 'repeat(3, 1fr)' }, gap: 3 }}>
         {currentPhotos.map((photo) => (
-          <Grid item xs={12} sm={6} md={4} key={photo.id}>
+          <Box key={photo.id}>
             <Card
               sx={{
                 cursor: 'pointer',
@@ -201,9 +199,9 @@ const GalleryPage: React.FC = () => {
                 <Chip label={photo.year} size="small" color="primary" />
               </Box>
             </Card>
-          </Grid>
+          </Box>
         ))}
-      </Grid>
+      </Box>
 
       {currentPhotos.length === 0 && (
         <Box sx={{ textAlign: 'center', py: 6 }}>

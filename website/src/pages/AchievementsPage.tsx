@@ -12,8 +12,7 @@ import {
   ListItemIcon,
   ListItemText,
   Chip,
-  Divider,
-  Grid
+  Divider
 } from '@mui/material';
 import {
   EmojiEvents as AwardIcon,
@@ -141,48 +140,40 @@ const AchievementsPage: React.FC = () => {
       </Typography>
 
       {/* Summary Statistics */}
-      <Grid container spacing={3} sx={{ mb: 6 }}>
-        <Grid item xs={6} md={3}>
-          <Card sx={{ textAlign: 'center', p: 2 }}>
-            <Typography variant="h4" color="primary" fontWeight="bold">
-              25+
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              Awards Received
-            </Typography>
-          </Card>
-        </Grid>
-        <Grid item xs={6} md={3}>
-          <Card sx={{ textAlign: 'center', p: 2 }}>
-            <Typography variant="h4" color="success.main" fontWeight="bold">
-              100+
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              Publications
-            </Typography>
-          </Card>
-        </Grid>
-        <Grid item xs={6} md={3}>
-          <Card sx={{ textAlign: 'center', p: 2 }}>
-            <Typography variant="h4" color="warning.main" fontWeight="bold">
-              15+
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              Research Projects
-            </Typography>
-          </Card>
-        </Grid>
-        <Grid item xs={6} md={3}>
-          <Card sx={{ textAlign: 'center', p: 2 }}>
-            <Typography variant="h4" color="error.main" fontWeight="bold">
-              2000+
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              Citations
-            </Typography>
-          </Card>
-        </Grid>
-      </Grid>
+      <Box sx={{ display: 'grid', gridTemplateColumns: { xs: 'repeat(2, 1fr)', md: 'repeat(4, 1fr)' }, gap: 3, mb: 6 }}>
+        <Card sx={{ textAlign: 'center', p: 2 }}>
+          <Typography variant="h4" color="primary" fontWeight="bold">
+            25+
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            Awards Received
+          </Typography>
+        </Card>
+        <Card sx={{ textAlign: 'center', p: 2 }}>
+          <Typography variant="h4" color="success.main" fontWeight="bold">
+            100+
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            Publications
+          </Typography>
+        </Card>
+        <Card sx={{ textAlign: 'center', p: 2 }}>
+          <Typography variant="h4" color="warning.main" fontWeight="bold">
+            15+
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            Research Projects
+          </Typography>
+        </Card>
+        <Card sx={{ textAlign: 'center', p: 2 }}>
+          <Typography variant="h4" color="error.main" fontWeight="bold">
+            2000+
+          </Typography>
+          <Typography variant="body2" color="text.secondary">
+            Citations
+          </Typography>
+        </Card>
+      </Box>
 
       {/* Tabs */}
       <Box sx={{ mb: 4 }}>
