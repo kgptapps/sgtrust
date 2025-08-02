@@ -48,9 +48,22 @@ jobs:
           cd website
           npm run build
 
+      - name: Copy build to root for GitHub Pages
+        run: |
+          cp -r website/dist/* .
+          touch .nojekyll
+
       - name: Add .nojekyll file
         run: |
           touch website/dist/.nojekyll
+
+      - name: Deploy to GitHub Pages (commit to repository)
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git diff --staged --quiet || git commit -m "deploy: update GitHub Pages with latest build"
+          git push
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
