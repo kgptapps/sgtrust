@@ -3,30 +3,33 @@ import { createTheme } from '@mui/material/styles';
 const academicTheme = createTheme({
   palette: {
     primary: {
-      main: '#1565C0',        // Deep academic blue
-      light: '#5E92F3',       // Light blue for accents
-      dark: '#0D47A1',        // Dark blue for headers
+      main: '#8D6E63',        // Warm medium brown
+      light: '#BCAAA4',       // Light brown for accents
+      dark: '#5D4037',        // Dark brown for headers
       contrastText: '#FFFFFF'
     },
     secondary: {
-      main: '#37474F',        // Professional gray
-      light: '#62727B',       // Light gray for text
-      dark: '#263238',        // Dark gray for emphasis
+      main: '#6D4C41',        // Rich brown
+      light: '#A1887F',       // Light brown for text
+      dark: '#3E2723',        // Deep brown for emphasis
       contrastText: '#FFFFFF'
     },
     background: {
-      default: '#FAFAFA',     // Clean white background
-      paper: '#FFFFFF',       // Pure white for cards
+      default: '#FFF8E1',     // Very light cream/beige background
+      paper: '#FFFDE7',       // Warm white for cards
     },
     text: {
-      primary: '#212121',     // Dark text for readability
-      secondary: '#757575',   // Medium gray for secondary text
+      primary: '#3E2723',     // Dark brown text for readability
+      secondary: '#6D4C41',   // Medium brown for secondary text
     },
     success: {
-      main: '#2E7D32',        // Academic green for achievements
+      main: '#689F38',        // Earthy green for achievements
     },
     warning: {
-      main: '#F57C00',        // Academic orange for highlights
+      main: '#FF8F00',        // Warm amber for highlights
+    },
+    error: {
+      main: '#D84315',        // Warm red-brown for errors
     }
   },
   typography: {
@@ -36,51 +39,51 @@ const academicTheme = createTheme({
       fontWeight: 400,
       lineHeight: 1.2,
       letterSpacing: '-0.01562em',
-      color: '#1565C0'
+      color: '#5D4037'
     },
     h2: {
       fontSize: '2rem',
       fontWeight: 400,
       lineHeight: 1.3,
-      color: '#37474F'
+      color: '#6D4C41'
     },
     h3: {
       fontSize: '1.5rem',
       fontWeight: 500,
       lineHeight: 1.4,
-      color: '#37474F'
+      color: '#6D4C41'
     },
     h4: {
       fontSize: '1.25rem',
       fontWeight: 500,
       lineHeight: 1.4,
-      color: '#37474F'
+      color: '#6D4C41'
     },
     h5: {
       fontSize: '1.125rem',
       fontWeight: 500,
       lineHeight: 1.4,
-      color: '#37474F'
+      color: '#6D4C41'
     },
     h6: {
       fontSize: '1rem',
       fontWeight: 500,
       lineHeight: 1.4,
-      color: '#37474F'
+      color: '#6D4C41'
     },
     body1: {
       fontSize: '1rem',
       lineHeight: 1.6,
-      color: '#212121'
+      color: '#3E2723'
     },
     body2: {
       fontSize: '0.875rem',
       lineHeight: 1.6,
-      color: '#757575'
+      color: '#6D4C41'
     },
     caption: {
       fontSize: '0.875rem',
-      color: '#757575',
+      color: '#6D4C41',
       fontStyle: 'italic'
     }
   },
@@ -97,9 +100,9 @@ const academicTheme = createTheme({
     MuiCard: {
       styleOverrides: {
         root: {
-          boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+          boxShadow: '0 2px 8px rgba(93, 64, 55, 0.15)',
           borderRadius: 8,
-          border: '1px solid #E0E0E0'
+          border: '1px solid #D7CCC8'
         }
       }
     },
@@ -115,7 +118,7 @@ const academicTheme = createTheme({
     MuiAppBar: {
       styleOverrides: {
         root: {
-          boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+          boxShadow: '0 2px 4px rgba(93, 64, 55, 0.15)'
         }
       }
     }

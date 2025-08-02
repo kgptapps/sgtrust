@@ -52,8 +52,8 @@ const HomePage: React.FC = () => {
       {/* Hero Section */}
       <Box
         sx={{
-          background: 'linear-gradient(135deg, #1565C0 0%, #0D47A1 100%)',
-          color: 'white',
+          background: 'linear-gradient(135deg, #D7CCC8 0%, #BCAAA4 50%, #A1887F 100%)',
+          color: '#3E2723',
           py: 8,
           mb: 6
         }}
@@ -77,10 +77,10 @@ const HomePage: React.FC = () => {
                   component={Link}
                   to="/about"
                   sx={{
-                    backgroundColor: 'white',
-                    color: 'primary.main',
+                    backgroundColor: '#5D4037',
+                    color: 'white',
                     '&:hover': {
-                      backgroundColor: 'grey.100'
+                      backgroundColor: '#3E2723'
                     }
                   }}
                 >
@@ -92,11 +92,11 @@ const HomePage: React.FC = () => {
                   component={Link}
                   to="/students"
                   sx={{
-                    borderColor: 'white',
-                    color: 'white',
+                    borderColor: '#5D4037',
+                    color: '#5D4037',
                     '&:hover': {
-                      borderColor: 'white',
-                      backgroundColor: 'rgba(255,255,255,0.1)'
+                      borderColor: '#3E2723',
+                      backgroundColor: 'rgba(93, 64, 55, 0.1)'
                     }
                   }}
                 >
