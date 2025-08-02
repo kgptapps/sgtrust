@@ -146,10 +146,10 @@ const HomePage: React.FC = () => {
                   textAlign: 'center',
                   p: 3,
                   height: '100%',
-                  transition: 'transform 0.2s',
+                  transition: 'transform 0.3s ease',
                   '&:hover': {
                     transform: 'translateY(-4px)',
-                    boxShadow: 3
+                    boxShadow: 4
                   }
                 }}
               >
