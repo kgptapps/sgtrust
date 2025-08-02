@@ -1,6 +1,6 @@
-# Professor's Legacy Website
+# Professor S. Govindasamy's Legacy Website
 
-A comprehensive website celebrating the remarkable academic journey of a distinguished professor who mentored 50+ PhD students, most of whom have achieved success in the USA and around the world.
+A comprehensive website celebrating the remarkable academic journey of Professor S. Govindasamy, a distinguished professor who mentored 50+ PhD students, most of whom have achieved success in the USA and around the world.
 
 ## 🌐 Live Website
 **URL**: [https://kgptapps.github.io/sgtrust/](https://kgptapps.github.io/sgtrust/)
@@ -8,7 +8,7 @@ A comprehensive website celebrating the remarkable academic journey of a disting
 ## 🎯 Project Overview
 
 This website showcases:
-- **Academic Legacy**: Complete timeline of the professor's journey from village to academic excellence
+- **Academic Legacy**: Complete timeline of Professor S. Govindasamy's journey from village to academic excellence
 - **Student Success**: Directory of 50+ PhD alumni with their current achievements
 - **Multilingual Support**: Full Tamil and English language support
 - **Financial Transparency**: Complete accountability of funding and expenditures

@@ -1,5 +1,5 @@
 # Privacy Policy & Data Protection
-## Professor's Legacy Website - Legal Compliance and Data Security
+## Professor S. Govindasamy's Legacy Website - Legal Compliance and Data Security
 
 ### 📋 Overview
 This document outlines privacy policies, data protection measures, and legal compliance for the professor's legacy website.
@@ -97,9 +97,9 @@ This document outlines privacy policies, data protection measures, and legal com
 ### 1. Consent Form Template
 
 ```
-CONSENT FOR INCLUSION IN PROFESSOR'S LEGACY WEBSITE
+CONSENT FOR INCLUSION IN PROFESSOR S. GOVINDASAMY'S LEGACY WEBSITE
 
-I, [Student Name], hereby provide my consent for the inclusion of my academic and professional information on Professor [Name]'s legacy website.
+I, [Student Name], hereby provide my consent for the inclusion of my academic and professional information on Professor S. Govindasamy's legacy website.
 
 INFORMATION TO BE INCLUDED:
 ☐ Name and academic credentials

@@ -1,8 +1,8 @@
 # User Guide & Website Documentation
-## Professor's Legacy Website - Visitor Guide and FAQ
+## Professor S. Govindasamy's Legacy Website - Visitor Guide and FAQ
 
-### 🎯 Welcome to Professor's Legacy Website
-This website celebrates the remarkable academic journey of a distinguished professor who mentored 50+ PhD students, most of whom have achieved success in the USA and around the world.
+### 🎯 Welcome to Professor S. Govindasamy's Legacy Website
+This website celebrates the remarkable academic journey of Professor S. Govindasamy, a distinguished professor who mentored 50+ PhD students, most of whom have achieved success in the USA and around the world.
 
 ---
 

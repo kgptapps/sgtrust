@@ -1,5 +1,5 @@
 # Technical Product Requirements Document (Technical PRD)
-## Professor's Legacy Website - Technical Overview
+## Professor S. Govindasamy's Legacy Website - Technical Overview
 
 ### 1. Technical Architecture Overview
 

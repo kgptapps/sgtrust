@@ -1,5 +1,5 @@
 # SEO Strategy & Academic Discoverability
-## Professor's Legacy Website - Search Engine Optimization
+## Professor S. Govindasamy's Legacy Website - Search Engine Optimization
 
 ### 🎯 SEO Objectives
 - **Academic Discoverability**: High visibility in academic search engines
@@ -16,10 +16,10 @@
 
 ```html
 <!-- Primary Meta Tags -->
-<title>Professor [Name] - Distinguished Academic Legacy | 50+ PhD Students</title>
-<meta name="title" content="Professor [Name] - Distinguished Academic Legacy | 50+ PhD Students">
-<meta name="description" content="Explore the remarkable academic journey of Professor [Name], who mentored 50+ PhD students, most now successful in USA. Discover his research, achievements, and transformative impact on students' lives.">
-<meta name="keywords" content="Professor [Name], PhD supervision, academic mentor, computer science research, Tamil Nadu professor, USA alumni, academic legacy, research achievements">
+<title>Professor S. Govindasamy - Distinguished Academic Legacy | 50+ PhD Students</title>
+<meta name="title" content="Professor S. Govindasamy - Distinguished Academic Legacy | 50+ PhD Students">
+<meta name="description" content="Explore the remarkable academic journey of Professor S. Govindasamy, who mentored 50+ PhD students, most now successful in USA. Discover his research, achievements, and transformative impact on students' lives.">
+<meta name="keywords" content="Professor S. Govindasamy, PhD supervision, academic mentor, computer science research, Tamil Nadu professor, USA alumni, academic legacy, research achievements">
 
 <!-- Language and Region -->
 <meta name="language" content="English">
@@ -29,8 +29,8 @@
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://kgptapps.github.io/sgtrust/">
-<meta property="og:title" content="Professor [Name] - Distinguished Academic Legacy">
-<meta property="og:description" content="Remarkable academic journey of a professor who mentored 50+ PhD students, transforming lives from village to global success.">
+<meta property="og:title" content="Professor S. Govindasamy - Distinguished Academic Legacy">
+<meta property="og:description" content="Remarkable academic journey of Professor S. Govindasamy who mentored 50+ PhD students, transforming lives from village to global success.">
 <meta property="og:image" content="https://kgptapps.github.io/sgtrust/media/images/professor/profile/main-headshot.jpg">
 <meta property="og:locale" content="en_US">
 <meta property="og:locale:alternate" content="ta_IN">
@@ -38,12 +38,12 @@
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:url" content="https://kgptapps.github.io/sgtrust/">
-<meta property="twitter:title" content="Professor [Name] - Distinguished Academic Legacy">
-<meta property="twitter:description" content="Remarkable academic journey of a professor who mentored 50+ PhD students, transforming lives from village to global success.">
+<meta property="twitter:title" content="Professor S. Govindasamy - Distinguished Academic Legacy">
+<meta property="twitter:description" content="Remarkable academic journey of Professor S. Govindasamy who mentored 50+ PhD students, transforming lives from village to global success.">
 <meta property="twitter:image" content="https://kgptapps.github.io/sgtrust/media/images/professor/profile/main-headshot.jpg">
 
 <!-- Academic Meta Tags -->
-<meta name="citation_author" content="Professor [Full Name]">
+<meta name="citation_author" content="Professor S. Govindasamy">
 <meta name="citation_title" content="Academic Legacy and Research Contributions">
 <meta name="citation_publication_date" content="2025">
 <meta name="citation_language" content="en">
@@ -61,7 +61,7 @@
 {
   "@context": "https://schema.org",
   "@type": "Person",
-  "name": "Professor [Full Name]",
+  "name": "Professor S. Govindasamy",
   "jobTitle": "Professor Emeritus",
   "affiliation": {
     "@type": "Organization",
@@ -101,7 +101,7 @@
 {
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
-  "name": "Professor [Name] Academic Legacy",
+  "name": "Professor S. Govindasamy Academic Legacy",
   "description": "Academic legacy website showcasing research, publications, and student achievements",
   "alumni": [
     {
@@ -124,8 +124,8 @@
 ### 1. Google Scholar Integration
 ```html
 <!-- Google Scholar Meta Tags -->
-<meta name="citation_title" content="Academic Legacy of Professor [Name]">
-<meta name="citation_author" content="Professor [Full Name]">
+<meta name="citation_title" content="Academic Legacy of Professor S. Govindasamy">
+<meta name="citation_author" content="Professor S. Govindasamy">
 <meta name="citation_publication_date" content="2025">
 <meta name="citation_pdf_url" content="https://kgptapps.github.io/sgtrust/documents/academic/cv.pdf">
 <meta name="citation_abstract_html_url" content="https://kgptapps.github.io/sgtrust/about">
@@ -171,8 +171,8 @@ Tamil: /about?lang=ta, /students?lang=ta, /gallery?lang=ta
 ### 1. Target Keywords
 
 #### Primary Keywords (English)
-- "Professor [Name]"
-- "PhD supervision [University]"
+- "Professor S. Govindasamy"
+- "PhD supervision Tamil Nadu"
 - "Academic mentor India"
 - "Computer science professor Tamil Nadu"
 - "PhD students USA success"
@@ -185,7 +185,7 @@ Tamil: /about?lang=ta, /students?lang=ta, /gallery?lang=ta
 - "University professor Chennai"
 
 #### Tamil Keywords
-- "பேராசிரியர் [பெயர்]"
+- "பேராசிரியர் எஸ். கோவிந்தசாமி"
 - "முனைவர் பட்ட வழிகாட்டுதல்"
 - "கல்வி வழிகாட்டி"
 - "ஆராய்ச்சி சாதனைகள்"
@@ -194,14 +194,14 @@ Tamil: /about?lang=ta, /students?lang=ta, /gallery?lang=ta
 ### 2. Content Optimization
 
 #### Page Titles (60 characters max)
-- Homepage: "Professor [Name] - Academic Legacy | 50+ PhD Students"
-- About: "About Professor [Name] - Village to Academic Excellence"
-- Students: "Alumni Directory - 50+ PhD Students | Professor [Name]"
-- Gallery: "Academic Journey Gallery | Professor [Name]"
+- Homepage: "Professor S. Govindasamy - Academic Legacy | 50+ PhD Students"
+- About: "About Professor S. Govindasamy - Village to Academic Excellence"
+- Students: "Alumni Directory - 50+ PhD Students | Professor S. Govindasamy"
+- Gallery: "Academic Journey Gallery | Professor S. Govindasamy"
 
 #### Meta Descriptions (160 characters max)
-- Homepage: "Discover Professor [Name]'s remarkable journey from village to mentoring 50+ PhD students, most successful in USA. Explore his academic legacy."
-- Students: "Meet 50+ PhD alumni of Professor [Name], now leading researchers and professors worldwide, especially in USA. Success stories and achievements."
+- Homepage: "Discover Professor S. Govindasamy's remarkable journey from village to mentoring 50+ PhD students, most successful in USA. Explore his academic legacy."
+- Students: "Meet 50+ PhD alumni of Professor S. Govindasamy, now leading researchers and professors worldwide, especially in USA. Success stories and achievements."
 
 ---
 

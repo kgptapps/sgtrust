@@ -1,5 +1,5 @@
 # Content Strategy & Data Models
-## Professor's Legacy Website - Content Structure and Guidelines
+## Professor S. Govindasamy's Legacy Website - Content Structure and Guidelines
 
 ### 📋 Overview
 This document defines the exact data structures, content guidelines, and sample data for the professor's website.

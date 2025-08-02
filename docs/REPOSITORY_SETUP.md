@@ -1,5 +1,5 @@
 # Repository Setup Instructions
-## Professor's Legacy Website - Deployment Configuration
+## Professor S. Govindasamy's Legacy Website - Deployment Configuration
 
 ### 📋 Repository Information
 - **Repository**: `git@github.com:kgptapps/sgtrust.git`

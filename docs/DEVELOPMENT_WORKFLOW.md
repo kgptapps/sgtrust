@@ -1,5 +1,5 @@
 # Development Workflow Document
-## Professor's Legacy Website - Change Management Process
+## Professor S. Govindasamy's Legacy Website - Change Management Process
 
 ### 🎯 Workflow Overview
 Every code change must follow this structured workflow to ensure quality, reliability, and proper testing before deployment.

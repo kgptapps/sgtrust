@@ -1,16 +1,16 @@
 # Product Requirements Document (PRD)
-## Professor's Legacy Website
+## Professor S. Govindasamy's Legacy Website
 
 ### 1. Project Overview
 
-**Project Name:** Professor's Legacy Website  
-**Purpose:** Create a comprehensive website showcasing a distinguished professor's academic journey, achievements, and the success of his 50+ doctorate students  
+**Project Name:** Professor S. Govindasamy's Legacy Website
+**Purpose:** Create a comprehensive website showcasing Professor S. Govindasamy's academic journey, achievements, and the success of his 50+ doctorate students
 **Target Audience:** Academic community, students, researchers, and general public interested in the professor's work  
 **Platform:** Web application hosted on GitHub Pages  
 
 ### 2. Background & Context
 
-- **Subject:** A professor who moved from a village to the city for work
+- **Subject:** Professor S. Govindasamy, who moved from a village to the city for work
 - **Key Achievement:** Created more than 50 doctorate students
 - **Notable Impact:** Most of his students have moved to the USA and achieved significant success
 - **Goal:** Document and celebrate his academic legacy and impact on students' lives

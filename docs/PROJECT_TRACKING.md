@@ -1,8 +1,8 @@
 # Project Tracking Document
-## Professor's Legacy Website - Development Status
+## Professor S. Govindasamy's Legacy Website - Development Status
 
 ### Project Overview
-- **Project Name**: Professor's Legacy Website
+- **Project Name**: Professor S. Govindasamy's Legacy Website
 - **Repository**: git@github.com:kgptapps/sgtrust.git
 - **Deployment URL**: https://kgptapps.github.io/sgtrust/
 - **Technology Stack**: React 18 + Vite + Material-UI + Tailwind CSS + i18next

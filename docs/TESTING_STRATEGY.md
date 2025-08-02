@@ -1,5 +1,5 @@
 # Testing Strategy & Quality Assurance
-## Professor's Legacy Website - Comprehensive Testing Framework
+## Professor S. Govindasamy's Legacy Website - Comprehensive Testing Framework
 
 ### 🎯 Testing Objectives
 - **Functionality**: All features work as designed
