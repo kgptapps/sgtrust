@@ -72,32 +72,26 @@ jobs:
             cp index.html deploy/
           fi
 
-      - name: Deploy to GitHub Pages (commit to repository)
+      - name: Prepare files for GitHub Pages
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          # Copy deployment files to a staging area
+          mkdir -p pages-deploy
 
-          # Copy deployment files to root
-          cp -r deploy/* .
-          rm -rf deploy
-
-          # Commit and push if there are changes
-          git add .
-          if ! git diff --staged --quiet; then
-            git commit -m "deploy: update GitHub Pages with latest build [skip ci]"
-            git push
-          else
-            echo "No changes to deploy"
+          # Copy built website files if they exist
+          if [ -d "deploy" ]; then
+            cp -r deploy/* pages-deploy/
           fi
 
-      - name: Upload build artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: website-build
-          path: website/dist
-          retention-days: 1
+          # List what we're deploying
+          echo "Files prepared for deployment:"
+          ls -la pages-deploy/
 
-  # Deployment job (only runs if Pages is configured)
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: pages-deploy
+
+  # Deployment job
   deploy:
     environment:
       name: github-pages
@@ -106,20 +100,6 @@ jobs:
     needs: build
     if: github.ref == 'refs/heads/main'
     steps:
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-
-      - name: Download build artifacts
-        uses: actions/download-artifact@v4
-        with:
-          name: website-build
-          path: ./dist
-
-      - name: Upload to GitHub Pages
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./dist
-
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
