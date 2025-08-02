@@ -3,7 +3,6 @@ import {
   Box,
   Container,
   Typography,
-  Grid,
   Card,
   CardContent,
   Button,
@@ -60,8 +59,8 @@ const HomePage: React.FC = () => {
         }}
       >
         <Container maxWidth="lg">
-          <Grid container spacing={4} alignItems="center">
-            <Grid item xs={12} md={8}>
+          <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '2fr 1fr' }, gap: 4, alignItems: 'center' }}>
+            <Box>
               <Typography variant="h2" component="h1" gutterBottom>
                 {t('content:welcomeTitle')}
               </Typography>
@@ -104,8 +103,8 @@ const HomePage: React.FC = () => {
                   {t('navigation:students')}
                 </Button>
               </Box>
-            </Grid>
-            <Grid item xs={12} md={4}>
+            </Box>
+            <Box>
               <Box sx={{ textAlign: 'center' }}>
                 <Avatar
                   sx={{
@@ -125,8 +124,8 @@ const HomePage: React.FC = () => {
                   {t('content:professorTitle')}
                 </Typography>
               </Box>
-            </Grid>
-          </Grid>
+            </Box>
+          </Box>
         </Container>
       </Box>
 
@@ -139,9 +138,9 @@ const HomePage: React.FC = () => {
           {t('content:impactDescription')}
         </Typography>
         
-        <Grid container spacing={3}>
+        <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', md: 'repeat(4, 1fr)' }, gap: 3 }}>
           {stats.map((stat, index) => (
-            <Grid item xs={12} sm={6} md={3} key={index}>
+            <Box key={index}>
               <Card
                 sx={{
                   textAlign: 'center',
@@ -169,9 +168,9 @@ const HomePage: React.FC = () => {
                   </Typography>
                 </CardContent>
               </Card>
-            </Grid>
+            </Box>
           ))}
-        </Grid>
+        </Box>
       </Container>
 
       {/* Call to Action */}

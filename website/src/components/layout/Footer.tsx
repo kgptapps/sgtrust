@@ -3,7 +3,6 @@ import {
   Box,
   Container,
   Typography,
-  Grid,
   Link,
   Divider
 } from '@mui/material';
@@ -23,19 +22,19 @@ const Footer: React.FC = () => {
       }}
     >
       <Container maxWidth="lg">
-        <Grid container spacing={4}>
+        <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: 'repeat(3, 1fr)' }, gap: 4 }}>
           {/* About Section */}
-          <Grid item xs={12} md={4}>
+          <Box>
             <Typography variant="h6" gutterBottom sx={{ color: 'white' }}>
               {t('navigation:professorName')}
             </Typography>
             <Typography variant="body2" sx={{ color: 'grey.300', mb: 2 }}>
               {t('common:footerDescription')}
             </Typography>
-          </Grid>
+          </Box>
 
           {/* Quick Links */}
-          <Grid item xs={12} md={4}>
+          <Box>
             <Typography variant="h6" gutterBottom sx={{ color: 'white' }}>
               {t('navigation:quickLinks')}
             </Typography>
@@ -53,10 +52,10 @@ const Footer: React.FC = () => {
                 {t('navigation:accountability')}
               </Link>
             </Box>
-          </Grid>
+          </Box>
 
           {/* Contact Info */}
-          <Grid item xs={12} md={4}>
+          <Box>
             <Typography variant="h6" gutterBottom sx={{ color: 'white' }}>
               {t('navigation:contact')}
             </Typography>
@@ -66,8 +65,8 @@ const Footer: React.FC = () => {
             <Typography variant="body2" sx={{ color: 'grey.300' }}>
               {t('common:inspireGenerations')}
             </Typography>
-          </Grid>
-        </Grid>
+          </Box>
+        </Box>
 
         <Divider sx={{ my: 4, backgroundColor: 'grey.600' }} />
 

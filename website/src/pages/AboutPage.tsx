@@ -3,7 +3,6 @@ import {
   Box,
   Container,
   Typography,
-  Grid,
   Card,
   CardContent,
   Avatar
@@ -19,23 +18,21 @@ const AboutPage: React.FC = () => {
         {t('content:aboutTitle')}
       </Typography>
       
-      <Grid container spacing={6} sx={{ mt: 2 }}>
-        <Grid item xs={12} md={4}>
-          <Box sx={{ textAlign: 'center' }}>
-            <Avatar
-              sx={{
-                width: 250,
-                height: 250,
-                mx: 'auto',
-                mb: 3
-              }}
-              src="/sgtrust/media/images/professor/profile/main-headshot.jpg"
-              alt="Professor S. Govindasamy"
-            />
-          </Box>
-        </Grid>
-        
-        <Grid item xs={12} md={8}>
+      <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 2fr' }, gap: 6, mt: 2 }}>
+        <Box sx={{ textAlign: 'center' }}>
+          <Avatar
+            sx={{
+              width: 250,
+              height: 250,
+              mx: 'auto',
+              mb: 3
+            }}
+            src="/sgtrust/media/images/professor/profile/main-headshot.jpg"
+            alt="Professor S. Govindasamy"
+          />
+        </Box>
+
+        <Box>
           <Card>
             <CardContent sx={{ p: 4 }}>
               <Typography variant="h4" gutterBottom color="primary">
@@ -58,8 +55,8 @@ const AboutPage: React.FC = () => {
               </Typography>
             </CardContent>
           </Card>
-        </Grid>
-      </Grid>
+        </Box>
+      </Box>
     </Container>
   );
 };
