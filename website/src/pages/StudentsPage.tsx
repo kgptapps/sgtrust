@@ -11,13 +11,22 @@ import {
   InputAdornment,
   Button,
   Tabs,
-  Tab
+  Tab,
+  FormControl,
+  InputLabel,
+  Select,
+  MenuItem,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails
 } from '@mui/material';
 import {
   Search as SearchIcon,
   LocationOn as LocationIcon,
   Work as WorkIcon,
-  School as SchoolIcon
+  School as SchoolIcon,
+  FilterList as FilterIcon,
+  ExpandMore as ExpandMoreIcon
 } from '@mui/icons-material';
 import { useTranslation } from 'react-i18next';
 
@@ -95,17 +104,36 @@ const StudentsPage: React.FC = () => {
   const { t } = useTranslation(['content']);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedTab, setSelectedTab] = useState(0);
+  const [yearFilter, setYearFilter] = useState('');
+  const [companyFilter, setCompanyFilter] = useState('');
+  const [showFilters, setShowFilters] = useState(false);
 
-  const filteredStudents = sampleStudents.filter(student =>
-    student.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    student.company.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    student.currentPosition.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  // Get unique years and companies for filter options
+  const uniqueYears = [...new Set(sampleStudents.map(student => student.year))].sort().reverse();
+  const uniqueCompanies = [...new Set(sampleStudents.map(student => student.company))].sort();
+
+  const filteredStudents = sampleStudents.filter(student => {
+    const matchesSearch = student.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      student.company.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      student.currentPosition.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      student.thesis.toLowerCase().includes(searchTerm.toLowerCase());
+
+    const matchesYear = !yearFilter || student.year === yearFilter;
+    const matchesCompany = !companyFilter || student.company === companyFilter;
+
+    return matchesSearch && matchesYear && matchesCompany;
+  });
 
   const usaStudents = filteredStudents.filter(student => student.country === 'USA');
   const allStudents = filteredStudents;
 
   const displayStudents = selectedTab === 0 ? allStudents : usaStudents;
+
+  const clearFilters = () => {
+    setSearchTerm('');
+    setYearFilter('');
+    setCompanyFilter('');
+  };
 
   return (
     <Container maxWidth="lg" sx={{ py: 6 }}>
@@ -149,7 +177,7 @@ const StudentsPage: React.FC = () => {
         <TextField
           fullWidth
           variant="outlined"
-          placeholder="Search by name, company, or position..."
+          placeholder="Search by name, company, position, or thesis..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           InputProps={{
@@ -162,11 +190,66 @@ const StudentsPage: React.FC = () => {
           sx={{ mb: 3 }}
         />
 
+        {/* Advanced Filters */}
+        <Accordion expanded={showFilters} onChange={() => setShowFilters(!showFilters)}>
+          <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+              <FilterIcon />
+              <Typography>Advanced Filters</Typography>
+              {(yearFilter || companyFilter) && (
+                <Chip label="Filters Active" size="small" color="primary" />
+              )}
+            </Box>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: 'repeat(3, 1fr)' }, gap: 2 }}>
+              <FormControl fullWidth>
+                <InputLabel>Graduation Year</InputLabel>
+                <Select
+                  value={yearFilter}
+                  label="Graduation Year"
+                  onChange={(e) => setYearFilter(e.target.value)}
+                >
+                  <MenuItem value="">All Years</MenuItem>
+                  {uniqueYears.map((year) => (
+                    <MenuItem key={year} value={year}>{year}</MenuItem>
+                  ))}
+                </Select>
+              </FormControl>
+
+              <FormControl fullWidth>
+                <InputLabel>Company</InputLabel>
+                <Select
+                  value={companyFilter}
+                  label="Company"
+                  onChange={(e) => setCompanyFilter(e.target.value)}
+                >
+                  <MenuItem value="">All Companies</MenuItem>
+                  {uniqueCompanies.map((company) => (
+                    <MenuItem key={company} value={company}>{company}</MenuItem>
+                  ))}
+                </Select>
+              </FormControl>
+
+              <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                <Button
+                  variant="outlined"
+                  onClick={clearFilters}
+                  disabled={!searchTerm && !yearFilter && !companyFilter}
+                  fullWidth
+                >
+                  Clear Filters
+                </Button>
+              </Box>
+            </Box>
+          </AccordionDetails>
+        </Accordion>
+
         <Tabs
           value={selectedTab}
           onChange={(_, newValue) => setSelectedTab(newValue)}
           centered
-          sx={{ mb: 3 }}
+          sx={{ mt: 3 }}
         >
           <Tab label={`All Students (${allStudents.length})`} />
           <Tab label={`USA Success Stories (${usaStudents.length})`} />
