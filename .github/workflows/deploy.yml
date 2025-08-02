@@ -62,34 +62,23 @@ jobs:
           # Copy built website files
           if [ -d "website/dist" ]; then
             cp -r website/dist/* deploy/
+            echo "✅ Copied React build files"
+          else
+            echo "❌ No website/dist found"
+            exit 1
           fi
 
-          # Add .nojekyll for GitHub Pages
+          # Add .nojekyll for GitHub Pages (prevents Jekyll processing)
           touch deploy/.nojekyll
 
-          # Copy root index.html if it exists
-          if [ -f "index.html" ]; then
-            cp index.html deploy/
-          fi
-
-      - name: Prepare files for GitHub Pages
-        run: |
-          # Copy deployment files to a staging area
-          mkdir -p pages-deploy
-
-          # Copy built website files if they exist
-          if [ -d "deploy" ]; then
-            cp -r deploy/* pages-deploy/
-          fi
-
-          # List what we're deploying
-          echo "Files prepared for deployment:"
-          ls -la pages-deploy/
+          # List deployed files for debugging
+          echo "📁 Files prepared for deployment:"
+          find deploy -type f | head -20
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: pages-deploy
+          path: deploy
 
   # Deployment job
   deploy:
