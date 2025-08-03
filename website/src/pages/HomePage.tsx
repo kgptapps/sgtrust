@@ -4,48 +4,17 @@ import {
   Container,
   Typography,
   Card,
-  CardContent,
   Button,
   Avatar
 } from '@mui/material';
-import {
-  School as SchoolIcon,
-  EmojiEvents as AwardIcon,
-  Groups as StudentsIcon,
-  Public as GlobalIcon
-} from '@mui/icons-material';
+
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
 const HomePage: React.FC = () => {
   const { t } = useTranslation(['content', 'navigation']);
 
-  const stats = [
-    {
-      icon: <StudentsIcon sx={{ fontSize: 40, color: 'primary.main' }} />,
-      number: '50+',
-      label: t('content:phdStudents'),
-      description: t('content:phdStudentsDesc')
-    },
-    {
-      icon: <GlobalIcon sx={{ fontSize: 40, color: 'success.main' }} />,
-      number: '80%',
-      label: t('content:usaSuccess'),
-      description: t('content:usaSuccessDesc')
-    },
-    {
-      icon: <SchoolIcon sx={{ fontSize: 40, color: 'warning.main' }} />,
-      number: '40+',
-      label: t('content:yearsTeaching'),
-      description: t('content:yearsTeachingDesc')
-    },
-    {
-      icon: <AwardIcon sx={{ fontSize: 40, color: 'error.main' }} />,
-      number: '25+',
-      label: t('content:awards'),
-      description: t('content:awardsDesc')
-    }
-  ];
+
 
   return (
     <Box>
@@ -65,10 +34,10 @@ const HomePage: React.FC = () => {
                 {t('content:welcomeTitle')}
               </Typography>
               <Typography variant="h5" sx={{ mb: 3, opacity: 0.9 }}>
-                {t('content:welcomeSubtitle')}
+                Community Educator & Philanthropist
               </Typography>
               <Typography variant="body1" sx={{ mb: 3, fontSize: '1.1rem', opacity: 0.8 }}>
-                {t('content:heroDescription')}
+                Celebrating the remarkable journey of an educator who dedicated his life to helping people from all walks of life through education, community service, and philanthropic endeavors.
               </Typography>
 
               {/* Memorial and Statue Commemoration */}
@@ -88,37 +57,25 @@ const HomePage: React.FC = () => {
                   His legacy continues to inspire generations of scholars.
                 </Typography>
               </Box>
-              <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap' }}>
+              <Box sx={{ display: 'flex', justifyContent: 'center' }}>
                 <Button
                   variant="contained"
                   size="large"
-                  component={Link}
-                  to="/about"
                   sx={{
                     backgroundColor: '#5D4037',
                     color: 'white',
+                    px: 4,
+                    py: 1.5,
+                    fontSize: '1.1rem',
                     '&:hover': {
                       backgroundColor: '#3E2723'
                     }
                   }}
-                >
-                  {t('navigation:about')}
-                </Button>
-                <Button
-                  variant="outlined"
-                  size="large"
-                  component={Link}
-                  to="/students"
-                  sx={{
-                    borderColor: '#5D4037',
-                    color: '#5D4037',
-                    '&:hover': {
-                      borderColor: '#3E2723',
-                      backgroundColor: 'rgba(93, 64, 55, 0.1)'
-                    }
+                  onClick={() => {
+                    document.getElementById('explore-section')?.scrollIntoView({ behavior: 'smooth' });
                   }}
                 >
-                  {t('navigation:students')}
+                  Explore His Legacy
                 </Button>
               </Box>
             </Box>
@@ -147,76 +104,89 @@ const HomePage: React.FC = () => {
         </Container>
       </Box>
 
-      {/* Statistics Section */}
+      {/* 80th Birthday Statue Opening Invitation */}
       <Container maxWidth="lg" sx={{ mb: 6 }}>
-        <Typography variant="h3" component="h2" textAlign="center" gutterBottom>
-          {t('content:impactNumbers')}
-        </Typography>
-        <Typography variant="body1" textAlign="center" sx={{ mb: 4, color: 'text.secondary' }}>
-          {t('content:impactDescription')}
-        </Typography>
-        
-        <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', md: 'repeat(4, 1fr)' }, gap: 3 }}>
-          {stats.map((stat, index) => (
-            <Box key={index}>
-              <Card
-                sx={{
-                  textAlign: 'center',
-                  p: 3,
-                  height: '100%',
-                  transition: 'transform 0.3s ease',
-                  '&:hover': {
-                    transform: 'translateY(-4px)',
-                    boxShadow: 4
-                  }
-                }}
-              >
-                <CardContent>
-                  <Box sx={{ mb: 2 }}>
-                    {stat.icon}
-                  </Box>
-                  <Typography variant="h3" component="div" sx={{ fontWeight: 700, mb: 1 }}>
-                    {stat.number}
-                  </Typography>
-                  <Typography variant="h6" component="div" sx={{ mb: 1, color: 'primary.main' }}>
-                    {stat.label}
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    {stat.description}
-                  </Typography>
-                </CardContent>
-              </Card>
+        <Card sx={{
+          background: 'linear-gradient(135deg, #8D6E63 0%, #6D4C41 100%)',
+          color: 'white',
+          p: 6,
+          textAlign: 'center',
+          boxShadow: '0 8px 32px rgba(93, 64, 55, 0.3)'
+        }}>
+          <Typography variant="h3" component="h2" gutterBottom sx={{ fontWeight: 600 }}>
+            🏛️ Memorial Statue Opening Ceremony
+          </Typography>
+          <Typography variant="h5" sx={{ mb: 3, opacity: 0.9 }}>
+            Honoring Professor S. Govindasamy's 80th Birthday Legacy
+          </Typography>
+          <Typography variant="body1" sx={{ mb: 4, fontSize: '1.2rem', maxWidth: '800px', mx: 'auto' }}>
+            Join us for the unveiling of the commemorative statue celebrating Professor S. Govindasamy's
+            extraordinary life and his dedication to educating and uplifting people from all walks of life.
+            A legacy that continues to inspire communities worldwide.
+          </Typography>
+          <Box sx={{ display: 'flex', gap: 3, justifyContent: 'center', flexWrap: 'wrap' }}>
+            <Box sx={{ textAlign: 'center' }}>
+              <Typography variant="h6" sx={{ fontWeight: 600 }}>📅 Date</Typography>
+              <Typography variant="body1">To Be Announced</Typography>
             </Box>
-          ))}
-        </Box>
+            <Box sx={{ textAlign: 'center' }}>
+              <Typography variant="h6" sx={{ fontWeight: 600 }}>📍 Location</Typography>
+              <Typography variant="body1">University Campus</Typography>
+            </Box>
+            <Box sx={{ textAlign: 'center' }}>
+              <Typography variant="h6" sx={{ fontWeight: 600 }}>🎯 Purpose</Typography>
+              <Typography variant="body1">Community Celebration</Typography>
+            </Box>
+          </Box>
+        </Card>
       </Container>
 
-      {/* Call to Action */}
-      <Box sx={{ backgroundColor: 'grey.50', py: 6 }}>
+      {/* Explore Journey Section */}
+      <Box id="explore-section" sx={{ backgroundColor: 'grey.50', py: 6 }}>
         <Container maxWidth="lg">
           <Box sx={{ textAlign: 'center' }}>
             <Typography variant="h4" component="h2" gutterBottom>
-              {t('content:exploreJourney')}
+              Explore His Journey
             </Typography>
             <Typography variant="body1" sx={{ mb: 4, color: 'text.secondary' }}>
-              {t('content:exploreDescription')}
+              Discover the remarkable life of a man who dedicated himself to educating and uplifting communities through knowledge and compassion.
             </Typography>
-            <Box sx={{ display: 'flex', gap: 2, justifyContent: 'center', flexWrap: 'wrap' }}>
+            <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', md: 'repeat(4, 1fr)' }, gap: 3 }}>
               <Button
                 variant="contained"
                 size="large"
                 component={Link}
-                to="/timeline"
+                to="/about"
+                sx={{ py: 2 }}
               >
-                {t('navigation:timeline')}
+                About His Life
               </Button>
               <Button
                 variant="outlined"
                 size="large"
                 component={Link}
-                to="/gallery"
+                to="/students"
+                sx={{ py: 2 }}
               >
-                {t('navigation:gallery')}
+                Community Impact
+              </Button>
+              <Button
+                variant="outlined"
+                size="large"
+                component={Link}
+                to="/achievements"
+                sx={{ py: 2 }}
+              >
+                Achievements
+              </Button>
+              <Button
+                variant="outlined"
+                size="large"
+                component={Link}
+                to="/timeline"
+                sx={{ py: 2 }}
+              >
+                Life Timeline
               </Button>
             </Box>
           </Box>
