@@ -1,4 +1,4 @@
-name: Build and Deploy Professor S. Govindasamy Website
+name: 🚀 Build and Deploy Professor S. Govindasamy Website
 # Repository: git@github.com:kgptapps/sgtrust.git
 # Deployment URL: https://kgptapps.github.io/sgtrust/
 
@@ -23,31 +23,54 @@ permissions:
   pages: write
   id-token: write
   actions: write
+  checks: write
+  pull-requests: write
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
+env:
+  NODE_VERSION: '20'
+  CACHE_VERSION: 'v1'
+
 jobs:
-  # Build job
+  # Quality checks and build job
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
+    outputs:
+      build-success: ${{ steps.build-check.outputs.success }}
+      test-results: ${{ steps.test-summary.outputs.results }}
+
     steps:
-      - name: Checkout repository
+      - name: 📥 Checkout repository
         uses: actions/checkout@v4
-        
-      - name: Setup Node.js
+        with:
+          fetch-depth: 0 # Full history for better caching
+
+      - name: 🔧 Setup Node.js ${{ env.NODE_VERSION }}
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: ${{ env.NODE_VERSION }}
           cache: 'npm'
           cache-dependency-path: website/package-lock.json
-          
-      - name: Install dependencies
+
+      - name: 📦 Install dependencies
         run: |
           cd website
-          npm ci
+          echo "🔍 Checking package-lock.json integrity..."
+          npm ci --prefer-offline --no-audit
+          echo "✅ Dependencies installed successfully"
+
+      - name: 🔍 Verify installation
+        run: |
+          cd website
+          echo "📋 Installed packages:"
+          npm list --depth=0 || true
+          echo "🔧 Node version: $(node --version)"
+          echo "📦 NPM version: $(npm --version)"
 
       - name: Run tests
         run: |

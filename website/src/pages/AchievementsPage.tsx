@@ -5,8 +5,6 @@ import {
   Typography,
   Card,
   CardContent,
-  CardMedia,
-  Grid,
   Chip,
   Dialog,
   DialogContent,
@@ -25,7 +23,6 @@ import {
   Sports as SportsIcon,
   Work as WorkIcon
 } from '@mui/icons-material';
-import { useTranslation } from 'react-i18next';
 
 interface Certificate {
   filename: string;
@@ -54,7 +51,6 @@ interface AchievementsMetadata {
 }
 
 const AchievementsPage: React.FC = () => {
-  const { t } = useTranslation(['content']);
   const [achievementsData, setAchievementsData] = useState<AchievementsMetadata | null>(null);
   const [selectedCertificate, setSelectedCertificate] = useState<Certificate | null>(null);
   const [expandedYear, setExpandedYear] = useState<string | false>(false);
@@ -68,7 +64,6 @@ const AchievementsPage: React.FC = () => {
   }, []);
 
   const getCategoryIcon = (activity: string) => {
-    const activityLower = activity.toLowerCase();
     if (achievementsData?.categories.sports.includes(activity)) {
       return <SportsIcon color="primary" />;
     } else if (achievementsData?.categories.academic.includes(activity)) {
