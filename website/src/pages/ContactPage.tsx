@@ -10,10 +10,8 @@ import {
 } from '@mui/material';
 import {
   Email as EmailIcon,
-  Phone as PhoneIcon,
   LocationOn as LocationIcon,
   School as SchoolIcon,
-  LinkedIn as LinkedInIcon,
   GitHub as GitHubIcon
 } from '@mui/icons-material';
 import { useTranslation } from 'react-i18next';
@@ -24,26 +22,26 @@ const ContactPage: React.FC = () => {
   const contactInfo = [
     {
       icon: <EmailIcon sx={{ fontSize: 40, color: 'primary.main' }} />,
-      title: 'Email',
-      value: 'professor.govindasamy@university.edu',
-      description: 'For academic inquiries and collaboration'
+      title: 'Legacy Contact',
+      value: 'legacy.govindasamy@university.edu',
+      description: 'For inquiries about Professor S. Govindasamy\'s legacy'
     },
     {
-      icon: <PhoneIcon sx={{ fontSize: 40, color: 'success.main' }} />,
-      title: 'Phone',
-      value: '+1 (555) 123-4567',
-      description: 'Office hours: Monday-Friday, 9 AM - 5 PM'
+      icon: <SchoolIcon sx={{ fontSize: 40, color: 'success.main' }} />,
+      title: 'Memorial Information',
+      value: 'University Archives',
+      description: 'Academic records and historical documentation'
     },
     {
       icon: <LocationIcon sx={{ fontSize: 40, color: 'warning.main' }} />,
-      title: 'Office Address',
-      value: 'Department of Engineering\nUniversity Campus\nCity, State 12345',
-      description: 'Visitors welcome by appointment'
+      title: 'Memorial Location',
+      value: 'Department of Engineering\nUniversity Campus\nCommemorative Statue (2025)',
+      description: 'Visit the memorial statue in his honor'
     },
     {
       icon: <SchoolIcon sx={{ fontSize: 40, color: 'error.main' }} />,
-      title: 'Academic Profile',
-      value: 'Professor Emeritus',
+      title: 'Academic Legacy',
+      value: 'Professor Emeritus (1945-2025)',
       description: 'Department of Engineering Sciences'
     }
   ];
@@ -120,29 +118,29 @@ const ContactPage: React.FC = () => {
         </Box>
       </Box>
 
-      {/* Call to Action */}
+      {/* Memorial and Legacy */}
       <Box sx={{ backgroundColor: 'grey.50', p: 4, borderRadius: 2, textAlign: 'center' }}>
         <Typography variant="h5" component="h3" gutterBottom>
-          Connect with the Academic Community
+          Honor the Legacy
         </Typography>
         <Typography variant="body1" color="text.secondary" sx={{ mb: 3 }}>
-          Join the network of Professor S. Govindasamy's students and colleagues
+          Connect with Professor S. Govindasamy's alumni network and preserve his remarkable legacy
         </Typography>
         <Box sx={{ display: 'flex', gap: 2, justifyContent: 'center', flexWrap: 'wrap' }}>
           <Button
             variant="contained"
             startIcon={<EmailIcon />}
-            href="mailto:professor.govindasamy@university.edu"
+            href="mailto:legacy.govindasamy@university.edu"
           >
-            Send Email
+            Legacy Inquiries
           </Button>
           <Button
             variant="outlined"
-            startIcon={<LinkedInIcon />}
+            startIcon={<SchoolIcon />}
             href="#"
             target="_blank"
           >
-            LinkedIn Profile
+            Alumni Network
           </Button>
           <Button
             variant="outlined"

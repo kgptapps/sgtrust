@@ -71,7 +71,7 @@ const HomePage: React.FC = () => {
                 {t('content:heroDescription')}
               </Typography>
 
-              {/* Dynamic Birthday and Statue Commemoration */}
+              {/* Memorial and Statue Commemoration */}
               <Box sx={{
                 mb: 4,
                 p: 3,
@@ -80,12 +80,12 @@ const HomePage: React.FC = () => {
                 border: '1px solid rgba(93, 64, 55, 0.2)'
               }}>
                 <Typography variant="body1" sx={{ fontSize: '1.1rem', fontWeight: 500, mb: 1 }}>
-                  🎉 {new Date().getFullYear()} marks Professor S. Govindasamy's {new Date().getFullYear() - 1945}th birthday!
+                  🕊️ In Loving Memory of Professor S. Govindasamy (1945-2025)
                 </Typography>
                 <Typography variant="body2" sx={{ opacity: 0.9 }}>
-                  In remembrance of his remarkable legacy, a commemorative statue was constructed in 2025
-                  to honor his 80th birthday and celebrate his extraordinary contributions to academia and
-                  the success of his students worldwide.
+                  A commemorative statue was constructed in 2025 to honor his 80th birthday and celebrate
+                  his extraordinary contributions to academia and the success of his students worldwide.
+                  His legacy continues to inspire generations of scholars.
                 </Typography>
               </Box>
               <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap' }}>

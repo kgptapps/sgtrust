@@ -327,17 +327,17 @@ const StudentsPage: React.FC = () => {
         </Box>
       )}
 
-      {/* Call to Action */}
+      {/* Legacy Tribute */}
       <Box sx={{ textAlign: 'center', mt: 6, p: 4, backgroundColor: 'grey.50', borderRadius: 2 }}>
         <Typography variant="h5" gutterBottom>
-          Join the Legacy
+          Continuing the Legacy
         </Typography>
         <Typography variant="body1" color="text.secondary" sx={{ mb: 3 }}>
-          Interested in pursuing your PhD under Professor S. Govindasamy's guidance?
+          Professor S. Govindasamy's remarkable legacy lives on through his students who continue to make significant contributions to academia and industry worldwide.
         </Typography>
-        <Button variant="contained" size="large">
-          Contact for Admissions
-        </Button>
+        <Typography variant="body2" color="text.secondary">
+          His mentorship and guidance have shaped careers and inspired generations of scholars.
+        </Typography>
       </Box>
     </Container>
   );
