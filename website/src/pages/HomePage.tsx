@@ -88,7 +88,7 @@ const HomePage: React.FC = () => {
                     document.getElementById('explore-section')?.scrollIntoView({ behavior: 'smooth' });
                   }}
                 >
-                  Explore His Legacy
+                  {t('content:exploreHisLegacy')}
                 </Button>
               </Box>
             </Box>
@@ -100,9 +100,15 @@ const HomePage: React.FC = () => {
                     height: 200,
                     mx: 'auto',
                     mb: 2,
-                    border: '4px solid white'
+                    border: '4px solid white',
+                    boxShadow: `0 8px 32px ${theme.palette.primary.main}30`,
+                    transition: 'all 0.3s ease',
+                    '&:hover': {
+                      transform: 'scale(1.05)',
+                      boxShadow: `0 12px 40px ${theme.palette.primary.main}40`
+                    }
                   }}
-                  src="/sgtrust/media/images/professor/profile/main-headshot.jpg"
+                  src="/sgtrust/media/images/professor-portrait.png"
                   alt={t('content:professorName')}
                 />
                 <Typography variant="h6" sx={{ fontWeight: 600 }}>
@@ -169,17 +175,51 @@ const HomePage: React.FC = () => {
             {t('content:memorialDescription')}
           </Typography>
           <Box sx={{ display: 'flex', gap: 3, justifyContent: 'center', flexWrap: 'wrap' }}>
-            <Box sx={{ textAlign: 'center' }}>
-              <Typography variant="h6" sx={{ fontWeight: 600 }}>📅 Date</Typography>
-              <Typography variant="body1">{t('content:ceremonyDate')}</Typography>
+            <Box sx={{ textAlign: 'center', minWidth: '200px' }}>
+              <Typography variant="h6" sx={{ fontWeight: 600, minHeight: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                📅 {t('content:dateLabel')}
+              </Typography>
+              <Typography variant="body1" sx={{ minHeight: '24px' }}>{t('content:ceremonyDate')}</Typography>
             </Box>
-            <Box sx={{ textAlign: 'center' }}>
-              <Typography variant="h6" sx={{ fontWeight: 600 }}>📍 Location</Typography>
-              <Typography variant="body1" sx={{ whiteSpace: 'pre-line' }}>{t('content:ceremonyLocation')}</Typography>
+            <Box sx={{ textAlign: 'center', minWidth: '250px' }}>
+              <Typography variant="h6" sx={{ fontWeight: 600, minHeight: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                📍 {t('content:locationLabel')}
+              </Typography>
+              <Typography
+                variant="body1"
+                component="a"
+                href="https://maps.app.goo.gl/DDLsY7XYDS6es3Pv9"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => trackMemorialCeremonyInteraction('location_map_click')}
+                sx={{
+                  whiteSpace: 'pre-line',
+                  textDecoration: 'underline',
+                  color: 'primary.main',
+                  cursor: 'pointer',
+                  fontWeight: 500,
+                  display: 'inline-block',
+                  p: 1,
+                  borderRadius: 1,
+                  transition: 'all 0.2s ease',
+                  textAlign: 'left',
+                  minHeight: '72px',
+                  lineHeight: 1.4,
+                  '&:hover': {
+                    backgroundColor: 'primary.light',
+                    color: 'primary.dark',
+                    transform: 'scale(1.02)'
+                  }
+                }}
+              >
+                {t('content:ceremonyLocation')}
+              </Typography>
             </Box>
-            <Box sx={{ textAlign: 'center' }}>
-              <Typography variant="h6" sx={{ fontWeight: 600 }}>🎯 Purpose</Typography>
-              <Typography variant="body1">{t('content:ceremonyPurpose')}</Typography>
+            <Box sx={{ textAlign: 'center', minWidth: '200px' }}>
+              <Typography variant="h6" sx={{ fontWeight: 600, minHeight: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                🎯 {t('content:purposeLabel')}
+              </Typography>
+              <Typography variant="body1" sx={{ minHeight: '24px' }}>{t('content:ceremonyPurpose')}</Typography>
             </Box>
           </Box>
         </Card>
