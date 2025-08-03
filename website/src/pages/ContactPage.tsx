@@ -41,7 +41,7 @@ const ContactPage: React.FC = () => {
     {
       icon: <SchoolIcon sx={{ fontSize: 40, color: 'error.main' }} />,
       title: 'Academic Legacy',
-      value: 'Professor Emeritus (1945-2025)',
+      value: 'Professor Emeritus (1945-2009)',
       description: 'Department of Engineering Sciences'
     }
   ];

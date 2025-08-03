@@ -80,10 +80,10 @@ const HomePage: React.FC = () => {
                 border: '1px solid rgba(93, 64, 55, 0.2)'
               }}>
                 <Typography variant="body1" sx={{ fontSize: '1.1rem', fontWeight: 500, mb: 1 }}>
-                  🕊️ In Loving Memory of Professor S. Govindasamy (1945-2025)
+                  🕊️ In Loving Memory of Professor S. Govindasamy (1945-2009)
                 </Typography>
                 <Typography variant="body2" sx={{ opacity: 0.9 }}>
-                  A commemorative statue was constructed in 2025 to honor his 80th birthday and celebrate
+                  A commemorative statue was constructed in 2025 in his memory to celebrate
                   his extraordinary contributions to academia and the success of his students worldwide.
                   His legacy continues to inspire generations of scholars.
                 </Typography>
