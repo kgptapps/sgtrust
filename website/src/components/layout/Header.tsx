@@ -11,9 +11,7 @@ import {
   ListItemText,
   Box,
   useMediaQuery,
-  useTheme,
-  Switch,
-  FormControlLabel
+  useTheme
 } from '@mui/material';
 import {
   Menu as MenuIcon,
@@ -23,6 +21,7 @@ import {
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import ThemeSelector from '../ThemeSelector';
+import { trackNavigation, trackLanguageToggle, trackMobileMenuInteraction } from '../../utils/analytics';
 
 const Header: React.FC = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -32,12 +31,14 @@ const Header: React.FC = () => {
   const location = useLocation();
 
   const handleDrawerToggle = () => {
+    const action = mobileOpen ? 'menu_close' : 'menu_open';
+    trackMobileMenuInteraction(action);
     setMobileOpen(!mobileOpen);
   };
 
-  const handleLanguageToggle = () => {
-    const newLang = i18n.language === 'en' ? 'ta' : 'en';
-    i18n.changeLanguage(newLang);
+  const handleLanguageChange = (language: string) => {
+    trackLanguageToggle(language);
+    i18n.changeLanguage(language);
   };
 
   const navigationItems = [
@@ -67,7 +68,11 @@ const Header: React.FC = () => {
             key={item.key}
             component={Link}
             to={item.path}
-            onClick={handleDrawerToggle}
+            onClick={() => {
+              trackNavigation(item.path);
+              trackMobileMenuInteraction('menu_navigation');
+              handleDrawerToggle();
+            }}
             sx={{
               color: location.pathname === item.path ? 'primary.main' : 'text.primary',
               backgroundColor: location.pathname === item.path ? 'primary.light' : 'transparent',
@@ -87,16 +92,24 @@ const Header: React.FC = () => {
           </Typography>
           <ThemeSelector />
         </Box>
-        <FormControlLabel
-          control={
-            <Switch
-              checked={i18n.language === 'ta'}
-              onChange={handleLanguageToggle}
-              color="primary"
-            />
-          }
-          label={i18n.language === 'en' ? 'தமிழ்' : 'English'}
-        />
+        <Box sx={{ display: 'flex', gap: 1 }}>
+          <Button
+            variant={i18n.language === 'en' ? 'contained' : 'outlined'}
+            size="small"
+            onClick={() => handleLanguageChange('en')}
+            sx={{ flex: 1, fontSize: '0.75rem' }}
+          >
+            English
+          </Button>
+          <Button
+            variant={i18n.language === 'ta' ? 'contained' : 'outlined'}
+            size="small"
+            onClick={() => handleLanguageChange('ta')}
+            sx={{ flex: 1, fontSize: '0.75rem' }}
+          >
+            தமிழ்
+          </Button>
+        </Box>
       </Box>
     </Box>
   );
@@ -142,6 +155,7 @@ const Header: React.FC = () => {
                   key={item.key}
                   component={Link}
                   to={item.path}
+                  onClick={() => trackNavigation(item.path)}
                   sx={{
                     color: location.pathname === item.path ? 'primary.main' : 'text.primary',
                     fontWeight: location.pathname === item.path ? 600 : 400,
@@ -157,24 +171,28 @@ const Header: React.FC = () => {
             </Box>
           )}
 
-          {/* Theme Selector & Language Toggle */}
+          {/* Theme Selector & Language Buttons */}
           {!isMobile && (
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
               <ThemeSelector />
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                <LanguageIcon sx={{ color: 'text.secondary' }} />
-                <FormControlLabel
-                  control={
-                    <Switch
-                      checked={i18n.language === 'ta'}
-                      onChange={handleLanguageToggle}
-                      color="primary"
-                      size="small"
-                    />
-                  }
-                  label={i18n.language === 'en' ? 'தமிழ்' : 'English'}
-                  sx={{ m: 0 }}
-                />
+                <LanguageIcon sx={{ color: 'text.secondary', mr: 1 }} />
+                <Button
+                  variant={i18n.language === 'en' ? 'contained' : 'outlined'}
+                  size="small"
+                  onClick={() => handleLanguageChange('en')}
+                  sx={{ minWidth: '60px', fontSize: '0.75rem' }}
+                >
+                  English
+                </Button>
+                <Button
+                  variant={i18n.language === 'ta' ? 'contained' : 'outlined'}
+                  size="small"
+                  onClick={() => handleLanguageChange('ta')}
+                  sx={{ minWidth: '60px', fontSize: '0.75rem' }}
+                >
+                  தமிழ்
+                </Button>
               </Box>
             </Box>
           )}

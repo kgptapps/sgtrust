@@ -13,7 +13,7 @@ import {
   Check as CheckIcon
 } from '@mui/icons-material';
 import { useTheme } from '../contexts/ThemeContext';
-import { trackThemeChange } from '../utils/analytics';
+import { trackThemeInteraction } from '../utils/analytics';
 
 const ThemeSelector: React.FC = () => {
   const { currentTheme, setTheme, availableThemes } = useTheme();
@@ -21,6 +21,7 @@ const ThemeSelector: React.FC = () => {
   const open = Boolean(anchorEl);
 
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
+    trackThemeInteraction('theme_menu_open');
     setAnchorEl(event.currentTarget);
   };
 
@@ -31,7 +32,7 @@ const ThemeSelector: React.FC = () => {
   const handleThemeSelect = (themeKey: string) => {
     const themeName = availableThemes[themeKey as keyof typeof availableThemes].name;
     setTheme(themeKey);
-    trackThemeChange(themeName);
+    trackThemeInteraction('theme_changed', themeName);
     handleClose();
   };
 

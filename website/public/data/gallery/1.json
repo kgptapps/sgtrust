@@ -1,0 +1,345 @@
+{
+  "galleryInfo": {
+    "title": {
+      "en": "Professor S. Govindasamy Photo Gallery",
+      "ta": "பேராசிரியர் எஸ். கோவிந்தசாமி படக்காட்சி"
+    },
+    "description": {
+      "en": "A visual journey through the remarkable life and career of Professor S. Govindasamy, showcasing his academic achievements, community service, and the success of his students.",
+      "ta": "பேராசிரியர் எஸ். கோவிந்தசாமியின் குறிப்பிடத்தக்க வாழ்க்கை மற்றும் தொழில் வாழ்க்கையின் காட்சி பயணம், அவரது கல்வி சாதனைகள், சமூக சேவை மற்றும் அவரது மாணவர்களின் வெற்றியை காட்டுகிறது."
+    },
+    "totalImages": 24,
+    "lastUpdated": "2025-01-03"
+  },
+  "categories": [
+    {
+      "id": "early_life",
+      "name": {
+        "en": "Early Life & Education",
+        "ta": "ஆரம்ப வாழ்க்கை & கல்வி"
+      },
+      "description": {
+        "en": "Childhood, education, and formative years",
+        "ta": "குழந்தைப் பருவம், கல்வி மற்றும் உருவாக்க ஆண்டுகள்"
+      }
+    },
+    {
+      "id": "academic_career",
+      "name": {
+        "en": "Academic Career",
+        "ta": "கல்வி வாழ்க்கை"
+      },
+      "description": {
+        "en": "Teaching, research, and academic achievements",
+        "ta": "கற்பித்தல், ஆராய்ச்சி மற்றும் கல்வி சாதனைகள்"
+      }
+    },
+    {
+      "id": "students_mentorship",
+      "name": {
+        "en": "Students & Mentorship",
+        "ta": "மாணவர்கள் & வழிகாட்டுதல்"
+      },
+      "description": {
+        "en": "PhD students, graduations, and mentoring moments",
+        "ta": "முனைவர் மாணவர்கள், பட்டமளிப்பு மற்றும் வழிகாட்டுதல் தருணங்கள்"
+      }
+    },
+    {
+      "id": "community_service",
+      "name": {
+        "en": "Community Service",
+        "ta": "சமூக சேவை"
+      },
+      "description": {
+        "en": "Philanthropic work and community engagement",
+        "ta": "பரோபகார பணி மற்றும் சமூக ஈடுபாடு"
+      }
+    },
+    {
+      "id": "awards_recognition",
+      "name": {
+        "en": "Awards & Recognition",
+        "ta": "விருதுகள் & அங்கீகாரம்"
+      },
+      "description": {
+        "en": "Honors, awards, and public recognition",
+        "ta": "கௌரவங்கள், விருதுகள் மற்றும் பொது அங்கீகாரம்"
+      }
+    },
+    {
+      "id": "family_personal",
+      "name": {
+        "en": "Family & Personal",
+        "ta": "குடும்பம் & தனிப்பட்ட"
+      },
+      "description": {
+        "en": "Family moments and personal life",
+        "ta": "குடும்ப தருணங்கள் மற்றும் தனிப்பட்ட வாழ்க்கை"
+      }
+    },
+    {
+      "id": "memorial_legacy",
+      "name": {
+        "en": "Memorial & Legacy",
+        "ta": "நினைவு & மரபு"
+      },
+      "description": {
+        "en": "Memorial events and continuing legacy",
+        "ta": "நினைவு நிகழ்வுகள் மற்றும் தொடர்ச்சியான மரபு"
+      }
+    }
+  ],
+  "images": [
+    {
+      "id": "img_001",
+      "filename": "young_professor_1970.jpg",
+      "title": {
+        "en": "Young Professor Govindasamy",
+        "ta": "இளம் பேராசிரியர் கோவிந்தசாமி"
+      },
+      "description": {
+        "en": "Professor S. Govindasamy as a young academic in 1970, beginning his teaching career with enthusiasm and dedication.",
+        "ta": "1970 இல் இளம் கல்வியாளராக பேராசிரியர் எஸ். கோவிந்தசாமி, உற்சாகம் மற்றும் அர்ப்பணிப்புடன் தனது கற்பித்தல் வாழ்க்கையைத் தொடங்கினார்."
+      },
+      "year": 1970,
+      "category": "early_life",
+      "location": {
+        "en": "University Campus",
+        "ta": "பல்கலைக்கழக வளாகம்"
+      },
+      "tags": {
+        "en": ["young professor", "early career", "1970s", "teaching", "academic", "university"],
+        "ta": ["இளம் பேராசிரியர்", "ஆரம்ப வாழ்க்கை", "1970கள்", "கற்பித்தல்", "கல்வி", "பல்கலைக்கழகம்"]
+      },
+      "people": [
+        {
+          "name": "Professor S. Govindasamy",
+          "role": {
+            "en": "Young Professor",
+            "ta": "இளம் பேராசிரியர்"
+          }
+        }
+      ],
+      "technical_details": {
+        "photographer": "University Photography Department",
+        "camera": "Film Camera",
+        "format": "Black & White",
+        "resolution": "High Quality Scan"
+      }
+    },
+    {
+      "id": "img_002",
+      "filename": "first_phd_graduation_1975.jpg",
+      "title": {
+        "en": "First PhD Graduation Ceremony",
+        "ta": "முதல் முனைவர் பட்டமளிப்பு விழா"
+      },
+      "description": {
+        "en": "Historic moment of Professor Govindasamy's first PhD student graduation in 1975, marking the beginning of his legendary mentorship journey.",
+        "ta": "1975 இல் பேராசிரியர் கோவிந்தசாமியின் முதல் முனைவர் மாணவர் பட்டமளிப்பின் வரலாற்று தருணம், அவரது புகழ்பெற்ற வழிகாட்டுதல் பயணத்தின் தொடக்கத்தைக் குறிக்கிறது."
+      },
+      "year": 1975,
+      "category": "students_mentorship",
+      "location": {
+        "en": "University Auditorium",
+        "ta": "பல்கலைக்கழக அரங்கம்"
+      },
+      "tags": {
+        "en": ["PhD graduation", "first student", "mentorship", "academic milestone", "1975", "ceremony"],
+        "ta": ["முனைவர் பட்டமளிப்பு", "முதல் மாணவர்", "வழிகாட்டுதல்", "கல்வி மைல்கல்", "1975", "விழா"]
+      },
+      "people": [
+        {
+          "name": "Professor S. Govindasamy",
+          "role": {
+            "en": "PhD Supervisor",
+            "ta": "முனைவர் வழிகாட்டி"
+          }
+        },
+        {
+          "name": "Dr. First Student",
+          "role": {
+            "en": "First PhD Graduate",
+            "ta": "முதல் முனைவர் பட்டதாரி"
+          }
+        }
+      ],
+      "technical_details": {
+        "photographer": "University Official Photographer",
+        "camera": "Professional Film Camera",
+        "format": "Color",
+        "resolution": "Archival Quality"
+      }
+    },
+    {
+      "id": "img_003",
+      "filename": "community_service_1980.jpg",
+      "title": {
+        "en": "Community Education Program",
+        "ta": "சமூக கல்வி திட்டம்"
+      },
+      "description": {
+        "en": "Professor Govindasamy conducting a community education program in 1980, demonstrating his commitment to helping people from all walks of life.",
+        "ta": "1980 இல் பேராசிரியர் கோவிந்தசாமி ஒரு சமூக கல்வி திட்டத்தை நடத்துகிறார், வாழ்க்கையின் அனைத்து தரப்பினருக்கும் உதவுவதற்கான அவரது அர்ப்பணிப்பை வெளிப்படுத்துகிறார்."
+      },
+      "year": 1980,
+      "category": "community_service",
+      "location": {
+        "en": "Village Community Center",
+        "ta": "கிராம சமூக மையம்"
+      },
+      "tags": {
+        "en": ["community service", "education", "village", "philanthropy", "teaching", "outreach"],
+        "ta": ["சமூக சேவை", "கல்வி", "கிராமம்", "பரோபகாரம்", "கற்பித்தல்", "விரிவாக்கம்"]
+      },
+      "people": [
+        {
+          "name": "Professor S. Govindasamy",
+          "role": {
+            "en": "Community Educator",
+            "ta": "சமூக கல்வியாளர்"
+          }
+        }
+      ],
+      "technical_details": {
+        "photographer": "Local Photographer",
+        "camera": "Film Camera",
+        "format": "Color",
+        "resolution": "Standard Quality"
+      }
+    },
+    {
+      "id": "img_004",
+      "filename": "award_ceremony_1985.jpg",
+      "title": {
+        "en": "Excellence in Teaching Award",
+        "ta": "கற்பித்தலில் சிறப்பு விருது"
+      },
+      "description": {
+        "en": "Professor Govindasamy receiving the Excellence in Teaching Award in 1985, recognizing his outstanding contribution to education.",
+        "ta": "1985 இல் பேராசிரியர் கோவிந்தசாமி கற்பித்தலில் சிறப்பு விருதைப் பெறுகிறார், கல்விக்கான அவரது சிறந்த பங்களிப்பை அங்கீகரிக்கிறது."
+      },
+      "year": 1985,
+      "category": "awards_recognition",
+      "location": {
+        "en": "University Convocation Hall",
+        "ta": "பல்கலைக்கழக மாநாட்டு அரங்கம்"
+      },
+      "tags": {
+        "en": ["award", "teaching excellence", "recognition", "ceremony", "achievement", "1985"],
+        "ta": ["விருது", "கற்பித்தல் சிறப்பு", "அங்கீகாரம்", "விழா", "சாதனை", "1985"]
+      },
+      "people": [
+        {
+          "name": "Professor S. Govindasamy",
+          "role": {
+            "en": "Award Recipient",
+            "ta": "விருது பெற்றவர்"
+          }
+        },
+        {
+          "name": "University Chancellor",
+          "role": {
+            "en": "Award Presenter",
+            "ta": "விருது வழங்குபவர்"
+          }
+        }
+      ],
+      "technical_details": {
+        "photographer": "University Media Department",
+        "camera": "Professional Camera",
+        "format": "Color",
+        "resolution": "High Quality"
+      }
+    },
+    {
+      "id": "img_005",
+      "filename": "family_portrait_1990.jpg",
+      "title": {
+        "en": "Family Portrait",
+        "ta": "குடும்ப உருவப்படம்"
+      },
+      "description": {
+        "en": "A beautiful family portrait from 1990, showing Professor Govindasamy with his family, highlighting the personal side of his life.",
+        "ta": "1990 இலிருந்து ஒரு அழகான குடும்ப உருவப்படம், பேராசிரியர் கோவிந்தசாமியை அவரது குடும்பத்துடன் காட்டுகிறது, அவரது வாழ்க்கையின் தனிப்பட்ட பக்கத்தை எடுத்துக்காட்டுகிறது."
+      },
+      "year": 1990,
+      "category": "family_personal",
+      "location": {
+        "en": "Family Home",
+        "ta": "குடும்ப வீடு"
+      },
+      "tags": {
+        "en": ["family", "portrait", "personal life", "home", "1990s", "family values"],
+        "ta": ["குடும்பம்", "உருவப்படம்", "தனிப்பட்ட வாழ்க்கை", "வீடு", "1990கள்", "குடும்ப மதிப்புகள்"]
+      },
+      "people": [
+        {
+          "name": "Professor S. Govindasamy",
+          "role": {
+            "en": "Family Head",
+            "ta": "குடும்பத் தலைவர்"
+          }
+        },
+        {
+          "name": "Family Members",
+          "role": {
+            "en": "Family",
+            "ta": "குடும்பம்"
+          }
+        }
+      ],
+      "technical_details": {
+        "photographer": "Professional Portrait Photographer",
+        "camera": "Medium Format Camera",
+        "format": "Color",
+        "resolution": "Portrait Quality"
+      }
+    },
+    {
+      "id": "img_006",
+      "filename": "memorial_statue_2025.jpg",
+      "title": {
+        "en": "Memorial Statue Unveiling",
+        "ta": "நினைவு சிலை திறப்பு"
+      },
+      "description": {
+        "en": "The unveiling of Professor Govindasamy's memorial statue in 2025, commemorating his 80th birthday and celebrating his legacy.",
+        "ta": "2025 இல் பேராசிரியர் கோவிந்தசாமியின் நினைவு சிலையின் திறப்பு, அவரது 80வது பிறந்தநாளை நினைவுகூர்ந்து அவரது மரபைக் கொண்டாடுகிறது."
+      },
+      "year": 2025,
+      "category": "memorial_legacy",
+      "location": {
+        "en": "Vendakottai Village, Pattukottai Taluk, Thanjavur District",
+        "ta": "வெண்டக்கோட்டை கிராமம், பட்டுக்கோட்டை தாலுக், தஞ்சாவூர் மாவட்டம்"
+      },
+      "tags": {
+        "en": ["memorial", "statue", "legacy", "80th birthday", "commemoration", "2025", "village"],
+        "ta": ["நினைவு", "சிலை", "மரபு", "80வது பிறந்தநாள்", "நினைவுகூர்தல்", "2025", "கிராமம்"]
+      },
+      "people": [
+        {
+          "name": "Community Members",
+          "role": {
+            "en": "Attendees",
+            "ta": "பங்கேற்பாளர்கள்"
+          }
+        },
+        {
+          "name": "Former Students",
+          "role": {
+            "en": "Alumni",
+            "ta": "முன்னாள் மாணவர்கள்"
+          }
+        }
+      ],
+      "technical_details": {
+        "photographer": "Event Photographer",
+        "camera": "Digital Camera",
+        "format": "Digital Color",
+        "resolution": "High Resolution"
+      }
+    }
+  ]
+}

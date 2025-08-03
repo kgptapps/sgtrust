@@ -11,6 +11,7 @@ import {
 
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import { trackHeroInteraction, trackMemorialCeremonyInteraction, trackExploreJourneyClick } from '../utils/analytics';
 
 const HomePage: React.FC = () => {
   const { t } = useTranslation(['content', 'navigation']);
@@ -47,10 +48,10 @@ const HomePage: React.FC = () => {
                 {t('content:welcomeTitle')}
               </Typography>
               <Typography variant="h5" sx={{ mb: 3, opacity: 0.9 }}>
-                Community Educator & Philanthropist
+                {t('content:welcomeSubtitle')}
               </Typography>
               <Typography variant="body1" sx={{ mb: 3, fontSize: '1.1rem', opacity: 0.8 }}>
-                Celebrating the remarkable journey of an educator who dedicated his life to helping people from all walks of life through education, community service, and philanthropic endeavors.
+                {t('content:heroDescription')}
               </Typography>
 
               {/* Memorial and Statue Commemoration */}
@@ -62,12 +63,10 @@ const HomePage: React.FC = () => {
                 border: `1px solid ${theme.palette.primary.main}30`
               }}>
                 <Typography variant="body1" sx={{ fontSize: '1.1rem', fontWeight: 500, mb: 1 }}>
-                  🕊️ In Loving Memory of Professor S. Govindasamy (1945-2009)
+                  {t('content:memorialMessage')}
                 </Typography>
                 <Typography variant="body2" sx={{ opacity: 0.9 }}>
-                  A commemorative statue was constructed in 2025 in his memory to celebrate
-                  his extraordinary contributions to academia and the success of his students worldwide.
-                  His legacy continues to inspire generations of scholars.
+                  {t('content:memorialStatueDescription')}
                 </Typography>
               </Box>
               <Box sx={{ display: 'flex', justifyContent: 'center' }}>
@@ -85,6 +84,7 @@ const HomePage: React.FC = () => {
                     }
                   }}
                   onClick={() => {
+                    trackHeroInteraction('explore_legacy');
                     document.getElementById('explore-section')?.scrollIntoView({ behavior: 'smooth' });
                   }}
                 >
@@ -128,10 +128,10 @@ const HomePage: React.FC = () => {
           border: `1px solid ${theme.palette.primary.main}20`
         }}>
           <Typography variant="h3" component="h2" gutterBottom sx={{ fontWeight: 600 }}>
-            🏛️ Memorial Statue Opening Ceremony
+            🏛️ {t('content:memorialTitle')}
           </Typography>
           <Typography variant="h5" sx={{ mb: 3, opacity: 0.9 }}>
-            Celebrating Professor S. Govindasamy's 80th Birthday
+            {t('content:memorialSubtitle')}
           </Typography>
 
           {/* Memorial Statue Image with 3D Effect */}
@@ -145,11 +145,14 @@ const HomePage: React.FC = () => {
               component="img"
               src="/sgtrust/media/images/memorial/memorialsketch.jpeg"
               alt="Memorial Statue Design"
+              onClick={() => trackMemorialCeremonyInteraction('statue_image_click')}
+              onMouseEnter={() => trackMemorialCeremonyInteraction('statue_image_hover')}
               sx={{
                 maxWidth: '400px',
                 width: '100%',
                 height: 'auto',
                 borderRadius: 3,
+                cursor: 'pointer',
                 boxShadow: `0 25px 50px -12px ${theme.palette.primary.main}40, 0 0 0 1px ${theme.palette.primary.main}10`,
                 transform: 'rotateX(5deg) rotateY(-5deg)',
                 transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
@@ -163,22 +166,20 @@ const HomePage: React.FC = () => {
           </Box>
 
           <Typography variant="body1" sx={{ mb: 4, fontSize: '1.2rem', maxWidth: '800px', mx: 'auto' }}>
-            Join us for the unveiling of the commemorative statue celebrating Professor S. Govindasamy's
-            extraordinary life and his dedication to educating and uplifting people from all walks of life.
-            A legacy that continues to inspire communities worldwide.
+            {t('content:memorialDescription')}
           </Typography>
           <Box sx={{ display: 'flex', gap: 3, justifyContent: 'center', flexWrap: 'wrap' }}>
             <Box sx={{ textAlign: 'center' }}>
               <Typography variant="h6" sx={{ fontWeight: 600 }}>📅 Date</Typography>
-              <Typography variant="body1">September 6th, 2025</Typography>
+              <Typography variant="body1">{t('content:ceremonyDate')}</Typography>
             </Box>
             <Box sx={{ textAlign: 'center' }}>
               <Typography variant="h6" sx={{ fontWeight: 600 }}>📍 Location</Typography>
-              <Typography variant="body1">Vendakottai Village<br/>Pattukottai Taluk<br/>Thanjavur District</Typography>
+              <Typography variant="body1" sx={{ whiteSpace: 'pre-line' }}>{t('content:ceremonyLocation')}</Typography>
             </Box>
             <Box sx={{ textAlign: 'center' }}>
               <Typography variant="h6" sx={{ fontWeight: 600 }}>🎯 Purpose</Typography>
-              <Typography variant="body1">Celebrate His 80th Birthday</Typography>
+              <Typography variant="body1">{t('content:ceremonyPurpose')}</Typography>
             </Box>
           </Box>
         </Card>
@@ -189,10 +190,10 @@ const HomePage: React.FC = () => {
         <Container maxWidth="lg">
           <Box sx={{ textAlign: 'center' }}>
             <Typography variant="h4" component="h2" gutterBottom>
-              Explore His Journey
+              {t('content:exploreJourneyTitle')}
             </Typography>
             <Typography variant="body1" sx={{ mb: 4, color: 'text.secondary' }}>
-              Discover the remarkable life of a man who dedicated himself to educating and uplifting communities through knowledge and compassion.
+              {t('content:exploreJourneyDescription')}
             </Typography>
             <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', md: 'repeat(4, 1fr)' }, gap: 3 }}>
               <Button
@@ -200,36 +201,40 @@ const HomePage: React.FC = () => {
                 size="large"
                 component={Link}
                 to="/about"
+                onClick={() => trackExploreJourneyClick('/about')}
                 sx={{ py: 2 }}
               >
-                About His Life
+                {t('content:aboutHisLife')}
               </Button>
               <Button
                 variant="outlined"
                 size="large"
                 component={Link}
                 to="/students"
+                onClick={() => trackExploreJourneyClick('/students')}
                 sx={{ py: 2 }}
               >
-                Community Impact
+                {t('content:communityImpact')}
               </Button>
               <Button
                 variant="outlined"
                 size="large"
                 component={Link}
                 to="/achievements"
+                onClick={() => trackExploreJourneyClick('/achievements')}
                 sx={{ py: 2 }}
               >
-                Achievements
+                {t('content:achievements')}
               </Button>
               <Button
                 variant="outlined"
                 size="large"
                 component={Link}
                 to="/timeline"
+                onClick={() => trackExploreJourneyClick('/timeline')}
                 sx={{ py: 2 }}
               >
-                Life Timeline
+                {t('content:lifeTimeline')}
               </Button>
             </Box>
           </Box>

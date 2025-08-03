@@ -1,0 +1,26 @@
+IMAGE #: 7
+
+Basic Information:
+- Filename: group_phd_students_1995.jpg
+- Title: PhD Students Group Photo
+- Year: 1995
+- Location: University Research Lab
+
+Description:
+Professor Govindasamy with a group of his PhD students in the research laboratory in 1995. This photo shows the collaborative research environment he fostered, with students from diverse backgrounds working together on various engineering projects.
+
+Category (choose one):
+☑ Students & Mentorship
+□ Academic Career  
+□ Community Service
+□ Awards & Recognition
+□ Family & Personal
+□ Memorial & Legacy
+
+People in Photo:
+- Person 1: Professor S. Govindasamy (Role: PhD Supervisor)
+- Person 2: Rajesh Kumar (Role: PhD Student)
+- Person 3: Priya Sharma (Role: PhD Student)
+
+Tags (keywords for searching):
+PhD students, research lab, mentorship, 1995, group photo, engineering
