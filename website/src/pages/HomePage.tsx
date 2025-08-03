@@ -67,9 +67,27 @@ const HomePage: React.FC = () => {
               <Typography variant="h5" sx={{ mb: 3, opacity: 0.9 }}>
                 {t('content:welcomeSubtitle')}
               </Typography>
-              <Typography variant="body1" sx={{ mb: 4, fontSize: '1.1rem', opacity: 0.8 }}>
+              <Typography variant="body1" sx={{ mb: 3, fontSize: '1.1rem', opacity: 0.8 }}>
                 {t('content:heroDescription')}
               </Typography>
+
+              {/* Dynamic Birthday and Statue Commemoration */}
+              <Box sx={{
+                mb: 4,
+                p: 3,
+                backgroundColor: 'rgba(93, 64, 55, 0.1)',
+                borderRadius: 2,
+                border: '1px solid rgba(93, 64, 55, 0.2)'
+              }}>
+                <Typography variant="body1" sx={{ fontSize: '1.1rem', fontWeight: 500, mb: 1 }}>
+                  🎉 {new Date().getFullYear()} marks Professor S. Govindasamy's {new Date().getFullYear() - 1945}th birthday!
+                </Typography>
+                <Typography variant="body2" sx={{ opacity: 0.9 }}>
+                  In remembrance of his remarkable legacy, a commemorative statue was constructed in 2025
+                  to honor his 80th birthday and celebrate his extraordinary contributions to academia and
+                  the success of his students worldwide.
+                </Typography>
+              </Box>
               <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap' }}>
                 <Button
                   variant="contained"
