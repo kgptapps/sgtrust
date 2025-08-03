@@ -107,8 +107,8 @@ const HomePage: React.FC = () => {
       {/* 80th Birthday Statue Opening Invitation */}
       <Container maxWidth="lg" sx={{ mb: 6 }}>
         <Card sx={{
-          background: 'linear-gradient(135deg, #8D6E63 0%, #6D4C41 100%)',
-          color: 'white',
+          background: 'linear-gradient(135deg, #D7CCC8 0%, #BCAAA4 100%)',
+          color: '#3E2723',
           p: 6,
           textAlign: 'center',
           boxShadow: '0 8px 32px rgba(93, 64, 55, 0.3)'
@@ -117,7 +117,7 @@ const HomePage: React.FC = () => {
             🏛️ Memorial Statue Opening Ceremony
           </Typography>
           <Typography variant="h5" sx={{ mb: 3, opacity: 0.9 }}>
-            Honoring Professor S. Govindasamy's 80th Birthday Legacy
+            Celebrating Professor S. Govindasamy's 80th Birthday
           </Typography>
           <Typography variant="body1" sx={{ mb: 4, fontSize: '1.2rem', maxWidth: '800px', mx: 'auto' }}>
             Join us for the unveiling of the commemorative statue celebrating Professor S. Govindasamy's
@@ -127,15 +127,15 @@ const HomePage: React.FC = () => {
           <Box sx={{ display: 'flex', gap: 3, justifyContent: 'center', flexWrap: 'wrap' }}>
             <Box sx={{ textAlign: 'center' }}>
               <Typography variant="h6" sx={{ fontWeight: 600 }}>📅 Date</Typography>
-              <Typography variant="body1">To Be Announced</Typography>
+              <Typography variant="body1">September 6th, 2025</Typography>
             </Box>
             <Box sx={{ textAlign: 'center' }}>
               <Typography variant="h6" sx={{ fontWeight: 600 }}>📍 Location</Typography>
-              <Typography variant="body1">University Campus</Typography>
+              <Typography variant="body1">Vendakottai Village<br/>Pattukottai Taluk<br/>Thanjavur District</Typography>
             </Box>
             <Box sx={{ textAlign: 'center' }}>
               <Typography variant="h6" sx={{ fontWeight: 600 }}>🎯 Purpose</Typography>
-              <Typography variant="body1">Community Celebration</Typography>
+              <Typography variant="body1">Celebrate His 80th Birthday</Typography>
             </Box>
           </Box>
         </Card>
