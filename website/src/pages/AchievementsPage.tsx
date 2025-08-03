@@ -1,330 +1,290 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Box,
   Container,
   Typography,
   Card,
   CardContent,
-  Tabs,
-  Tab,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
+  CardMedia,
+  Grid,
   Chip,
-  Divider
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  IconButton,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+  Badge
 } from '@mui/material';
 import {
   EmojiEvents as AwardIcon,
-  MenuBook as PublicationIcon,
-  School as ResearchIcon,
-  Star as HonorIcon
+  Close as CloseIcon,
+  ExpandMore as ExpandMoreIcon,
+  School as SchoolIcon,
+  Sports as SportsIcon,
+  Work as WorkIcon
 } from '@mui/icons-material';
 import { useTranslation } from 'react-i18next';
 
-// Sample achievements data
-const achievementsData = {
-  awards: [
-    {
-      title: "Excellence in Teaching Award",
-      year: "2022",
-      organization: "University Academic Council",
-      description: "Recognition for outstanding contribution to doctoral education"
-    },
-    {
-      title: "Research Excellence Award",
-      year: "2020",
-      organization: "National Engineering Society",
-      description: "For significant contributions to engineering research"
-    },
-    {
-      title: "Mentor of the Year",
-      year: "2019",
-      organization: "Graduate Student Association",
-      description: "Voted by students for exceptional mentorship"
-    },
-    {
-      title: "Lifetime Achievement Award",
-      year: "2018",
-      organization: "State Education Board",
-      description: "For 35+ years of dedicated service to education"
-    }
-  ],
-  publications: [
-    {
-      title: "Advanced Engineering Principles in Modern Applications",
-      year: "2023",
-      journal: "International Journal of Engineering",
-      type: "Journal Article",
-      citations: 45
-    },
-    {
-      title: "Mentorship Strategies for Doctoral Success",
-      year: "2022",
-      journal: "Educational Research Quarterly",
-      type: "Journal Article",
-      citations: 32
-    },
-    {
-      title: "Engineering Education: A Comprehensive Guide",
-      year: "2021",
-      journal: "Academic Press",
-      type: "Book",
-      citations: 78
-    },
-    {
-      title: "Innovation in Graduate Research Methodology",
-      year: "2020",
-      journal: "Research in Higher Education",
-      type: "Journal Article",
-      citations: 56
-    }
-  ],
-  research: [
-    {
-      title: "Sustainable Engineering Solutions",
-      period: "2020-2023",
-      funding: "$250,000",
-      agency: "National Science Foundation"
-    },
-    {
-      title: "Advanced Materials Research",
-      period: "2018-2021",
-      funding: "$180,000",
-      agency: "Department of Energy"
-    },
-    {
-      title: "Educational Technology Integration",
-      period: "2019-2022",
-      funding: "$120,000",
-      agency: "Education Research Council"
-    }
-  ],
-  honors: [
-    {
-      title: "Fellow, National Academy of Engineering",
-      year: "2021",
-      description: "Elected for contributions to engineering education"
-    },
-    {
-      title: "Distinguished Professor Emeritus",
-      year: "2020",
-      description: "Highest academic honor from the university"
-    },
-    {
-      title: "International Visiting Scholar",
-      year: "2019",
-      description: "Invited positions at leading universities worldwide"
-    }
-  ]
-};
+interface Certificate {
+  filename: string;
+  institution: string;
+  activity: string;
+  year: number;
+  path: string;
+}
+
+interface YearData {
+  count: number;
+  certificates: Certificate[];
+}
+
+interface AchievementsMetadata {
+  title: string;
+  description: string;
+  total_certificates: number;
+  year_range: { start: number; end: number };
+  categories: {
+    sports: string[];
+    academic: string[];
+    professional: string[];
+  };
+  years: Record<string, YearData>;
+}
 
 const AchievementsPage: React.FC = () => {
   const { t } = useTranslation(['content']);
-  const [selectedTab, setSelectedTab] = useState(0);
+  const [achievementsData, setAchievementsData] = useState<AchievementsMetadata | null>(null);
+  const [selectedCertificate, setSelectedCertificate] = useState<Certificate | null>(null);
+  const [expandedYear, setExpandedYear] = useState<string | false>(false);
 
-  const tabs = [
-    { label: 'Awards', icon: <AwardIcon />, data: achievementsData.awards },
-    { label: 'Publications', icon: <PublicationIcon />, data: achievementsData.publications },
-    { label: 'Research', icon: <ResearchIcon />, data: achievementsData.research },
-    { label: 'Honors', icon: <HonorIcon />, data: achievementsData.honors }
-  ];
+  useEffect(() => {
+    // Load achievements metadata
+    fetch('/sgtrust/media/achievements/achievements_metadata.json')
+      .then(response => response.json())
+      .then(data => setAchievementsData(data))
+      .catch(error => console.error('Error loading achievements data:', error));
+  }, []);
+
+  const getCategoryIcon = (activity: string) => {
+    const activityLower = activity.toLowerCase();
+    if (achievementsData?.categories.sports.includes(activity)) {
+      return <SportsIcon color="primary" />;
+    } else if (achievementsData?.categories.academic.includes(activity)) {
+      return <SchoolIcon color="secondary" />;
+    } else {
+      return <WorkIcon color="action" />;
+    }
+  };
+
+  const getCategoryColor = (activity: string) => {
+    if (achievementsData?.categories.sports.includes(activity)) {
+      return 'primary';
+    } else if (achievementsData?.categories.academic.includes(activity)) {
+      return 'secondary';
+    } else {
+      return 'default';
+    }
+  };
+
+  if (!achievementsData) {
+    return (
+      <Container maxWidth="lg" sx={{ py: 6 }}>
+        <Typography variant="h6" textAlign="center">
+          Loading achievements...
+        </Typography>
+      </Container>
+    );
+  }
 
   return (
     <Container maxWidth="lg" sx={{ py: 6 }}>
       <Typography variant="h3" component="h1" gutterBottom textAlign="center">
-        {t('content:achievementsTitle')}
+        {achievementsData.title}
       </Typography>
       <Typography variant="body1" textAlign="center" color="text.secondary" sx={{ mb: 4 }}>
-        {t('content:achievementsDescription')}
+        {achievementsData.description}
       </Typography>
 
       {/* Summary Statistics */}
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: 'repeat(2, 1fr)', md: 'repeat(4, 1fr)' }, gap: 3, mb: 6 }}>
         <Card sx={{ textAlign: 'center', p: 2 }}>
           <Typography variant="h4" color="primary" fontWeight="bold">
-            25+
+            {achievementsData.total_certificates}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Awards Received
+            Total Certificates
           </Typography>
         </Card>
         <Card sx={{ textAlign: 'center', p: 2 }}>
           <Typography variant="h4" color="success.main" fontWeight="bold">
-            100+
+            {achievementsData.categories.sports.length}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Publications
+            Sports Activities
           </Typography>
         </Card>
         <Card sx={{ textAlign: 'center', p: 2 }}>
           <Typography variant="h4" color="warning.main" fontWeight="bold">
-            15+
+            {achievementsData.year_range.end - achievementsData.year_range.start + 1}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Research Projects
+            Years Span
           </Typography>
         </Card>
         <Card sx={{ textAlign: 'center', p: 2 }}>
           <Typography variant="h4" color="error.main" fontWeight="bold">
-            2000+
+            {achievementsData.categories.academic.length + achievementsData.categories.professional.length}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Citations
+            Academic & Professional
           </Typography>
         </Card>
       </Box>
 
-      {/* Tabs */}
-      <Box sx={{ mb: 4 }}>
-        <Tabs
-          value={selectedTab}
-          onChange={(_, newValue) => setSelectedTab(newValue)}
-          variant="scrollable"
-          scrollButtons="auto"
-        >
-          {tabs.map((tab, index) => (
-            <Tab
-              key={index}
-              label={
-                <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                  {tab.icon}
-                  {tab.label}
-                </Box>
-              }
-            />
-          ))}
-        </Tabs>
-      </Box>
+      {/* Year-based Achievements */}
+      <Typography variant="h4" component="h2" gutterBottom sx={{ mb: 3 }}>
+        Certificates by Year ({achievementsData.year_range.start} - {achievementsData.year_range.end})
+      </Typography>
 
-      {/* Content */}
-      <Card>
-        <CardContent sx={{ p: 4 }}>
-          {selectedTab === 0 && (
-            <List>
-              {achievementsData.awards.map((award, index) => (
-                <React.Fragment key={index}>
-                  <ListItem alignItems="flex-start">
-                    <ListItemIcon>
-                      <AwardIcon color="primary" />
-                    </ListItemIcon>
-                    <ListItemText
-                      primary={
-                        <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 1 }}>
-                          <Typography variant="h6">{award.title}</Typography>
-                          <Chip label={award.year} color="primary" size="small" />
-                        </Box>
-                      }
-                      secondary={
-                        <Box>
-                          <Typography variant="body2" color="primary" sx={{ fontWeight: 'medium' }}>
-                            {award.organization}
+      {/* Year Accordions */}
+      {Object.entries(achievementsData.years)
+        .sort(([a], [b]) => parseInt(b) - parseInt(a)) // Sort years in descending order
+        .map(([year, yearData]) => (
+          <Accordion
+            key={year}
+            expanded={expandedYear === year}
+            onChange={(_, isExpanded) => setExpandedYear(isExpanded ? year : false)}
+            sx={{ mb: 2 }}
+          >
+            <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+              <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, width: '100%' }}>
+                <AwardIcon color="primary" />
+                <Typography variant="h6" sx={{ flexGrow: 1 }}>
+                  {year}
+                </Typography>
+                <Badge badgeContent={yearData.count} color="primary">
+                  <Chip
+                    label={`${yearData.count} certificate${yearData.count !== 1 ? 's' : ''}`}
+                    size="small"
+                    variant="outlined"
+                  />
+                </Badge>
+              </Box>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+                {yearData.certificates.map((certificate, index) => (
+                  <Card key={index} sx={{ overflow: 'hidden' }}>
+                    <CardContent sx={{ p: 3 }}>
+                      {/* Certificate Header */}
+                      <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 3 }}>
+                        {getCategoryIcon(certificate.activity)}
+                        <Box sx={{ flexGrow: 1 }}>
+                          <Typography variant="h6" component="h3">
+                            {certificate.activity}
                           </Typography>
                           <Typography variant="body2" color="text.secondary">
-                            {award.description}
+                            {certificate.institution}
                           </Typography>
                         </Box>
-                      }
-                    />
-                  </ListItem>
-                  {index < achievementsData.awards.length - 1 && <Divider />}
-                </React.Fragment>
-              ))}
-            </List>
-          )}
+                        <Chip
+                          label={certificate.year}
+                          color="primary"
+                          size="small"
+                        />
+                        <Chip
+                          label={certificate.activity}
+                          size="small"
+                          color={getCategoryColor(certificate.activity) as any}
+                          variant="outlined"
+                        />
+                      </Box>
 
-          {selectedTab === 1 && (
-            <List>
-              {achievementsData.publications.map((pub, index) => (
-                <React.Fragment key={index}>
-                  <ListItem alignItems="flex-start">
-                    <ListItemIcon>
-                      <PublicationIcon color="primary" />
-                    </ListItemIcon>
-                    <ListItemText
-                      primary={
-                        <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 1, flexWrap: 'wrap' }}>
-                          <Typography variant="h6">{pub.title}</Typography>
-                          <Chip label={pub.year} color="primary" size="small" />
-                          <Chip label={pub.type} variant="outlined" size="small" />
-                        </Box>
-                      }
-                      secondary={
-                        <Box>
-                          <Typography variant="body2" color="primary" sx={{ fontWeight: 'medium' }}>
-                            {pub.journal}
-                          </Typography>
-                          <Typography variant="body2" color="text.secondary">
-                            Citations: {pub.citations}
-                          </Typography>
-                        </Box>
-                      }
-                    />
-                  </ListItem>
-                  {index < achievementsData.publications.length - 1 && <Divider />}
-                </React.Fragment>
-              ))}
-            </List>
-          )}
-
-          {selectedTab === 2 && (
-            <List>
-              {achievementsData.research.map((research, index) => (
-                <React.Fragment key={index}>
-                  <ListItem alignItems="flex-start">
-                    <ListItemIcon>
-                      <ResearchIcon color="primary" />
-                    </ListItemIcon>
-                    <ListItemText
-                      primary={
-                        <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 1, flexWrap: 'wrap' }}>
-                          <Typography variant="h6">{research.title}</Typography>
-                          <Chip label={research.period} color="primary" size="small" />
-                          <Chip label={research.funding} color="success" size="small" />
-                        </Box>
-                      }
-                      secondary={
-                        <Typography variant="body2" color="primary" sx={{ fontWeight: 'medium' }}>
-                          Funded by: {research.agency}
+                      {/* Full Certificate Image */}
+                      <Box
+                        sx={{
+                          textAlign: 'center',
+                          cursor: 'pointer',
+                          transition: 'transform 0.2s',
+                          '&:hover': {
+                            transform: 'scale(1.02)'
+                          }
+                        }}
+                        onClick={() => setSelectedCertificate(certificate)}
+                      >
+                        <img
+                          src={certificate.path}
+                          alt={`${certificate.institution} - ${certificate.activity}`}
+                          style={{
+                            maxWidth: '100%',
+                            height: 'auto',
+                            borderRadius: '8px',
+                            boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+                            border: '1px solid #e0e0e0'
+                          }}
+                        />
+                        <Typography
+                          variant="caption"
+                          color="text.secondary"
+                          sx={{
+                            display: 'block',
+                            mt: 1,
+                            fontStyle: 'italic'
+                          }}
+                        >
+                          Click to view in full screen
                         </Typography>
-                      }
-                    />
-                  </ListItem>
-                  {index < achievementsData.research.length - 1 && <Divider />}
-                </React.Fragment>
-              ))}
-            </List>
-          )}
+                      </Box>
+                    </CardContent>
+                  </Card>
+                ))}
+              </Box>
+            </AccordionDetails>
+          </Accordion>
+        ))}
 
-          {selectedTab === 3 && (
-            <List>
-              {achievementsData.honors.map((honor, index) => (
-                <React.Fragment key={index}>
-                  <ListItem alignItems="flex-start">
-                    <ListItemIcon>
-                      <HonorIcon color="primary" />
-                    </ListItemIcon>
-                    <ListItemText
-                      primary={
-                        <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 1 }}>
-                          <Typography variant="h6">{honor.title}</Typography>
-                          <Chip label={honor.year} color="primary" size="small" />
-                        </Box>
-                      }
-                      secondary={
-                        <Typography variant="body2" color="text.secondary">
-                          {honor.description}
-                        </Typography>
-                      }
-                    />
-                  </ListItem>
-                  {index < achievementsData.honors.length - 1 && <Divider />}
-                </React.Fragment>
-              ))}
-            </List>
-          )}
-        </CardContent>
-      </Card>
+      {/* Certificate Detail Dialog */}
+      <Dialog
+        open={!!selectedCertificate}
+        onClose={() => setSelectedCertificate(null)}
+        maxWidth="md"
+        fullWidth
+      >
+        {selectedCertificate && (
+          <>
+            <DialogTitle sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+              <Box>
+                <Typography variant="h6">
+                  {selectedCertificate.activity}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  {selectedCertificate.institution} • {selectedCertificate.year}
+                </Typography>
+              </Box>
+              <IconButton onClick={() => setSelectedCertificate(null)}>
+                <CloseIcon />
+              </IconButton>
+            </DialogTitle>
+            <DialogContent>
+              <Box sx={{ textAlign: 'center' }}>
+                <img
+                  src={selectedCertificate.path}
+                  alt={`${selectedCertificate.institution} - ${selectedCertificate.activity}`}
+                  style={{
+                    maxWidth: '100%',
+                    maxHeight: '70vh',
+                    objectFit: 'contain',
+                    borderRadius: '8px',
+                    boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+                  }}
+                />
+              </Box>
+            </DialogContent>
+          </>
+        )}
+      </Dialog>
     </Container>
   );
 };

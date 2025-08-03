@@ -1,0 +1,292 @@
+{
+  "title": "Professor Govindasamy's Achievements",
+  "description": "A chronological collection of certificates and achievements spanning from 1961 to 1985",
+  "total_certificates": 27,
+  "year_range": {
+    "start": 1961,
+    "end": 1985
+  },
+  "categories": {
+    "sports": [
+      "Junior Football",
+      "Football",
+      "Hockey",
+      "Football (Runner-up)",
+      "Volleyball",
+      "Discus Throw (Third Place)",
+      "Hop, Step and Jump",
+      "Tug of War (Winner)",
+      "Discus Throw",
+      "Table Tennis Doubles",
+      "Tug of War",
+      "Best in Annual Sports",
+      "Cricket",
+      "Football (Winner)",
+      "Carrom Doubles",
+      "Cricket (Winner)",
+      "Tug of War (Runner-up)"
+    ],
+    "academic": [
+      "Acting",
+      "Conducting",
+      "Merit Certification"
+    ],
+    "professional": [
+      "Social Service League",
+      "Badminton",
+      "Liquid Extraction",
+      "Certificate"
+    ]
+  },
+  "years": {
+    "1961": {
+      "count": 1,
+      "certificates": [
+        {
+          "filename": "boardhighschool-juniorfootball-1961to1962.jpg",
+          "institution": "Board High School",
+          "activity": "Junior Football",
+          "year": 1961,
+          "path": "/sgtrust/media/achievements/1961/boardhighschool-juniorfootball-1961to1962.jpg"
+        }
+      ]
+    },
+    "1962": {
+      "count": 1,
+      "certificates": [
+        {
+          "filename": "rajahserfoji-socialserviceleague-1962to1964.jpg",
+          "institution": "Rajah Serfoji College",
+          "activity": "Social Service League",
+          "year": 1962,
+          "path": "/sgtrust/media/achievements/1962/rajahserfoji-socialserviceleague-1962to1964.jpg"
+        }
+      ]
+    },
+    "1963": {
+      "count": 1,
+      "certificates": [
+        {
+          "filename": "rajahserfojicollege-football-1963.jpg",
+          "institution": "Rajah Serfoji College",
+          "activity": "Football",
+          "year": 1963,
+          "path": "/sgtrust/media/achievements/1963/rajahserfojicollege-football-1963.jpg"
+        }
+      ]
+    },
+    "1965": {
+      "count": 2,
+      "certificates": [
+        {
+          "filename": "rajahserfojicollege-hockey-1965.jpg",
+          "institution": "Rajah Serfoji College",
+          "activity": "Hockey",
+          "year": 1965,
+          "path": "/sgtrust/media/achievements/1965/rajahserfojicollege-hockey-1965.jpg"
+        },
+        {
+          "filename": "rajahserfojicollege-runnerupfootball-1965.jpg",
+          "institution": "Rajah Serfoji College",
+          "activity": "Football (Runner-up)",
+          "year": 1965,
+          "path": "/sgtrust/media/achievements/1965/rajahserfojicollege-runnerupfootball-1965.jpg"
+        }
+      ]
+    },
+    "1966": {
+      "count": 2,
+      "certificates": [
+        {
+          "filename": "rajahserfojicollege-football-1966.jpg",
+          "institution": "Rajah Serfoji College",
+          "activity": "Football",
+          "year": 1966,
+          "path": "/sgtrust/media/achievements/1966/rajahserfojicollege-football-1966.jpg"
+        },
+        {
+          "filename": "rajahserfojicollege-volleyball-1966.jpg",
+          "institution": "Rajah Serfoji College",
+          "activity": "Volleyball",
+          "year": 1966,
+          "path": "/sgtrust/media/achievements/1966/rajahserfojicollege-volleyball-1966.jpg"
+        }
+      ]
+    },
+    "1973": {
+      "count": 4,
+      "certificates": [
+        {
+          "filename": "universityofmadras-acting-1973.jpg",
+          "institution": "University of Madras",
+          "activity": "Acting",
+          "year": 1973,
+          "path": "/sgtrust/media/achievements/1973/universityofmadras-acting-1973.jpg"
+        },
+        {
+          "filename": "universityofmadras-discusthrowthird-1973.jpg",
+          "institution": "University of Madras",
+          "activity": "Discus Throw (Third Place)",
+          "year": 1973,
+          "path": "/sgtrust/media/achievements/1973/universityofmadras-discusthrowthird-1973.jpg"
+        },
+        {
+          "filename": "universityofmadras-hopstepandjump-1973.jpg",
+          "institution": "University of Madras",
+          "activity": "Hop, Step and Jump",
+          "year": 1973,
+          "path": "/sgtrust/media/achievements/1973/universityofmadras-hopstepandjump-1973.jpg"
+        },
+        {
+          "filename": "universityofmadras-tugofwarwinning-1973.jpg",
+          "institution": "University of Madras",
+          "activity": "Tug of War (Winner)",
+          "year": 1973,
+          "path": "/sgtrust/media/achievements/1973/universityofmadras-tugofwarwinning-1973.jpg"
+        }
+      ]
+    },
+    "1974": {
+      "count": 6,
+      "certificates": [
+        {
+          "filename": "universityofmadras-badmitton-1974.jpg",
+          "institution": "University of Madras",
+          "activity": "Badminton",
+          "year": 1974,
+          "path": "/sgtrust/media/achievements/1974/universityofmadras-badmitton-1974.jpg"
+        },
+        {
+          "filename": "universityofmadras-conducting-1974.jpg",
+          "institution": "University of Madras",
+          "activity": "Conducting",
+          "year": 1974,
+          "path": "/sgtrust/media/achievements/1974/universityofmadras-conducting-1974.jpg"
+        },
+        {
+          "filename": "universityofmadras-discusthrow-1974.jpg",
+          "institution": "University of Madras",
+          "activity": "Discus Throw",
+          "year": 1974,
+          "path": "/sgtrust/media/achievements/1974/universityofmadras-discusthrow-1974.jpg"
+        },
+        {
+          "filename": "universityofmadras-football-1974.jpg",
+          "institution": "University of Madras",
+          "activity": "Football",
+          "year": 1974,
+          "path": "/sgtrust/media/achievements/1974/universityofmadras-football-1974.jpg"
+        },
+        {
+          "filename": "universityofmadras-tabletennisdoubles-1974.jpg",
+          "institution": "University of Madras",
+          "activity": "Table Tennis Doubles",
+          "year": 1974,
+          "path": "/sgtrust/media/achievements/1974/universityofmadras-tabletennisdoubles-1974.jpg"
+        },
+        {
+          "filename": "universityofmadras-tugofwar-1974.jpg",
+          "institution": "University of Madras",
+          "activity": "Tug of War",
+          "year": 1974,
+          "path": "/sgtrust/media/achievements/1974/universityofmadras-tugofwar-1974.jpg"
+        }
+      ]
+    },
+    "1975": {
+      "count": 4,
+      "certificates": [
+        {
+          "filename": "universityofmadras-bestinannualsports-1975.jpg",
+          "institution": "University of Madras",
+          "activity": "Best in Annual Sports",
+          "year": 1975,
+          "path": "/sgtrust/media/achievements/1975/universityofmadras-bestinannualsports-1975.jpg"
+        },
+        {
+          "filename": "universityofmadras-cricket-1975.jpg",
+          "institution": "University of Madras",
+          "activity": "Cricket",
+          "year": 1975,
+          "path": "/sgtrust/media/achievements/1975/universityofmadras-cricket-1975.jpg"
+        },
+        {
+          "filename": "universityofmadras-footballwinner-1975.jpg",
+          "institution": "University of Madras",
+          "activity": "Football (Winner)",
+          "year": 1975,
+          "path": "/sgtrust/media/achievements/1975/universityofmadras-footballwinner-1975.jpg"
+        },
+        {
+          "filename": "universityofmadras-volleyball-1975.jpg",
+          "institution": "University of Madras",
+          "activity": "Volleyball",
+          "year": 1975,
+          "path": "/sgtrust/media/achievements/1975/universityofmadras-volleyball-1975.jpg"
+        }
+      ]
+    },
+    "1978": {
+      "count": 3,
+      "certificates": [
+        {
+          "filename": "universityofmadras-carromdoubles-1978.jpg",
+          "institution": "University of Madras",
+          "activity": "Carrom Doubles",
+          "year": 1978,
+          "path": "/sgtrust/media/achievements/1978/universityofmadras-carromdoubles-1978.jpg"
+        },
+        {
+          "filename": "universityofmadras-cricketwinner-1978.jpg",
+          "institution": "University of Madras",
+          "activity": "Cricket (Winner)",
+          "year": 1978,
+          "path": "/sgtrust/media/achievements/1978/universityofmadras-cricketwinner-1978.jpg"
+        },
+        {
+          "filename": "universityofmadras-tugofwarrunnerup-1978.jpg",
+          "institution": "University of Madras",
+          "activity": "Tug of War (Runner-up)",
+          "year": 1978,
+          "path": "/sgtrust/media/achievements/1978/universityofmadras-tugofwarrunnerup-1978.jpg"
+        }
+      ]
+    },
+    "1980": {
+      "count": 1,
+      "certificates": [
+        {
+          "filename": "collegeoftechnologymadras-liquidextraction-1980.jpg",
+          "institution": "College of Technology, Madras",
+          "activity": "Liquid Extraction",
+          "year": 1980,
+          "path": "/sgtrust/media/achievements/1980/collegeoftechnologymadras-liquidextraction-1980.jpg"
+        }
+      ]
+    },
+    "1983": {
+      "count": 1,
+      "certificates": [
+        {
+          "filename": "universityofmadras-meritcertification-1983.jpg",
+          "institution": "University of Madras",
+          "activity": "Merit Certification",
+          "year": 1983,
+          "path": "/sgtrust/media/achievements/1983/universityofmadras-meritcertification-1983.jpg"
+        }
+      ]
+    },
+    "1985": {
+      "count": 1,
+      "certificates": [
+        {
+          "filename": "internationalconferenceonforensicsciences-certificate-1985.jpg",
+          "institution": "International Conference on Forensic Sciences",
+          "activity": "Certificate",
+          "year": 1985,
+          "path": "/sgtrust/media/achievements/1985/internationalconferenceonforensicsciences-certificate-1985.jpg"
+        }
+      ]
+    }
+  }
+}

@@ -27,7 +27,7 @@ describe('Translation Coverage Tests', () => {
 
     it('should have no empty Tamil content translations', () => {
       const emptyTranslations = Object.entries(taContent)
-        .filter(([key, value]) => !value || value.toString().trim() === '')
+        .filter(([, value]) => !value || value.toString().trim() === '')
         .map(([key]) => key);
       
       expect(emptyTranslations).toEqual([]);
@@ -48,7 +48,7 @@ describe('Translation Coverage Tests', () => {
       ];
       
       const placeholderTranslations = Object.entries(taContent)
-        .filter(([key, value]) => {
+        .filter(([, value]) => {
           const text = value.toString();
           return placeholderPatterns.some(pattern => pattern.test(text));
         })
@@ -78,7 +78,7 @@ describe('Translation Coverage Tests', () => {
 
     it('should have no empty Tamil navigation translations', () => {
       const emptyTranslations = Object.entries(taNavigation)
-        .filter(([key, value]) => !value || value.toString().trim() === '')
+        .filter(([, value]) => !value || value.toString().trim() === '')
         .map(([key]) => key);
       
       expect(emptyTranslations).toEqual([]);
@@ -122,7 +122,7 @@ describe('Translation Coverage Tests', () => {
       ];
       
       const englishInTamil = Object.entries(taContent)
-        .filter(([key, value]) => {
+        .filter(([, value]) => {
           const text = value.toString();
           return englishPatterns.some(pattern => pattern.test(text));
         })
@@ -137,7 +137,7 @@ describe('Translation Coverage Tests', () => {
 
     it('should have reasonable Tamil text length (not too short)', () => {
       const tooShortTranslations = Object.entries(taContent)
-        .filter(([key, value]) => {
+        .filter(([, value]) => {
           const text = value.toString().trim();
           // Tamil text should generally be at least 2 characters for meaningful content
           return text.length > 0 && text.length < 2;
@@ -156,10 +156,10 @@ describe('Translation Coverage Tests', () => {
 // Helper function to generate missing translation report
 export function generateTranslationReport() {
   const report = {
-    missingContentKeys: [],
-    missingNavigationKeys: [],
-    emptyTranslations: [],
-    suspiciousTranslations: []
+    missingContentKeys: [] as string[],
+    missingNavigationKeys: [] as string[],
+    emptyTranslations: [] as string[],
+    suspiciousTranslations: [] as { key: string; value: string }[]
   };
 
   // Check missing content keys
@@ -174,13 +174,13 @@ export function generateTranslationReport() {
 
   // Check empty translations
   report.emptyTranslations = Object.entries(taContent)
-    .filter(([key, value]) => !value || value.toString().trim() === '')
+    .filter(([, value]) => !value || value.toString().trim() === '')
     .map(([key]) => key);
 
   // Check suspicious translations (English words in Tamil)
   const englishPatterns = [/professor/i, /university/i, /student/i, /education/i];
   report.suspiciousTranslations = Object.entries(taContent)
-    .filter(([key, value]) => {
+    .filter(([, value]) => {
       const text = value.toString();
       return englishPatterns.some(pattern => pattern.test(text));
     })
@@ -337,7 +337,7 @@ describe('UI Element Translation Coverage', () => {
     };
 
     const emptyTranslations = Object.entries(buttonTranslations)
-      .filter(([key, value]) => !value || value.toString().trim() === '')
+      .filter(([, value]) => !value || value.toString().trim() === '')
       .map(([key]) => key);
 
     expect(emptyTranslations).toEqual([]);
