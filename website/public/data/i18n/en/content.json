@@ -45,5 +45,10 @@
   "achievements": "Achievements",
   "lifeTimeline": "Life Timeline",
   "memorialMessage": "🕊️ In Loving Memory of Professor S. Govindasamy (1945-2009)",
-  "memorialStatueDescription": "A commemorative statue was constructed in 2025 in his memory to celebrate his extraordinary contributions to academia and the success of his students worldwide. His legacy continues to inspire generations of scholars."
+  "memorialStatueDescription": "A commemorative statue was constructed in 2025 in his memory to celebrate his extraordinary contributions to academia and the success of his students worldwide. His legacy continues to inspire generations of scholars.",
+  "clickForMaps": "📱 Click to view on Google Maps",
+  "exploreHisLegacy": "Explore His Legacy",
+  "dateLabel": "Date",
+  "locationLabel": "Location",
+  "purposeLabel": "Purpose"
 }
