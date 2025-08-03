@@ -81,7 +81,8 @@ export const trackMemorialCeremonyInteraction = (action: string) => {
   const memorialActions: { [key: string]: string } = {
     'statue_image_hover': 'Memorial Statue Image Hover',
     'statue_image_click': 'Memorial Statue Image Click',
-    'ceremony_details_view': 'Ceremony Details Viewed'
+    'ceremony_details_view': 'Ceremony Details Viewed',
+    'location_map_click': 'Google Maps Location Clicked'
   };
 
   const friendlyAction = memorialActions[action] || action;
