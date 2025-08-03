@@ -49,6 +49,21 @@ jobs:
           cd website
           npm ci
 
+      - name: Run tests
+        run: |
+          cd website
+          npm test
+
+      - name: Run translation coverage tests
+        run: |
+          cd website
+          npm run test:translations
+
+      - name: Run linting
+        run: |
+          cd website
+          npm run lint
+
       - name: Build website
         run: |
           cd website
