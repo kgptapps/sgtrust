@@ -119,6 +119,35 @@ const HomePage: React.FC = () => {
           <Typography variant="h5" sx={{ mb: 3, opacity: 0.9 }}>
             Celebrating Professor S. Govindasamy's 80th Birthday
           </Typography>
+
+          {/* Memorial Statue Image with 3D Effect */}
+          <Box sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            mb: 4,
+            perspective: '1000px'
+          }}>
+            <Box
+              component="img"
+              src="/sgtrust/media/images/memorial/statue-sketch.jpg"
+              alt="Memorial Statue Design"
+              sx={{
+                maxWidth: '400px',
+                width: '100%',
+                height: 'auto',
+                borderRadius: 3,
+                boxShadow: '0 20px 40px rgba(93, 64, 55, 0.4), 0 15px 12px rgba(93, 64, 55, 0.3)',
+                transform: 'rotateX(5deg) rotateY(-5deg)',
+                transition: 'all 0.3s ease',
+                border: '3px solid rgba(93, 64, 55, 0.2)',
+                '&:hover': {
+                  transform: 'rotateX(0deg) rotateY(0deg) scale(1.05)',
+                  boxShadow: '0 25px 50px rgba(93, 64, 55, 0.5), 0 20px 20px rgba(93, 64, 55, 0.4)',
+                }
+              }}
+            />
+          </Box>
+
           <Typography variant="body1" sx={{ mb: 4, fontSize: '1.2rem', maxWidth: '800px', mx: 'auto' }}>
             Join us for the unveiling of the commemorative statue celebrating Professor S. Govindasamy's
             extraordinary life and his dedication to educating and uplifting people from all walks of life.
