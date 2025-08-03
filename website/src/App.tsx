@@ -1,9 +1,9 @@
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { ThemeProvider } from '@mui/material/styles';
 import { CssBaseline } from '@mui/material';
 import { useTranslation } from 'react-i18next';
-import academicTheme from './theme';
+import { ThemeProvider } from './contexts/ThemeContext';
+import GoogleAnalytics from './components/GoogleAnalytics';
 import './i18n';
 
 // Components
@@ -23,9 +23,10 @@ function App() {
   const currentLanguage = i18n.language;
 
   return (
-    <ThemeProvider theme={academicTheme}>
+    <ThemeProvider>
       <CssBaseline />
       <Router basename="/sgtrust">
+        <GoogleAnalytics />
         <div className={`min-h-screen flex flex-col ${currentLanguage === 'ta' ? 'lang-ta' : ''}`}>
           <Header />
           <main className="flex-grow">

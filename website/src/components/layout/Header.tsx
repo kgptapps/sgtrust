@@ -22,6 +22,7 @@ import {
 } from '@mui/icons-material';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import ThemeSelector from '../ThemeSelector';
 
 const Header: React.FC = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -80,6 +81,12 @@ const Header: React.FC = () => {
         ))}
       </List>
       <Box sx={{ p: 2 }}>
+        <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', mb: 2 }}>
+          <Typography variant="body2" color="text.secondary">
+            Theme
+          </Typography>
+          <ThemeSelector />
+        </Box>
         <FormControlLabel
           control={
             <Switch
@@ -150,22 +157,25 @@ const Header: React.FC = () => {
             </Box>
           )}
 
-          {/* Language Toggle */}
+          {/* Theme Selector & Language Toggle */}
           {!isMobile && (
-            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-              <LanguageIcon sx={{ color: 'text.secondary' }} />
-              <FormControlLabel
-                control={
-                  <Switch
-                    checked={i18n.language === 'ta'}
-                    onChange={handleLanguageToggle}
-                    color="primary"
-                    size="small"
-                  />
-                }
-                label={i18n.language === 'en' ? 'தமிழ்' : 'English'}
-                sx={{ m: 0 }}
-              />
+            <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+              <ThemeSelector />
+              <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                <LanguageIcon sx={{ color: 'text.secondary' }} />
+                <FormControlLabel
+                  control={
+                    <Switch
+                      checked={i18n.language === 'ta'}
+                      onChange={handleLanguageToggle}
+                      color="primary"
+                      size="small"
+                    />
+                  }
+                  label={i18n.language === 'en' ? 'தமிழ்' : 'English'}
+                  sx={{ m: 0 }}
+                />
+              </Box>
             </Box>
           )}
         </Toolbar>

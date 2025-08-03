@@ -5,7 +5,8 @@ import {
   Typography,
   Card,
   Button,
-  Avatar
+  Avatar,
+  useTheme
 } from '@mui/material';
 
 import { useTranslation } from 'react-i18next';
@@ -13,6 +14,7 @@ import { Link } from 'react-router-dom';
 
 const HomePage: React.FC = () => {
   const { t } = useTranslation(['content', 'navigation']);
+  const theme = useTheme();
 
 
 
@@ -21,10 +23,21 @@ const HomePage: React.FC = () => {
       {/* Hero Section */}
       <Box
         sx={{
-          background: 'linear-gradient(135deg, #D7CCC8 0%, #BCAAA4 50%, #A1887F 100%)',
-          color: '#3E2723',
+          background: `linear-gradient(135deg, ${theme.palette.background.paper} 0%, ${theme.palette.primary.light} 40%, ${theme.palette.primary.main}20 100%)`,
+          color: theme.palette.text.primary,
           py: 8,
-          mb: 6
+          mb: 6,
+          position: 'relative',
+          '&::before': {
+            content: '""',
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            background: `linear-gradient(45deg, ${theme.palette.primary.main}10, transparent 50%, ${theme.palette.secondary.main}05)`,
+            pointerEvents: 'none'
+          }
         }}
       >
         <Container maxWidth="lg">
@@ -44,9 +57,9 @@ const HomePage: React.FC = () => {
               <Box sx={{
                 mb: 4,
                 p: 3,
-                backgroundColor: 'rgba(93, 64, 55, 0.1)',
+                backgroundColor: `${theme.palette.primary.main}15`,
                 borderRadius: 2,
-                border: '1px solid rgba(93, 64, 55, 0.2)'
+                border: `1px solid ${theme.palette.primary.main}30`
               }}>
                 <Typography variant="body1" sx={{ fontSize: '1.1rem', fontWeight: 500, mb: 1 }}>
                   🕊️ In Loving Memory of Professor S. Govindasamy (1945-2009)
@@ -62,13 +75,13 @@ const HomePage: React.FC = () => {
                   variant="contained"
                   size="large"
                   sx={{
-                    backgroundColor: '#5D4037',
-                    color: 'white',
+                    backgroundColor: theme.palette.secondary.main,
+                    color: theme.palette.secondary.contrastText,
                     px: 4,
                     py: 1.5,
                     fontSize: '1.1rem',
                     '&:hover': {
-                      backgroundColor: '#3E2723'
+                      backgroundColor: theme.palette.secondary.dark
                     }
                   }}
                   onClick={() => {
@@ -107,11 +120,12 @@ const HomePage: React.FC = () => {
       {/* 80th Birthday Statue Opening Invitation */}
       <Container maxWidth="lg" sx={{ mb: 6 }}>
         <Card sx={{
-          background: 'linear-gradient(135deg, #D7CCC8 0%, #BCAAA4 100%)',
-          color: '#3E2723',
+          background: `linear-gradient(135deg, ${theme.palette.background.paper} 0%, ${theme.palette.primary.light} 100%)`,
+          color: theme.palette.text.primary,
           p: 6,
           textAlign: 'center',
-          boxShadow: '0 8px 32px rgba(93, 64, 55, 0.3)'
+          boxShadow: `0 20px 25px -5px ${theme.palette.primary.main}20, 0 10px 10px -5px ${theme.palette.primary.main}10`,
+          border: `1px solid ${theme.palette.primary.main}20`
         }}>
           <Typography variant="h3" component="h2" gutterBottom sx={{ fontWeight: 600 }}>
             🏛️ Memorial Statue Opening Ceremony
@@ -129,20 +143,20 @@ const HomePage: React.FC = () => {
           }}>
             <Box
               component="img"
-              src="/sgtrust/media/images/memorial/statue-sketch.jpg"
+              src="/sgtrust/media/images/memorial/memorialsketch.jpeg"
               alt="Memorial Statue Design"
               sx={{
                 maxWidth: '400px',
                 width: '100%',
                 height: 'auto',
                 borderRadius: 3,
-                boxShadow: '0 20px 40px rgba(93, 64, 55, 0.4), 0 15px 12px rgba(93, 64, 55, 0.3)',
+                boxShadow: `0 25px 50px -12px ${theme.palette.primary.main}40, 0 0 0 1px ${theme.palette.primary.main}10`,
                 transform: 'rotateX(5deg) rotateY(-5deg)',
-                transition: 'all 0.3s ease',
-                border: '3px solid rgba(93, 64, 55, 0.2)',
+                transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                border: `2px solid ${theme.palette.primary.main}20`,
                 '&:hover': {
                   transform: 'rotateX(0deg) rotateY(0deg) scale(1.05)',
-                  boxShadow: '0 25px 50px rgba(93, 64, 55, 0.5), 0 20px 20px rgba(93, 64, 55, 0.4)',
+                  boxShadow: `0 25px 50px -12px ${theme.palette.primary.main}60, 0 0 0 1px ${theme.palette.primary.main}20`,
                 }
               }}
             />
@@ -171,7 +185,7 @@ const HomePage: React.FC = () => {
       </Container>
 
       {/* Explore Journey Section */}
-      <Box id="explore-section" sx={{ backgroundColor: 'grey.50', py: 6 }}>
+      <Box id="explore-section" sx={{ backgroundColor: theme.palette.background.default, py: 6 }}>
         <Container maxWidth="lg">
           <Box sx={{ textAlign: 'center' }}>
             <Typography variant="h4" component="h2" gutterBottom>
