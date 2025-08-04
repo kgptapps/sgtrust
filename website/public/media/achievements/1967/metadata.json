@@ -1,0 +1,20 @@
+{
+  "year": 1967,
+  "count": 2,
+  "certificates": [
+    {
+      "filename": "universityofmadras-bachelor-science-1967.jpg",
+      "institution": "University of Madras",
+      "activity": "Bachelor of Science",
+      "year": 1967,
+      "path": "/sgtrust/media/achievements/1967/universityofmadras-bachelor-science-1967.jpg"
+    },
+    {
+      "filename": "rajahserfojicollege-certificateofmerit-1967.jpg",
+      "institution": "Rajah Serfoji College",
+      "activity": "Certificate of Merit",
+      "year": 1967,
+      "path": "/sgtrust/media/achievements/1967/rajahserfojicollege-certificateofmerit-1967.jpg"
+    }
+  ]
+}

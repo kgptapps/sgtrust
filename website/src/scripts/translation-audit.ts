@@ -3,6 +3,11 @@
 import fs from 'fs';
 import path from 'path';
 
+// Translation data interface
+interface TranslationData {
+  [key: string]: string | TranslationData;
+}
+
 // Translation file paths
 const TRANSLATION_DIR = path.join(process.cwd(), 'public/data/i18n');
 const EN_CONTENT = path.join(TRANSLATION_DIR, 'en/content.json');
@@ -13,7 +18,7 @@ const TA_NAVIGATION = path.join(TRANSLATION_DIR, 'ta/navigation.json');
 interface TranslationAuditReport {
   missingKeys: string[];
   emptyTranslations: string[];
-  suspiciousTranslations: Array<{key: string, value: string}>;
+  suspiciousTranslations: Array<{key: string, value: string | TranslationData}>;
   extraKeys: string[];
   totalKeys: number;
   translatedKeys: number;
@@ -22,7 +27,7 @@ interface TranslationAuditReport {
 
 class TranslationAuditor {
   
-  private loadJsonFile(filePath: string): Record<string, any> {
+  private loadJsonFile(filePath: string): TranslationData {
     try {
       const content = fs.readFileSync(filePath, 'utf-8');
       return JSON.parse(content);
@@ -32,7 +37,7 @@ class TranslationAuditor {
     }
   }
 
-  private saveJsonFile(filePath: string, data: Record<string, any>): void {
+  private saveJsonFile(filePath: string, data: TranslationData): void {
     try {
       const content = JSON.stringify(data, null, 2);
       fs.writeFileSync(filePath, content, 'utf-8');
@@ -117,7 +122,7 @@ class TranslationAuditor {
     const tamilData = this.loadJsonFile(tamilFile);
 
     // Create a new Tamil structure matching English keys
-    const fixedTamilData: Record<string, any> = {};
+    const fixedTamilData: TranslationData = {};
     
     Object.keys(englishData).forEach(key => {
       if (tamilData[key] && tamilData[key].toString().trim() !== '') {

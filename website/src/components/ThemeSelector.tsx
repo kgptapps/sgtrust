@@ -12,7 +12,7 @@ import {
   Palette as PaletteIcon,
   Check as CheckIcon
 } from '@mui/icons-material';
-import { useTheme } from '../contexts/ThemeContext';
+import { useTheme } from '../hooks/useTheme';
 import { trackThemeInteraction } from '../utils/analytics';
 
 const ThemeSelector: React.FC = () => {

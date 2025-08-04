@@ -20,6 +20,15 @@ import {
 } from '@mui/icons-material';
 import { useTranslation } from 'react-i18next';
 
+// Photo interface
+interface Photo {
+  id: number;
+  src: string;
+  title: string;
+  description: string;
+  year: string;
+}
+
 // Sample gallery data
 const galleryData = {
   personal: [
@@ -91,7 +100,7 @@ const galleryData = {
 const GalleryPage: React.FC = () => {
   const { t } = useTranslation(['content']);
   const [selectedTab, setSelectedTab] = useState(0);
-  const [selectedImage, setSelectedImage] = useState<any>(null);
+  const [selectedImage, setSelectedImage] = useState<Photo | null>(null);
   const [dialogOpen, setDialogOpen] = useState(false);
 
   const categories = [
@@ -118,7 +127,7 @@ const GalleryPage: React.FC = () => {
 
   const currentPhotos = getPhotosForCategory(categories[selectedTab].key);
 
-  const handleImageClick = (photo: any) => {
+  const handleImageClick = (photo: Photo) => {
     setSelectedImage(photo);
     setDialogOpen(true);
   };

@@ -17,8 +17,18 @@ import {
 } from '@mui/icons-material';
 import { useTranslation } from 'react-i18next';
 
+// Timeline event interface
+interface TimelineEvent {
+  year: string;
+  title: string;
+  description: string;
+  type: string;
+  icon: React.ReactElement;
+  color: 'primary' | 'success' | 'warning' | 'error';
+}
+
 // Timeline data
-const timelineEvents = [
+const timelineEvents: TimelineEvent[] = [
   {
     year: "1960",
     title: "Early Life",
@@ -190,7 +200,7 @@ const TimelinePage: React.FC = () => {
                   <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
                     <Chip
                       label={event.year}
-                      color={event.color as any}
+                      color={event.color}
                       size="small"
                       sx={{ mr: 2, fontWeight: 'bold' }}
                     />

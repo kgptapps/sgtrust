@@ -1,10 +1,10 @@
 {
   "title": "Professor Govindasamy's Achievements",
-  "description": "A chronological collection of certificates and achievements spanning from 1961 to 1985",
-  "total_certificates": 27,
+  "description": "A chronological collection of certificates and achievements spanning from 1961 to 1989",
+  "total_certificates": 39,
   "year_range": {
     "start": 1961,
-    "end": 1985
+    "end": 1989
   },
   "categories": {
     "sports": [
@@ -29,13 +29,22 @@
     "academic": [
       "Acting",
       "Conducting",
-      "Merit Certification"
+      "Merit Certification",
+      "Bachelor of Science",
+      "Master of Science",
+      "PhD in Biochemistry",
+      "Merit Certificate",
+      "Provisional Certificate",
+      "Certificate of Merit",
+      "Conduct Letter"
     ],
     "professional": [
       "Social Service League",
       "Badminton",
       "Liquid Extraction",
-      "Certificate"
+      "Certificate",
+      "Recommendation Letter",
+      "Appointment Letter"
     ]
   },
   "years": {
@@ -52,7 +61,7 @@
       ]
     },
     "1962": {
-      "count": 1,
+      "count": 3,
       "certificates": [
         {
           "filename": "rajahserfoji-socialserviceleague-1962to1964.jpg",
@@ -60,6 +69,20 @@
           "activity": "Social Service League",
           "year": 1962,
           "path": "/sgtrust/media/achievements/1962/rajahserfoji-socialserviceleague-1962to1964.jpg"
+        },
+        {
+          "filename": "governmentofindia(ministryofeducation)-meritcertificate-1962.jpg",
+          "institution": "Government of India (Ministry of Education)",
+          "activity": "Merit Certificate",
+          "year": 1962,
+          "path": "/sgtrust/media/achievements/1962/governmentofindia(ministryofeducation)-meritcertificate-1962.jpg"
+        },
+        {
+          "filename": "universityofmadras-provisionalcertificate-1962.jpg",
+          "institution": "University of Madras",
+          "activity": "Provisional Certificate",
+          "year": 1962,
+          "path": "/sgtrust/media/achievements/1962/universityofmadras-provisionalcertificate-1962.jpg"
         }
       ]
     },
@@ -113,6 +136,37 @@
         }
       ]
     },
+    "1967": {
+      "count": 2,
+      "certificates": [
+        {
+          "filename": "universityofmadras-bachelor-science-1967.jpg",
+          "institution": "University of Madras",
+          "activity": "Bachelor of Science",
+          "year": 1967,
+          "path": "/sgtrust/media/achievements/1967/universityofmadras-bachelor-science-1967.jpg"
+        },
+        {
+          "filename": "rajahserfojicollege-certificateofmerit-1967.jpg",
+          "institution": "Rajah Serfoji College",
+          "activity": "Certificate of Merit",
+          "year": 1967,
+          "path": "/sgtrust/media/achievements/1967/rajahserfojicollege-certificateofmerit-1967.jpg"
+        }
+      ]
+    },
+    "1972": {
+      "count": 1,
+      "certificates": [
+        {
+          "filename": "universityofmadras-conductletter-1972.jpg",
+          "institution": "University of Madras",
+          "activity": "Conduct Letter",
+          "year": 1972,
+          "path": "/sgtrust/media/achievements/1972/universityofmadras-conductletter-1972.jpg"
+        }
+      ]
+    },
     "1973": {
       "count": 4,
       "certificates": [
@@ -147,7 +201,7 @@
       ]
     },
     "1974": {
-      "count": 6,
+      "count": 9,
       "certificates": [
         {
           "filename": "universityofmadras-badmitton-1974.jpg",
@@ -190,11 +244,32 @@
           "activity": "Tug of War",
           "year": 1974,
           "path": "/sgtrust/media/achievements/1974/universityofmadras-tugofwar-1974.jpg"
+        },
+        {
+          "filename": "universityofmadras-masters-science-1974.jpg",
+          "institution": "University of Madras",
+          "activity": "Master of Science",
+          "year": 1974,
+          "path": "/sgtrust/media/achievements/1974/universityofmadras-masters-science-1974.jpg"
+        },
+        {
+          "filename": "universityofmadras-conductletter-1974.jpg",
+          "institution": "University of Madras",
+          "activity": "Conduct Letter",
+          "year": 1974,
+          "path": "/sgtrust/media/achievements/1974/universityofmadras-conductletter-1974.jpg"
+        },
+        {
+          "filename": "universityofmadras-provisionalcertificate-1974.jpg",
+          "institution": "University of Madras",
+          "activity": "Provisional Certificate",
+          "year": 1974,
+          "path": "/sgtrust/media/achievements/1974/universityofmadras-provisionalcertificate-1974.jpg"
         }
       ]
     },
     "1975": {
-      "count": 4,
+      "count": 5,
       "certificates": [
         {
           "filename": "universityofmadras-bestinannualsports-1975.jpg",
@@ -223,6 +298,13 @@
           "activity": "Volleyball",
           "year": 1975,
           "path": "/sgtrust/media/achievements/1975/universityofmadras-volleyball-1975.jpg"
+        },
+        {
+          "filename": "patnamedicalcollege-recommendationletter-1975.jpg",
+          "institution": "Patna Medical College",
+          "activity": "Recommendation Letter",
+          "year": 1975,
+          "path": "/sgtrust/media/achievements/1975/patnamedicalcollege-recommendationletter-1975.jpg"
         }
       ]
     },
@@ -249,6 +331,18 @@
           "activity": "Tug of War (Runner-up)",
           "year": 1978,
           "path": "/sgtrust/media/achievements/1978/universityofmadras-tugofwarrunnerup-1978.jpg"
+        }
+      ]
+    },
+    "1979": {
+      "count": 1,
+      "certificates": [
+        {
+          "filename": "universityofmadras-phd-biochemistry-1979.jpg",
+          "institution": "University of Madras",
+          "activity": "PhD in Biochemistry",
+          "year": 1979,
+          "path": "/sgtrust/media/achievements/1979/universityofmadras-phd-biochemistry-1979.jpg"
         }
       ]
     },
@@ -285,6 +379,30 @@
           "activity": "Certificate",
           "year": 1985,
           "path": "/sgtrust/media/achievements/1985/internationalconferenceonforensicsciences-certificate-1985.jpg"
+        }
+      ]
+    },
+    "1987": {
+      "count": 1,
+      "certificates": [
+        {
+          "filename": "universityofmadras-recommendationletter-1987.jpg",
+          "institution": "University of Madras",
+          "activity": "Recommendation Letter",
+          "year": 1987,
+          "path": "/sgtrust/media/achievements/1987/universityofmadras-recommendationletter-1987.jpg"
+        }
+      ]
+    },
+    "1989": {
+      "count": 1,
+      "certificates": [
+        {
+          "filename": "universityofmadras-appointementletter-1989.jpg",
+          "institution": "University of Madras",
+          "activity": "Appointment Letter",
+          "year": 1989,
+          "path": "/sgtrust/media/achievements/1989/universityofmadras-appointementletter-1989.jpg"
         }
       ]
     }

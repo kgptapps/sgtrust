@@ -42,7 +42,28 @@
       "activity": "Tug of War",
       "year": 1974,
       "path": "/sgtrust/media/achievements/1974/universityofmadras-tugofwar-1974.jpg"
+    },
+    {
+      "filename": "universityofmadras-masters-science-1974.jpg",
+      "institution": "University of Madras",
+      "activity": "Master of Science",
+      "year": 1974,
+      "path": "/sgtrust/media/achievements/1974/universityofmadras-masters-science-1974.jpg"
+    },
+    {
+      "filename": "universityofmadras-conductletter-1974.jpg",
+      "institution": "University of Madras",
+      "activity": "Conduct Letter",
+      "year": 1974,
+      "path": "/sgtrust/media/achievements/1974/universityofmadras-conductletter-1974.jpg"
+    },
+    {
+      "filename": "universityofmadras-provisionalcertificate-1974.jpg",
+      "institution": "University of Madras",
+      "activity": "Provisional Certificate",
+      "year": 1974,
+      "path": "/sgtrust/media/achievements/1974/universityofmadras-provisionalcertificate-1974.jpg"
     }
   ],
-  "count": 6
+  "count": 9
 }

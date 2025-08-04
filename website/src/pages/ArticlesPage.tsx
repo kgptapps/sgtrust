@@ -24,6 +24,16 @@ import {
   School as SchoolIcon
 } from '@mui/icons-material';
 
+// Article interface
+interface Article {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  date: string;
+  category: string;
+  content: string;
+}
 
 // Sample articles data - will be replaced with actual data
 const articlesData = {
@@ -83,7 +93,7 @@ const articlesData = {
 const ArticlesPage: React.FC = () => {
   const theme = useTheme();
   const [selectedTab, setSelectedTab] = useState(0);
-  const [selectedArticle, setSelectedArticle] = useState<any>(null);
+  const [selectedArticle, setSelectedArticle] = useState<Article | null>(null);
   const [dialogOpen, setDialogOpen] = useState(false);
 
   const categories = [
@@ -106,7 +116,7 @@ const ArticlesPage: React.FC = () => {
     return articlesData[category as keyof typeof articlesData] || [];
   };
 
-  const handleArticleClick = (article: any) => {
+  const handleArticleClick = (article: Article) => {
     setSelectedArticle(article);
     setDialogOpen(true);
   };

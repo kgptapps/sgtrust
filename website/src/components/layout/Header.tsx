@@ -48,6 +48,7 @@ const Header: React.FC = () => {
     { key: 'students', path: '/students', label: t('navigation:students') },
     { key: 'gallery', path: '/gallery', label: t('navigation:gallery') },
     { key: 'achievements', path: '/achievements', label: t('navigation:achievements') },
+    { key: 'publications', path: '/publications', label: t('navigation:publications') },
     { key: 'articles', path: '/articles', label: t('navigation:articles') },
     { key: 'accountability', path: '/accountability', label: t('navigation:accountability') },
     { key: 'contact', path: '/contact', label: t('navigation:contact') }

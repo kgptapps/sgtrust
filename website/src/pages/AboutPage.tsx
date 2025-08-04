@@ -18,45 +18,58 @@ const AboutPage: React.FC = () => {
         {t('content:aboutTitle')}
       </Typography>
       
-      <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1fr 2fr' }, gap: 6, mt: 2 }}>
-        <Box sx={{ textAlign: 'center' }}>
-          <Avatar
-            sx={{
-              width: 250,
-              height: 250,
-              mx: 'auto',
-              mb: 3
-            }}
-            src="/sgtrust/media/images/professor/profile/main-headshot.jpg"
-            alt="Professor S. Govindasamy"
-          />
-        </Box>
-
-        <Box>
-          <Card>
-            <CardContent sx={{ p: 4 }}>
-              <Typography variant="h4" gutterBottom color="primary">
-                Professor S. Govindasamy
-              </Typography>
-              <Typography variant="h6" gutterBottom color="text.secondary">
-                {t('content:professorTitle')}
-              </Typography>
-              
-              <Typography variant="body1" paragraph sx={{ mt: 3 }}>
-                {t('content:aboutDescription1')}
-              </Typography>
-              
-              <Typography variant="body1" paragraph>
-                {t('content:aboutDescription2')}
-              </Typography>
-              
-              <Typography variant="body1" paragraph>
-                {t('content:aboutDescription3')}
-              </Typography>
-            </CardContent>
-          </Card>
-        </Box>
+      {/* Professor Photo Section */}
+      <Box sx={{ textAlign: 'center', mb: 6 }}>
+        <Avatar
+          sx={{
+            width: 300,
+            height: 300,
+            mx: 'auto',
+            mb: 3,
+            boxShadow: 4
+          }}
+          src="/sgtrust/media/images/professor-about-photo.png"
+          alt="Professor S. Govindasamy"
+        />
+        <Typography variant="h3" gutterBottom color="primary" sx={{ fontWeight: 'bold' }}>
+          Professor S. Govindasamy
+        </Typography>
+        <Typography variant="h5" gutterBottom color="text.secondary" sx={{ fontStyle: 'italic' }}>
+          {t('content:professorTitle')}
+        </Typography>
       </Box>
+
+      {/* Biography Section */}
+      <Card sx={{ mb: 4 }}>
+        <CardContent sx={{ p: 5 }}>
+          <Typography variant="body1" paragraph sx={{
+            fontSize: '1.1rem',
+            lineHeight: 1.8,
+            textAlign: 'justify',
+            whiteSpace: 'pre-line'
+          }}>
+            {t('content:aboutDescription1')}
+          </Typography>
+
+          <Typography variant="body1" paragraph sx={{
+            fontSize: '1.1rem',
+            lineHeight: 1.8,
+            textAlign: 'justify',
+            whiteSpace: 'pre-line'
+          }}>
+            {t('content:aboutDescription2')}
+          </Typography>
+
+          <Typography variant="body1" paragraph sx={{
+            fontSize: '1.1rem',
+            lineHeight: 1.8,
+            textAlign: 'justify',
+            whiteSpace: 'pre-line'
+          }}>
+            {t('content:aboutDescription3')}
+          </Typography>
+        </CardContent>
+      </Card>
     </Container>
   );
 };

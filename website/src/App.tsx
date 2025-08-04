@@ -15,6 +15,7 @@ import TimelinePage from './pages/TimelinePage';
 import StudentsPage from './pages/StudentsPage';
 import GalleryPage from './pages/GalleryPage';
 import AchievementsPage from './pages/AchievementsPage';
+import PublicationsPage from './pages/PublicationsPage';
 import ArticlesPage from './pages/ArticlesPage';
 import AccountabilityPage from './pages/AccountabilityPage';
 import ContactPage from './pages/ContactPage';
@@ -38,6 +39,7 @@ function App() {
               <Route path="/students" element={<StudentsPage />} />
               <Route path="/gallery" element={<GalleryPage />} />
               <Route path="/achievements" element={<AchievementsPage />} />
+              <Route path="/publications" element={<PublicationsPage />} />
               <Route path="/articles" element={<ArticlesPage />} />
               <Route path="/accountability" element={<AccountabilityPage />} />
               <Route path="/contact" element={<ContactPage />} />

@@ -1,9 +1,24 @@
 // Google Analytics utility functions
 
+// Google Analytics types
+type GtagCommand = 'config' | 'event' | 'js' | 'set';
+type GtagConfigParams = {
+  page_title?: string;
+  page_location?: string;
+  page_path?: string;
+  custom_map?: Record<string, string>;
+};
+type GtagEventParams = {
+  event_category?: string;
+  event_label?: string;
+  value?: number;
+  custom_parameter?: string;
+};
+
 declare global {
   interface Window {
-    gtag: (...args: any[]) => void;
-    dataLayer: any[];
+    gtag: (command: GtagCommand, targetId: string | Date, params?: GtagConfigParams | GtagEventParams) => void;
+    dataLayer: unknown[];
   }
 }
 

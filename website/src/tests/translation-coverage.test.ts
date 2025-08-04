@@ -231,7 +231,7 @@ describe('UI Element Translation Coverage', () => {
             });
           }
         });
-      } catch (error) {
+      } catch {
         // Skip files that can't be read
       }
     };
@@ -248,7 +248,7 @@ describe('UI Element Translation Coverage', () => {
             scanFile(fullPath);
           }
         });
-      } catch (error) {
+      } catch {
         // Skip directories that can't be read
       }
     };
