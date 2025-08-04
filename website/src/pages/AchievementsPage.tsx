@@ -82,59 +82,64 @@ interface AchievementsMetadata {
 const achievementsData = {
   academic: [
     {
-      id: 'phd-1985',
-      title: 'Doctor of Philosophy in Engineering',
-      description: 'Completed PhD with distinction in Mechanical Engineering',
-      institution: 'Indian Institute of Technology',
-      year: 1985,
+      id: 'bachelor-chemistry-1968',
+      title: 'Bachelor of Science in Chemistry',
+      description: 'Completed undergraduate studies with a major in Chemistry, establishing the foundation for a distinguished career in biochemical research',
+      institution: 'Rajah Serfoji College, Thanjavur',
+      year: 1968,
       category: 'academic' as const,
-      type: 'Degree',
+      type: 'Undergraduate Degree',
       details: [
-        'Thesis: Advanced Materials in Manufacturing',
-        'Graduated with First Class with Distinction',
-        'Research published in international journals'
+        'Major: Chemistry',
+        'Institution: Rajah Serfoji College, Thanjavur',
+        'Laid the groundwork for advanced studies in biochemistry',
+        'Developed fundamental understanding of chemical principles'
       ]
     },
     {
-      id: 'mtech-1982',
-      title: 'Master of Technology',
-      description: 'M.Tech in Mechanical Engineering with specialization in Design',
-      institution: 'Regional Engineering College',
-      year: 1982,
+      id: 'dppa-public-administration-1972',
+      title: 'Diploma in Public Administration (DPPA)',
+      description: 'Earned specialized qualification in Public Administration, demonstrating commitment to understanding governance and administrative excellence',
+      institution: 'Department of Politics, University of Madras',
+      year: 1972,
       category: 'academic' as const,
-      type: 'Degree',
+      type: 'Diploma',
       details: [
-        'Specialization in Machine Design',
-        'Project on Industrial Automation',
-        'Secured University Rank'
+        'Major: Public Administration',
+        'Department: Politics, University of Madras',
+        'Enhanced understanding of administrative systems',
+        'Complemented scientific education with governance knowledge'
       ]
     },
     {
-      id: 'research-excellence-2010',
-      title: 'Research Excellence Award',
-      description: 'Recognition for outstanding contribution to engineering research',
-      institution: 'Indian Academy of Sciences',
-      year: 2010,
+      id: 'masters-biochemistry-1974',
+      title: 'Master of Science in Biochemistry',
+      description: 'Advanced graduate studies in Biochemistry, deepening expertise in molecular and cellular processes that would define his research career',
+      institution: 'Department of Biochemistry, University of Madras',
+      year: 1974,
       category: 'academic' as const,
-      type: 'Award',
+      type: 'Master\'s Degree',
       details: [
-        'For 25+ years of research contribution',
-        'Published 50+ research papers',
-        'Guided 20+ PhD students'
+        'Major: Biochemistry',
+        'Department: Biochemistry, University of Madras',
+        'Advanced study of molecular and cellular processes',
+        'Preparation for doctoral research in biochemistry'
       ]
     },
     {
-      id: 'btech-1980',
-      title: 'Bachelor of Technology',
-      description: 'B.Tech in Mechanical Engineering with First Class',
-      institution: 'Government Engineering College',
-      year: 1980,
+      id: 'doctorate-biochemistry-1979',
+      title: 'Doctor of Philosophy in Biochemistry',
+      description: 'Culmination of academic journey with doctoral research in Biochemistry, marking the beginning of his distinguished career as a research scientist and educator',
+      institution: 'Department of Biochemistry, University of Madras',
+      year: 1979,
       category: 'academic' as const,
-      type: 'Degree',
+      type: 'Doctoral Degree',
       details: [
-        'First Class with Distinction',
-        'Department Topper',
-        'Gold Medal for Academic Excellence'
+        'Major: Biochemistry',
+        'Department: Biochemistry, University of Madras',
+        'Original research contributing to scientific knowledge',
+        'Foundation for career as research scientist and educator',
+        'First doctorate holder in his village community'
       ]
     }
   ],
@@ -529,6 +534,23 @@ const AchievementsPage: React.FC = () => {
             </Box>
           ))}
         </Box>
+      ) : getFilteredAchievements().length === 0 ? (
+        /* Empty State */
+        <Box sx={{
+          textAlign: 'center',
+          py: 8,
+          px: 4
+        }}>
+          <Typography variant="h5" color="text.secondary" gutterBottom>
+            No Content Available
+          </Typography>
+          <Typography variant="body1" color="text.secondary">
+            {selectedCategory === 'academic'
+              ? 'Academic achievements content is currently being prepared.'
+              : 'No achievements found for the selected category.'
+            }
+          </Typography>
+        </Box>
       ) : (
         /* Regular Achievements Grid */
         <Box sx={{
@@ -724,8 +746,8 @@ const AchievementsPage: React.FC = () => {
         )}
       </Dialog>
 
-      {/* Legacy Certificates Section */}
-      {legacyAchievementsData && (
+      {/* Legacy Certificates Section - Only show for Academic Achievements */}
+      {legacyAchievementsData && selectedCategory === 'academic' && (
         <>
           <Divider sx={{ my: 6 }} />
           <Box sx={{ mt: 6 }}>
