@@ -16,7 +16,7 @@ import {
   Badge,
   Tabs,
   Tab,
-  Grid,
+
   List,
   ListItem,
   ListItemText,
@@ -36,7 +36,7 @@ import {
   MenuBook as AcademicIcon,
   Star as StarIcon
 } from '@mui/icons-material';
-import { publications, type Publication } from '../data/publications';
+import { publications } from '../data/publications';
 
 interface Achievement {
   id: string;
@@ -531,9 +531,13 @@ const AchievementsPage: React.FC = () => {
         </Box>
       ) : (
         /* Regular Achievements Grid */
-        <Grid container spacing={4}>
+        <Box sx={{
+          display: 'grid',
+          gridTemplateColumns: { xs: '1fr', md: 'repeat(2, 1fr)', lg: 'repeat(3, 1fr)' },
+          gap: 4
+        }}>
           {getFilteredAchievements().map((achievement) => (
-            <Grid item xs={12} md={6} lg={4} key={achievement.id}>
+            <Box key={achievement.id}>
               <Card
                 sx={{
                   height: '100%',
@@ -609,9 +613,9 @@ const AchievementsPage: React.FC = () => {
                   </Box>
                 </CardContent>
               </Card>
-            </Grid>
+            </Box>
           ))}
-        </Grid>
+        </Box>
       )}
 
       {/* Achievement Detail Dialog */}
