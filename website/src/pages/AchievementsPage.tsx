@@ -21,15 +21,7 @@ import {
   ListItemText,
   Divider,
   Link,
-  Paper,
-  TextField,
-  InputAdornment,
-  FormControl,
-  InputLabel,
-  Select,
-  MenuItem,
-  CardMedia,
-  Grid
+  CardMedia
 } from '@mui/material';
 import {
   EmojiEvents as AwardIcon,
@@ -43,12 +35,11 @@ import {
   Star as StarIcon,
   Article as ArticleIcon,
   Science as ScienceIcon,
-  Newspaper as NewspaperIcon,
-  Search as SearchIcon
+  Newspaper as NewspaperIcon
 } from '@mui/icons-material';
 
 // Import data from other pages
-import { publications, type Publication } from '../data/publications';
+import { publications } from '../data/publications';
 
 
 interface Achievement {
