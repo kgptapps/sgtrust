@@ -1,261 +1,145 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   Box,
   Container,
   Typography,
   Card,
   CardContent,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-  Paper,
-  Chip,
-  Tabs,
-  Tab,
-  LinearProgress
+  Paper
 } from '@mui/material';
 import {
-  AccountBalance as FundIcon,
-  TrendingUp as GrowthIcon,
   School as EducationIcon,
-  Verified as VerifiedIcon
+  Favorite as HeartIcon,
+  AccountBalance as FundIcon
 } from '@mui/icons-material';
-import { useTranslation } from 'react-i18next';
 
 const AccountabilityPage: React.FC = () => {
-  const { t } = useTranslation(['content']);
-  const [selectedTab, setSelectedTab] = useState(0);
-
-  const financialSummary = [
-    {
-      icon: <FundIcon sx={{ fontSize: 40, color: 'primary.main' }} />,
-      title: 'Total Funding Received',
-      amount: '$2,500,000',
-      description: 'Research grants and educational funding',
-      color: 'primary'
-    },
-    {
-      icon: <EducationIcon sx={{ fontSize: 40, color: 'success.main' }} />,
-      title: 'Student Support',
-      amount: '$1,800,000',
-      description: 'Scholarships and research assistantships',
-      color: 'success'
-    },
-    {
-      icon: <GrowthIcon sx={{ fontSize: 40, color: 'warning.main' }} />,
-      title: 'Research Equipment',
-      amount: '$500,000',
-      description: 'Laboratory and computational resources',
-      color: 'warning'
-    },
-    {
-      icon: <VerifiedIcon sx={{ fontSize: 40, color: 'error.main' }} />,
-      title: 'Administrative Costs',
-      amount: '$200,000',
-      description: 'Operational and administrative expenses',
-      color: 'error'
-    }
-  ];
-
-  const fundingHistory = [
-    { year: '2023', source: 'National Science Foundation', amount: '$250,000', purpose: 'Advanced Materials Research', status: 'Active' },
-    { year: '2022', source: 'Department of Energy', amount: '$300,000', purpose: 'Sustainable Energy Systems', status: 'Completed' },
-    { year: '2021', source: 'Industry Partnership', amount: '$150,000', purpose: 'Technology Transfer', status: 'Completed' },
-    { year: '2020', source: 'University Research Grant', amount: '$100,000', purpose: 'Student Research Support', status: 'Completed' },
-    { year: '2019', source: 'International Collaboration', amount: '$200,000', purpose: 'Global Research Initiative', status: 'Completed' }
-  ];
-
-  const expenditures = [
-    { category: 'Student Stipends', amount: '$1,200,000', percentage: 48 },
-    { category: 'Research Equipment', amount: '$500,000', percentage: 20 },
-    { category: 'Conference & Travel', amount: '$300,000', percentage: 12 },
-    { category: 'Publications & Dissemination', amount: '$250,000', percentage: 10 },
-    { category: 'Administrative Costs', amount: '$200,000', percentage: 8 },
-    { category: 'Other Expenses', amount: '$50,000', percentage: 2 }
-  ];
-
-  const tabs = [
-    { label: 'Financial Overview', icon: <FundIcon /> },
-    { label: 'Funding History', icon: <GrowthIcon /> },
-    { label: 'Expenditure Breakdown', icon: <EducationIcon /> }
-  ];
 
   return (
     <Container maxWidth="lg" sx={{ py: 6 }}>
-      <Typography variant="h3" component="h1" gutterBottom textAlign="center">
-        {t('content:accountabilityTitle')}
-      </Typography>
-      <Typography variant="body1" textAlign="center" color="text.secondary" sx={{ mb: 6 }}>
-        {t('content:accountabilityDescription')}
-      </Typography>
-
-      {/* Financial Summary Cards */}
-      <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', lg: 'repeat(4, 1fr)' }, gap: 3, mb: 6 }}>
-        {financialSummary.map((item, index) => (
-          <Card key={index} sx={{ height: '100%', transition: 'transform 0.3s ease', '&:hover': { transform: 'translateY(-4px)' } }}>
-            <CardContent sx={{ textAlign: 'center', p: 3 }}>
-              <Box sx={{ mb: 2 }}>
-                {item.icon}
-              </Box>
-              <Typography variant="h5" component="div" sx={{ mb: 1, fontWeight: 'bold', color: `${item.color}.main` }}>
-                {item.amount}
-              </Typography>
-              <Typography variant="h6" component="div" sx={{ mb: 1 }}>
-                {item.title}
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                {item.description}
-              </Typography>
-            </CardContent>
-          </Card>
-        ))}
+      {/* Header */}
+      <Box textAlign="center" mb={6}>
+        <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', mb: 2 }}>
+          <FundIcon sx={{ fontSize: 40, mr: 2, color: 'primary.main' }} />
+          <Typography variant="h3" component="h1" gutterBottom>
+            Professor S. Govindasamy Educational Endowment Fund
+          </Typography>
+        </Box>
+        <Typography variant="h6" color="text.secondary" sx={{ mb: 4 }}>
+          Honoring his legacy through educational support for future generations
+        </Typography>
       </Box>
 
-      {/* Tabs */}
-      <Box sx={{ mb: 4 }}>
-        <Tabs
-          value={selectedTab}
-          onChange={(_, newValue) => setSelectedTab(newValue)}
-          variant="scrollable"
-          scrollButtons="auto"
-        >
-          {tabs.map((tab, index) => (
-            <Tab
-              key={index}
-              label={
-                <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                  {tab.icon}
-                  {tab.label}
-                </Box>
-              }
-            />
-          ))}
-        </Tabs>
-      </Box>
-
-      {/* Tab Content */}
-      {selectedTab === 0 && (
-        <Card>
-          <CardContent sx={{ p: 4 }}>
-            <Typography variant="h5" gutterBottom>
-              Financial Transparency Overview
+      {/* Memorial Message */}
+      <Card sx={{ mb: 6, backgroundColor: 'grey.50' }}>
+        <CardContent sx={{ p: 4 }}>
+          <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', mb: 3 }}>
+            <HeartIcon sx={{ fontSize: 32, color: 'error.main', mr: 2 }} />
+            <Typography variant="h5" component="h2" color="primary.main">
+              In Loving Memory
             </Typography>
-            <Typography variant="body1" color="text.secondary" sx={{ mb: 4 }}>
-              Professor S. Govindasamy maintains complete transparency in all financial matters related to research funding,
-              student support, and academic activities. All funds are managed according to university policies and federal regulations.
+          </Box>
+
+          <Typography variant="body1" sx={{ mb: 3, lineHeight: 1.8 }}>
+            The sudden and unexpected loss of our beloved Professor, mentor, friend, and guiding light to cardiac arrest in Chennai
+            remains difficult to comprehend. Though Professor S. Govindasamy has departed from this physical world, his profound
+            love, wisdom, and dedication continue to live within each of us. We find comfort knowing that his spirit watches over
+            our endeavors and well-being from above.
+          </Typography>
+
+          <Typography variant="body1" sx={{ mb: 3, lineHeight: 1.8 }}>
+            In tribute to his extraordinary life and unwavering commitment to education, we have embarked on establishing the
+            Professor S. Govindasamy Educational Endowment Fund. This initiative serves as a lasting testament to his belief
+            in the transformative power of education and his lifelong dedication to nurturing young minds.
+          </Typography>
+        </CardContent>
+      </Card>
+
+      {/* Fund Mission */}
+      <Card sx={{ mb: 6 }}>
+        <CardContent sx={{ p: 4 }}>
+          <Box sx={{ display: 'flex', alignItems: 'center', mb: 3 }}>
+            <EducationIcon sx={{ fontSize: 32, color: 'primary.main', mr: 2 }} />
+            <Typography variant="h5" component="h2" color="primary.main">
+              Educational Mission & Vision
             </Typography>
+          </Box>
 
-            <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: 'repeat(2, 1fr)' }, gap: 4 }}>
-              <Box>
-                <Typography variant="h6" gutterBottom>
-                  Funding Sources
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  • Federal research grants (60%)<br/>
-                  • Industry partnerships (25%)<br/>
-                  • University funding (10%)<br/>
-                  • International collaborations (5%)
-                </Typography>
-              </Box>
-              <Box>
-                <Typography variant="h6" gutterBottom>
-                  Impact Metrics
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  • 50+ PhD students supported<br/>
-                  • 100+ research publications funded<br/>
-                  • 25+ patents and innovations<br/>
-                  • 15+ industry collaborations
-                </Typography>
-              </Box>
-            </Box>
-          </CardContent>
-        </Card>
-      )}
+          <Typography variant="body1" sx={{ mb: 3, lineHeight: 1.8 }}>
+            The Professor S. Govindasamy Educational Endowment Fund is designed to provide meaningful support to deserving
+            students pursuing Master's degrees and research opportunities. Our primary focus centers on assisting students
+            from rural communities and economically disadvantaged backgrounds, ensuring that financial constraints do not
+            hinder their academic aspirations.
+          </Typography>
 
-      {selectedTab === 1 && (
-        <Card>
-          <CardContent>
-            <Typography variant="h5" gutterBottom>
-              Funding History
-            </Typography>
-            <TableContainer component={Paper} elevation={0}>
-              <Table>
-                <TableHead>
-                  <TableRow>
-                    <TableCell><strong>Year</strong></TableCell>
-                    <TableCell><strong>Funding Source</strong></TableCell>
-                    <TableCell><strong>Amount</strong></TableCell>
-                    <TableCell><strong>Purpose</strong></TableCell>
-                    <TableCell><strong>Status</strong></TableCell>
-                  </TableRow>
-                </TableHead>
-                <TableBody>
-                  {fundingHistory.map((grant, index) => (
-                    <TableRow key={index}>
-                      <TableCell>{grant.year}</TableCell>
-                      <TableCell>{grant.source}</TableCell>
-                      <TableCell sx={{ fontWeight: 'bold', color: 'primary.main' }}>{grant.amount}</TableCell>
-                      <TableCell>{grant.purpose}</TableCell>
-                      <TableCell>
-                        <Chip
-                          label={grant.status}
-                          color={grant.status === 'Active' ? 'success' : 'default'}
-                          size="small"
-                        />
-                      </TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            </TableContainer>
-          </CardContent>
-        </Card>
-      )}
+          <Typography variant="body1" sx={{ mb: 3, lineHeight: 1.8 }}>
+            Beyond student support, our vision encompasses providing research funding to emerging young scientists who
+            demonstrate exceptional promise but face financial barriers. Additionally, we remain open to developing innovative
+            educational initiatives and programs within the Department of Biochemistry at the University of Chennai, guided
+            by contributions and suggestions from Professor Govindasamy's students and colleagues.
+          </Typography>
+        </CardContent>
+      </Card>
 
-      {selectedTab === 2 && (
-        <Card>
-          <CardContent>
-            <Typography variant="h5" gutterBottom>
-              Expenditure Breakdown
-            </Typography>
-            <Typography variant="body2" color="text.secondary" sx={{ mb: 4 }}>
-              Detailed breakdown of how research funding has been allocated and utilized
-            </Typography>
+      {/* Challenges & Transparency */}
+      <Card sx={{ mb: 6 }}>
+        <CardContent sx={{ p: 4 }}>
+          <Typography variant="h5" component="h2" gutterBottom color="primary.main">
+            Organizational Challenges & Our Commitment to Transparency
+          </Typography>
 
-            {expenditures.map((expense, index) => (
-              <Box key={index} sx={{ mb: 3 }}>
-                <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}>
-                  <Typography variant="body1">{expense.category}</Typography>
-                  <Typography variant="body1" sx={{ fontWeight: 'bold' }}>
-                    {expense.amount} ({expense.percentage}%)
-                  </Typography>
-                </Box>
-                <LinearProgress
-                  variant="determinate"
-                  value={expense.percentage}
-                  sx={{ height: 8, borderRadius: 4 }}
-                />
-              </Box>
-            ))}
-          </CardContent>
-        </Card>
-      )}
+          <Typography variant="body1" sx={{ mb: 3, lineHeight: 1.8 }}>
+            We have made extensive efforts, both individually and collectively, to establish a formal non-profit organization
+            bearing Professor Govindasamy's name and to create a dedicated institutional bank account for the Educational
+            Endowment Fund. Unfortunately, despite our persistent attempts, complex regulatory requirements, administrative
+            procedures, and tax-related complications have prevented us from successfully completing this formal establishment.
+          </Typography>
 
-      {/* Verification Notice */}
-      <Box sx={{ mt: 6, p: 3, backgroundColor: 'grey.50', borderRadius: 2, textAlign: 'center' }}>
-        <VerifiedIcon sx={{ fontSize: 40, color: 'success.main', mb: 2 }} />
-        <Typography variant="h6" gutterBottom>
-          Verified Financial Records
+          <Typography variant="body1" sx={{ mb: 3, lineHeight: 1.8 }}>
+            We recognize and deeply appreciate your understanding of these institutional challenges, which currently limit
+            our ability to provide immediate, formal fund management structures. These regulatory obstacles do not align
+            with our urgent desire to honor Professor Govindasamy's memory and begin supporting deserving students without delay.
+          </Typography>
+        </CardContent>
+      </Card>
+
+      {/* Call to Action */}
+      <Card sx={{ mb: 6, backgroundColor: 'primary.50' }}>
+        <CardContent sx={{ p: 4 }}>
+          <Typography variant="h5" component="h2" gutterBottom color="primary.main">
+            Your Support Makes the Difference
+          </Typography>
+
+          <Typography variant="body1" sx={{ mb: 3, lineHeight: 1.8 }}>
+            We earnestly invite you to join us in this meaningful endeavor by contributing generously to the Professor S.
+            Govindasamy Educational Endowment Fund. Your support will help us create a lasting tribute that reflects the
+            selfless life he dedicated to empowering others through education and mentorship.
+          </Typography>
+
+          <Typography variant="body1" sx={{ mb: 3, lineHeight: 1.8 }}>
+            We fully acknowledge the legitimate concerns regarding financial accountability, fund management, and the proper
+            establishment of this endowment within university frameworks. Please be assured that we are committed to maintaining
+            complete transparency throughout every stage of this process. We will provide regular updates, detailed financial
+            reporting, and open communication as we work toward formalizing this fund through appropriate institutional channels.
+          </Typography>
+
+          <Typography variant="body1" sx={{ lineHeight: 1.8, fontWeight: 500 }}>
+            Together, we can ensure that Professor Govindasamy's legacy of educational excellence and compassionate mentorship
+            continues to inspire and support future generations of students and researchers.
+          </Typography>
+        </CardContent>
+      </Card>
+
+      {/* Contact Information */}
+      <Paper sx={{ p: 3, backgroundColor: 'grey.100', textAlign: 'center' }}>
+        <Typography variant="h6" gutterBottom color="primary.main">
+          For More Information
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          All financial information is audited annually and complies with university and federal regulations.
-          For detailed financial reports, please contact the university's financial office.
+          If you would like to contribute to the Professor S. Govindasamy Educational Endowment Fund
+          or have questions about our transparency initiatives, please reach out to us through the contact page.
         </Typography>
-      </Box>
+      </Paper>
     </Container>
   );
 };
