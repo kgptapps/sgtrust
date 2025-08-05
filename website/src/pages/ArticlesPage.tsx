@@ -35,11 +35,85 @@ interface Article {
   content: string;
 }
 
-// Sample articles data - will be replaced with actual data
+// Articles data including magazines and newspapers
 const articlesData = {
-  photographs: [
+  magazines_newspapers: [
     {
       id: 1,
+      title: 'Drug Proven Correct',
+      description: 'Drug research validation coverage',
+      image: '/sgtrust/media/newspapers/drugprovencorrect.JPG',
+      date: 'Research Coverage',
+      category: 'newspaper',
+      content: 'Newspaper coverage of Professor Govindasamy\'s drug research validation work...'
+    },
+    {
+      id: 2,
+      title: 'Educational Trust',
+      description: 'Educational trust coverage',
+      image: '/sgtrust/media/newspapers/educationaltrust.JPG',
+      date: 'Community Service',
+      category: 'newspaper',
+      content: 'Coverage of Professor Govindasamy\'s educational trust initiatives...'
+    },
+    {
+      id: 3,
+      title: 'Felicitation',
+      description: 'Felicitation ceremony coverage',
+      image: '/sgtrust/media/newspapers/felicitation.JPG',
+      date: 'Recognition',
+      category: 'newspaper',
+      content: 'Newspaper coverage of felicitation ceremony honoring Professor Govindasamy...'
+    },
+    {
+      id: 4,
+      title: 'First Trial Result',
+      description: 'First trial result announcement',
+      image: '/sgtrust/media/newspapers/firsttrialresult.JPG',
+      date: 'Research Milestone',
+      category: 'newspaper',
+      content: 'Coverage of significant research trial results...'
+    },
+    {
+      id: 5,
+      title: 'Magazine Feature',
+      description: 'Magazine feature article',
+      image: '/sgtrust/media/newspapers/magazine.JPG',
+      date: 'Profile',
+      category: 'magazine',
+      content: 'In-depth magazine profile of Professor Govindasamy\'s contributions...'
+    },
+    {
+      id: 6,
+      title: 'Newspaper Article',
+      description: 'Newspaper article feature',
+      image: '/sgtrust/media/newspapers/newspaperarticle.JPG',
+      date: 'Feature Story',
+      category: 'newspaper',
+      content: 'Feature newspaper article highlighting Professor Govindasamy\'s work...'
+    },
+    {
+      id: 7,
+      title: 'Newspaper Award',
+      description: 'Newspaper award coverage',
+      image: '/sgtrust/media/newspapers/newspaperaward.JPG',
+      date: 'Award Recognition',
+      category: 'newspaper',
+      content: 'Newspaper coverage of award recognition for Professor Govindasamy...'
+    },
+    {
+      id: 8,
+      title: 'Statue Request',
+      description: 'Statue request coverage',
+      image: '/sgtrust/media/newspapers/statuerequest.JPG',
+      date: 'Memorial Initiative',
+      category: 'newspaper',
+      content: 'Coverage of community request for memorial statue...'
+    }
+  ],
+  photographs: [
+    {
+      id: 9,
       title: "Early Academic Years",
       description: "Rare photographs from Professor's early teaching career",
       image: "/sgtrust/media/images/articles/early-academic.jpg",
@@ -98,6 +172,7 @@ const ArticlesPage: React.FC = () => {
 
   const categories = [
     { key: 'all', label: 'All Articles', icon: <ArticleIcon /> },
+    { key: 'magazines_newspapers', label: 'Magazines & Newspapers', icon: <ArticleIcon /> },
     { key: 'photographs', label: 'Photographs', icon: <PhotoIcon /> },
     { key: 'documents', label: 'Documents', icon: <ArticleIcon /> },
     { key: 'historical', label: 'Historical Records', icon: <HistoryIcon /> }
@@ -105,6 +180,7 @@ const ArticlesPage: React.FC = () => {
 
   const getAllArticles = () => {
     return [
+      ...articlesData.magazines_newspapers,
       ...articlesData.photographs,
       ...articlesData.documents,
       ...articlesData.historical

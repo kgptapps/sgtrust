@@ -22,7 +22,7 @@ import {
   ListItemText,
   Divider,
   Link,
-  Button
+
 } from '@mui/material';
 import {
   EmojiEvents as AwardIcon,
@@ -36,7 +36,7 @@ import {
   MenuBook as AcademicIcon,
   Star as StarIcon
 } from '@mui/icons-material';
-import { publications } from '../data/publications';
+
 
 interface Achievement {
   id: string;
@@ -144,134 +144,179 @@ const achievementsData = {
     }
   ],
   professional: [
-    // Magazines and Newspapers
-
     {
-      id: 'drug-proven-correct',
-      title: 'Drug Proven Correct',
-      description: 'Drug research validation coverage',
+      id: 'school-teacher-1968',
+      title: 'School Teacher',
+      description: 'Commenced professional career in education, laying the foundation for a distinguished academic journey in teaching and mentorship',
+      institution: 'Primary Education Sector',
+      year: 1968,
       category: 'professional' as const,
-      subcategory: 'magazines-newspapers' as const,
-      type: 'Newspaper',
-      image: '/sgtrust/media/newspapers/drugprovencorrect.JPG'
-    },
-    {
-      id: 'educational-trust',
-      title: 'Educational Trust',
-      description: 'Educational trust coverage',
-      category: 'professional' as const,
-      subcategory: 'magazines-newspapers' as const,
-      type: 'Newspaper',
-      image: '/sgtrust/media/newspapers/educationaltrust.JPG'
-    },
-    {
-      id: 'felicitation',
-      title: 'Felicitation',
-      description: 'Felicitation ceremony coverage',
-      category: 'professional' as const,
-      subcategory: 'magazines-newspapers' as const,
-      type: 'Newspaper',
-      image: '/sgtrust/media/newspapers/felicitation.JPG'
-    },
-    {
-      id: 'first-trial-result',
-      title: 'First Trial Result',
-      description: 'First trial result announcement',
-      category: 'professional' as const,
-      subcategory: 'magazines-newspapers' as const,
-      type: 'Newspaper',
-      image: '/sgtrust/media/newspapers/firsttrialresult.JPG'
-    },
-    {
-      id: 'magazine',
-      title: 'Magazine',
-      description: 'Magazine feature',
-      category: 'professional' as const,
-      subcategory: 'magazines-newspapers' as const,
-      type: 'Magazine',
-      image: '/sgtrust/media/newspapers/magazine.JPG'
-    },
-    {
-      id: 'newspaper-article',
-      title: 'Newspaper Article',
-      description: 'Newspaper article feature',
-      category: 'professional' as const,
-      subcategory: 'magazines-newspapers' as const,
-      type: 'Newspaper',
-      image: '/sgtrust/media/newspapers/newspaperarticle.JPG'
-    },
-    {
-      id: 'newspaper-award',
-      title: 'Newspaper Award',
-      description: 'Newspaper award coverage',
-      category: 'professional' as const,
-      subcategory: 'magazines-newspapers' as const,
-      type: 'Newspaper',
-      image: '/sgtrust/media/newspapers/newspaperaward.JPG'
-    },
-    {
-      id: 'statue-request',
-      title: 'Statue Request',
-      description: 'Statue request coverage',
-      category: 'professional' as const,
-      subcategory: 'magazines-newspapers' as const,
-      type: 'Newspaper',
-      image: '/sgtrust/media/newspapers/statuerequest.JPG'
-    },
-
-    // Professional Recognition
-    {
-      id: 'best-teacher-2015',
-      title: 'Best Teacher Award',
-      description: 'State-level recognition for excellence in teaching',
-      institution: 'Tamil Nadu Government',
-      year: 2015,
-      category: 'professional' as const,
-      type: 'Award',
+      type: 'Teaching Position',
       details: [
-        'Selected from 10,000+ teachers statewide',
-        'Innovative teaching methodologies',
-        'Student feedback excellence'
+        'Duration: 1968-1969',
+        'First professional teaching experience',
+        'Developed foundational pedagogical skills',
+        'Established commitment to education and student development',
+        'Gained practical classroom management experience'
       ]
     },
     {
-      id: 'industry-collaboration-2018',
-      title: 'Industry Collaboration Excellence',
-      description: 'Recognition for bridging academia and industry',
-      institution: 'Confederation of Indian Industry',
-      year: 2018,
+      id: 'demonstrator-stanley-1970',
+      title: 'Demonstrator in Biochemistry',
+      description: 'Advanced to specialized biochemistry instruction, bridging theoretical knowledge with practical laboratory applications in medical education',
+      institution: 'Stanley Medical College',
+      year: 1970,
       category: 'professional' as const,
-      type: 'Recognition',
+      type: 'Academic Position',
       details: [
-        'Established 15+ industry partnerships',
-        'Technology transfer initiatives',
-        'Student placement excellence'
+        'Duration: 1970-1974',
+        'Department: Biochemistry',
+        'Conducted laboratory demonstrations for medical students',
+        'Developed expertise in biochemical analytical techniques',
+        'Mentored students in practical biochemistry applications',
+        'Contributed to medical education curriculum development'
       ]
     },
-
-    // Publications Preview - Top 20 most recent publications
-    ...publications
-      .sort((a, b) => b.year - a.year) // Sort by year descending
-      .slice(0, 20) // Take only the first 20
-      .map(pub => ({
-        id: pub.id,
-        title: pub.title,
-        description: `${pub.authors.join(', ')} (${pub.year})`,
-        institution: pub.journal,
-        year: pub.year,
-        category: 'professional' as const,
-        subcategory: 'publications' as const,
-        type: 'Publication',
-        details: [
-          `Authors: ${pub.authors.join(', ')}`,
-          `Journal: ${pub.journal}`,
-          `Year: ${pub.year}`,
-          ...(pub.volume ? [`Volume: ${pub.volume}`] : []),
-          ...(pub.pages ? [`Pages: ${pub.pages}`] : []),
-          ...(pub.doi ? [`DOI: ${pub.doi}`] : []),
-          ...(pub.url ? [`URL: ${pub.url}`] : [])
-        ]
-      }))
+    {
+      id: 'lecturer-madras-1974',
+      title: 'Lecturer in Biochemistry',
+      description: 'Elevated to full lectureship, assuming comprehensive teaching responsibilities while pursuing advanced research in biochemical sciences',
+      institution: 'University of Madras',
+      year: 1974,
+      category: 'professional' as const,
+      type: 'Academic Position',
+      details: [
+        'Duration: 1974-1983',
+        'Department: Biochemistry, University of Madras',
+        'Delivered undergraduate and postgraduate lectures',
+        'Initiated independent research programs',
+        'Supervised student research projects',
+        'Contributed to curriculum design and academic planning',
+        'Established research collaborations within the university'
+      ]
+    },
+    {
+      id: 'reader-madras-1983',
+      title: 'Reader in Biochemistry',
+      description: 'Promoted to senior academic rank, recognizing excellence in teaching, research, and scholarly contributions to the field of biochemistry',
+      institution: 'University of Madras',
+      year: 1983,
+      category: 'professional' as const,
+      type: 'Senior Academic Position',
+      details: [
+        'Duration: 1983-1989',
+        'Department: Biochemistry, University of Madras',
+        'Advanced research leadership responsibilities',
+        'Supervised M.Phil. and Ph.D. candidates',
+        'Published significant research contributions',
+        'Participated in academic committees and university governance',
+        'Mentored junior faculty members',
+        'Expanded research focus on diabetes and cancer studies'
+      ]
+    },
+    {
+      id: 'professor-madras-1989',
+      title: 'Professor in Biochemistry',
+      description: 'Achieved the pinnacle of academic excellence, leading cutting-edge research initiatives and shaping the next generation of biochemists until retirement',
+      institution: 'University of Madras',
+      year: 1989,
+      category: 'professional' as const,
+      type: 'Professorial Position',
+      details: [
+        'Duration: 1989 until retirement',
+        'Department: Biochemistry, University of Madras',
+        'Led major research programs in diabetes and cancer',
+        'Established international research collaborations',
+        'Supervised numerous doctoral and post-doctoral researchers',
+        'Published extensively in peer-reviewed journals',
+        'Served on editorial boards and review committees',
+        'Represented the university at national and international conferences'
+      ]
+    },
+    {
+      id: 'head-department-1992',
+      title: 'Head of Department of Biochemistry',
+      description: 'Appointed to departmental leadership, orchestrating academic excellence, research innovation, and institutional development during a transformative period',
+      institution: 'University of Madras',
+      year: 1992,
+      category: 'professional' as const,
+      type: 'Administrative Leadership',
+      details: [
+        'Duration: 1992-1999',
+        'Department: Biochemistry, University of Madras',
+        'Led departmental strategic planning and development',
+        'Managed faculty recruitment and development',
+        'Oversaw curriculum modernization and research infrastructure',
+        'Established industry partnerships and funding initiatives',
+        'Coordinated interdisciplinary research programs',
+        'Enhanced departmental reputation and academic standing',
+        'Mentored faculty in research and career development'
+      ]
+    },
+    {
+      id: 'life-member-biological-sciences',
+      title: 'Life Member - Society of Biological Sciences (India)',
+      description: 'Distinguished lifetime membership recognizing significant contributions to biological sciences research and education in India',
+      institution: 'Society of Biological Sciences (India)',
+      category: 'professional' as const,
+      type: 'Professional Membership',
+      details: [
+        'Lifetime recognition for excellence in biological sciences',
+        'Active participation in national scientific discourse',
+        'Contribution to advancement of biological research in India',
+        'Networking with leading scientists and researchers',
+        'Access to cutting-edge research publications and conferences',
+        'Mentorship opportunities for emerging scientists'
+      ]
+    },
+    {
+      id: 'life-member-political-science',
+      title: 'Life Member - All India Political Science Association',
+      description: 'Prestigious lifetime membership acknowledging interdisciplinary expertise and contributions to political science education and research',
+      institution: 'All India Political Science Association',
+      category: 'professional' as const,
+      type: 'Professional Membership',
+      details: [
+        'Recognition of interdisciplinary academic excellence',
+        'Contribution to political science education and research',
+        'Participation in national academic conferences and seminars',
+        'Collaboration with political science scholars across India',
+        'Access to specialized research resources and publications',
+        'Involvement in policy discussions and academic governance'
+      ]
+    },
+    {
+      id: 'life-member-madras-teachers',
+      title: 'Life Member - Madras University Teachers\' Association',
+      description: 'Esteemed lifetime membership honoring dedicated service to higher education and commitment to faculty welfare and academic excellence',
+      institution: 'Madras University Teachers\' Association',
+      category: 'professional' as const,
+      type: 'Professional Membership',
+      details: [
+        'Recognition of outstanding service to higher education',
+        'Advocacy for faculty rights and academic freedom',
+        'Participation in university governance and policy development',
+        'Mentorship of junior faculty members',
+        'Contribution to educational reforms and curriculum development',
+        'Leadership in academic and administrative matters'
+      ]
+    },
+    {
+      id: 'life-member-indian-officers',
+      title: 'Life Member - Indian Officers Association',
+      description: 'Distinguished lifetime membership recognizing leadership excellence and administrative acumen in academic and professional spheres',
+      institution: 'Indian Officers Association',
+      category: 'professional' as const,
+      type: 'Professional Membership',
+      details: [
+        'Recognition of exceptional leadership and administrative skills',
+        'Networking with distinguished officers across various sectors',
+        'Participation in leadership development programs',
+        'Contribution to organizational excellence and governance',
+        'Mentorship of emerging leaders and administrators',
+        'Access to professional development resources and training'
+      ]
+    }
   ]
 };
 
@@ -281,7 +326,7 @@ const AchievementsPage: React.FC = () => {
   const [selectedAchievement, setSelectedAchievement] = useState<Achievement | null>(null);
   const [expandedYear, setExpandedYear] = useState<string | false>(false);
   const [selectedCategory, setSelectedCategory] = useState<'academic' | 'professional'>('academic');
-  const [selectedSubcategory, setSelectedSubcategory] = useState<'research-projects' | 'publications' | 'magazines-newspapers'>('research-projects');
+
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   useEffect(() => {
@@ -314,31 +359,7 @@ const AchievementsPage: React.FC = () => {
     }
   };
 
-  const getSubcategoryColor = (subcategory?: string): 'info' | 'success' | 'error' | 'default' => {
-    switch (subcategory) {
-      case 'research-projects':
-        return 'success';
-      case 'publications':
-        return 'info';
-      case 'magazines-newspapers':
-        return 'error';
-      default:
-        return 'default';
-    }
-  };
 
-  const getSubcategoryLabel = (subcategory?: string): string => {
-    switch (subcategory) {
-      case 'research-projects':
-        return 'Research';
-      case 'publications':
-        return 'Publication';
-      case 'magazines-newspapers':
-        return 'Media';
-      default:
-        return '';
-    }
-  };
 
   // Legacy functions for certificate categorization
   const getLegacyCategoryIcon = (activity: string) => {
@@ -376,11 +397,6 @@ const AchievementsPage: React.FC = () => {
 
   const handleCategoryChange = (_event: React.SyntheticEvent, newValue: 'academic' | 'professional') => {
     setSelectedCategory(newValue);
-    setSelectedSubcategory('research-projects'); // Reset subcategory when changing main category
-  };
-
-  const handleSubcategoryChange = (_event: React.SyntheticEvent, newValue: 'research-projects' | 'publications' | 'magazines-newspapers') => {
-    setSelectedSubcategory(newValue);
   };
 
   const handleImageClick = (imageSrc: string) => {
@@ -393,15 +409,7 @@ const AchievementsPage: React.FC = () => {
 
   // Filter achievements based on selected category and subcategory
   const getFilteredAchievements = () => {
-    const categoryAchievements = achievementsData[selectedCategory];
-
-    if (selectedCategory === 'academic') {
-      return categoryAchievements;
-    }
-
-    return categoryAchievements.filter(achievement =>
-      'subcategory' in achievement && achievement.subcategory === selectedSubcategory
-    );
+    return achievementsData[selectedCategory];
   };
 
   return (
@@ -439,102 +447,7 @@ const AchievementsPage: React.FC = () => {
         </Tabs>
       </Box>
 
-      {/* Subcategory Tabs for Professional Achievements */}
-      {selectedCategory === 'professional' && (
-        <Box sx={{ borderBottom: 1, borderColor: 'divider', mb: 4 }}>
-          <Tabs
-            value={selectedSubcategory}
-            onChange={handleSubcategoryChange}
-            centered
-            variant="scrollable"
-            scrollButtons="auto"
-          >
-            <Tab label="Research Projects" value="research-projects" />
-            <Tab label="Publications" value="publications" />
-            <Tab label="Magazines & Newspapers" value="magazines-newspapers" />
-          </Tabs>
-        </Box>
-      )}
-
-      {/* Publications Preview Notice */}
-      {selectedCategory === 'professional' && selectedSubcategory === 'publications' && (
-        <Box sx={{ mb: 3, p: 3, backgroundColor: 'primary.light', borderRadius: 2 }}>
-          <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 2 }}>
-            <Box>
-              <Typography variant="h6" sx={{ color: 'primary.contrastText', mb: 1 }}>
-                Publications Preview
-              </Typography>
-              <Typography variant="body2" sx={{ color: 'primary.contrastText', opacity: 0.9 }}>
-                Showing 20 most recent publications out of {publications.length} total publications
-              </Typography>
-            </Box>
-            <Button
-              variant="contained"
-              color="secondary"
-              onClick={() => window.open('/sgtrust/publications', '_blank')}
-              sx={{
-                fontWeight: 'bold',
-                '&:hover': {
-                  transform: 'translateY(-2px)',
-                  boxShadow: 4
-                }
-              }}
-            >
-              View All {publications.length} Publications
-            </Button>
-          </Box>
-        </Box>
-      )}
-
-      {/* Publications Scientific Format */}
-      {selectedCategory === 'professional' && selectedSubcategory === 'publications' ? (
-        <Box>
-          {getFilteredAchievements().map((achievement, index) => (
-            <Box key={achievement.id} sx={{ mb: 2 }}>
-              <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: 2, p: 2, backgroundColor: 'background.paper', borderRadius: 1, border: '1px solid', borderColor: 'divider' }}>
-                <Typography variant="body2" color="text.secondary" sx={{ minWidth: 30 }}>
-                  {index + 1}.
-                </Typography>
-
-                <Box sx={{ flexGrow: 1 }}>
-                  <Typography variant="body1" sx={{ mb: 1, lineHeight: 1.6 }}>
-                    {achievement.description}. <em>{achievement.institution}</em>. {achievement.year}.
-                  </Typography>
-
-                  <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap', alignItems: 'center' }}>
-                    <Chip
-                      label={achievement.type}
-                      size="small"
-                      color="primary"
-                      variant="outlined"
-                    />
-                    {achievement.details && achievement.details.some(detail => detail.includes('DOI:')) && (
-                      <Link
-                        href={`https://doi.org/${achievement.details.find(detail => detail.includes('DOI:'))?.replace('DOI: ', '')}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        sx={{ ml: 1 }}
-                      >
-                        DOI
-                      </Link>
-                    )}
-                    {achievement.details && achievement.details.some(detail => detail.includes('URL:')) && (
-                      <Link
-                        href={achievement.details.find(detail => detail.includes('URL:'))?.replace('URL: ', '')}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        sx={{ ml: 1 }}
-                      >
-                        Full Text
-                      </Link>
-                    )}
-                  </Box>
-                </Box>
-              </Box>
-            </Box>
-          ))}
-        </Box>
-      ) : getFilteredAchievements().length === 0 ? (
+      {getFilteredAchievements().length === 0 ? (
         /* Empty State */
         <Box sx={{
           textAlign: 'center',
@@ -573,21 +486,7 @@ const AchievementsPage: React.FC = () => {
                 onClick={() => handleAchievementClick(achievement)}
               >
                 <CardContent sx={{ p: 3 }}>
-                  {/* Achievement Image */}
-                  {'image' in achievement && achievement.image && (
-                    <Box sx={{ mb: 2 }}>
-                      <img
-                        src={achievement.image}
-                        alt={achievement.title}
-                        style={{
-                          width: '100%',
-                          height: '200px',
-                          objectFit: 'cover',
-                          borderRadius: '8px'
-                        }}
-                      />
-                    </Box>
-                  )}
+
 
                   {/* Achievement Header */}
                   <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
@@ -624,19 +523,124 @@ const AchievementsPage: React.FC = () => {
                       size="small"
                       color={getCategoryColor(achievement.category)}
                     />
-                    {'subcategory' in achievement && achievement.subcategory && (
-                      <Chip
-                        label={getSubcategoryLabel(achievement.subcategory)}
-                        size="small"
-                        color={getSubcategoryColor(achievement.subcategory)}
-                        variant="filled"
-                      />
-                    )}
                   </Box>
                 </CardContent>
               </Card>
             </Box>
           ))}
+        </Box>
+      )}
+
+      {/* Research Supervision & Statistics - Only show for Professional Achievements */}
+      {selectedCategory === 'professional' && getFilteredAchievements().length > 0 && (
+        <Box sx={{ mt: 6 }}>
+          <Card sx={{
+            backgroundColor: (theme) => theme.palette.mode === 'dark'
+              ? theme.palette.grey[800]
+              : theme.palette.grey[50],
+            border: (theme) => `2px solid ${theme.palette.primary.main}`,
+            boxShadow: 4
+          }}>
+            <CardContent sx={{ p: 4 }}>
+              <Typography variant="h4" component="h3" gutterBottom textAlign="center" sx={{
+                fontWeight: 'bold',
+                mb: 3,
+                color: 'primary.main'
+              }}>
+                Research Leadership & Academic Impact
+              </Typography>
+
+              <Typography variant="body1" sx={{
+                textAlign: 'center',
+                fontSize: '1.1rem',
+                mb: 4,
+                color: 'text.primary'
+              }}>
+                Professor Govindasamy's distinguished career encompassed comprehensive research supervision,
+                extensive scholarly publications, and three decades of transformative teaching that shaped
+                countless students and advanced the field of biochemistry.
+              </Typography>
+
+              <Box sx={{
+                display: 'grid',
+                gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', md: 'repeat(3, 1fr)' },
+                gap: 3,
+                mt: 3
+              }}>
+                <Box sx={{ textAlign: 'center', p: 2 }}>
+                  <Typography variant="h3" sx={{ fontWeight: 'bold', mb: 1, color: 'primary.main' }}>
+                    43
+                  </Typography>
+                  <Typography variant="h6" sx={{ color: 'text.primary', fontWeight: 'medium' }}>
+                    M.Phil. Supervisions
+                  </Typography>
+                  <Typography variant="body2" sx={{ color: 'text.secondary', mt: 1 }}>
+                    Master of Philosophy candidates guided to successful completion
+                  </Typography>
+                </Box>
+
+                <Box sx={{ textAlign: 'center', p: 2 }}>
+                  <Typography variant="h3" sx={{ fontWeight: 'bold', mb: 1, color: 'primary.main' }}>
+                    22
+                  </Typography>
+                  <Typography variant="h6" sx={{ color: 'text.primary', fontWeight: 'medium' }}>
+                    Ph.D. Supervisions
+                  </Typography>
+                  <Typography variant="body2" sx={{ color: 'text.secondary', mt: 1 }}>
+                    Doctoral candidates mentored through original research
+                  </Typography>
+                </Box>
+
+                <Box sx={{ textAlign: 'center', p: 2 }}>
+                  <Typography variant="h3" sx={{ fontWeight: 'bold', mb: 1, color: 'primary.main' }}>
+                    7
+                  </Typography>
+                  <Typography variant="h6" sx={{ color: 'text.primary', fontWeight: 'medium' }}>
+                    Ph.D. Under Guidance
+                  </Typography>
+                  <Typography variant="body2" sx={{ color: 'text.secondary', mt: 1 }}>
+                    Ongoing doctoral research projects at time of retirement
+                  </Typography>
+                </Box>
+
+                <Box sx={{ textAlign: 'center', p: 2 }}>
+                  <Typography variant="h3" sx={{ fontWeight: 'bold', mb: 1, color: 'primary.main' }}>
+                    76
+                  </Typography>
+                  <Typography variant="h6" sx={{ color: 'text.primary', fontWeight: 'medium' }}>
+                    Research Publications
+                  </Typography>
+                  <Typography variant="body2" sx={{ color: 'text.secondary', mt: 1 }}>
+                    Peer-reviewed articles in national and international journals
+                  </Typography>
+                </Box>
+
+                <Box sx={{ textAlign: 'center', p: 2 }}>
+                  <Typography variant="h3" sx={{ fontWeight: 'bold', mb: 1, color: 'primary.main' }}>
+                    30
+                  </Typography>
+                  <Typography variant="h6" sx={{ color: 'text.primary', fontWeight: 'medium' }}>
+                    Years Teaching
+                  </Typography>
+                  <Typography variant="body2" sx={{ color: 'text.secondary', mt: 1 }}>
+                    Decades of excellence in biochemistry education
+                  </Typography>
+                </Box>
+
+                <Box sx={{ textAlign: 'center', p: 2 }}>
+                  <Typography variant="h3" sx={{ fontWeight: 'bold', mb: 1, color: 'primary.main' }}>
+                    1st
+                  </Typography>
+                  <Typography variant="h6" sx={{ color: 'text.primary', fontWeight: 'medium' }}>
+                    Village Doctorate
+                  </Typography>
+                  <Typography variant="body2" sx={{ color: 'text.secondary', mt: 1 }}>
+                    First Ph.D. holder in his village community
+                  </Typography>
+                </Box>
+              </Box>
+            </CardContent>
+          </Card>
         </Box>
       )}
 
