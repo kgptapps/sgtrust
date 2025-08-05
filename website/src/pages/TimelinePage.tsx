@@ -13,7 +13,6 @@ import {
   Work as WorkIcon,
   EmojiEvents as AwardIcon,
   Groups as StudentsIcon,
-  MenuBook as BookIcon,
   Business as BusinessIcon,
   Psychology as PsychologyIcon
 } from '@mui/icons-material';
@@ -96,7 +95,7 @@ const createTimelineFromAchievements = () => {
 
   return sortedAchievements.map((achievement) => {
     let icon = <WorkIcon />;
-    let color: "primary" | "secondary" | "success" | "error" | "warning" | "info" = "success";
+    let color: "primary" | "success" | "error" | "warning" = "success";
 
     // Assign icons and colors based on position type
     switch (achievement.type) {
@@ -106,7 +105,7 @@ const createTimelineFromAchievements = () => {
         break;
       case 'Academic Position':
         icon = <PsychologyIcon />;
-        color = "info";
+        color = "success";
         break;
       case 'Senior Academic Position':
         icon = <BusinessIcon />;
@@ -118,7 +117,7 @@ const createTimelineFromAchievements = () => {
         break;
       case 'Administrative Leadership':
         icon = <StudentsIcon />;
-        color = "secondary";
+        color = "warning";
         break;
       default:
         icon = <WorkIcon />;

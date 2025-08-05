@@ -3,9 +3,6 @@ import {
   Box,
   Container,
   Typography,
-  Card,
-  CardContent,
-  Grid,
   Chip,
   Dialog,
   DialogContent,
@@ -16,17 +13,13 @@ import {
   Tabs,
   List,
   ListItem,
-  ListItemText,
-  Divider
+  ListItemText
 } from '@mui/material';
 import {
   Close as CloseIcon,
   Science as ScienceIcon,
   Biotech as BiotechIcon,
-  LocalHospital as MedicalIcon,
-  Psychology as PsychologyIcon,
-  School as EducationIcon,
-  Groups as CollaborationIcon
+  Psychology as PsychologyIcon
 } from '@mui/icons-material';
 
 // Research Project interface
