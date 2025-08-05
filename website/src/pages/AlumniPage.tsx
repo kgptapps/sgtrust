@@ -84,12 +84,13 @@ const AlumniPage: React.FC = () => {
           >
             <CardMedia
               component="img"
-              height="300"
+              height="400"
               image={alumni.image}
               alt={alumni.name}
               sx={{
-                objectFit: 'cover',
-                backgroundColor: 'grey.100'
+                objectFit: 'contain',
+                backgroundColor: 'grey.50',
+                objectPosition: 'center top'
               }}
             />
             <CardContent sx={{ flexGrow: 1, p: 3 }}>
