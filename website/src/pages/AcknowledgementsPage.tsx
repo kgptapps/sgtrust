@@ -4,18 +4,12 @@ import {
   Typography,
   Box,
   Paper,
-  Grid,
   Card,
   CardContent,
-  Divider,
-  List,
-  ListItem,
-  ListItemText
+  Divider
 } from '@mui/material';
-import { useTranslation } from 'react-i18next';
 
 const AcknowledgementsPage: React.FC = () => {
-  const { t } = useTranslation(['content', 'common']);
 
   return (
     <Container maxWidth="lg" sx={{ py: 4 }}>
@@ -44,80 +38,72 @@ const AcknowledgementsPage: React.FC = () => {
         </Typography>
       </Paper>
 
-      <Grid container spacing={4}>
-        <Grid item xs={12} md={6}>
-          <Card elevation={2} sx={{ height: '100%' }}>
-            <CardContent>
-              <Typography variant="h6" gutterBottom color="primary.main">
-                Family Members
-              </Typography>
-              <Typography variant="body2" paragraph>
-                We are deeply grateful to the family members of Professor S. Govindasamy 
-                who provided invaluable photographs, documents, and personal insights 
-                that made this comprehensive tribute possible.
-              </Typography>
-              <Typography variant="body2">
-                Their dedication to preserving his memory and sharing his story with 
-                the world is truly commendable.
-              </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
+      <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: 'repeat(2, 1fr)' }, gap: 4 }}>
+        <Card elevation={2} sx={{ height: '100%' }}>
+          <CardContent>
+            <Typography variant="h6" gutterBottom color="primary.main">
+              Family Members
+            </Typography>
+            <Typography variant="body2" paragraph>
+              We are deeply grateful to the family members of Professor S. Govindasamy
+              who provided invaluable photographs, documents, and personal insights
+              that made this comprehensive tribute possible.
+            </Typography>
+            <Typography variant="body2">
+              Their dedication to preserving his memory and sharing his story with
+              the world is truly commendable.
+            </Typography>
+          </CardContent>
+        </Card>
 
-        <Grid item xs={12} md={6}>
-          <Card elevation={2} sx={{ height: '100%' }}>
-            <CardContent>
-              <Typography variant="h6" gutterBottom color="primary.main">
-                Former Students
-              </Typography>
-              <Typography variant="body2" paragraph>
-                Special thanks to the former students who shared their memories, 
-                testimonials, and experiences with Professor Govindasamy.
-              </Typography>
-              <Typography variant="body2">
-                Their stories illuminate the profound impact he had on countless 
-                lives and careers.
-              </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
+        <Card elevation={2} sx={{ height: '100%' }}>
+          <CardContent>
+            <Typography variant="h6" gutterBottom color="primary.main">
+              Former Students
+            </Typography>
+            <Typography variant="body2" paragraph>
+              Special thanks to the former students who shared their memories,
+              testimonials, and experiences with Professor Govindasamy.
+            </Typography>
+            <Typography variant="body2">
+              Their stories illuminate the profound impact he had on countless
+              lives and careers.
+            </Typography>
+          </CardContent>
+        </Card>
 
-        <Grid item xs={12} md={6}>
-          <Card elevation={2} sx={{ height: '100%' }}>
-            <CardContent>
-              <Typography variant="h6" gutterBottom color="primary.main">
-                Academic Colleagues
-              </Typography>
-              <Typography variant="body2" paragraph>
-                We acknowledge the contributions of fellow academics and colleagues 
-                who worked alongside Professor Govindasamy.
-              </Typography>
-              <Typography variant="body2">
-                Their professional insights and shared memories have enriched 
-                this memorial significantly.
-              </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
+        <Card elevation={2} sx={{ height: '100%' }}>
+          <CardContent>
+            <Typography variant="h6" gutterBottom color="primary.main">
+              Academic Colleagues
+            </Typography>
+            <Typography variant="body2" paragraph>
+              We acknowledge the contributions of fellow academics and colleagues
+              who worked alongside Professor Govindasamy.
+            </Typography>
+            <Typography variant="body2">
+              Their professional insights and shared memories have enriched
+              this memorial significantly.
+            </Typography>
+          </CardContent>
+        </Card>
 
-        <Grid item xs={12} md={6}>
-          <Card elevation={2} sx={{ height: '100%' }}>
-            <CardContent>
-              <Typography variant="h6" gutterBottom color="primary.main">
-                Institutional Support
-              </Typography>
-              <Typography variant="body2" paragraph>
-                Gratitude to the University of Madras and other institutions 
-                for providing access to archives and historical records.
-              </Typography>
-              <Typography variant="body2">
-                Their cooperation has been essential in documenting his 
-                academic journey and achievements.
-              </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
-      </Grid>
+        <Card elevation={2} sx={{ height: '100%' }}>
+          <CardContent>
+            <Typography variant="h6" gutterBottom color="primary.main">
+              Institutional Support
+            </Typography>
+            <Typography variant="body2" paragraph>
+              Gratitude to the University of Madras and other institutions
+              for providing access to archives and historical records.
+            </Typography>
+            <Typography variant="body2">
+              Their cooperation has been essential in documenting his
+              academic journey and achievements.
+            </Typography>
+          </CardContent>
+        </Card>
+      </Box>
 
       <Paper elevation={3} sx={{ p: 4, mt: 4 }}>
         <Typography variant="h5" gutterBottom color="primary.main">

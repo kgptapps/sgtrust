@@ -2,17 +2,14 @@ import React from 'react';
 import {
   Container,
   Typography,
-  Box,
   Paper,
-  Grid,
+  Box,
   Card,
   CardContent,
   Divider
 } from '@mui/material';
-import { useTranslation } from 'react-i18next';
 
 const SGTrustPage: React.FC = () => {
-  const { t } = useTranslation(['content', 'common']);
 
   return (
     <Container maxWidth="lg" sx={{ py: 4 }}>
@@ -45,67 +42,59 @@ const SGTrustPage: React.FC = () => {
         </Typography>
       </Paper>
 
-      <Grid container spacing={4}>
-        <Grid item xs={12} md={6}>
-          <Card elevation={2} sx={{ height: '100%' }}>
-            <CardContent>
-              <Typography variant="h6" gutterBottom color="primary.main">
-                Mission
-              </Typography>
-              <Typography variant="body2">
-                To promote educational excellence, support deserving students, and advance 
-                research in the fields that Professor Govindasamy was passionate about.
-              </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
+      <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: 'repeat(2, 1fr)' }, gap: 4 }}>
+        <Card elevation={2} sx={{ height: '100%' }}>
+          <CardContent>
+            <Typography variant="h6" gutterBottom color="primary.main">
+              Mission
+            </Typography>
+            <Typography variant="body2">
+              To promote educational excellence, support deserving students, and advance
+              research in the fields that Professor Govindasamy was passionate about.
+            </Typography>
+          </CardContent>
+        </Card>
 
-        <Grid item xs={12} md={6}>
-          <Card elevation={2} sx={{ height: '100%' }}>
-            <CardContent>
-              <Typography variant="h6" gutterBottom color="primary.main">
-                Vision
-              </Typography>
-              <Typography variant="body2">
-                To create a lasting impact on education by providing opportunities for 
-                academic growth and research advancement in honor of Professor S. Govindasamy's legacy.
-              </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
+        <Card elevation={2} sx={{ height: '100%' }}>
+          <CardContent>
+            <Typography variant="h6" gutterBottom color="primary.main">
+              Vision
+            </Typography>
+            <Typography variant="body2">
+              To create a lasting impact on education by providing opportunities for
+              academic growth and research advancement in honor of Professor S. Govindasamy's legacy.
+            </Typography>
+          </CardContent>
+        </Card>
 
-        <Grid item xs={12} md={6}>
-          <Card elevation={2} sx={{ height: '100%' }}>
-            <CardContent>
-              <Typography variant="h6" gutterBottom color="primary.main">
-                Objectives
-              </Typography>
-              <Typography variant="body2">
-                • Support educational initiatives<br/>
-                • Provide scholarships to deserving students<br/>
-                • Promote research and academic excellence<br/>
-                • Preserve and share Professor's academic contributions
-              </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
+        <Card elevation={2} sx={{ height: '100%' }}>
+          <CardContent>
+            <Typography variant="h6" gutterBottom color="primary.main">
+              Objectives
+            </Typography>
+            <Typography variant="body2">
+              • Support educational initiatives<br/>
+              • Provide scholarships to deserving students<br/>
+              • Promote research and academic excellence<br/>
+              • Preserve and share Professor's academic contributions
+            </Typography>
+          </CardContent>
+        </Card>
 
-        <Grid item xs={12} md={6}>
-          <Card elevation={2} sx={{ height: '100%' }}>
-            <CardContent>
-              <Typography variant="h6" gutterBottom color="primary.main">
-                Activities
-              </Typography>
-              <Typography variant="body2">
-                • Educational scholarships and grants<br/>
-                • Academic conferences and seminars<br/>
-                • Research publication support<br/>
-                • Student mentorship programs
-              </Typography>
-            </CardContent>
-          </Card>
-        </Grid>
-      </Grid>
+        <Card elevation={2} sx={{ height: '100%' }}>
+          <CardContent>
+            <Typography variant="h6" gutterBottom color="primary.main">
+              Activities
+            </Typography>
+            <Typography variant="body2">
+              • Educational scholarships and grants<br/>
+              • Academic conferences and seminars<br/>
+              • Research publication support<br/>
+              • Student mentorship programs
+            </Typography>
+          </CardContent>
+        </Card>
+      </Box>
 
       <Paper elevation={3} sx={{ p: 4, mt: 4 }}>
         <Typography variant="h5" gutterBottom color="primary.main">
