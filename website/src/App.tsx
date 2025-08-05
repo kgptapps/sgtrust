@@ -13,7 +13,7 @@ import Footer from './components/layout/Footer';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import TimelinePage from './pages/TimelinePage';
-import StudentsPage from './pages/StudentsPage';
+import AlumniPage from './pages/AlumniPage';
 import GalleryPage from './pages/GalleryPage';
 import AchievementsPage from './pages/AchievementsPage';
 import AccountabilityPage from './pages/AccountabilityPage';
@@ -39,7 +39,7 @@ function App() {
               <Route path="/timeline" element={<TimelinePage />} />
               <Route path="/achievements" element={<AchievementsPage />} />
               <Route path="/gallery" element={<GalleryPage />} />
-              <Route path="/students" element={<StudentsPage />} />
+              <Route path="/students" element={<AlumniPage />} />
               <Route path="/accountability" element={<AccountabilityPage />} />
               <Route path="/sgtrust" element={<SGTrustPage />} />
               <Route path="/acknowledgements" element={<AcknowledgementsPage />} />
