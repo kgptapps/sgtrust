@@ -43,9 +43,7 @@ import {
   Article as ArticleIcon,
   Science as ScienceIcon,
   Newspaper as NewspaperIcon,
-  Search as SearchIcon,
-  FilterList as FilterIcon,
-  Sort as SortIcon
+  Search as SearchIcon
 } from '@mui/icons-material';
 
 // Import data from other pages
