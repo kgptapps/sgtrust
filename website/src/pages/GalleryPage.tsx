@@ -173,13 +173,7 @@ const galleryPhotos: Photo[] = [
     description: "Professor participating in sports - long jump",
     year: "Sports"
   },
-  {
-    id: 22,
-    src: "/sgtrust/media/images/gallery/oldneighbourhoodbuddies.jpg",
-    title: "Old Neighbourhood Buddies",
-    description: "With childhood friends and neighbourhood buddies",
-    year: "Personal"
-  },
+
   {
     id: 23,
     src: "/sgtrust/media/images/gallery/photowithcollegues.jpg",
@@ -190,9 +184,9 @@ const galleryPhotos: Photo[] = [
   {
     id: 24,
     src: "/sgtrust/media/images/gallery/photowithcousin.jpg",
-    title: "Photo with Cousin",
-    description: "Family moment with cousin",
-    year: "Family"
+    title: "With Librarian M. Veerasamy",
+    description: "With respected librarian M. Veerasamy",
+    year: "Professional"
   },
   {
     id: 25,
@@ -215,13 +209,7 @@ const galleryPhotos: Photo[] = [
     description: "With political party leader",
     year: "Public Service"
   },
-  {
-    id: 28,
-    src: "/sgtrust/media/images/gallery/relatives.jpg",
-    title: "With Relatives",
-    description: "Family gathering with relatives",
-    year: "Family"
-  },
+
   {
     id: 29,
     src: "/sgtrust/media/images/gallery/shotput.jpg",
@@ -229,13 +217,7 @@ const galleryPhotos: Photo[] = [
     description: "Professor participating in shot put event",
     year: "Sports"
   },
-  {
-    id: 30,
-    src: "/sgtrust/media/images/gallery/singaporefriends.jpg",
-    title: "Singapore Friends",
-    description: "With friends during Singapore visit",
-    year: "International"
-  },
+
   {
     id: 31,
     src: "/sgtrust/media/images/gallery/speech.jpg",
@@ -250,13 +232,7 @@ const galleryPhotos: Photo[] = [
     description: "Another moment of public speaking",
     year: "Academic"
   },
-  {
-    id: 33,
-    src: "/sgtrust/media/images/gallery/standingindinerhall.jpg",
-    title: "Standing in Diner Hall",
-    description: "Professor in university dining hall",
-    year: "Campus Life"
-  },
+
   {
     id: 34,
     src: "/sgtrust/media/images/gallery/tripwithfriends.jpg",
@@ -313,13 +289,7 @@ const galleryPhotos: Photo[] = [
     description: "With his respected PhD supervisor and guide",
     year: "Academic"
   },
-  {
-    id: 42,
-    src: "/sgtrust/media/images/gallery/withhisrelatives.jpg",
-    title: "With His Relatives",
-    description: "Family gathering with extended relatives",
-    year: "Family"
-  },
+
   {
     id: 43,
     src: "/sgtrust/media/images/gallery/withhisstudentinsingapore.jpg",
