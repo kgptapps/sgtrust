@@ -19,6 +19,8 @@ import PublicationsPage from './pages/PublicationsPage';
 import ResearchProjectsPage from './pages/ResearchProjectsPage';
 import ArticlesPage from './pages/ArticlesPage';
 import AccountabilityPage from './pages/AccountabilityPage';
+import SGTrustPage from './pages/SGTrustPage';
+import AcknowledgementsPage from './pages/AcknowledgementsPage';
 import ContactPage from './pages/ContactPage';
 
 function App() {
@@ -37,13 +39,15 @@ function App() {
               <Route path="/" element={<HomePage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/timeline" element={<TimelinePage />} />
-              <Route path="/students" element={<StudentsPage />} />
-              <Route path="/gallery" element={<GalleryPage />} />
               <Route path="/achievements" element={<AchievementsPage />} />
               <Route path="/publications" element={<PublicationsPage />} />
               <Route path="/research-projects" element={<ResearchProjectsPage />} />
               <Route path="/articles" element={<ArticlesPage />} />
+              <Route path="/gallery" element={<GalleryPage />} />
+              <Route path="/students" element={<StudentsPage />} />
               <Route path="/accountability" element={<AccountabilityPage />} />
+              <Route path="/sgtrust" element={<SGTrustPage />} />
+              <Route path="/acknowledgements" element={<AcknowledgementsPage />} />
               <Route path="/contact" element={<ContactPage />} />
             </Routes>
           </main>

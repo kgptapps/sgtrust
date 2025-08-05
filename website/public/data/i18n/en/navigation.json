@@ -4,13 +4,15 @@
   "home": "Home",
   "about": "About",
   "timeline": "Timeline",
-  "students": "Students",
-  "gallery": "Gallery",
   "achievements": "Achievements",
   "publications": "Publications",
   "researchProjects": "Research Projects",
   "articles": "Articles",
-  "accountability": "Accountability",
+  "gallery": "Gallery",
+  "students": "Students",
+  "endowmentFund": "Endowment Fund",
+  "sgtrust": "SGTrust",
+  "acknowledgements": "Acknowledgements",
   "contact": "Contact",
   "quickLinks": "Quick Links"
 }

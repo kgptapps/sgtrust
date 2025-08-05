@@ -4,13 +4,15 @@
   "home": "முகப்பு",
   "about": "பற்றி",
   "timeline": "காலவரிசை",
-  "students": "மாணவர்கள்",
-  "gallery": "படக்காட்சி",
   "achievements": "சாதனைகள்",
   "publications": "வெளியீடுகள்",
   "researchProjects": "ஆராய்ச்சி திட்டங்கள்",
   "articles": "கட்டுரைகள்",
-  "accountability": "பொறுப்புணர்வு",
+  "gallery": "படக்காட்சி",
+  "students": "மாணவர்கள்",
+  "endowmentFund": "நன்கொடை நிதி",
+  "sgtrust": "எஸ்ஜி அறக்கட்டளை",
+  "acknowledgements": "நன்றியுரை",
   "contact": "தொடர்பு",
   "quickLinks": "விரைவு இணைப்புகள்"
 }

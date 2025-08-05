@@ -45,13 +45,15 @@ const Header: React.FC = () => {
     { key: 'home', path: '/', label: t('navigation:home') },
     { key: 'about', path: '/about', label: t('navigation:about') },
     { key: 'timeline', path: '/timeline', label: t('navigation:timeline') },
-    { key: 'students', path: '/students', label: t('navigation:students') },
-    { key: 'gallery', path: '/gallery', label: t('navigation:gallery') },
     { key: 'achievements', path: '/achievements', label: t('navigation:achievements') },
     { key: 'publications', path: '/publications', label: t('navigation:publications') },
     { key: 'research-projects', path: '/research-projects', label: t('navigation:researchProjects') },
     { key: 'articles', path: '/articles', label: t('navigation:articles') },
-    { key: 'accountability', path: '/accountability', label: t('navigation:accountability') },
+    { key: 'gallery', path: '/gallery', label: t('navigation:gallery') },
+    { key: 'students', path: '/students', label: t('navigation:students') },
+    { key: 'endowment-fund', path: '/accountability', label: t('navigation:endowmentFund') },
+    { key: 'sgtrust', path: '/sgtrust', label: t('navigation:sgtrust') },
+    { key: 'acknowledgements', path: '/acknowledgements', label: t('navigation:acknowledgements') },
     { key: 'contact', path: '/contact', label: t('navigation:contact') }
   ];
 
