@@ -28,7 +28,8 @@ import {
   InputLabel,
   Select,
   MenuItem,
-  Button
+  Button,
+  Paper
 } from '@mui/material';
 import {
   EmojiEvents as AwardIcon,
@@ -562,6 +563,60 @@ const articlesData: Article[] = [
     date: 'Memorial Request',
     category: 'newspaper',
     content: 'Newspaper coverage of request for memorial statue...'
+  },
+  {
+    id: 9,
+    title: '2 Day Fasting for Pay Raise',
+    description: 'Article about 2-day fasting for pay raise',
+    image: '/sgtrust/media/images/articles/2dayfastingforpayraise.jpeg',
+    date: 'Social Action',
+    category: 'article',
+    content: 'Article coverage of 2-day fasting protest for pay raise...'
+  },
+  {
+    id: 10,
+    title: 'Muta Article 1',
+    description: 'Muta publication article - Part 1',
+    image: '/sgtrust/media/images/articles/Muta1.jpg',
+    date: 'Publication',
+    category: 'article',
+    content: 'Muta publication article coverage - Part 1...'
+  },
+  {
+    id: 11,
+    title: 'Muta Article 2',
+    description: 'Muta publication article - Part 2',
+    image: '/sgtrust/media/images/articles/Muta2.jpg',
+    date: 'Publication',
+    category: 'article',
+    content: 'Muta publication article coverage - Part 2...'
+  },
+  {
+    id: 12,
+    title: 'Muta Article 3',
+    description: 'Muta publication article - Part 3',
+    image: '/sgtrust/media/images/articles/Muta3.jpg',
+    date: 'Publication',
+    category: 'article',
+    content: 'Muta publication article coverage - Part 3...'
+  },
+  {
+    id: 13,
+    title: 'Muta Article 4',
+    description: 'Muta publication article - Part 4',
+    image: '/sgtrust/media/images/articles/Muta4.jpg',
+    date: 'Publication',
+    category: 'article',
+    content: 'Muta publication article coverage - Part 4...'
+  },
+  {
+    id: 14,
+    title: 'Muta Article 5',
+    description: 'Muta publication article - Part 5',
+    image: '/sgtrust/media/images/articles/Muta5.jpg',
+    date: 'Publication',
+    category: 'article',
+    content: 'Muta publication article coverage - Part 5...'
   }
 ];
 
@@ -576,8 +631,6 @@ const AchievementsPage: React.FC = () => {
   const [publicationsSearch, setPublicationsSearch] = useState('');
   const [publicationsYearFilter, setPublicationsYearFilter] = useState('');
   const [publicationsCategoryFilter, setPublicationsCategoryFilter] = useState('');
-  const [publicationsSortBy, setPublicationsSortBy] = useState<'year' | 'title' | 'journal'>('year');
-  const [publicationsSortOrder, setPublicationsSortOrder] = useState<'asc' | 'desc'>('desc');
 
   // Articles modal state
   const [selectedArticleImage, setSelectedArticleImage] = useState<string | null>(null);
@@ -679,43 +732,60 @@ const AchievementsPage: React.FC = () => {
     setSelectedArticleImage(null);
   };
 
-  // Filter and sort publications
+  // Filter publications (same as original PublicationsPage)
   const getFilteredAndSortedPublications = () => {
-    let filtered = publications.filter(pub => {
-      const matchesSearch = !publicationsSearch ||
+    return publications.filter(pub => {
+      const matchesSearch = publicationsSearch === '' ||
         pub.title.toLowerCase().includes(publicationsSearch.toLowerCase()) ||
         pub.authors.some(author => author.toLowerCase().includes(publicationsSearch.toLowerCase())) ||
         pub.journal.toLowerCase().includes(publicationsSearch.toLowerCase());
 
-      const matchesYear = !publicationsYearFilter || pub.year.toString() === publicationsYearFilter;
-      const matchesCategory = !publicationsCategoryFilter || pub.category === publicationsCategoryFilter;
+      const matchesYear = publicationsYearFilter === '' || pub.year.toString() === publicationsYearFilter;
+      const matchesType = publicationsCategoryFilter === '' || pub.type === publicationsCategoryFilter;
 
-      return matchesSearch && matchesYear && matchesCategory;
+      return matchesSearch && matchesYear && matchesType;
     });
-
-    // Sort publications
-    filtered.sort((a, b) => {
-      let comparison = 0;
-      switch (publicationsSortBy) {
-        case 'year':
-          comparison = a.year - b.year;
-          break;
-        case 'title':
-          comparison = a.title.localeCompare(b.title);
-          break;
-        case 'journal':
-          comparison = a.journal.localeCompare(b.journal);
-          break;
-      }
-      return publicationsSortOrder === 'asc' ? comparison : -comparison;
-    });
-
-    return filtered;
   };
 
-  // Get unique years and categories for filters
+  // Get unique years and types for filters
   const uniqueYears = [...new Set(publications.map(pub => pub.year))].sort((a, b) => b - a);
-  const uniqueCategories = [...new Set(publications.map(pub => pub.category).filter(Boolean))].sort();
+  const uniqueTypes = [...new Set(publications.map(pub => pub.type))];
+
+  // Helper functions for publications formatting (same as original PublicationsPage)
+  const formatAuthors = (authors: string[]) => {
+    if (authors.length === 1) return authors[0];
+    if (authors.length === 2) return `${authors[0]} and ${authors[1]}`;
+    return `${authors.slice(0, -1).join(', ')}, and ${authors[authors.length - 1]}`;
+  };
+
+  const formatCitation = (pub: any) => {
+    const authorsStr = formatAuthors(pub.authors);
+    const volumePages = pub.volume && pub.pages ? ` ${pub.volume}:${pub.pages}` :
+                       pub.volume ? ` ${pub.volume}` :
+                       pub.pages ? `:${pub.pages}` : '';
+
+    return `${authorsStr}. ${pub.title}. ${pub.journal}. ${pub.year}${volumePages}.`;
+  };
+
+  // Group publications by year (same as original)
+  const getPublicationsByYear = () => {
+    const filtered = getFilteredAndSortedPublications();
+    const grouped = filtered.reduce((acc, pub) => {
+      if (!acc[pub.year]) {
+        acc[pub.year] = [];
+      }
+      acc[pub.year].push(pub);
+      return acc;
+    }, {} as Record<number, any[]>);
+
+    return Object.keys(grouped)
+      .map(Number)
+      .sort((a, b) => b - a)
+      .reduce((acc, year) => {
+        acc[year] = grouped[year];
+        return acc;
+      }, {} as Record<number, any[]>);
+  };
 
   // Filter achievements based on selected category and subcategory
   const getFilteredAchievements = () => {
@@ -739,19 +809,32 @@ const AchievementsPage: React.FC = () => {
     switch (selectedCategory) {
       case 'publications':
         const filteredPublications = getFilteredAndSortedPublications();
-        return (
-          <>
-            {/* Publications Search and Filter Controls */}
-            <Box sx={{ mb: 4, p: 3, backgroundColor: 'grey.50', borderRadius: 2 }}>
-              <Typography variant="h6" gutterBottom>
-                Search & Filter Publications ({filteredPublications.length} of {publications.length})
-              </Typography>
+        const publicationsByYear = getPublicationsByYear();
+        const sortedYears = Object.keys(publicationsByYear).map(Number).sort((a, b) => b - a);
 
-              <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: 'repeat(2, 1fr)', lg: 'repeat(4, 1fr)' }, gap: 2, mb: 3 }}>
+        return (
+          <Box sx={{ width: '100%' }}>
+            {/* Header - Same as original */}
+            <Box sx={{ mb: 4, textAlign: 'center' }}>
+              <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', mb: 2 }}>
+                <ArticleIcon sx={{ fontSize: 40, mr: 2, color: 'primary.main' }} />
+                <Typography variant="h4" component="h2" gutterBottom>
+                  Scientific Publications
+                </Typography>
+              </Box>
+              <Typography variant="h6" color="text.secondary" sx={{ mb: 3 }}>
+                Complete list of peer-reviewed research publications
+              </Typography>
+              <Typography variant="body1" color="text.secondary">
+                Total Publications: {publications.length} | Years: {Math.min(...uniqueYears)} - {Math.max(...uniqueYears)}
+              </Typography>
+            </Box>
+
+            {/* Filters - Same as original */}
+            <Paper sx={{ p: 3, mb: 4 }}>
+              <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap', alignItems: 'center' }}>
                 <TextField
-                  fullWidth
-                  variant="outlined"
-                  placeholder="Search by title, author, or journal..."
+                  placeholder="Search publications..."
                   value={publicationsSearch}
                   onChange={(e) => setPublicationsSearch(e.target.value)}
                   InputProps={{
@@ -761,9 +844,10 @@ const AchievementsPage: React.FC = () => {
                       </InputAdornment>
                     ),
                   }}
+                  sx={{ flexGrow: 1, minWidth: 300 }}
                 />
 
-                <FormControl fullWidth>
+                <FormControl sx={{ minWidth: 120 }}>
                   <InputLabel>Year</InputLabel>
                   <Select
                     value={publicationsYearFilter}
@@ -771,96 +855,98 @@ const AchievementsPage: React.FC = () => {
                     onChange={(e) => setPublicationsYearFilter(e.target.value)}
                   >
                     <MenuItem value="">All Years</MenuItem>
-                    {uniqueYears.map((year) => (
+                    {uniqueYears.map(year => (
                       <MenuItem key={year} value={year.toString()}>{year}</MenuItem>
                     ))}
                   </Select>
                 </FormControl>
 
-                <FormControl fullWidth>
-                  <InputLabel>Category</InputLabel>
+                <FormControl sx={{ minWidth: 120 }}>
+                  <InputLabel>Type</InputLabel>
                   <Select
                     value={publicationsCategoryFilter}
-                    label="Category"
+                    label="Type"
                     onChange={(e) => setPublicationsCategoryFilter(e.target.value)}
                   >
-                    <MenuItem value="">All Categories</MenuItem>
-                    {uniqueCategories.map((category) => (
-                      <MenuItem key={category} value={category}>{category}</MenuItem>
+                    <MenuItem value="">All Types</MenuItem>
+                    {uniqueTypes.map(type => (
+                      <MenuItem key={type} value={type}>{type}</MenuItem>
                     ))}
-                  </Select>
-                </FormControl>
-
-                <FormControl fullWidth>
-                  <InputLabel>Sort By</InputLabel>
-                  <Select
-                    value={`${publicationsSortBy}-${publicationsSortOrder}`}
-                    label="Sort By"
-                    onChange={(e) => {
-                      const [sortBy, sortOrder] = e.target.value.split('-');
-                      setPublicationsSortBy(sortBy as 'year' | 'title' | 'journal');
-                      setPublicationsSortOrder(sortOrder as 'asc' | 'desc');
-                    }}
-                  >
-                    <MenuItem value="year-desc">Year (Newest First)</MenuItem>
-                    <MenuItem value="year-asc">Year (Oldest First)</MenuItem>
-                    <MenuItem value="title-asc">Title (A-Z)</MenuItem>
-                    <MenuItem value="title-desc">Title (Z-A)</MenuItem>
-                    <MenuItem value="journal-asc">Journal (A-Z)</MenuItem>
-                    <MenuItem value="journal-desc">Journal (Z-A)</MenuItem>
                   </Select>
                 </FormControl>
               </Box>
 
-              <Button
-                variant="outlined"
-                onClick={() => {
-                  setPublicationsSearch('');
-                  setPublicationsYearFilter('');
-                  setPublicationsCategoryFilter('');
-                  setPublicationsSortBy('year');
-                  setPublicationsSortOrder('desc');
-                }}
-                disabled={!publicationsSearch && !publicationsYearFilter && !publicationsCategoryFilter}
-              >
-                Clear Filters
-              </Button>
-            </Box>
+              {(publicationsSearch || publicationsYearFilter !== '' || publicationsCategoryFilter !== '') && (
+                <Box sx={{ mt: 2 }}>
+                  <Typography variant="body2" color="text.secondary">
+                    Showing {filteredPublications.length} of {publications.length} publications
+                  </Typography>
+                </Box>
+              )}
+            </Paper>
 
-            {/* Publications Grid */}
-            {filteredPublications.map((publication) => (
-              <Box key={publication.id}>
-                <Card sx={{ height: '100%', transition: 'transform 0.2s, box-shadow 0.2s', '&:hover': { transform: 'translateY(-2px)', boxShadow: 4 } }}>
-                  <CardContent sx={{ p: 3 }}>
-                    <Box sx={{ display: 'flex', alignItems: 'flex-start', mb: 2 }}>
-                      <ArticleIcon color="primary" sx={{ mt: 0.5, mr: 2 }} />
+            {/* Publications List - Same as original */}
+            {sortedYears.map(year => (
+              <Box key={year} sx={{ mb: 4 }}>
+                <Typography variant="h4" component="h3" sx={{ mb: 3, color: 'primary.main' }}>
+                  {year}
+                </Typography>
+
+                {publicationsByYear[year].map((pub, index) => (
+                  <Paper key={pub.id} sx={{ p: 3, mb: 2 }}>
+                    <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: 2 }}>
+                      <Typography variant="body2" color="text.secondary" sx={{ minWidth: 30 }}>
+                        {index + 1}.
+                      </Typography>
+
                       <Box sx={{ flexGrow: 1 }}>
-                        <Typography variant="h6" component="h3" gutterBottom sx={{ fontWeight: 600, lineHeight: 1.3 }}>
-                          {publication.title}
+                        <Typography variant="body1" sx={{ mb: 1, lineHeight: 1.6 }}>
+                          {formatCitation(pub)}
                         </Typography>
-                        <Typography variant="body2" color="primary" sx={{ fontWeight: 500, mb: 1 }}>
-                          {publication.authors.join(', ')}
-                        </Typography>
-                        <Typography variant="body2" color="text.secondary" sx={{ fontStyle: 'italic', mb: 2 }}>
-                          {publication.journal}
-                          {publication.volume && `, Vol. ${publication.volume}`}
-                          {publication.issue && `, Issue ${publication.issue}`}
-                          {publication.pages && `, pp. ${publication.pages}`}
-                        </Typography>
+
                         <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap', alignItems: 'center' }}>
-                          <Chip label={publication.year} color="primary" size="small" />
-                          <Chip label={publication.type} variant="outlined" size="small" />
-                          {publication.category && (
-                            <Chip label={publication.category} variant="outlined" size="small" color="secondary" />
+                          <Chip
+                            label={pub.type}
+                            size="small"
+                            color="primary"
+                            variant="outlined"
+                          />
+                          {pub.category && (
+                            <Chip
+                              label={pub.category}
+                              size="small"
+                              color="secondary"
+                              variant="outlined"
+                            />
+                          )}
+                          {pub.doi && (
+                            <Link
+                              href={`https://doi.org/${pub.doi}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              sx={{ ml: 1 }}
+                            >
+                              DOI: {pub.doi}
+                            </Link>
+                          )}
+                          {pub.url && (
+                            <Link
+                              href={pub.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              sx={{ ml: 1 }}
+                            >
+                              Full Text
+                            </Link>
                           )}
                         </Box>
                       </Box>
                     </Box>
-                  </CardContent>
-                </Card>
+                  </Paper>
+                ))}
               </Box>
             ))}
-          </>
+          </Box>
         );
       case 'research-projects':
         return researchProjectsData.map((project) => (
