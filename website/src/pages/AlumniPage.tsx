@@ -5,8 +5,7 @@ import {
   Box,
   Card,
   CardContent,
-  CardMedia,
-  Grid
+  CardMedia
 } from '@mui/material';
 import { School as SchoolIcon } from '@mui/icons-material';
 
@@ -61,64 +60,70 @@ const AlumniPage: React.FC = () => {
       </Box>
 
       {/* Alumni Profiles */}
-      <Grid container spacing={4} justifyContent="center">
+      <Box
+        sx={{
+          display: 'grid',
+          gridTemplateColumns: { xs: '1fr', md: 'repeat(2, 1fr)' },
+          gap: 4,
+          justifyContent: 'center'
+        }}
+      >
         {alumniProfiles.map((alumni) => (
-          <Grid item xs={12} md={6} key={alumni.id}>
-            <Card
+          <Card
+            key={alumni.id}
+            sx={{
+              height: '100%',
+              display: 'flex',
+              flexDirection: 'column',
+              transition: 'transform 0.2s, box-shadow 0.2s',
+              '&:hover': {
+                transform: 'translateY(-4px)',
+                boxShadow: 6
+              }
+            }}
+          >
+            <CardMedia
+              component="img"
+              height="300"
+              image={alumni.image}
+              alt={alumni.name}
               sx={{
-                height: '100%',
-                display: 'flex',
-                flexDirection: 'column',
-                transition: 'transform 0.2s, box-shadow 0.2s',
-                '&:hover': {
-                  transform: 'translateY(-4px)',
-                  boxShadow: 6
-                }
+                objectFit: 'cover',
+                backgroundColor: 'grey.100'
               }}
-            >
-              <CardMedia
-                component="img"
-                height="300"
-                image={alumni.image}
-                alt={alumni.name}
-                sx={{
-                  objectFit: 'cover',
-                  backgroundColor: 'grey.100'
-                }}
-              />
-              <CardContent sx={{ flexGrow: 1, p: 3 }}>
-                <Typography variant="h5" component="h2" gutterBottom sx={{ fontWeight: 600, color: 'primary.main' }}>
-                  {alumni.name}
+            />
+            <CardContent sx={{ flexGrow: 1, p: 3 }}>
+              <Typography variant="h5" component="h2" gutterBottom sx={{ fontWeight: 600, color: 'primary.main' }}>
+                {alumni.name}
+              </Typography>
+
+              <Typography variant="h6" color="text.primary" sx={{ mb: 1, fontWeight: 500 }}>
+                {alumni.title}
+              </Typography>
+
+              <Typography variant="body1" color="text.secondary" sx={{ mb: 1 }}>
+                {alumni.department}
+              </Typography>
+
+              <Typography variant="body1" color="text.secondary" sx={{ mb: 1, fontWeight: 500 }}>
+                {alumni.institution}
+              </Typography>
+
+              {alumni.location && (
+                <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
+                  {alumni.location}
                 </Typography>
+              )}
 
-                <Typography variant="h6" color="text.primary" sx={{ mb: 1, fontWeight: 500 }}>
-                  {alumni.title}
+              {alumni.tenure && (
+                <Typography variant="body2" color="primary.main" sx={{ fontWeight: 500 }}>
+                  {alumni.tenure}
                 </Typography>
-
-                <Typography variant="body1" color="text.secondary" sx={{ mb: 1 }}>
-                  {alumni.department}
-                </Typography>
-
-                <Typography variant="body1" color="text.secondary" sx={{ mb: 1, fontWeight: 500 }}>
-                  {alumni.institution}
-                </Typography>
-
-                {alumni.location && (
-                  <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
-                    {alumni.location}
-                  </Typography>
-                )}
-
-                {alumni.tenure && (
-                  <Typography variant="body2" color="primary.main" sx={{ fontWeight: 500 }}>
-                    {alumni.tenure}
-                  </Typography>
-                )}
-              </CardContent>
-            </Card>
-          </Grid>
+              )}
+            </CardContent>
+          </Card>
         ))}
-      </Grid>
+      </Box>
 
       {/* Legacy Note */}
       <Box sx={{ mt: 6, textAlign: 'center', p: 4, backgroundColor: 'grey.50', borderRadius: 2 }}>
