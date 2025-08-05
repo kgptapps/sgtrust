@@ -5,18 +5,13 @@ import {
   Typography,
   Card,
   CardMedia,
-  Tabs,
-  Tab,
   Dialog,
   DialogContent,
   IconButton,
   Chip
 } from '@mui/material';
 import {
-  Close as CloseIcon,
-  Person as PersonIcon,
-  School as SchoolIcon,
-  Event as EventIcon
+  Close as CloseIcon
 } from '@mui/icons-material';
 import { useTranslation } from 'react-i18next';
 
@@ -29,103 +24,350 @@ interface Photo {
   year: string;
 }
 
-// Sample gallery data
-const galleryData = {
-  personal: [
-    {
-      id: 1,
-      src: "/sgtrust/media/images/gallery/personal/family-1.jpg",
-      title: "Family Portrait",
-      description: "Professor with family members",
-      year: "2020"
-    },
-    {
-      id: 2,
-      src: "/sgtrust/media/images/gallery/personal/village-1.jpg",
-      title: "Village Roots",
-      description: "Visiting childhood village",
-      year: "2019"
-    }
-  ],
-  academic: [
-    {
-      id: 3,
-      src: "/sgtrust/media/images/gallery/academic/lecture-1.jpg",
-      title: "Teaching Excellence",
-      description: "Professor delivering a lecture",
-      year: "2021"
-    },
-    {
-      id: 4,
-      src: "/sgtrust/media/images/gallery/academic/research-1.jpg",
-      title: "Research Work",
-      description: "In the research laboratory",
-      year: "2020"
-    }
-  ],
-  students: [
-    {
-      id: 5,
-      src: "/sgtrust/media/images/gallery/students/graduation-1.jpg",
-      title: "PhD Graduation",
-      description: "With graduating PhD students",
-      year: "2022"
-    },
-    {
-      id: 6,
-      src: "/sgtrust/media/images/gallery/students/group-1.jpg",
-      title: "Student Group",
-      description: "Annual student gathering",
-      year: "2021"
-    }
-  ],
-  events: [
-    {
-      id: 7,
-      src: "/sgtrust/media/images/gallery/events/conference-1.jpg",
-      title: "International Conference",
-      description: "Speaking at academic conference",
-      year: "2022"
-    },
-    {
-      id: 8,
-      src: "/sgtrust/media/images/gallery/events/award-1.jpg",
-      title: "Award Ceremony",
-      description: "Receiving academic recognition",
-      year: "2021"
-    }
-  ]
-};
+// Gallery photos data - Real photos from Professor S. Govindasamy's collection
+const galleryPhotos: Photo[] = [
+  {
+    id: 1,
+    src: "/sgtrust/media/images/gallery/addressingguest.jpg",
+    title: "Addressing Guest",
+    description: "Professor addressing distinguished guests at an academic event",
+    year: "Academic"
+  },
+  {
+    id: 2,
+    src: "/sgtrust/media/images/gallery/addressingstudents.jpg",
+    title: "Addressing Students",
+    description: "Professor delivering a lecture to students",
+    year: "Teaching"
+  },
+  {
+    id: 3,
+    src: "/sgtrust/media/images/gallery/ataconfrenceinsingapore.jpg",
+    title: "Conference in Singapore",
+    description: "At an academic conference in Singapore",
+    year: "International"
+  },
+  {
+    id: 4,
+    src: "/sgtrust/media/images/gallery/athisoffice.jpg",
+    title: "At His Office",
+    description: "Professor at his university office",
+    year: "Professional"
+  },
+  {
+    id: 5,
+    src: "/sgtrust/media/images/gallery/attendingexecutivemeeting.jpg",
+    title: "Executive Meeting",
+    description: "Attending university executive meeting",
+    year: "Administrative"
+  },
+  {
+    id: 6,
+    src: "/sgtrust/media/images/gallery/awardscermony.jpg",
+    title: "Awards Ceremony",
+    description: "Receiving academic recognition and awards",
+    year: "Recognition"
+  },
+  {
+    id: 7,
+    src: "/sgtrust/media/images/gallery/celebration.jpg",
+    title: "Celebration",
+    description: "Academic celebration with colleagues",
+    year: "Events"
+  },
+  {
+    id: 8,
+    src: "/sgtrust/media/images/gallery/committeespeech.jpg",
+    title: "Committee Speech",
+    description: "Delivering speech at committee meeting",
+    year: "Leadership"
+  },
+  {
+    id: 9,
+    src: "/sgtrust/media/images/gallery/congratulations.jpg",
+    title: "Congratulations",
+    description: "Receiving congratulations from colleagues",
+    year: "Achievement"
+  },
+  {
+    id: 10,
+    src: "/sgtrust/media/images/gallery/congratulationsagain.jpg",
+    title: "More Congratulations",
+    description: "Another moment of recognition and appreciation",
+    year: "Achievement"
+  },
+  {
+    id: 11,
+    src: "/sgtrust/media/images/gallery/cyclingthroughtown.jpg",
+    title: "Cycling Through Town",
+    description: "Professor cycling through the town",
+    year: "Personal"
+  },
+  {
+    id: 12,
+    src: "/sgtrust/media/images/gallery/debate.jpg",
+    title: "Academic Debate",
+    description: "Participating in academic debate or discussion",
+    year: "Academic"
+  },
+  {
+    id: 13,
+    src: "/sgtrust/media/images/gallery/discussion.jpg",
+    title: "Discussion",
+    description: "Engaged in academic discussion with peers",
+    year: "Academic"
+  },
+  {
+    id: 14,
+    src: "/sgtrust/media/images/gallery/distinguishedguest.jpg",
+    title: "Distinguished Guest",
+    description: "With distinguished guests at university event",
+    year: "Events"
+  },
+  {
+    id: 15,
+    src: "/sgtrust/media/images/gallery/familyphoto.jpg",
+    title: "Family Photo",
+    description: "Professor with his beloved family",
+    year: "Family"
+  },
+  {
+    id: 16,
+    src: "/sgtrust/media/images/gallery/familypicture.jpg",
+    title: "Family Picture",
+    description: "Another cherished family moment",
+    year: "Family"
+  },
+  {
+    id: 17,
+    src: "/sgtrust/media/images/gallery/felicitation.jpg",
+    title: "Felicitation",
+    description: "Being felicitated for academic contributions",
+    year: "Honor"
+  },
+  {
+    id: 18,
+    src: "/sgtrust/media/images/gallery/funtimewithfriends.jpg",
+    title: "Fun Time with Friends",
+    description: "Enjoying leisure time with friends and colleagues",
+    year: "Social"
+  },
+  {
+    id: 19,
+    src: "/sgtrust/media/images/gallery/hangoutwithprof.jpg",
+    title: "Hangout with Professor",
+    description: "Casual time with fellow professors",
+    year: "Social"
+  },
+  {
+    id: 20,
+    src: "/sgtrust/media/images/gallery/honoring.jpg",
+    title: "Honoring",
+    description: "Being honored for outstanding contributions",
+    year: "Recognition"
+  },
+  {
+    id: 21,
+    src: "/sgtrust/media/images/gallery/longjump.jpg",
+    title: "Long Jump",
+    description: "Professor participating in sports - long jump",
+    year: "Sports"
+  },
+  {
+    id: 22,
+    src: "/sgtrust/media/images/gallery/oldneighbourhoodbuddies.jpg",
+    title: "Old Neighbourhood Buddies",
+    description: "With childhood friends and neighbourhood buddies",
+    year: "Personal"
+  },
+  {
+    id: 23,
+    src: "/sgtrust/media/images/gallery/photowithcollegues.jpg",
+    title: "Photo with Colleagues",
+    description: "Group photo with university colleagues",
+    year: "Professional"
+  },
+  {
+    id: 24,
+    src: "/sgtrust/media/images/gallery/photowithcousin.jpg",
+    title: "Photo with Cousin",
+    description: "Family moment with cousin",
+    year: "Family"
+  },
+  {
+    id: 25,
+    src: "/sgtrust/media/images/gallery/playingvolleyball.jpg",
+    title: "Playing Volleyball",
+    description: "Professor enjoying volleyball game",
+    year: "Sports"
+  },
+  {
+    id: 26,
+    src: "/sgtrust/media/images/gallery/politicalleader.jpg",
+    title: "With Political Leader",
+    description: "Meeting with political leader",
+    year: "Public Service"
+  },
+  {
+    id: 27,
+    src: "/sgtrust/media/images/gallery/politicalpartyleader.jpg",
+    title: "Political Party Leader",
+    description: "With political party leader",
+    year: "Public Service"
+  },
+  {
+    id: 28,
+    src: "/sgtrust/media/images/gallery/relatives.jpg",
+    title: "With Relatives",
+    description: "Family gathering with relatives",
+    year: "Family"
+  },
+  {
+    id: 29,
+    src: "/sgtrust/media/images/gallery/shotput.jpg",
+    title: "Shot Put",
+    description: "Professor participating in shot put event",
+    year: "Sports"
+  },
+  {
+    id: 30,
+    src: "/sgtrust/media/images/gallery/singaporefriends.jpg",
+    title: "Singapore Friends",
+    description: "With friends during Singapore visit",
+    year: "International"
+  },
+  {
+    id: 31,
+    src: "/sgtrust/media/images/gallery/speech.jpg",
+    title: "Delivering Speech",
+    description: "Professor delivering an important speech",
+    year: "Academic"
+  },
+  {
+    id: 32,
+    src: "/sgtrust/media/images/gallery/speech2.jpg",
+    title: "Another Speech",
+    description: "Another moment of public speaking",
+    year: "Academic"
+  },
+  {
+    id: 33,
+    src: "/sgtrust/media/images/gallery/standingindinerhall.jpg",
+    title: "Standing in Diner Hall",
+    description: "Professor in university dining hall",
+    year: "Campus Life"
+  },
+  {
+    id: 34,
+    src: "/sgtrust/media/images/gallery/tripwithfriends.jpg",
+    title: "Trip with Friends",
+    description: "Enjoying trip with friends and colleagues",
+    year: "Travel"
+  },
+  {
+    id: 35,
+    src: "/sgtrust/media/images/gallery/unniversitycelebration.jpg",
+    title: "University Celebration",
+    description: "University celebration and festivities",
+    year: "Events"
+  },
+  {
+    id: 36,
+    src: "/sgtrust/media/images/gallery/valedictoryfunction.jpg",
+    title: "Valedictory Function",
+    description: "At university valedictory function",
+    year: "Academic"
+  },
+  {
+    id: 37,
+    src: "/sgtrust/media/images/gallery/vistingprofessor.jpg",
+    title: "Visiting Professor",
+    description: "With visiting professor at university",
+    year: "Academic"
+  },
+  {
+    id: 38,
+    src: "/sgtrust/media/images/gallery/withcolleagues.jpg",
+    title: "With Colleagues",
+    description: "Group moment with university colleagues",
+    year: "Professional"
+  },
+  {
+    id: 39,
+    src: "/sgtrust/media/images/gallery/withdelegate.jpg",
+    title: "With Delegate",
+    description: "Meeting with academic delegate",
+    year: "Professional"
+  },
+  {
+    id: 40,
+    src: "/sgtrust/media/images/gallery/withhisgrandmaandolderbrother.jpg",
+    title: "With Grandma and Older Brother",
+    description: "Precious family moment with grandmother and brother",
+    year: "Family"
+  },
+  {
+    id: 41,
+    src: "/sgtrust/media/images/gallery/withhisphdguide.jpg",
+    title: "With His PhD Guide",
+    description: "With his respected PhD supervisor and guide",
+    year: "Academic"
+  },
+  {
+    id: 42,
+    src: "/sgtrust/media/images/gallery/withhisrelatives.jpg",
+    title: "With His Relatives",
+    description: "Family gathering with extended relatives",
+    year: "Family"
+  },
+  {
+    id: 43,
+    src: "/sgtrust/media/images/gallery/withhisstudentinsingapore.jpg",
+    title: "With Student in Singapore",
+    description: "With his student during Singapore visit",
+    year: "International"
+  },
+  {
+    id: 44,
+    src: "/sgtrust/media/images/gallery/withhisstudents.jpg",
+    title: "With His Students",
+    description: "Professor with his beloved students",
+    year: "Teaching"
+  },
+  {
+    id: 45,
+    src: "/sgtrust/media/images/gallery/withmorecolleauges.jpg",
+    title: "With More Colleagues",
+    description: "Another group photo with colleagues",
+    year: "Professional"
+  },
+  {
+    id: 46,
+    src: "/sgtrust/media/images/gallery/youngprofessors.govindasamy.jpg",
+    title: "Young Professor Govindasamy",
+    description: "Professor S. Govindasamy in his younger days",
+    year: "Early Career"
+  },
+  {
+    id: 47,
+    src: "/sgtrust/media/images/gallery/anotherpoliticalleader.jpeg",
+    title: "Another Political Leader",
+    description: "Meeting with another distinguished political leader",
+    year: "Public Service"
+  },
+  {
+    id: 48,
+    src: "/sgtrust/media/images/gallery/wholecampus.jpeg",
+    title: "Whole Campus",
+    description: "View of the entire university campus",
+    year: "Campus Life"
+  }
+];
 
 const GalleryPage: React.FC = () => {
   const { t } = useTranslation(['content']);
-  const [selectedTab, setSelectedTab] = useState(0);
   const [selectedImage, setSelectedImage] = useState<Photo | null>(null);
   const [dialogOpen, setDialogOpen] = useState(false);
-
-  const categories = [
-    { key: 'all', label: 'All Photos', icon: <PersonIcon /> },
-    { key: 'personal', label: 'Personal', icon: <PersonIcon /> },
-    { key: 'academic', label: 'Academic', icon: <SchoolIcon /> },
-    { key: 'students', label: 'Students', icon: <SchoolIcon /> },
-    { key: 'events', label: 'Events', icon: <EventIcon /> }
-  ];
-
-  const getAllPhotos = () => {
-    return [
-      ...galleryData.personal,
-      ...galleryData.academic,
-      ...galleryData.students,
-      ...galleryData.events
-    ];
-  };
-
-  const getPhotosForCategory = (category: string) => {
-    if (category === 'all') return getAllPhotos();
-    return galleryData[category as keyof typeof galleryData] || [];
-  };
-
-  const currentPhotos = getPhotosForCategory(categories[selectedTab].key);
 
   const handleImageClick = (photo: Photo) => {
     setSelectedImage(photo);
@@ -142,41 +384,21 @@ const GalleryPage: React.FC = () => {
       <Typography variant="h3" component="h1" gutterBottom textAlign="center">
         {t('content:galleryTitle')}
       </Typography>
-      <Typography variant="body1" textAlign="center" color="text.secondary" sx={{ mb: 4 }}>
+      <Typography variant="body1" textAlign="center" color="text.secondary" sx={{ mb: 6 }}>
         {t('content:galleryDescription')}
       </Typography>
 
-      {/* Category Tabs */}
-      <Box sx={{ mb: 4 }}>
-        <Tabs
-          value={selectedTab}
-          onChange={(_, newValue) => setSelectedTab(newValue)}
-          variant="scrollable"
-          scrollButtons="auto"
-          sx={{ mb: 3 }}
-        >
-          {categories.map((category) => (
-            <Tab
-              key={category.key}
-              label={
-                <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                  {category.icon}
-                  {category.label}
-                </Box>
-              }
-            />
-          ))}
-        </Tabs>
-      </Box>
-
       {/* Photo Grid */}
-      <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', md: 'repeat(3, 1fr)' }, gap: 3 }}>
-        {currentPhotos.map((photo) => (
+      <Box sx={{ display: 'grid', gridTemplateColumns: { xs: 'repeat(2, 1fr)', sm: 'repeat(3, 1fr)', md: 'repeat(4, 1fr)' }, gap: 3 }}>
+        {galleryPhotos.map((photo) => (
           <Box key={photo.id}>
             <Card
               sx={{
                 cursor: 'pointer',
                 transition: 'transform 0.2s ease, box-shadow 0.2s ease',
+                height: '100%',
+                display: 'flex',
+                flexDirection: 'column',
                 '&:hover': {
                   transform: 'scale(1.02)',
                   boxShadow: 6
@@ -184,38 +406,44 @@ const GalleryPage: React.FC = () => {
               }}
               onClick={() => handleImageClick(photo)}
             >
-              <CardMedia
-                component="img"
-                height="250"
-                image={photo.src}
-                alt={photo.title}
-                sx={{
-                  objectFit: 'cover',
-                  backgroundColor: 'grey.200'
-                }}
-                onError={(e) => {
-                  // Fallback for missing images
-                  (e.target as HTMLImageElement).src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkltYWdlIFBsYWNlaG9sZGVyPC90ZXh0Pjwvc3ZnPg==';
-                }}
-              />
-              <Box sx={{ p: 2 }}>
-                <Typography variant="h6" gutterBottom>
+              <Box sx={{ position: 'relative', paddingTop: '100%', overflow: 'hidden' }}>
+                <CardMedia
+                  component="img"
+                  image={photo.src}
+                  alt={photo.title}
+                  sx={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    backgroundColor: 'grey.200'
+                  }}
+                  onError={(e) => {
+                    // Fallback for missing images
+                    (e.target as HTMLImageElement).src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkltYWdlIFBsYWNlaG9sZGVyPC90ZXh0Pjwvc3ZnPg==';
+                  }}
+                />
+              </Box>
+              <Box sx={{ p: 1.5, flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
+                <Typography variant="subtitle2" gutterBottom sx={{ fontWeight: 'bold', fontSize: '0.875rem' }}>
                   {photo.title}
                 </Typography>
-                <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
+                <Typography variant="caption" color="text.secondary" sx={{ mb: 1, flexGrow: 1, fontSize: '0.75rem' }}>
                   {photo.description}
                 </Typography>
-                <Chip label={photo.year} size="small" color="primary" />
+                <Chip label={photo.year} size="small" color="primary" sx={{ alignSelf: 'flex-start', fontSize: '0.7rem', height: '20px' }} />
               </Box>
             </Card>
           </Box>
         ))}
       </Box>
 
-      {currentPhotos.length === 0 && (
+      {galleryPhotos.length === 0 && (
         <Box sx={{ textAlign: 'center', py: 6 }}>
           <Typography variant="h6" color="text.secondary">
-            No photos available in this category yet.
+            No photos available yet.
           </Typography>
           <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
             Photos will be added soon to showcase Professor S. Govindasamy's journey.
