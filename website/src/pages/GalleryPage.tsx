@@ -28,111 +28,125 @@ interface Photo {
 const galleryPhotos: Photo[] = [
   {
     id: 1,
+    src: "/sgtrust/media/images/withformergovernoroftamilnadu.jpeg",
+    title: "With Former Governor of Tamil Nadu",
+    description: "Professor with the former Governor of Tamil Nadu",
+    year: "Public Service"
+  },
+  {
+    id: 2,
+    src: "/sgtrust/media/images/withhisstudents.jpeg",
+    title: "With His Students",
+    description: "Professor with his beloved students",
+    year: "Teaching"
+  },
+  {
+    id: 3,
     src: "/sgtrust/media/images/gallery/addressingguest.jpg",
     title: "Addressing Guest",
     description: "Professor addressing distinguished guests at an academic event",
     year: "Academic"
   },
   {
-    id: 2,
+    id: 4,
     src: "/sgtrust/media/images/gallery/addressingstudents.jpg",
     title: "Addressing Students",
     description: "Professor delivering a lecture to students",
     year: "Teaching"
   },
   {
-    id: 3,
+    id: 5,
     src: "/sgtrust/media/images/gallery/ataconfrenceinsingapore.jpg",
     title: "Conference in Singapore",
     description: "At an academic conference in Singapore",
     year: "International"
   },
   {
-    id: 4,
+    id: 6,
     src: "/sgtrust/media/images/gallery/athisoffice.jpg",
     title: "At His Office",
     description: "Professor at his university office",
     year: "Professional"
   },
   {
-    id: 5,
+    id: 7,
     src: "/sgtrust/media/images/gallery/attendingexecutivemeeting.jpg",
     title: "Executive Meeting",
     description: "Attending university executive meeting",
     year: "Administrative"
   },
   {
-    id: 6,
+    id: 8,
     src: "/sgtrust/media/images/gallery/awardscermony.jpg",
     title: "Awards Ceremony",
     description: "Receiving academic recognition and awards",
     year: "Recognition"
   },
   {
-    id: 7,
+    id: 9,
     src: "/sgtrust/media/images/gallery/celebration.jpg",
     title: "Celebration",
     description: "Academic celebration with colleagues",
     year: "Events"
   },
   {
-    id: 8,
+    id: 10,
     src: "/sgtrust/media/images/gallery/committeespeech.jpg",
     title: "Committee Speech",
     description: "Delivering speech at committee meeting",
     year: "Leadership"
   },
   {
-    id: 9,
+    id: 11,
     src: "/sgtrust/media/images/gallery/congratulations.jpg",
     title: "Congratulations",
     description: "Receiving congratulations from colleagues",
     year: "Achievement"
   },
   {
-    id: 10,
+    id: 12,
     src: "/sgtrust/media/images/gallery/congratulationsagain.jpg",
     title: "More Congratulations",
     description: "Another moment of recognition and appreciation",
     year: "Achievement"
   },
   {
-    id: 11,
+    id: 13,
     src: "/sgtrust/media/images/gallery/cyclingthroughtown.jpg",
     title: "Cycling Through Town",
     description: "Professor cycling through the town",
     year: "Personal"
   },
   {
-    id: 12,
+    id: 14,
     src: "/sgtrust/media/images/gallery/debate.jpg",
     title: "Academic Debate",
     description: "Participating in academic debate or discussion",
     year: "Academic"
   },
   {
-    id: 13,
+    id: 15,
     src: "/sgtrust/media/images/gallery/discussion.jpg",
     title: "Discussion",
     description: "Engaged in academic discussion with peers",
     year: "Academic"
   },
   {
-    id: 14,
+    id: 16,
     src: "/sgtrust/media/images/gallery/distinguishedguest.jpg",
     title: "Distinguished Guest",
     description: "With distinguished guests at university event",
     year: "Events"
   },
   {
-    id: 15,
+    id: 17,
     src: "/sgtrust/media/images/gallery/familyphoto.jpg",
     title: "Family Photo",
     description: "Professor with his beloved family",
     year: "Family"
   },
   {
-    id: 16,
+    id: 18,
     src: "/sgtrust/media/images/gallery/familypicture.jpg",
     title: "Family Picture",
     description: "Another cherished family moment",

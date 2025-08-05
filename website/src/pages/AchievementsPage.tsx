@@ -1059,7 +1059,7 @@ const AchievementsPage: React.FC = () => {
   };
 
   return (
-    <Container maxWidth="lg" sx={{ py: 6 }}>
+    <Container maxWidth={selectedCategory === 'publications' ? false : 'lg'} sx={{ py: 6, ...(selectedCategory === 'publications' && { px: 3 }) }}>
       {/* Header */}
       <Box textAlign="center" mb={6}>
         <Typography variant="h3" component="h1" gutterBottom>
@@ -1129,8 +1129,13 @@ const AchievementsPage: React.FC = () => {
             }
           </Typography>
         </Box>
+      ) : selectedCategory === 'publications' ? (
+        /* Publications get full width layout */
+        <Box sx={{ width: '100%' }}>
+          {renderContent()}
+        </Box>
       ) : (
-        /* Content Grid */
+        /* Content Grid for other categories */
         <Box sx={{
           display: 'grid',
           gridTemplateColumns: { xs: '1fr', md: 'repeat(2, 1fr)', lg: 'repeat(3, 1fr)' },
