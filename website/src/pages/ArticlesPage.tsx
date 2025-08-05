@@ -126,7 +126,7 @@ const articlesData = {
     {
       id: 12,
       title: "MUTA 1",
-      description: "Family heritage documentation with father",
+      description: "",
       image: "/sgtrust/media/images/articles/Muta1.jpg",
       date: "Family Heritage",
       category: "family",
@@ -135,7 +135,7 @@ const articlesData = {
     {
       id: 13,
       title: "MUTA 2",
-      description: "Family gathering documentation",
+      description: "",
       image: "/sgtrust/media/images/articles/Muta2.jpg",
       date: "Family Heritage",
       category: "family",
@@ -144,7 +144,7 @@ const articlesData = {
     {
       id: 14,
       title: "MUTA 3",
-      description: "Family celebration documentation",
+      description: "",
       image: "/sgtrust/media/images/articles/Muta3.jpg",
       date: "Family Heritage",
       category: "family",
@@ -153,7 +153,7 @@ const articlesData = {
     {
       id: 15,
       title: "MUTA 4",
-      description: "Multi-generational family documentation",
+      description: "",
       image: "/sgtrust/media/images/articles/Muta4.jpg",
       date: "Family Heritage",
       category: "family",
@@ -162,7 +162,7 @@ const articlesData = {
     {
       id: 16,
       title: "MUTA 5",
-      description: "Family legacy documentation",
+      description: "",
       image: "/sgtrust/media/images/articles/Muta5.jpg",
       date: "Family Heritage",
       category: "family",
