@@ -16,13 +16,20 @@ import {
   Badge,
   Tabs,
   Tab,
-
   List,
   ListItem,
   ListItemText,
   Divider,
   Link,
-
+  Paper,
+  TextField,
+  InputAdornment,
+  FormControl,
+  InputLabel,
+  Select,
+  MenuItem,
+  CardMedia,
+  Grid
 } from '@mui/material';
 import {
   EmojiEvents as AwardIcon,
@@ -31,11 +38,17 @@ import {
   School as SchoolIcon,
   Sports as SportsIcon,
   Work as WorkIcon,
-
   Business as BusinessIcon,
   MenuBook as AcademicIcon,
-  Star as StarIcon
+  Star as StarIcon,
+  Article as ArticleIcon,
+  Science as ScienceIcon,
+  Newspaper as NewspaperIcon,
+  Search as SearchIcon
 } from '@mui/icons-material';
+
+// Import data from other pages
+import { publications, type Publication } from '../data/publications';
 
 
 interface Achievement {
@@ -44,12 +57,40 @@ interface Achievement {
   description: string;
   institution?: string;
   year?: number;
-  category: 'academic' | 'professional';
+  category: 'academic' | 'professional' | 'publications' | 'research-projects' | 'articles';
   subcategory?: 'research-projects' | 'publications' | 'magazines-newspapers';
   type: string;
   image?: string;
   certificate?: string;
   details?: string[];
+}
+
+// Research Project interface
+interface ResearchProject {
+  id: string;
+  title: string;
+  description?: string;
+  category: 'major' | 'minor';
+  duration: string;
+  fundingAgency: string;
+  totalEstimate: string;
+  collaborators?: string[];
+  outcomes?: string[];
+  publications?: string[];
+  status: 'completed' | 'ongoing' | 'published';
+  significance?: string;
+  researchArea?: string;
+}
+
+// Article interface
+interface Article {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  date: string;
+  category: string;
+  content: string;
 }
 
 interface Certificate {
@@ -400,12 +441,110 @@ const achievementsData = {
   ]
 };
 
+// Research Projects Data
+const researchProjectsData: ResearchProject[] = [
+  {
+    id: 'cauvery-100-ayurvedic',
+    title: 'Biochemical effects of Cauvery-100 an Ayurvedic Formulation to treat Gastrointestinal Tract Complications on Mammalian System',
+    category: 'major',
+    duration: 'Two years (1991-93)',
+    fundingAgency: 'Cauvery Ayurvedics, 16, Vannarpathi, Kodambakkam Madras',
+    totalEstimate: 'Rs. 1,70,000',
+    status: 'completed'
+  },
+  {
+    id: 'narcotic-rehabilitation',
+    title: 'Biochemical Concept of Narcotic Addict\'s Rehabilitation to Restrain Border Disturbances',
+    category: 'major',
+    duration: 'Three years (1993-96)',
+    fundingAgency: 'Defence Grants-in-Aid Scheme, Ministry of Defence, Government of India',
+    totalEstimate: 'Rs. 2,66,940',
+    status: 'completed'
+  },
+  {
+    id: 'echitamine-anticancer',
+    title: 'Evaluation of the Anticancer effects of Echitamine chloride in Experimental Fibrosarcoma and Ehrlich Ascites Carcinoma (EAC)',
+    category: 'major',
+    duration: 'Three years (1994-97)',
+    fundingAgency: 'University Grants Commission, New Delhi',
+    totalEstimate: 'Rs. 1,81,940',
+    status: 'completed'
+  },
+  {
+    id: 'asshiffa-500-unani',
+    title: 'Asshiffa-500, An Unani formulation. A prospective drug to treat kidney disease',
+    category: 'major',
+    duration: '1995-98',
+    fundingAgency: 'Alkausar Unani Kidney Foundation Centre',
+    totalEstimate: 'Rs. 1,23,000',
+    status: 'completed'
+  },
+  {
+    id: 'gangetin-antifertility',
+    title: 'Evaluation of the antifertility effects of gangetin - a plant petrocarpan on male albino rats',
+    category: 'major',
+    duration: '1998-2001',
+    fundingAgency: 'University Grants Commission, New Delhi',
+    totalEstimate: 'Rs. 3,16,940',
+    status: 'completed'
+  }
+];
+
+// Articles Data
+const articlesData: Article[] = [
+  {
+    id: 1,
+    title: 'Drug Proven Correct',
+    description: 'Drug research validation coverage',
+    image: '/sgtrust/media/newspapers/drugprovencorrect.JPG',
+    date: 'Research Coverage',
+    category: 'newspaper',
+    content: 'Newspaper coverage of Professor Govindasamy\'s drug research validation work...'
+  },
+  {
+    id: 2,
+    title: 'Educational Trust',
+    description: 'Educational trust coverage',
+    image: '/sgtrust/media/newspapers/educationaltrust.JPG',
+    date: 'Community Service',
+    category: 'newspaper',
+    content: 'Coverage of Professor Govindasamy\'s educational trust initiatives...'
+  },
+  {
+    id: 3,
+    title: 'Felicitation',
+    description: 'Felicitation ceremony coverage',
+    image: '/sgtrust/media/newspapers/felicitation.JPG',
+    date: 'Recognition',
+    category: 'newspaper',
+    content: 'Newspaper coverage of felicitation ceremony honoring Professor Govindasamy...'
+  },
+  {
+    id: 4,
+    title: 'First Trial Result',
+    description: 'First trial result announcement',
+    image: '/sgtrust/media/newspapers/firsttrialresult.JPG',
+    date: 'Research Milestone',
+    category: 'newspaper',
+    content: 'Coverage of significant research trial results...'
+  },
+  {
+    id: 5,
+    title: 'Magazine Feature',
+    description: 'Magazine feature article',
+    image: '/sgtrust/media/newspapers/magazine.JPG',
+    date: 'Profile',
+    category: 'magazine',
+    content: 'In-depth magazine profile of Professor Govindasamy\'s contributions...'
+  }
+];
+
 const AchievementsPage: React.FC = () => {
   const [legacyAchievementsData, setLegacyAchievementsData] = useState<AchievementsMetadata | null>(null);
   const [selectedCertificate, setSelectedCertificate] = useState<Certificate | null>(null);
   const [selectedAchievement, setSelectedAchievement] = useState<Achievement | null>(null);
   const [expandedYear, setExpandedYear] = useState<string | false>(false);
-  const [selectedCategory, setSelectedCategory] = useState<'academic' | 'professional'>('academic');
+  const [selectedCategory, setSelectedCategory] = useState<'academic' | 'professional' | 'publications' | 'research-projects' | 'articles'>('academic');
 
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
@@ -423,6 +562,12 @@ const AchievementsPage: React.FC = () => {
         return <AcademicIcon color="primary" />;
       case 'professional':
         return <BusinessIcon color="secondary" />;
+      case 'publications':
+        return <ArticleIcon color="primary" />;
+      case 'research-projects':
+        return <ScienceIcon color="secondary" />;
+      case 'articles':
+        return <NewspaperIcon color="primary" />;
       default:
         return <StarIcon color="action" />;
     }
@@ -431,8 +576,11 @@ const AchievementsPage: React.FC = () => {
   const getCategoryColor = (category: string): 'primary' | 'secondary' | 'default' => {
     switch (category) {
       case 'academic':
+      case 'publications':
+      case 'articles':
         return 'primary';
       case 'professional':
+      case 'research-projects':
         return 'secondary';
       default:
         return 'default';
@@ -475,7 +623,7 @@ const AchievementsPage: React.FC = () => {
     setSelectedAchievement(null);
   };
 
-  const handleCategoryChange = (_event: React.SyntheticEvent, newValue: 'academic' | 'professional') => {
+  const handleCategoryChange = (_event: React.SyntheticEvent, newValue: 'academic' | 'professional' | 'publications' | 'research-projects' | 'articles') => {
     setSelectedCategory(newValue);
   };
 
@@ -489,7 +637,144 @@ const AchievementsPage: React.FC = () => {
 
   // Filter achievements based on selected category and subcategory
   const getFilteredAchievements = () => {
-    return achievementsData[selectedCategory];
+    switch (selectedCategory) {
+      case 'academic':
+      case 'professional':
+        return achievementsData[selectedCategory];
+      case 'publications':
+        return publications;
+      case 'research-projects':
+        return researchProjectsData;
+      case 'articles':
+        return articlesData;
+      default:
+        return [];
+    }
+  };
+
+  // Render content based on selected category
+  const renderContent = () => {
+    switch (selectedCategory) {
+      case 'publications':
+        return publications.map((publication) => (
+          <Box key={publication.id}>
+            <Card sx={{ height: '100%', cursor: 'pointer', transition: 'transform 0.2s, box-shadow 0.2s', '&:hover': { transform: 'translateY(-4px)', boxShadow: 4 } }}>
+              <CardContent sx={{ p: 3 }}>
+                <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+                  <ArticleIcon color="primary" />
+                  <Box sx={{ ml: 2, flexGrow: 1 }}>
+                    <Typography variant="h6" component="h3" gutterBottom>
+                      {publication.title}
+                    </Typography>
+                    <Chip label={publication.year} color="primary" size="small" />
+                  </Box>
+                </Box>
+                <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
+                  {publication.journal}
+                </Typography>
+                <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
+                  {publication.authors}
+                </Typography>
+                <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
+                  <Chip label="Publication" variant="outlined" size="small" color="primary" />
+                  <Chip label={publication.category} variant="outlined" size="small" />
+                </Box>
+              </CardContent>
+            </Card>
+          </Box>
+        ));
+      case 'research-projects':
+        return researchProjectsData.map((project) => (
+          <Box key={project.id}>
+            <Card sx={{ height: '100%', cursor: 'pointer', transition: 'transform 0.2s, box-shadow 0.2s', '&:hover': { transform: 'translateY(-4px)', boxShadow: 4 } }}>
+              <CardContent sx={{ p: 3 }}>
+                <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+                  <ScienceIcon color="secondary" />
+                  <Box sx={{ ml: 2, flexGrow: 1 }}>
+                    <Typography variant="h6" component="h3" gutterBottom>
+                      {project.title}
+                    </Typography>
+                    <Chip label={project.duration} color="secondary" size="small" />
+                  </Box>
+                </Box>
+                <Typography variant="body2" color="primary" sx={{ mb: 2 }}>
+                  {project.fundingAgency}
+                </Typography>
+                <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
+                  Total Estimate: {project.totalEstimate}
+                </Typography>
+                <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
+                  <Chip label="Research Project" variant="outlined" size="small" color="secondary" />
+                  <Chip label={project.category} variant="outlined" size="small" />
+                  <Chip label={project.status} variant="outlined" size="small" />
+                </Box>
+              </CardContent>
+            </Card>
+          </Box>
+        ));
+      case 'articles':
+        return articlesData.map((article) => (
+          <Box key={article.id}>
+            <Card sx={{ height: '100%', cursor: 'pointer', transition: 'transform 0.2s, box-shadow 0.2s', '&:hover': { transform: 'translateY(-4px)', boxShadow: 4 } }}>
+              <CardMedia component="img" height="200" image={article.image} alt={article.title} />
+              <CardContent sx={{ p: 3 }}>
+                <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+                  <NewspaperIcon color="primary" />
+                  <Box sx={{ ml: 2, flexGrow: 1 }}>
+                    <Typography variant="h6" component="h3" gutterBottom>
+                      {article.title}
+                    </Typography>
+                    <Chip label={article.date} color="primary" size="small" />
+                  </Box>
+                </Box>
+                <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
+                  {article.description}
+                </Typography>
+                <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
+                  <Chip label="Article" variant="outlined" size="small" color="primary" />
+                  <Chip label={article.category} variant="outlined" size="small" />
+                </Box>
+              </CardContent>
+            </Card>
+          </Box>
+        ));
+      case 'academic':
+      case 'professional':
+        const achievements = achievementsData[selectedCategory];
+        return achievements.map((achievement) => (
+          <Box key={achievement.id}>
+            <Card sx={{ height: '100%', cursor: 'pointer', transition: 'transform 0.2s, box-shadow 0.2s', '&:hover': { transform: 'translateY(-4px)', boxShadow: 4 } }}
+                  onClick={() => handleAchievementClick(achievement)}>
+              <CardContent sx={{ p: 3 }}>
+                <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+                  {getCategoryIcon(achievement.category)}
+                  <Box sx={{ ml: 2, flexGrow: 1 }}>
+                    <Typography variant="h6" component="h3" gutterBottom>
+                      {achievement.title}
+                    </Typography>
+                    {achievement.year && (
+                      <Chip label={achievement.year} color={getCategoryColor(achievement.category)} size="small" />
+                    )}
+                  </Box>
+                </Box>
+                <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
+                  {achievement.description}
+                </Typography>
+                {achievement.institution && (
+                  <Typography variant="body2" color="primary" sx={{ mb: 2 }}>
+                    {achievement.institution}
+                  </Typography>
+                )}
+                <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
+                  <Chip label={achievement.type} variant="outlined" size="small" color={getCategoryColor(achievement.category)} />
+                </Box>
+              </CardContent>
+            </Card>
+          </Box>
+        ));
+      default:
+        return [];
+    }
   };
 
   return (
@@ -510,18 +795,37 @@ const AchievementsPage: React.FC = () => {
           value={selectedCategory}
           onChange={handleCategoryChange}
           centered
-          variant="fullWidth"
+          variant="scrollable"
+          scrollButtons="auto"
         >
           <Tab
-            label="Academic Achievements"
+            label="Academic"
             value="academic"
             icon={<AcademicIcon />}
             iconPosition="start"
           />
           <Tab
-            label="Professional Achievements"
+            label="Professional"
             value="professional"
             icon={<BusinessIcon />}
+            iconPosition="start"
+          />
+          <Tab
+            label="Publications"
+            value="publications"
+            icon={<ArticleIcon />}
+            iconPosition="start"
+          />
+          <Tab
+            label="Research Projects"
+            value="research-projects"
+            icon={<ScienceIcon />}
+            iconPosition="start"
+          />
+          <Tab
+            label="Articles"
+            value="articles"
+            icon={<NewspaperIcon />}
             iconPosition="start"
           />
         </Tabs>
@@ -545,69 +849,13 @@ const AchievementsPage: React.FC = () => {
           </Typography>
         </Box>
       ) : (
-        /* Regular Achievements Grid */
+        /* Content Grid */
         <Box sx={{
           display: 'grid',
           gridTemplateColumns: { xs: '1fr', md: 'repeat(2, 1fr)', lg: 'repeat(3, 1fr)' },
           gap: 4
         }}>
-          {getFilteredAchievements().map((achievement) => (
-            <Box key={achievement.id}>
-              <Card
-                sx={{
-                  height: '100%',
-                  cursor: 'pointer',
-                  transition: 'transform 0.2s, box-shadow 0.2s',
-                  '&:hover': {
-                    transform: 'translateY(-4px)',
-                    boxShadow: 4
-                  }
-                }}
-                onClick={() => handleAchievementClick(achievement)}
-              >
-                <CardContent sx={{ p: 3 }}>
-
-
-                  {/* Achievement Header */}
-                  <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-                    {getCategoryIcon(achievement.category)}
-                    <Box sx={{ ml: 2, flexGrow: 1 }}>
-                      <Typography variant="h6" component="h3" gutterBottom>
-                        {achievement.title}
-                      </Typography>
-                      {achievement.year && (
-                        <Chip
-                          label={achievement.year}
-                          color={getCategoryColor(achievement.category)}
-                          size="small"
-                        />
-                      )}
-                    </Box>
-                  </Box>
-
-                  {/* Achievement Details */}
-                  <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
-                    {achievement.description}
-                  </Typography>
-
-                  {achievement.institution && (
-                    <Typography variant="body2" color="primary" sx={{ mb: 2 }}>
-                      {achievement.institution}
-                    </Typography>
-                  )}
-
-                  <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
-                    <Chip
-                      label={achievement.type}
-                      variant="outlined"
-                      size="small"
-                      color={getCategoryColor(achievement.category)}
-                    />
-                  </Box>
-                </CardContent>
-              </Card>
-            </Box>
-          ))}
+          {renderContent()}
         </Box>
       )}
 

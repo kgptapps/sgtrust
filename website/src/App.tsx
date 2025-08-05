@@ -16,9 +16,6 @@ import TimelinePage from './pages/TimelinePage';
 import StudentsPage from './pages/StudentsPage';
 import GalleryPage from './pages/GalleryPage';
 import AchievementsPage from './pages/AchievementsPage';
-import PublicationsPage from './pages/PublicationsPage';
-import ResearchProjectsPage from './pages/ResearchProjectsPage';
-import ArticlesPage from './pages/ArticlesPage';
 import AccountabilityPage from './pages/AccountabilityPage';
 import SGTrustPage from './pages/SGTrustPage';
 import AcknowledgementsPage from './pages/AcknowledgementsPage';
@@ -41,9 +38,6 @@ function App() {
               <Route path="/about" element={<AboutPage />} />
               <Route path="/timeline" element={<TimelinePage />} />
               <Route path="/achievements" element={<AchievementsPage />} />
-              <Route path="/publications" element={<PublicationsPage />} />
-              <Route path="/research-projects" element={<ResearchProjectsPage />} />
-              <Route path="/articles" element={<ArticlesPage />} />
               <Route path="/gallery" element={<GalleryPage />} />
               <Route path="/students" element={<StudentsPage />} />
               <Route path="/accountability" element={<AccountabilityPage />} />
