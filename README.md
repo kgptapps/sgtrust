@@ -146,7 +146,9 @@ This project is created to honor and celebrate academic excellence and student s
 
 ---
 
-**Repository**: git@github.com:kgptapps/sgtrust.git  
-**Live URL**: https://kgptapps.github.io/sgtrust/  
-**Documentation Status**: Complete ✅  
+**Repository**: git@github.com:kgptapps/sgtrust.git
+**Live URL**: https://kgptapps.github.io/sgtrust/
+**Documentation Status**: Complete ✅
 **Development Status**: Ready to start 🚀
+
+<!-- Build trigger: 2025-08-05 -->
