@@ -1,344 +1,96 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   Box,
   Container,
   Typography,
-  Card,
-  CardContent,
-  Avatar,
-  Chip,
-  TextField,
-  InputAdornment,
-  Button,
-  Tabs,
-  Tab,
-  FormControl,
-  InputLabel,
-  Select,
-  MenuItem,
-  Accordion,
-  AccordionSummary,
-  AccordionDetails
+  Paper,
+  Divider
 } from '@mui/material';
-import {
-  Search as SearchIcon,
-  LocationOn as LocationIcon,
-  Work as WorkIcon,
-  School as SchoolIcon,
-  FilterList as FilterIcon,
-  ExpandMore as ExpandMoreIcon
-} from '@mui/icons-material';
 import { useTranslation } from 'react-i18next';
-
-// Sample student data - in a real app, this would come from an API
-const sampleStudents = [
-  {
-    id: 1,
-    name: "Dr. Rajesh Kumar",
-    year: "2018",
-    thesis: "Advanced Machine Learning Applications in Healthcare",
-    currentPosition: "Senior Data Scientist",
-    company: "Google",
-    location: "California, USA",
-    country: "USA",
-    image: "/sgtrust/media/images/students/placeholder-male.jpg"
-  },
-  {
-    id: 2,
-    name: "Dr. Priya Sharma",
-    year: "2019",
-    thesis: "Sustainable Energy Systems and Smart Grid Technology",
-    currentPosition: "Research Director",
-    company: "Tesla",
-    location: "Texas, USA",
-    country: "USA",
-    image: "/sgtrust/media/images/students/placeholder-female.jpg"
-  },
-  {
-    id: 3,
-    name: "Dr. Arun Patel",
-    year: "2020",
-    thesis: "Quantum Computing Applications in Cryptography",
-    currentPosition: "Principal Engineer",
-    company: "Microsoft",
-    location: "Washington, USA",
-    country: "USA",
-    image: "/sgtrust/media/images/students/placeholder-male.jpg"
-  },
-  {
-    id: 4,
-    name: "Dr. Meera Reddy",
-    year: "2017",
-    thesis: "Biomedical Engineering and Neural Interfaces",
-    currentPosition: "VP of Engineering",
-    company: "Neuralink",
-    location: "California, USA",
-    country: "USA",
-    image: "/sgtrust/media/images/students/placeholder-female.jpg"
-  },
-  {
-    id: 5,
-    name: "Dr. Suresh Iyer",
-    year: "2021",
-    thesis: "Artificial Intelligence in Financial Markets",
-    currentPosition: "Quantitative Researcher",
-    company: "Goldman Sachs",
-    location: "New York, USA",
-    country: "USA",
-    image: "/sgtrust/media/images/students/placeholder-male.jpg"
-  },
-  {
-    id: 6,
-    name: "Dr. Kavitha Nair",
-    year: "2016",
-    thesis: "Environmental Engineering and Climate Solutions",
-    currentPosition: "Senior Scientist",
-    company: "NASA",
-    location: "Florida, USA",
-    country: "USA",
-    image: "/sgtrust/media/images/students/placeholder-female.jpg"
-  }
-];
 
 const StudentsPage: React.FC = () => {
   const { t } = useTranslation(['content']);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedTab, setSelectedTab] = useState(0);
-  const [yearFilter, setYearFilter] = useState('');
-  const [companyFilter, setCompanyFilter] = useState('');
-  const [showFilters, setShowFilters] = useState(false);
-
-  // Get unique years and companies for filter options
-  const uniqueYears = [...new Set(sampleStudents.map(student => student.year))].sort().reverse();
-  const uniqueCompanies = [...new Set(sampleStudents.map(student => student.company))].sort();
-
-  const filteredStudents = sampleStudents.filter(student => {
-    const matchesSearch = student.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      student.company.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      student.currentPosition.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      student.thesis.toLowerCase().includes(searchTerm.toLowerCase());
-
-    const matchesYear = !yearFilter || student.year === yearFilter;
-    const matchesCompany = !companyFilter || student.company === companyFilter;
-
-    return matchesSearch && matchesYear && matchesCompany;
-  });
-
-  const usaStudents = filteredStudents.filter(student => student.country === 'USA');
-  const allStudents = filteredStudents;
-
-  const displayStudents = selectedTab === 0 ? allStudents : usaStudents;
-
-  const clearFilters = () => {
-    setSearchTerm('');
-    setYearFilter('');
-    setCompanyFilter('');
-  };
 
   return (
-    <Container maxWidth="lg" sx={{ py: 6 }}>
-      <Typography variant="h3" component="h1" gutterBottom textAlign="center">
-        {t('content:studentsTitle')}
+    <Container maxWidth="lg" sx={{ py: 4 }}>
+      <Typography
+        variant="h3"
+        component="h1"
+        gutterBottom
+        sx={{
+          textAlign: 'center',
+          color: 'primary.main',
+          fontWeight: 600,
+          mb: 4
+        }}
+      >
+        Students
       </Typography>
-      <Typography variant="body1" textAlign="center" color="text.secondary" sx={{ mb: 4 }}>
-        {t('content:studentsDescription')}
-      </Typography>
 
-      {/* Statistics */}
-      <Box sx={{ display: 'flex', justifyContent: 'center', gap: 4, mb: 4 }}>
-        <Box sx={{ textAlign: 'center' }}>
-          <Typography variant="h4" color="primary" fontWeight="bold">
-            50+
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            Total PhD Students
-          </Typography>
-        </Box>
-        <Box sx={{ textAlign: 'center' }}>
-          <Typography variant="h4" color="success.main" fontWeight="bold">
-            40+
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            In USA
-          </Typography>
-        </Box>
-        <Box sx={{ textAlign: 'center' }}>
-          <Typography variant="h4" color="warning.main" fontWeight="bold">
-            80%
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            Success Rate
-          </Typography>
-        </Box>
-      </Box>
-
-      {/* Search and Filters */}
-      <Box sx={{ mb: 4 }}>
-        <TextField
-          fullWidth
-          variant="outlined"
-          placeholder="Search by name, company, position, or thesis..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          InputProps={{
-            startAdornment: (
-              <InputAdornment position="start">
-                <SearchIcon />
-              </InputAdornment>
-            ),
-          }}
-          sx={{ mb: 3 }}
-        />
-
-        {/* Advanced Filters */}
-        <Accordion expanded={showFilters} onChange={() => setShowFilters(!showFilters)}>
-          <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-              <FilterIcon />
-              <Typography>Advanced Filters</Typography>
-              {(yearFilter || companyFilter) && (
-                <Chip label="Filters Active" size="small" color="primary" />
-              )}
-            </Box>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: 'repeat(3, 1fr)' }, gap: 2 }}>
-              <FormControl fullWidth>
-                <InputLabel>Graduation Year</InputLabel>
-                <Select
-                  value={yearFilter}
-                  label="Graduation Year"
-                  onChange={(e) => setYearFilter(e.target.value)}
-                >
-                  <MenuItem value="">All Years</MenuItem>
-                  {uniqueYears.map((year) => (
-                    <MenuItem key={year} value={year}>{year}</MenuItem>
-                  ))}
-                </Select>
-              </FormControl>
-
-              <FormControl fullWidth>
-                <InputLabel>Company</InputLabel>
-                <Select
-                  value={companyFilter}
-                  label="Company"
-                  onChange={(e) => setCompanyFilter(e.target.value)}
-                >
-                  <MenuItem value="">All Companies</MenuItem>
-                  {uniqueCompanies.map((company) => (
-                    <MenuItem key={company} value={company}>{company}</MenuItem>
-                  ))}
-                </Select>
-              </FormControl>
-
-              <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                <Button
-                  variant="outlined"
-                  onClick={clearFilters}
-                  disabled={!searchTerm && !yearFilter && !companyFilter}
-                  fullWidth
-                >
-                  Clear Filters
-                </Button>
-              </Box>
-            </Box>
-          </AccordionDetails>
-        </Accordion>
-
-        <Tabs
-          value={selectedTab}
-          onChange={(_, newValue) => setSelectedTab(newValue)}
-          centered
-          sx={{ mt: 3 }}
-        >
-          <Tab label={`All Students (${allStudents.length})`} />
-          <Tab label={`USA Success Stories (${usaStudents.length})`} />
-        </Tabs>
-      </Box>
-
-      {/* Students Grid */}
-      <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', md: 'repeat(3, 1fr)' }, gap: 3 }}>
-        {displayStudents.map((student) => (
-          <Box key={student.id}>
-            <Card
-              sx={{
-                height: '100%',
-                transition: 'transform 0.2s ease, box-shadow 0.2s ease',
-                '&:hover': {
-                  transform: 'translateY(-4px)',
-                  boxShadow: 6
-                }
-              }}
-            >
-              <CardContent sx={{ p: 3 }}>
-                <Box sx={{ textAlign: 'center', mb: 2 }}>
-                  <Avatar
-                    src={student.image}
-                    alt={student.name}
-                    sx={{ width: 80, height: 80, mx: 'auto', mb: 2 }}
-                  />
-                  <Typography variant="h6" fontWeight="bold" gutterBottom>
-                    {student.name}
-                  </Typography>
-                  <Chip
-                    label={`PhD ${student.year}`}
-                    size="small"
-                    color="primary"
-                    sx={{ mb: 1 }}
-                  />
-                </Box>
-
-                <Box sx={{ mb: 2 }}>
-                  <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
-                    <WorkIcon sx={{ fontSize: 16, mr: 1, color: 'text.secondary' }} />
-                    <Typography variant="body2" fontWeight="medium">
-                      {student.currentPosition}
-                    </Typography>
-                  </Box>
-                  <Typography variant="body2" color="primary" fontWeight="bold">
-                    {student.company}
-                  </Typography>
-                </Box>
-
-                <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-                  <LocationIcon sx={{ fontSize: 16, mr: 1, color: 'text.secondary' }} />
-                  <Typography variant="body2" color="text.secondary">
-                    {student.location}
-                  </Typography>
-                </Box>
-
-                <Box sx={{ display: 'flex', alignItems: 'flex-start', mb: 2 }}>
-                  <SchoolIcon sx={{ fontSize: 16, mr: 1, color: 'text.secondary', mt: 0.5 }} />
-                  <Typography variant="body2" color="text.secondary" sx={{ fontSize: '0.875rem' }}>
-                    {student.thesis}
-                  </Typography>
-                </Box>
-              </CardContent>
-            </Card>
-          </Box>
-        ))}
-      </Box>
-
-      {displayStudents.length === 0 && (
-        <Box sx={{ textAlign: 'center', py: 6 }}>
-          <Typography variant="h6" color="text.secondary">
-            No students found matching your search criteria.
-          </Typography>
-        </Box>
-      )}
-
-      {/* Legacy Tribute */}
-      <Box sx={{ textAlign: 'center', mt: 6, p: 4, backgroundColor: 'grey.50', borderRadius: 2 }}>
-        <Typography variant="h5" gutterBottom>
-          Continuing the Legacy
+      <Paper elevation={3} sx={{ p: 4, mb: 4 }}>
+        <Typography variant="h5" gutterBottom color="primary.main">
+          Professor S. Govindasamy's Academic Legacy
         </Typography>
-        <Typography variant="body1" color="text.secondary" sx={{ mb: 3 }}>
-          Professor S. Govindasamy's remarkable legacy lives on through his students who continue to make significant contributions to academia and industry worldwide.
+        <Typography variant="body1" paragraph>
+          Professor S. Govindasamy was a dedicated educator who guided numerous students
+          throughout his distinguished academic career. His commitment to excellence in
+          teaching and research supervision left a lasting impact on the academic community.
         </Typography>
-        <Typography variant="body2" color="text.secondary">
-          His mentorship and guidance have shaped careers and inspired generations of scholars.
+        <Typography variant="body1" paragraph>
+          During his tenure at the University of Madras, Professor Govindasamy mentored
+          students across various disciplines, fostering their intellectual growth and
+          research capabilities.
         </Typography>
-      </Box>
+      </Paper>
+
+      <Paper elevation={3} sx={{ p: 4, mb: 4 }}>
+        <Typography variant="h5" gutterBottom color="primary.main">
+          Teaching Philosophy
+        </Typography>
+        <Divider sx={{ mb: 3 }} />
+        <Typography variant="body1" paragraph>
+          Professor Govindasamy believed in nurturing critical thinking and independent
+          research among his students. His approach emphasized both theoretical understanding
+          and practical application of knowledge.
+        </Typography>
+        <Typography variant="body1" paragraph>
+          He was known for his patient guidance, encouraging students to explore new ideas
+          and push the boundaries of their chosen fields of study.
+        </Typography>
+      </Paper>
+
+      <Paper elevation={3} sx={{ p: 4, mb: 4 }}>
+        <Typography variant="h5" gutterBottom color="primary.main">
+          Academic Mentorship
+        </Typography>
+        <Divider sx={{ mb: 3 }} />
+        <Typography variant="body1" paragraph>
+          Throughout his career, Professor Govindasamy supervised research projects and
+          guided students in their academic pursuits. His mentorship extended beyond
+          formal education, providing career guidance and professional development support.
+        </Typography>
+        <Typography variant="body1" paragraph>
+          Many of his former students have gone on to successful careers in academia,
+          research, and industry, carrying forward the values and knowledge he imparted.
+        </Typography>
+      </Paper>
+
+      <Paper elevation={3} sx={{ p: 4, mt: 4 }}>
+        <Typography variant="h5" gutterBottom color="primary.main">
+          Continuing Impact
+        </Typography>
+        <Divider sx={{ mb: 3 }} />
+        <Typography variant="body1" paragraph>
+          The influence of Professor S. Govindasamy's teaching and mentorship continues
+          to resonate in the academic community. His dedication to education and student
+          development serves as an inspiration for current and future educators.
+        </Typography>
+        <Typography variant="body1">
+          His legacy lives on through the knowledge, skills, and values he instilled
+          in his students, who continue to contribute to their respective fields and
+          society at large.
+        </Typography>
+      </Paper>
     </Container>
   );
 };
