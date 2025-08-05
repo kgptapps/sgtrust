@@ -121,100 +121,56 @@ const articlesData = {
     }
   ],
   photographs: [
-    {
-      id: 10,
-      title: "Early Academic Years",
-      description: "Rare photographs from Professor's early teaching career",
-      image: "/sgtrust/media/images/articles/early-academic.jpg",
-      date: "1970-1980",
-      category: "academic",
-      content: "These rare photographs capture Professor S. Govindasamy during his early years as an educator..."
-    },
-    {
-      id: 11,
-      title: "Village Roots Documentation",
-      description: "Photographic evidence of humble beginnings",
-      image: "/sgtrust/media/images/articles/village-roots.jpg",
-      date: "1950-1970",
-      category: "personal",
-      content: "A collection of photographs documenting the professor's village origins and family background..."
-    },
-    {
-      id: 15,
-      title: "Appa - Family Portrait 1",
-      description: "Precious family moments with father and relatives",
-      image: "/sgtrust/media/images/articles/Muta1.jpg",
-      date: "Family Heritage",
-      category: "family",
-      content: "A cherished family photograph showing Professor S. Govindasamy with his father (Appa) and family members, capturing precious moments of family bonds and heritage."
-    },
-    {
-      id: 16,
-      title: "Appa - Family Portrait 2",
-      description: "Another treasured family gathering",
-      image: "/sgtrust/media/images/articles/Muta2.jpg",
-      date: "Family Heritage",
-      category: "family",
-      content: "Another beautiful family photograph documenting the close-knit family relationships and the importance of family in Professor's life."
-    },
-    {
-      id: 17,
-      title: "Appa - Family Portrait 3",
-      description: "Family celebration and togetherness",
-      image: "/sgtrust/media/images/articles/Muta3.jpg",
-      date: "Family Heritage",
-      category: "family",
-      content: "A family celebration photograph showing the joy and togetherness that characterized Professor's family life and values."
-    },
-    {
-      id: 18,
-      title: "Appa - Family Portrait 4",
-      description: "Multi-generational family bonds",
-      image: "/sgtrust/media/images/articles/Muta4.jpg",
-      date: "Family Heritage",
-      category: "family",
-      content: "A multi-generational family photograph highlighting the strong family traditions and bonds that shaped Professor's character and values."
-    },
-    {
-      id: 19,
-      title: "Appa - Family Portrait 5",
-      description: "Family legacy and heritage",
-      image: "/sgtrust/media/images/articles/Muta5.jpg",
-      date: "Family Heritage",
-      category: "family",
-      content: "The final photograph in this precious family collection, representing the enduring legacy and heritage that influenced Professor's journey from humble beginnings to academic excellence."
-    }
   ],
   documents: [
     {
-      id: 20,
-      title: "Original Research Papers",
-      description: "Handwritten research notes and early publications",
-      image: "/sgtrust/media/images/articles/research-papers.jpg",
-      date: "1975-1985",
-      category: "research",
-      content: "Original manuscripts and research documentation showing the evolution of academic thought..."
+      id: 12,
+      title: "MUTA 1",
+      description: "Family heritage documentation with father",
+      image: "/sgtrust/media/images/articles/Muta1.jpg",
+      date: "Family Heritage",
+      category: "family",
+      content: "A cherished family document showing Professor S. Govindasamy with his father (Appa) and family members, capturing precious moments of family bonds and heritage."
     },
     {
-      id: 21,
-      title: "Student Testimonials",
-      description: "Letters and testimonials from former students",
-      image: "/sgtrust/media/images/articles/testimonials.jpg",
-      date: "1980-2020",
-      category: "students",
-      content: "A compilation of heartfelt letters and testimonials from students across decades..."
-    }
+      id: 13,
+      title: "MUTA 2",
+      description: "Family gathering documentation",
+      image: "/sgtrust/media/images/articles/Muta2.jpg",
+      date: "Family Heritage",
+      category: "family",
+      content: "Family documentation showing the close-knit family relationships and the importance of family in Professor's life."
+    },
+    {
+      id: 14,
+      title: "MUTA 3",
+      description: "Family celebration documentation",
+      image: "/sgtrust/media/images/articles/Muta3.jpg",
+      date: "Family Heritage",
+      category: "family",
+      content: "Family celebration documentation showing the joy and togetherness that characterized Professor's family life and values."
+    },
+    {
+      id: 15,
+      title: "MUTA 4",
+      description: "Multi-generational family documentation",
+      image: "/sgtrust/media/images/articles/Muta4.jpg",
+      date: "Family Heritage",
+      category: "family",
+      content: "Multi-generational family documentation highlighting the strong family traditions and bonds that shaped Professor's character and values."
+    },
+    {
+      id: 16,
+      title: "MUTA 5",
+      description: "Family legacy documentation",
+      image: "/sgtrust/media/images/articles/Muta5.jpg",
+      date: "Family Heritage",
+      category: "family",
+      content: "Family legacy documentation representing the enduring heritage that influenced Professor's journey from humble beginnings to academic excellence."
+    },
+
   ],
   historical: [
-    {
-      id: 22,
-      title: "University Archives",
-      description: "Historical records from university archives",
-      image: "/sgtrust/media/images/articles/university-archives.jpg",
-      date: "1970-2020",
-      category: "institutional",
-      content: "Official university records documenting the professor's contributions and achievements..."
-    }
   ]
 };
 

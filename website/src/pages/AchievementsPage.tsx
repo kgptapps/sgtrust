@@ -316,6 +316,86 @@ const achievementsData = {
         'Mentorship of emerging leaders and administrators',
         'Access to professional development resources and training'
       ]
+    },
+    {
+      id: 'university-senate-member',
+      title: 'Member of the University Senate',
+      description: 'Served as an elected member of the University Senate, participating in key academic governance and policy decisions',
+      institution: 'University of Madras',
+      category: 'professional' as const,
+      type: 'Administrative Activities',
+      details: [
+        'Elected representative in university governance',
+        'Participated in academic policy formulation',
+        'Contributed to strategic planning and institutional development',
+        'Advocated for faculty and student welfare',
+        'Involved in curriculum approval and academic standards',
+        'Represented departmental interests at university level'
+      ]
+    },
+    {
+      id: 'syndicate-member',
+      title: 'Syndicate Member',
+      description: 'Served as Syndicate Member, contributing to the highest decision-making body of the university administration',
+      institution: 'University of Madras',
+      category: 'professional' as const,
+      type: 'Administrative Activities',
+      details: [
+        'Member of the university\'s executive governing body',
+        'Participated in financial and administrative decisions',
+        'Contributed to university policy development',
+        'Involved in faculty appointments and promotions',
+        'Oversight of university operations and management',
+        'Strategic planning for institutional growth'
+      ]
+    },
+    {
+      id: 'affiliation-committee-chairman',
+      title: 'Chairman of the Affiliation Committee',
+      description: 'Led the Affiliation Committee for the University of Madras, overseeing the accreditation and quality assurance of affiliated colleges',
+      institution: 'University of Madras',
+      category: 'professional' as const,
+      type: 'Administrative Activities',
+      details: [
+        'Chaired committee responsible for college affiliations',
+        'Evaluated academic standards and infrastructure of colleges',
+        'Ensured quality assurance in affiliated institutions',
+        'Conducted site visits and assessment reviews',
+        'Maintained academic standards across the university system',
+        'Facilitated institutional development and improvement'
+      ]
+    },
+    {
+      id: 'muta-executive-committee',
+      title: 'Executive Committee Member - Madras University Teachers Association',
+      description: 'Served as Executive Committee Member of the Madras University Teachers Association, advocating for faculty rights and academic excellence',
+      institution: 'Madras University Teachers Association',
+      category: 'professional' as const,
+      type: 'Administrative Activities',
+      details: [
+        'Active member of the executive leadership team',
+        'Advocated for faculty rights and welfare',
+        'Participated in policy discussions and negotiations',
+        'Contributed to academic freedom initiatives',
+        'Supported professional development programs',
+        'Facilitated communication between faculty and administration'
+      ]
+    },
+    {
+      id: 'muta-general-secretary',
+      title: 'General Secretary - Madras University Teachers Association',
+      description: 'Served as General Secretary of the Madras University Teachers Association, leading organizational activities and faculty advocacy',
+      institution: 'Madras University Teachers Association',
+      category: 'professional' as const,
+      type: 'Administrative Activities',
+      details: [
+        'Chief administrative officer of the teachers association',
+        'Coordinated organizational activities and meetings',
+        'Led faculty advocacy and representation efforts',
+        'Managed communication with university administration',
+        'Organized professional development and welfare programs',
+        'Maintained records and facilitated democratic processes'
+      ]
     }
   ]
 };
