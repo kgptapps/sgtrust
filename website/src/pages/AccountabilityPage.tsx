@@ -4,8 +4,7 @@ import {
   Container,
   Typography,
   Card,
-  CardContent,
-  Paper
+  CardContent
 } from '@mui/material';
 import {
   School as EducationIcon,
