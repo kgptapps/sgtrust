@@ -1,4 +1,5 @@
 
+// Build trigger: 2025-08-05
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { CssBaseline } from '@mui/material';
 import { useTranslation } from 'react-i18next';
