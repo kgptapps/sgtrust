@@ -1,15 +1,12 @@
 import React from 'react';
 import {
-  Box,
   Container,
   Typography,
   Paper,
   Divider
 } from '@mui/material';
-import { useTranslation } from 'react-i18next';
 
 const StudentsPage: React.FC = () => {
-  const { t } = useTranslation(['content']);
 
   return (
     <Container maxWidth="lg" sx={{ py: 4 }}>
