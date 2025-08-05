@@ -24,6 +24,70 @@ interface AlumniProfile {
 const alumniProfiles: AlumniProfile[] = [
   {
     id: 1,
+    name: "S. Subramanian",
+    title: "Alumni Profile",
+    department: "Information to be updated",
+    institution: "India",
+    image: "/sgtrust/media/images/placeholder-alumni.png"
+  },
+  {
+    id: 2,
+    name: "A. Kandasamy",
+    title: "Alumni Profile",
+    department: "Information to be updated",
+    institution: "USA",
+    image: "/sgtrust/media/images/placeholder-alumni.png"
+  },
+  {
+    id: 3,
+    name: "Samuel William",
+    title: "Alumni Profile",
+    department: "Information to be updated",
+    institution: "USA",
+    image: "/sgtrust/media/images/placeholder-alumni.png"
+  },
+  {
+    id: 4,
+    name: "N. Sekar",
+    title: "Alumni Profile",
+    department: "Information to be updated",
+    institution: "USA",
+    image: "/sgtrust/media/images/placeholder-alumni.png"
+  },
+  {
+    id: 5,
+    name: "N. Balasubramanian",
+    title: "Alumni Profile",
+    department: "Information to be updated",
+    institution: "USA",
+    image: "/sgtrust/media/images/placeholder-alumni.png"
+  },
+  {
+    id: 6,
+    name: "P. Kamaraj",
+    title: "Alumni Profile",
+    department: "Information to be updated",
+    institution: "USA",
+    image: "/sgtrust/media/images/placeholder-alumni.png"
+  },
+  {
+    id: 7,
+    name: "S. Manonmani",
+    title: "Alumni Profile",
+    department: "Information to be updated",
+    institution: "India",
+    image: "/sgtrust/media/images/placeholder-alumni.png"
+  },
+  {
+    id: 8,
+    name: "V. Bhuvaragamurthy",
+    title: "Alumni Profile",
+    department: "Information to be updated",
+    institution: "USA",
+    image: "/sgtrust/media/images/placeholder-alumni.png"
+  },
+  {
+    id: 9,
     name: "Professor V. Elangovan",
     title: "Professor",
     department: "Department of Biochemistry",
@@ -32,13 +96,109 @@ const alumniProfiles: AlumniProfile[] = [
     image: "/sgtrust/media/images/alumni/professorv.elangovan.jpeg"
   },
   {
-    id: 2,
+    id: 10,
     name: "Dr. S. Maneemegalai",
     title: "Associate Professor in Biochemistry",
     department: "Centre for Distance and Online Education",
     institution: "Bharathidasan University",
     location: "Tiruchirapalli - 620024, Tamil Nadu, India",
     image: "/sgtrust/media/images/alumni/professors.maneemegalai.png"
+  },
+  {
+    id: 11,
+    name: "D. Nandini",
+    title: "Alumni Profile",
+    department: "Information to be updated",
+    institution: "India",
+    image: "/sgtrust/media/images/placeholder-alumni.png"
+  },
+  {
+    id: 12,
+    name: "S. Balasubramanian",
+    title: "Alumni Profile",
+    department: "Information to be updated",
+    institution: "USA",
+    image: "/sgtrust/media/images/placeholder-alumni.png"
+  },
+  {
+    id: 13,
+    name: "G. Vijayan Siva",
+    title: "Alumni Profile",
+    department: "Information to be updated",
+    institution: "India",
+    image: "/sgtrust/media/images/placeholder-alumni.png"
+  },
+  {
+    id: 14,
+    name: "P. Ravichandran",
+    title: "Alumni Profile",
+    department: "Information to be updated",
+    institution: "USA",
+    image: "/sgtrust/media/images/placeholder-alumni.png"
+  },
+  {
+    id: 15,
+    name: "P. Latha",
+    title: "Alumni Profile",
+    department: "Information to be updated",
+    institution: "India",
+    image: "/sgtrust/media/images/placeholder-alumni.png"
+  },
+  {
+    id: 16,
+    name: "V. Saraswathi",
+    title: "Alumni Profile",
+    department: "Information to be updated",
+    institution: "USA",
+    image: "/sgtrust/media/images/placeholder-alumni.png"
+  },
+  {
+    id: 17,
+    name: "R. Saraswathi",
+    title: "Alumni Profile",
+    department: "Information to be updated",
+    institution: "India",
+    image: "/sgtrust/media/images/placeholder-alumni.png"
+  },
+  {
+    id: 18,
+    name: "V. Palani",
+    title: "Alumni Profile",
+    department: "Information to be updated",
+    institution: "India",
+    image: "/sgtrust/media/images/placeholder-alumni.png"
+  },
+  {
+    id: 19,
+    name: "R. Ravi",
+    title: "Alumni Profile",
+    department: "Information to be updated",
+    institution: "India",
+    image: "/sgtrust/media/images/placeholder-alumni.png"
+  },
+  {
+    id: 20,
+    name: "K. Karthikeyan",
+    title: "Alumni Profile",
+    department: "Information to be updated",
+    institution: "Singapore",
+    image: "/sgtrust/media/images/placeholder-alumni.png"
+  },
+  {
+    id: 21,
+    name: "R. K. Senthilkumaran",
+    title: "Alumni Profile",
+    department: "Information to be updated",
+    institution: "India",
+    image: "/sgtrust/media/images/placeholder-alumni.png"
+  },
+  {
+    id: 22,
+    name: "Shamaladevi",
+    title: "Alumni Profile",
+    department: "Information to be updated",
+    institution: "USA",
+    image: "/sgtrust/media/images/placeholder-alumni.png"
   }
 ];
 
@@ -63,8 +223,8 @@ const AlumniPage: React.FC = () => {
       <Box
         sx={{
           display: 'grid',
-          gridTemplateColumns: { xs: '1fr', md: 'repeat(2, 1fr)' },
-          gap: 4,
+          gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', lg: 'repeat(3, 1fr)' },
+          gap: 3,
           justifyContent: 'center'
         }}
       >
@@ -82,17 +242,35 @@ const AlumniPage: React.FC = () => {
               }
             }}
           >
-            <CardMedia
-              component="img"
-              height="400"
-              image={alumni.image}
-              alt={alumni.name}
-              sx={{
-                objectFit: 'contain',
-                backgroundColor: 'grey.50',
-                objectPosition: 'center top'
-              }}
-            />
+            {alumni.image.includes('placeholder') ? (
+              <Box
+                sx={{
+                  height: 300,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  backgroundColor: 'grey.100',
+                  border: '2px dashed',
+                  borderColor: 'grey.300'
+                }}
+              >
+                <Typography variant="body1" color="text.secondary" sx={{ textAlign: 'center' }}>
+                  Image needed
+                </Typography>
+              </Box>
+            ) : (
+              <CardMedia
+                component="img"
+                height="400"
+                image={alumni.image}
+                alt={alumni.name}
+                sx={{
+                  objectFit: 'contain',
+                  backgroundColor: 'grey.50',
+                  objectPosition: 'center top'
+                }}
+              />
+            )}
             <CardContent sx={{ flexGrow: 1, p: 3 }}>
               <Typography variant="h5" component="h2" gutterBottom sx={{ fontWeight: 600, color: 'primary.main' }}>
                 {alumni.name}
