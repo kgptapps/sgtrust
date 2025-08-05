@@ -81,65 +81,7 @@ const AccountabilityPage: React.FC = () => {
         </CardContent>
       </Card>
 
-      {/* Challenges & Transparency */}
-      <Card sx={{ mb: 6 }}>
-        <CardContent sx={{ p: 4 }}>
-          <Typography variant="h5" component="h2" gutterBottom color="primary.main">
-            Organizational Challenges & Our Commitment to Transparency
-          </Typography>
 
-          <Typography variant="body1" sx={{ mb: 3, lineHeight: 1.8 }}>
-            We have made extensive efforts, both individually and collectively, to establish a formal non-profit organization
-            bearing Professor Govindasamy's name and to create a dedicated institutional bank account for the Educational
-            Endowment Fund. Unfortunately, despite our persistent attempts, complex regulatory requirements, administrative
-            procedures, and tax-related complications have prevented us from successfully completing this formal establishment.
-          </Typography>
-
-          <Typography variant="body1" sx={{ mb: 3, lineHeight: 1.8 }}>
-            We recognize and deeply appreciate your understanding of these institutional challenges, which currently limit
-            our ability to provide immediate, formal fund management structures. These regulatory obstacles do not align
-            with our urgent desire to honor Professor Govindasamy's memory and begin supporting deserving students without delay.
-          </Typography>
-        </CardContent>
-      </Card>
-
-      {/* Call to Action */}
-      <Card sx={{ mb: 6, backgroundColor: 'primary.50' }}>
-        <CardContent sx={{ p: 4 }}>
-          <Typography variant="h5" component="h2" gutterBottom color="primary.main">
-            Your Support Makes the Difference
-          </Typography>
-
-          <Typography variant="body1" sx={{ mb: 3, lineHeight: 1.8 }}>
-            We earnestly invite you to join us in this meaningful endeavor by contributing generously to the Professor S.
-            Govindasamy Educational Endowment Fund. Your support will help us create a lasting tribute that reflects the
-            selfless life he dedicated to empowering others through education and mentorship.
-          </Typography>
-
-          <Typography variant="body1" sx={{ mb: 3, lineHeight: 1.8 }}>
-            We fully acknowledge the legitimate concerns regarding financial accountability, fund management, and the proper
-            establishment of this endowment within university frameworks. Please be assured that we are committed to maintaining
-            complete transparency throughout every stage of this process. We will provide regular updates, detailed financial
-            reporting, and open communication as we work toward formalizing this fund through appropriate institutional channels.
-          </Typography>
-
-          <Typography variant="body1" sx={{ lineHeight: 1.8, fontWeight: 500 }}>
-            Together, we can ensure that Professor Govindasamy's legacy of educational excellence and compassionate mentorship
-            continues to inspire and support future generations of students and researchers.
-          </Typography>
-        </CardContent>
-      </Card>
-
-      {/* Contact Information */}
-      <Paper sx={{ p: 3, backgroundColor: 'grey.100', textAlign: 'center' }}>
-        <Typography variant="h6" gutterBottom color="primary.main">
-          For More Information
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          If you would like to contribute to the Professor S. Govindasamy Educational Endowment Fund
-          or have questions about our transparency initiatives, please reach out to us through the contact page.
-        </Typography>
-      </Paper>
     </Container>
   );
 };
