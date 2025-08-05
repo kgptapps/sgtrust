@@ -109,11 +109,20 @@ const articlesData = {
       date: 'Memorial Initiative',
       category: 'newspaper',
       content: 'Coverage of community request for memorial statue...'
+    },
+    {
+      id: 9,
+      title: '2-Day Fasting for Pay Raise',
+      description: 'Professor\'s protest for academic justice and fair compensation',
+      image: '/sgtrust/media/images/articles/2dayfastingforpayraise.jpeg',
+      date: 'Academic Protest',
+      category: 'newspaper',
+      content: 'Documentation of Professor S. Govindasamy\'s principled stand through a 2-day fasting protest demanding fair pay raise and academic justice. This demonstrates his commitment to fighting for the rights of educators and his unwavering dedication to academic principles even in the face of institutional challenges.'
     }
   ],
   photographs: [
     {
-      id: 9,
+      id: 10,
       title: "Early Academic Years",
       description: "Rare photographs from Professor's early teaching career",
       image: "/sgtrust/media/images/articles/early-academic.jpg",
@@ -122,7 +131,7 @@ const articlesData = {
       content: "These rare photographs capture Professor S. Govindasamy during his early years as an educator..."
     },
     {
-      id: 2,
+      id: 11,
       title: "Village Roots Documentation",
       description: "Photographic evidence of humble beginnings",
       image: "/sgtrust/media/images/articles/village-roots.jpg",
@@ -133,7 +142,7 @@ const articlesData = {
   ],
   documents: [
     {
-      id: 3,
+      id: 12,
       title: "Original Research Papers",
       description: "Handwritten research notes and early publications",
       image: "/sgtrust/media/images/articles/research-papers.jpg",
@@ -142,7 +151,7 @@ const articlesData = {
       content: "Original manuscripts and research documentation showing the evolution of academic thought..."
     },
     {
-      id: 4,
+      id: 13,
       title: "Student Testimonials",
       description: "Letters and testimonials from former students",
       image: "/sgtrust/media/images/articles/testimonials.jpg",
@@ -153,7 +162,7 @@ const articlesData = {
   ],
   historical: [
     {
-      id: 5,
+      id: 14,
       title: "University Archives",
       description: "Historical records from university archives",
       image: "/sgtrust/media/images/articles/university-archives.jpg",
