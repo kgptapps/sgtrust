@@ -41,30 +41,33 @@ const AboutPage: React.FC = () => {
 
       {/* Biography Section */}
       <Card sx={{ mb: 4 }}>
-        <CardContent sx={{ p: 5 }}>
+        <CardContent sx={{ p: 4 }}>
           <Typography variant="body1" paragraph sx={{
             fontSize: '1.1rem',
-            lineHeight: 1.8,
+            lineHeight: 1.6,
             textAlign: 'justify',
-            whiteSpace: 'pre-line'
+            whiteSpace: 'pre-line',
+            mb: 2
           }}>
             {t('content:aboutDescription1')}
           </Typography>
 
           <Typography variant="body1" paragraph sx={{
             fontSize: '1.1rem',
-            lineHeight: 1.8,
+            lineHeight: 1.6,
             textAlign: 'justify',
-            whiteSpace: 'pre-line'
+            whiteSpace: 'pre-line',
+            mb: 2
           }}>
             {t('content:aboutDescription2')}
           </Typography>
 
           <Typography variant="body1" paragraph sx={{
             fontSize: '1.1rem',
-            lineHeight: 1.8,
+            lineHeight: 1.6,
             textAlign: 'justify',
-            whiteSpace: 'pre-line'
+            whiteSpace: 'pre-line',
+            mb: 0
           }}>
             {t('content:aboutDescription3')}
           </Typography>
