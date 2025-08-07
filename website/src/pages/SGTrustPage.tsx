@@ -5,7 +5,6 @@ import {
   Card,
   CardMedia,
   Box,
-  Button,
   Grid
 } from '@mui/material';
 
@@ -29,14 +28,20 @@ const SGTrustPage: React.FC = () => {
 
       {/* MUTA Image - First */}
       <Box sx={{ mb: 4, textAlign: 'center' }}>
-        <Card sx={{ cursor: 'pointer', maxWidth: 600, mx: 'auto', boxShadow: 3 }} onClick={() => window.open('/sgtrust/media/images/memorialphotos/MUTA.jpeg', '_blank')}>
-          <CardMedia
-            component="img"
-            image="/sgtrust/media/images/memorialphotos/MUTA.jpeg"
-            alt="Memorial Tribute - MUTA"
-            sx={{ objectFit: 'contain', maxHeight: 400 }}
-          />
-        </Card>
+        <Box
+          component="img"
+          src="/sgtrust/media/images/memorialphotos/MUTA.jpeg"
+          alt="Memorial Tribute - MUTA"
+          onClick={() => window.open('/sgtrust/media/images/memorialphotos/MUTA.jpeg', '_blank')}
+          sx={{
+            cursor: 'pointer',
+            maxWidth: '100%',
+            width: '800px',
+            height: 'auto',
+            objectFit: 'contain',
+            borderRadius: 1
+          }}
+        />
       </Box>
 
       {/* Three Page Images Side by Side */}
@@ -80,20 +85,33 @@ const SGTrustPage: React.FC = () => {
         </Grid>
       </Box>
 
-      {/* PDF Document at Bottom */}
-      <Box sx={{ textAlign: 'center' }}>
-        <Typography variant="h6" gutterBottom color="primary.main">
-          Memorial Document
-        </Typography>
-        <Button
-          variant="contained"
-          color="primary"
-          size="large"
-          onClick={() => window.open('/sgtrust/media/images/memorialphotos/pdffile.pdf', '_blank')}
-          sx={{ px: 4, py: 2 }}
-        >
-          View Memorial Document (PDF)
-        </Button>
+      {/* PDF Images at Bottom */}
+      <Box sx={{ mb: 4 }}>
+        <Grid container spacing={3}>
+          <Grid size={{ xs: 12, md: 6 }}>
+            <Card sx={{ cursor: 'pointer', boxShadow: 2 }} onClick={() => window.open('/sgtrust/media/images/memorialphotos/pdf1.jpeg', '_blank')}>
+              <CardMedia
+                component="img"
+                height="400"
+                image="/sgtrust/media/images/memorialphotos/pdf1.jpeg"
+                alt="Memorial PDF Document 1"
+                sx={{ objectFit: 'contain' }}
+              />
+            </Card>
+          </Grid>
+
+          <Grid size={{ xs: 12, md: 6 }}>
+            <Card sx={{ cursor: 'pointer', boxShadow: 2 }} onClick={() => window.open('/sgtrust/media/images/memorialphotos/pdf2.jpeg', '_blank')}>
+              <CardMedia
+                component="img"
+                height="400"
+                image="/sgtrust/media/images/memorialphotos/pdf2.jpeg"
+                alt="Memorial PDF Document 2"
+                sx={{ objectFit: 'contain' }}
+              />
+            </Card>
+          </Grid>
+        </Grid>
       </Box>
     </Container>
   );
