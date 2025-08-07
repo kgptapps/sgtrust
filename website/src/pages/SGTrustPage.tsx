@@ -28,19 +28,19 @@ const SGTrustPage: React.FC = () => {
       </Typography>
 
       {/* MUTA Image - First */}
-      <Box sx={{ mb: 6, textAlign: 'center' }}>
+      <Box sx={{ mb: 4, textAlign: 'center' }}>
         <Card sx={{ cursor: 'pointer', maxWidth: 600, mx: 'auto', boxShadow: 3 }} onClick={() => window.open('/sgtrust/media/images/memorialphotos/MUTA.jpeg', '_blank')}>
           <CardMedia
             component="img"
             image="/sgtrust/media/images/memorialphotos/MUTA.jpeg"
             alt="Memorial Tribute - MUTA"
-            sx={{ objectFit: 'contain', maxHeight: 500 }}
+            sx={{ objectFit: 'contain', maxHeight: 400 }}
           />
         </Card>
       </Box>
 
       {/* Three Page Images Side by Side */}
-      <Box sx={{ mb: 6 }}>
+      <Box sx={{ mb: 4 }}>
         <Grid container spacing={3}>
           <Grid size={{ xs: 12, md: 4 }}>
             <Card sx={{ cursor: 'pointer', boxShadow: 2 }} onClick={() => window.open('/sgtrust/media/images/memorialphotos/page1.jpeg', '_blank')}>
