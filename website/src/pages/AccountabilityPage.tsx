@@ -31,7 +31,7 @@ const AccountabilityPage: React.FC = () => {
       <Card sx={{ mb: 6, backgroundColor: 'success.50' }}>
         <CardContent sx={{ p: 4 }}>
           <Box sx={{ display: 'flex', alignItems: 'center', mb: 3 }}>
-            <HeartIcon sx={{ fontSize: 32, color: 'success.main', mr: 2 }} />
+            <FundIcon sx={{ fontSize: 32, color: 'success.main', mr: 2 }} />
             <Typography variant="h5" component="h2" color="success.main">
               Expressing Our Gratitude
             </Typography>
