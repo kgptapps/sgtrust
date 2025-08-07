@@ -28,7 +28,7 @@ interface Photo {
 const galleryPhotos: Photo[] = [
   {
     id: 1,
-    src: "/sgtrust/media/images/withformergovernoroftamilnadu.jpeg",
+    src: "/sgtrust/media/images/newgalleryphotos/withformergovernoroftamilnadu.jpeg",
     title: "With Former Governor of Tamil Nadu",
     description: "Professor with the former Governor of Tamil Nadu",
     year: "Public Service"
@@ -289,6 +289,64 @@ const galleryPhotos: Photo[] = [
     title: "Whole Campus",
     description: "View of the entire university campus",
     year: "Campus Life"
+  },
+
+  // New Gallery Photos
+  {
+    id: 49,
+    src: "/sgtrust/media/images/newgalleryphotos/asastageactor.jpeg",
+    title: "As a Stage Actor",
+    description: "Professor showcasing his theatrical talents as a stage actor",
+    year: "Arts & Culture"
+  },
+  {
+    id: 50,
+    src: "/sgtrust/media/images/newgalleryphotos/badminton.jpeg",
+    title: "Playing Badminton",
+    description: "Professor enjoying a game of badminton",
+    year: "Sports"
+  },
+  {
+    id: 51,
+    src: "/sgtrust/media/images/newgalleryphotos/cricket.jpeg",
+    title: "Playing Cricket",
+    description: "Professor participating in a cricket match",
+    year: "Sports"
+  },
+  {
+    id: 52,
+    src: "/sgtrust/media/images/newgalleryphotos/graduationphoto.jpeg",
+    title: "Graduation Photo",
+    description: "Professor's graduation ceremony moment",
+    year: "Academic Milestones"
+  },
+  {
+    id: 53,
+    src: "/sgtrust/media/images/newgalleryphotos/graduationphotowithfriends.jpeg",
+    title: "Graduation with Friends",
+    description: "Celebrating graduation with fellow graduates and friends",
+    year: "Academic Milestones"
+  },
+  {
+    id: 54,
+    src: "/sgtrust/media/images/newgalleryphotos/inthelab.jpeg",
+    title: "In the Laboratory",
+    description: "Professor conducting research in the biochemistry laboratory",
+    year: "Research"
+  },
+  {
+    id: 55,
+    src: "/sgtrust/media/images/newgalleryphotos/withcongressmanARM.jpeg",
+    title: "With Congressman ARM",
+    description: "Meeting with distinguished Congressman ARM",
+    year: "Public Service"
+  },
+  {
+    id: 56,
+    src: "/sgtrust/media/images/newgalleryphotos/withuniversitypersonnel.jpeg",
+    title: "With University Personnel",
+    description: "Group photo with university administrative personnel",
+    year: "Professional"
   }
 ];
 
