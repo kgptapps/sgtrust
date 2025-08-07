@@ -115,62 +115,38 @@ const AccountabilityPage: React.FC = () => {
 
           <Grid container spacing={3}>
             <Grid size={{ xs: 12, md: 4 }}>
-              <Card sx={{ height: '100%', cursor: 'pointer' }} onClick={() => window.open('/sgtrust/media/images/endownmentfundimages/WhatsApp Image 2025-08-05 at 16.26.39.jpeg', '_blank')}>
+              <Card sx={{ cursor: 'pointer', border: 'none', boxShadow: 'none' }} onClick={() => window.open('/sgtrust/media/images/endownmentfundimages/WhatsApp Image 2025-08-05 at 16.26.39.jpeg', '_blank')}>
                 <CardMedia
                   component="img"
-                  height="250"
+                  height="400"
                   image="/sgtrust/media/images/endownmentfundimages/WhatsApp Image 2025-08-05 at 16.26.39.jpeg"
-                  alt="Endowment Fund Establishment - Document 1"
-                  sx={{ objectFit: 'cover' }}
+                  alt="Endowment Fund Establishment Document"
+                  sx={{ objectFit: 'contain', borderRadius: 1 }}
                 />
-                <CardContent>
-                  <Typography variant="h6" component="h3" gutterBottom>
-                    Fund Documentation
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    Official documentation and planning materials for the endowment fund establishment
-                  </Typography>
-                </CardContent>
               </Card>
             </Grid>
 
             <Grid size={{ xs: 12, md: 4 }}>
-              <Card sx={{ height: '100%', cursor: 'pointer' }} onClick={() => window.open('/sgtrust/media/images/endownmentfundimages/WhatsApp Image 2025-08-05 at 16.26.39 (1).jpeg', '_blank')}>
+              <Card sx={{ cursor: 'pointer', border: 'none', boxShadow: 'none' }} onClick={() => window.open('/sgtrust/media/images/endownmentfundimages/WhatsApp Image 2025-08-05 at 16.26.39 (1).jpeg', '_blank')}>
                 <CardMedia
                   component="img"
-                  height="250"
+                  height="400"
                   image="/sgtrust/media/images/endownmentfundimages/WhatsApp Image 2025-08-05 at 16.26.39 (1).jpeg"
-                  alt="Endowment Fund Establishment - Document 2"
-                  sx={{ objectFit: 'cover' }}
+                  alt="Endowment Fund Establishment Document"
+                  sx={{ objectFit: 'contain', borderRadius: 1 }}
                 />
-                <CardContent>
-                  <Typography variant="h6" component="h3" gutterBottom>
-                    Planning Process
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    Collaborative planning and organizational efforts by students and colleagues
-                  </Typography>
-                </CardContent>
               </Card>
             </Grid>
 
             <Grid size={{ xs: 12, md: 4 }}>
-              <Card sx={{ height: '100%', cursor: 'pointer' }} onClick={() => window.open('/sgtrust/media/images/endownmentfundimages/WhatsApp Image 2025-08-05 at 16.26.39 (2).jpeg', '_blank')}>
+              <Card sx={{ cursor: 'pointer', border: 'none', boxShadow: 'none' }} onClick={() => window.open('/sgtrust/media/images/endownmentfundimages/WhatsApp Image 2025-08-05 at 16.26.39 (2).jpeg', '_blank')}>
                 <CardMedia
                   component="img"
-                  height="250"
+                  height="400"
                   image="/sgtrust/media/images/endownmentfundimages/WhatsApp Image 2025-08-05 at 16.26.39 (2).jpeg"
-                  alt="Endowment Fund Establishment - Document 3"
-                  sx={{ objectFit: 'cover' }}
+                  alt="Endowment Fund Establishment Document"
+                  sx={{ objectFit: 'contain', borderRadius: 1 }}
                 />
-                <CardContent>
-                  <Typography variant="h6" component="h3" gutterBottom>
-                    Implementation
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    Implementation and execution of the endowment fund initiative
-                  </Typography>
-                </CardContent>
               </Card>
             </Grid>
           </Grid>
