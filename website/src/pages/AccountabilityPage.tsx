@@ -86,6 +86,24 @@ const AccountabilityPage: React.FC = () => {
                   https://sites.google.com/site/professorsaminathangovindasamy/#5
                 </a>
               </Typography>
+
+              <Box sx={{ mt: 4, p: 3, backgroundColor: 'grey.50', borderRadius: 2, border: '1px solid', borderColor: 'grey.200' }}>
+                <Typography variant="h6" gutterBottom color="primary.main" sx={{ fontWeight: 600 }}>
+                  Special Acknowledgment
+                </Typography>
+                <Typography variant="body1" sx={{ lineHeight: 1.8, textAlign: 'justify', fontStyle: 'italic' }}>
+                  We extend our heartfelt gratitude to <strong>Professor D. Navaneetham</strong> for his
+                  dedicated efforts in creating and maintaining the original Google Sites website that
+                  serves as a comprehensive repository of Professor S. Govindasamy's legacy and the
+                  endowment fund documentation.
+                </Typography>
+                <Typography variant="body1" sx={{ lineHeight: 1.8, textAlign: 'justify', mt: 2 }}>
+                  Professor Navaneetham's commitment to preserving and sharing this important information
+                  has been invaluable in ensuring that Professor Govindasamy's contributions to education
+                  and the endowment fund initiatives remain accessible to the academic community and
+                  future generations.
+                </Typography>
+              </Box>
             </CardContent>
           </Card>
         </CardContent>
