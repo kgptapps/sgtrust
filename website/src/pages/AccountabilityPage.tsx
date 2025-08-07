@@ -114,7 +114,7 @@ const AccountabilityPage: React.FC = () => {
           </Typography>
 
           <Grid container spacing={3}>
-            <Grid item xs={12} md={4}>
+            <Grid size={{ xs: 12, md: 4 }}>
               <Card sx={{ height: '100%', cursor: 'pointer' }} onClick={() => window.open('/sgtrust/media/images/endownmentfundimages/WhatsApp Image 2025-08-05 at 16.26.39.jpeg', '_blank')}>
                 <CardMedia
                   component="img"
@@ -134,7 +134,7 @@ const AccountabilityPage: React.FC = () => {
               </Card>
             </Grid>
 
-            <Grid item xs={12} md={4}>
+            <Grid size={{ xs: 12, md: 4 }}>
               <Card sx={{ height: '100%', cursor: 'pointer' }} onClick={() => window.open('/sgtrust/media/images/endownmentfundimages/WhatsApp Image 2025-08-05 at 16.26.39 (1).jpeg', '_blank')}>
                 <CardMedia
                   component="img"
@@ -154,7 +154,7 @@ const AccountabilityPage: React.FC = () => {
               </Card>
             </Grid>
 
-            <Grid item xs={12} md={4}>
+            <Grid size={{ xs: 12, md: 4 }}>
               <Card sx={{ height: '100%', cursor: 'pointer' }} onClick={() => window.open('/sgtrust/media/images/endownmentfundimages/WhatsApp Image 2025-08-05 at 16.26.39 (2).jpeg', '_blank')}>
                 <CardMedia
                   component="img"
