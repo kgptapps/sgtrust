@@ -27,113 +27,81 @@ const AcknowledgementsPage: React.FC = () => {
         Acknowledgements
       </Typography>
 
-      <Paper elevation={3} sx={{ p: 4, mb: 4 }}>
-        <Typography variant="h5" gutterBottom color="primary.main">
-          Gratitude and Recognition
+      <Paper elevation={3} sx={{ p: 6, mb: 4, textAlign: 'center' }}>
+        <Typography variant="h4" gutterBottom color="primary.main" sx={{ fontWeight: 600 }}>
+          A Tribute of Love and Dedication
         </Typography>
-        <Typography variant="body1" paragraph>
-          This memorial website is a tribute to Professor S. Govindasamy's extraordinary 
-          life and contributions to education. We extend our heartfelt gratitude to all 
-          who have made this project possible.
+        <Typography variant="h6" paragraph sx={{ fontStyle: 'italic', color: 'text.secondary', mb: 4 }}>
+          This memorial website was created with profound love and respect
+        </Typography>
+        <Divider sx={{ mb: 4 }} />
+        <Typography variant="body1" paragraph sx={{ fontSize: '1.1rem', lineHeight: 1.8 }}>
+          This entire memorial website stands as a heartfelt tribute to Professor S. Govindasamy,
+          lovingly created by his grandsons <strong>Kaaviyan Kannaiyan</strong> and <strong>Kadhir Karthikeyan</strong>.
+        </Typography>
+        <Typography variant="body1" paragraph sx={{ fontSize: '1.1rem', lineHeight: 1.8 }}>
+          Driven by deep love and respect for their grandfather's extraordinary legacy, they have
+          dedicated countless hours to preserve his memory, achievements, and the profound impact
+          he had on education and countless lives.
         </Typography>
       </Paper>
 
-      <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: 'repeat(2, 1fr)' }, gap: 4 }}>
-        <Card elevation={2} sx={{ height: '100%' }}>
-          <CardContent>
-            <Typography variant="h6" gutterBottom color="primary.main">
-              Family Members
+      <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: 'repeat(2, 1fr)' }, gap: 4, mb: 4 }}>
+        <Card elevation={3} sx={{ height: '100%' }}>
+          <CardContent sx={{ p: 4 }}>
+            <Typography variant="h5" gutterBottom color="primary.main" sx={{ fontWeight: 600 }}>
+              Kaaviyan Kannaiyan
             </Typography>
-            <Typography variant="body2" paragraph>
-              We are deeply grateful to the family members of Professor S. Govindasamy
-              who provided invaluable photographs, documents, and personal insights
-              that made this comprehensive tribute possible.
+            <Typography variant="body1" paragraph sx={{ lineHeight: 1.7 }}>
+              With meticulous attention to detail and unwavering dedication, Kaaviyan has worked
+              tirelessly to ensure that every aspect of his grandfather's life and achievements
+              is accurately documented and beautifully presented.
             </Typography>
-            <Typography variant="body2">
-              Their dedication to preserving his memory and sharing his story with
-              the world is truly commendable.
-            </Typography>
-          </CardContent>
-        </Card>
-
-        <Card elevation={2} sx={{ height: '100%' }}>
-          <CardContent>
-            <Typography variant="h6" gutterBottom color="primary.main">
-              Former Students
-            </Typography>
-            <Typography variant="body2" paragraph>
-              Special thanks to the former students who shared their memories,
-              testimonials, and experiences with Professor Govindasamy.
-            </Typography>
-            <Typography variant="body2">
-              Their stories illuminate the profound impact he had on countless
-              lives and careers.
+            <Typography variant="body1" sx={{ lineHeight: 1.7 }}>
+              His commitment to preserving family history and academic legacy shines through
+              every page of this memorial website.
             </Typography>
           </CardContent>
         </Card>
 
-        <Card elevation={2} sx={{ height: '100%' }}>
-          <CardContent>
-            <Typography variant="h6" gutterBottom color="primary.main">
-              Academic Colleagues
+        <Card elevation={3} sx={{ height: '100%' }}>
+          <CardContent sx={{ p: 4 }}>
+            <Typography variant="h5" gutterBottom color="primary.main" sx={{ fontWeight: 600 }}>
+              Kadhir Karthikeyan
             </Typography>
-            <Typography variant="body2" paragraph>
-              We acknowledge the contributions of fellow academics and colleagues
-              who worked alongside Professor Govindasamy.
+            <Typography variant="body1" paragraph sx={{ lineHeight: 1.7 }}>
+              Kadhir's passion for honoring his grandfather's memory is evident in the thoughtful
+              curation of content, photographs, and the comprehensive documentation of Professor
+              Govindasamy's remarkable journey.
             </Typography>
-            <Typography variant="body2">
-              Their professional insights and shared memories have enriched
-              this memorial significantly.
-            </Typography>
-          </CardContent>
-        </Card>
-
-        <Card elevation={2} sx={{ height: '100%' }}>
-          <CardContent>
-            <Typography variant="h6" gutterBottom color="primary.main">
-              Institutional Support
-            </Typography>
-            <Typography variant="body2" paragraph>
-              Gratitude to the University of Madras and other institutions
-              for providing access to archives and historical records.
-            </Typography>
-            <Typography variant="body2">
-              Their cooperation has been essential in documenting his
-              academic journey and achievements.
+            <Typography variant="body1" sx={{ lineHeight: 1.7 }}>
+              His dedication ensures that future generations will understand and appreciate
+              the profound impact their grandfather had on education and society.
             </Typography>
           </CardContent>
         </Card>
       </Box>
 
-      <Paper elevation={3} sx={{ p: 4, mt: 4 }}>
-        <Typography variant="h5" gutterBottom color="primary.main">
-          Technical Acknowledgements
+      <Paper elevation={3} sx={{ p: 6 }}>
+        <Typography variant="h5" gutterBottom color="primary.main" sx={{ fontWeight: 600, textAlign: 'center' }}>
+          A Labor of Love
         </Typography>
-        <Divider sx={{ mb: 3 }} />
-        <Typography variant="body1" paragraph>
-          This website was developed with modern web technologies to ensure 
-          accessibility, responsiveness, and long-term preservation of Professor 
-          Govindasamy's legacy.
+        <Divider sx={{ mb: 4 }} />
+        <Typography variant="body1" paragraph sx={{ fontSize: '1.1rem', lineHeight: 1.8, textAlign: 'center' }}>
+          This website represents more than just a digital memorial—it is a testament to the
+          enduring bond between grandfather and grandsons, and their shared commitment to
+          education, knowledge, and preserving the legacy of a remarkable educator.
         </Typography>
-        <Typography variant="body1" paragraph>
-          We acknowledge the open-source community and the various libraries 
-          and frameworks that made this project possible.
+        <Typography variant="body1" paragraph sx={{ fontSize: '1.1rem', lineHeight: 1.8, textAlign: 'center' }}>
+          Through their efforts, Professor S. Govindasamy's wisdom, achievements, and inspiring
+          life story will continue to touch and inspire countless visitors for generations to come.
         </Typography>
-      </Paper>
-
-      <Paper elevation={3} sx={{ p: 4, mt: 4 }}>
-        <Typography variant="h5" gutterBottom color="primary.main">
-          Continuing Legacy
+        <Typography variant="h6" sx={{ fontStyle: 'italic', color: 'primary.main', textAlign: 'center', mt: 4 }}>
+          "In honoring our grandfather, we honor the values of education, dedication, and service
+          that he embodied throughout his remarkable life."
         </Typography>
-        <Divider sx={{ mb: 3 }} />
-        <Typography variant="body1" paragraph>
-          This memorial website stands as a testament to Professor S. Govindasamy's 
-          enduring impact on education and research. We hope it serves as an 
-          inspiration for future generations of educators and students.
-        </Typography>
-        <Typography variant="body1">
-          We invite visitors to share their own memories and stories to keep 
-          his legacy alive for years to come.
+        <Typography variant="body2" sx={{ textAlign: 'center', mt: 2, fontStyle: 'italic' }}>
+          — Kaaviyan Kannaiyan & Kadhir Karthikeyan
         </Typography>
       </Paper>
     </Container>
