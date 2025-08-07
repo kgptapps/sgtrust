@@ -155,10 +155,10 @@ const alumniProfiles: AlumniProfile[] = [
   {
     id: 17,
     name: "R. Saraswathi",
-    title: "Alumni Profile",
-    department: "Information to be updated",
-    institution: "India",
-    image: "/sgtrust/media/images/placeholder-alumni.png"
+    title: "Staff Scientist · Research specialist · GUEST FACULTY",
+    department: "Woman scientist",
+    institution: "DST, Delhi",
+    image: "/sgtrust/media/images/alumni/rsaraswathi.jpeg"
   },
   {
     id: 18,
