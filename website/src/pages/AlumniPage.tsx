@@ -60,7 +60,7 @@ const alumniProfiles: AlumniProfile[] = [
     title: "Associate Professor",
     department: "University of Colorado Anschutz Medical Campus",
     institution: "Aurora, CO 80045",
-    image: "/sgtrust/media/images/placeholder-alumni.png"
+    image: "/sgtrust/media/images/alumni/N. Balasubramanian.jpeg"
   },
   {
     id: 6,
