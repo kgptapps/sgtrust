@@ -4,7 +4,9 @@ import {
   Container,
   Typography,
   Card,
-  CardContent
+  CardContent,
+  CardMedia,
+  Grid
 } from '@mui/material';
 import {
   AccountBalance as FundIcon
@@ -93,6 +95,87 @@ const AccountabilityPage: React.FC = () => {
 
 
 
+
+      {/* Establishing the Endowment Fund */}
+      <Card sx={{ mb: 6 }}>
+        <CardContent sx={{ p: 4 }}>
+          <Box sx={{ display: 'flex', alignItems: 'center', mb: 3 }}>
+            <FundIcon sx={{ fontSize: 32, color: 'primary.main', mr: 2 }} />
+            <Typography variant="h5" component="h2" color="primary.main">
+              Establishing the Endowment Fund
+            </Typography>
+          </Box>
+
+          <Typography variant="body1" sx={{ mb: 4, lineHeight: 1.8, textAlign: 'justify' }}>
+            The establishment of the Professor S. Govindasamy Educational Endowment Fund represents a collaborative
+            effort by his students, colleagues, and admirers to honor his legacy and continue his mission of
+            educational excellence. These images document the journey of creating this meaningful tribute to
+            Professor's lifelong dedication to education and mentorship.
+          </Typography>
+
+          <Grid container spacing={3}>
+            <Grid item xs={12} md={4}>
+              <Card sx={{ height: '100%', cursor: 'pointer' }} onClick={() => window.open('/sgtrust/media/images/endownmentfundimages/WhatsApp Image 2025-08-05 at 16.26.39.jpeg', '_blank')}>
+                <CardMedia
+                  component="img"
+                  height="250"
+                  image="/sgtrust/media/images/endownmentfundimages/WhatsApp Image 2025-08-05 at 16.26.39.jpeg"
+                  alt="Endowment Fund Establishment - Document 1"
+                  sx={{ objectFit: 'cover' }}
+                />
+                <CardContent>
+                  <Typography variant="h6" component="h3" gutterBottom>
+                    Fund Documentation
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    Official documentation and planning materials for the endowment fund establishment
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+
+            <Grid item xs={12} md={4}>
+              <Card sx={{ height: '100%', cursor: 'pointer' }} onClick={() => window.open('/sgtrust/media/images/endownmentfundimages/WhatsApp Image 2025-08-05 at 16.26.39 (1).jpeg', '_blank')}>
+                <CardMedia
+                  component="img"
+                  height="250"
+                  image="/sgtrust/media/images/endownmentfundimages/WhatsApp Image 2025-08-05 at 16.26.39 (1).jpeg"
+                  alt="Endowment Fund Establishment - Document 2"
+                  sx={{ objectFit: 'cover' }}
+                />
+                <CardContent>
+                  <Typography variant="h6" component="h3" gutterBottom>
+                    Planning Process
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    Collaborative planning and organizational efforts by students and colleagues
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+
+            <Grid item xs={12} md={4}>
+              <Card sx={{ height: '100%', cursor: 'pointer' }} onClick={() => window.open('/sgtrust/media/images/endownmentfundimages/WhatsApp Image 2025-08-05 at 16.26.39 (2).jpeg', '_blank')}>
+                <CardMedia
+                  component="img"
+                  height="250"
+                  image="/sgtrust/media/images/endownmentfundimages/WhatsApp Image 2025-08-05 at 16.26.39 (2).jpeg"
+                  alt="Endowment Fund Establishment - Document 3"
+                  sx={{ objectFit: 'cover' }}
+                />
+                <CardContent>
+                  <Typography variant="h6" component="h3" gutterBottom>
+                    Implementation
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary">
+                    Implementation and execution of the endowment fund initiative
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+          </Grid>
+        </CardContent>
+      </Card>
 
     </Container>
   );
