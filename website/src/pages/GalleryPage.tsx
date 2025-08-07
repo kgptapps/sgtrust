@@ -33,20 +33,7 @@ const galleryPhotos: Photo[] = [
     description: "Professor with the former Governor of Tamil Nadu",
     year: "Public Service"
   },
-  {
-    id: 2,
-    src: "/sgtrust/media/images/withhisstudents.jpeg",
-    title: "With His Students",
-    description: "Professor with his beloved students",
-    year: "Teaching"
-  },
-  {
-    id: 3,
-    src: "/sgtrust/media/images/gallery/addressingguest.jpg",
-    title: "Addressing Guest",
-    description: "Professor addressing distinguished guests at an academic event",
-    year: "Academic"
-  },
+
   {
     id: 4,
     src: "/sgtrust/media/images/gallery/addressingstudents.jpg",
@@ -89,13 +76,7 @@ const galleryPhotos: Photo[] = [
     description: "Academic celebration with colleagues",
     year: "Events"
   },
-  {
-    id: 10,
-    src: "/sgtrust/media/images/gallery/committeespeech.jpg",
-    title: "Committee Speech",
-    description: "Delivering speech at committee meeting",
-    year: "Leadership"
-  },
+
   {
     id: 11,
     src: "/sgtrust/media/images/gallery/congratulations.jpg",
@@ -103,13 +84,7 @@ const galleryPhotos: Photo[] = [
     description: "Receiving congratulations from colleagues",
     year: "Achievement"
   },
-  {
-    id: 12,
-    src: "/sgtrust/media/images/gallery/congratulationsagain.jpg",
-    title: "More Congratulations",
-    description: "Another moment of recognition and appreciation",
-    year: "Achievement"
-  },
+
   {
     id: 13,
     src: "/sgtrust/media/images/gallery/cyclingthroughtown.jpg",
@@ -152,13 +127,7 @@ const galleryPhotos: Photo[] = [
     description: "Another cherished family moment",
     year: "Family"
   },
-  {
-    id: 17,
-    src: "/sgtrust/media/images/gallery/felicitation.jpg",
-    title: "Felicitation",
-    description: "Being felicitated for academic contributions",
-    year: "Honor"
-  },
+
   {
     id: 18,
     src: "/sgtrust/media/images/gallery/funtimewithfriends.jpg",
@@ -173,13 +142,7 @@ const galleryPhotos: Photo[] = [
     description: "Casual time with fellow professors",
     year: "Social"
   },
-  {
-    id: 20,
-    src: "/sgtrust/media/images/gallery/honoring.jpg",
-    title: "Honoring",
-    description: "Being honored for outstanding contributions",
-    year: "Recognition"
-  },
+
   {
     id: 21,
     src: "/sgtrust/media/images/gallery/longjump.jpg",
@@ -232,20 +195,7 @@ const galleryPhotos: Photo[] = [
     year: "Sports"
   },
 
-  {
-    id: 31,
-    src: "/sgtrust/media/images/gallery/speech.jpg",
-    title: "Delivering Speech",
-    description: "Professor delivering an important speech",
-    year: "Academic"
-  },
-  {
-    id: 32,
-    src: "/sgtrust/media/images/gallery/speech2.jpg",
-    title: "Another Speech",
-    description: "Another moment of public speaking",
-    year: "Academic"
-  },
+
 
   {
     id: 34,
@@ -311,13 +261,7 @@ const galleryPhotos: Photo[] = [
     description: "With his student during Singapore visit",
     year: "International"
   },
-  {
-    id: 44,
-    src: "/sgtrust/media/images/gallery/withhisstudents.jpg",
-    title: "With His Students",
-    description: "Professor with his beloved students",
-    year: "Teaching"
-  },
+
   {
     id: 45,
     src: "/sgtrust/media/images/gallery/withmorecolleauges.jpg",
