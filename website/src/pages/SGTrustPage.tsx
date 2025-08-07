@@ -42,7 +42,7 @@ const SGTrustPage: React.FC = () => {
       {/* Three Page Images Side by Side */}
       <Box sx={{ mb: 6 }}>
         <Grid container spacing={3}>
-          <Grid item xs={12} md={4}>
+          <Grid size={{ xs: 12, md: 4 }}>
             <Card sx={{ cursor: 'pointer', boxShadow: 2 }} onClick={() => window.open('/sgtrust/media/images/memorialphotos/page1.jpeg', '_blank')}>
               <CardMedia
                 component="img"
@@ -54,7 +54,7 @@ const SGTrustPage: React.FC = () => {
             </Card>
           </Grid>
 
-          <Grid item xs={12} md={4}>
+          <Grid size={{ xs: 12, md: 4 }}>
             <Card sx={{ cursor: 'pointer', boxShadow: 2 }} onClick={() => window.open('/sgtrust/media/images/memorialphotos/page2.jpeg', '_blank')}>
               <CardMedia
                 component="img"
@@ -66,7 +66,7 @@ const SGTrustPage: React.FC = () => {
             </Card>
           </Grid>
 
-          <Grid item xs={12} md={4}>
+          <Grid size={{ xs: 12, md: 4 }}>
             <Card sx={{ cursor: 'pointer', boxShadow: 2 }} onClick={() => window.open('/sgtrust/media/images/memorialphotos/page3.jpeg', '_blank')}>
               <CardMedia
                 component="img"
