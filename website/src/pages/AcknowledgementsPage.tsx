@@ -2,10 +2,7 @@ import React from 'react';
 import {
   Container,
   Typography,
-  Box,
   Paper,
-  Card,
-  CardContent,
   Divider
 } from '@mui/material';
 
