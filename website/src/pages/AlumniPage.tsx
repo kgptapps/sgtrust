@@ -57,9 +57,9 @@ const alumniProfiles: AlumniProfile[] = [
   {
     id: 5,
     name: "N. Balasubramanian",
-    title: "Alumni Profile",
-    department: "Information to be updated",
-    institution: "USA",
+    title: "Associate Professor",
+    department: "University of Colorado Anschutz Medical Campus",
+    institution: "Aurora, CO 80045",
     image: "/sgtrust/media/images/placeholder-alumni.png"
   },
   {
