@@ -46,41 +46,7 @@ const AcknowledgementsPage: React.FC = () => {
         </Typography>
       </Paper>
 
-      <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: 'repeat(2, 1fr)' }, gap: 4, mb: 4 }}>
-        <Card elevation={3} sx={{ height: '100%' }}>
-          <CardContent sx={{ p: 4 }}>
-            <Typography variant="h5" gutterBottom color="primary.main" sx={{ fontWeight: 600 }}>
-              Kaaviyan Kannaiyan
-            </Typography>
-            <Typography variant="body1" paragraph sx={{ lineHeight: 1.7 }}>
-              With meticulous attention to detail and unwavering dedication, Kaaviyan has worked
-              tirelessly to ensure that every aspect of his grandfather's life and achievements
-              is accurately documented and beautifully presented.
-            </Typography>
-            <Typography variant="body1" sx={{ lineHeight: 1.7 }}>
-              His commitment to preserving family history and academic legacy shines through
-              every page of this memorial website.
-            </Typography>
-          </CardContent>
-        </Card>
 
-        <Card elevation={3} sx={{ height: '100%' }}>
-          <CardContent sx={{ p: 4 }}>
-            <Typography variant="h5" gutterBottom color="primary.main" sx={{ fontWeight: 600 }}>
-              Kadhir Karthikeyan
-            </Typography>
-            <Typography variant="body1" paragraph sx={{ lineHeight: 1.7 }}>
-              Kadhir's passion for honoring his grandfather's memory is evident in the thoughtful
-              curation of content, photographs, and the comprehensive documentation of Professor
-              Govindasamy's remarkable journey.
-            </Typography>
-            <Typography variant="body1" sx={{ lineHeight: 1.7 }}>
-              His dedication ensures that future generations will understand and appreciate
-              the profound impact their grandfather had on education and society.
-            </Typography>
-          </CardContent>
-        </Card>
-      </Box>
 
       <Paper elevation={3} sx={{ p: 6 }}>
         <Typography variant="h5" gutterBottom color="primary.main" sx={{ fontWeight: 600, textAlign: 'center' }}>
