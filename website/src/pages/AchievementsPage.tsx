@@ -638,7 +638,7 @@ const AchievementsPage: React.FC = () => {
 
   useEffect(() => {
     // Load legacy achievements metadata (certificates)
-    fetch('/sgtrust/media/achievements/achievements_metadata.json')
+    fetch('/media/achievements/achievements_metadata.json')
       .then(response => response.json())
       .then(data => setLegacyAchievementsData(data))
       .catch(error => console.error('Error loading legacy achievements data:', error));

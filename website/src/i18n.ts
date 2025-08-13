@@ -13,7 +13,7 @@ i18n
     supportedLngs: ['en', 'ta'],
     
     backend: {
-      loadPath: '/sgtrust/data/i18n/{{lng}}/{{ns}}.json'
+      loadPath: '/data/i18n/{{lng}}/{{ns}}.json'
     },
     
     detection: {
