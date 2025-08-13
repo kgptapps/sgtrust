@@ -108,7 +108,7 @@ const HomePage: React.FC = () => {
                       boxShadow: `0 12px 40px ${theme.palette.primary.main}40`
                     }
                   }}
-                  src="/sgtrust/media/images/professor-portrait.png"
+                  src="/media/images/professor-portrait.png"
                   alt={t('content:professorName')}
                 />
                 <Typography variant="h6" sx={{ fontWeight: 600 }}>
@@ -149,7 +149,7 @@ const HomePage: React.FC = () => {
           }}>
             <Box
               component="img"
-              src="/sgtrust/media/images/memorial/memorialsketch.jpeg"
+              src="/media/images/memorial/memorialsketch.jpeg"
               alt="Memorial Statue Design"
               onClick={() => trackMemorialCeremonyInteraction('statue_image_click')}
               onMouseEnter={() => trackMemorialCeremonyInteraction('statue_image_hover')}

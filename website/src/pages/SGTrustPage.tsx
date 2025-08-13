@@ -48,11 +48,11 @@ const SGTrustPage: React.FC = () => {
       <Box sx={{ mb: 4 }}>
         <Grid container spacing={3}>
           <Grid size={{ xs: 12, md: 4 }}>
-            <Card sx={{ cursor: 'pointer', boxShadow: 2 }} onClick={() => window.open('/sgtrust/media/images/memorialphotos/page1.jpeg', '_blank')}>
+            <Card sx={{ cursor: 'pointer', boxShadow: 2 }} onClick={() => window.open('/media/images/memorialphotos/page1.jpeg', '_blank')}>
               <CardMedia
                 component="img"
                 height="400"
-                image="/sgtrust/media/images/memorialphotos/page1.jpeg"
+                image="/media/images/memorialphotos/page1.jpeg"
                 alt="Memorial Page 1"
                 sx={{ objectFit: 'contain' }}
               />
@@ -60,11 +60,11 @@ const SGTrustPage: React.FC = () => {
           </Grid>
 
           <Grid size={{ xs: 12, md: 4 }}>
-            <Card sx={{ cursor: 'pointer', boxShadow: 2 }} onClick={() => window.open('/sgtrust/media/images/memorialphotos/page2.jpeg', '_blank')}>
+            <Card sx={{ cursor: 'pointer', boxShadow: 2 }} onClick={() => window.open('/media/images/memorialphotos/page2.jpeg', '_blank')}>
               <CardMedia
                 component="img"
                 height="400"
-                image="/sgtrust/media/images/memorialphotos/page2.jpeg"
+                image="/media/images/memorialphotos/page2.jpeg"
                 alt="Memorial Page 2"
                 sx={{ objectFit: 'contain' }}
               />
@@ -72,11 +72,11 @@ const SGTrustPage: React.FC = () => {
           </Grid>
 
           <Grid size={{ xs: 12, md: 4 }}>
-            <Card sx={{ cursor: 'pointer', boxShadow: 2 }} onClick={() => window.open('/sgtrust/media/images/memorialphotos/page3.jpeg', '_blank')}>
+            <Card sx={{ cursor: 'pointer', boxShadow: 2 }} onClick={() => window.open('/media/images/memorialphotos/page3.jpeg', '_blank')}>
               <CardMedia
                 component="img"
                 height="400"
-                image="/sgtrust/media/images/memorialphotos/page3.jpeg"
+                image="/media/images/memorialphotos/page3.jpeg"
                 alt="Memorial Page 3"
                 sx={{ objectFit: 'contain' }}
               />
@@ -89,11 +89,11 @@ const SGTrustPage: React.FC = () => {
       <Box sx={{ mb: 4 }}>
         <Grid container spacing={3}>
           <Grid size={{ xs: 12, md: 6 }}>
-            <Card sx={{ cursor: 'pointer', boxShadow: 2 }} onClick={() => window.open('/sgtrust/media/images/memorialphotos/pdf1.jpeg', '_blank')}>
+            <Card sx={{ cursor: 'pointer', boxShadow: 2 }} onClick={() => window.open('/media/images/memorialphotos/pdf1.jpeg', '_blank')}>
               <CardMedia
                 component="img"
                 height="400"
-                image="/sgtrust/media/images/memorialphotos/pdf1.jpeg"
+                image="/media/images/memorialphotos/pdf1.jpeg"
                 alt="Memorial PDF Document 1"
                 sx={{ objectFit: 'contain' }}
               />
