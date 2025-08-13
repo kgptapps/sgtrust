@@ -133,11 +133,11 @@ const AccountabilityPage: React.FC = () => {
 
           <Grid container spacing={3}>
             <Grid size={{ xs: 12, md: 4 }}>
-              <Card sx={{ cursor: 'pointer', border: 'none', boxShadow: 'none' }} onClick={() => window.open('/sgtrust/media/images/endownmentfundimages/WhatsApp Image 2025-08-05 at 16.26.39.jpeg', '_blank')}>
+              <Card sx={{ cursor: 'pointer', border: 'none', boxShadow: 'none' }} onClick={() => window.open('/media/images/endownmentfundimages/WhatsApp Image 2025-08-05 at 16.26.39.jpeg', '_blank')}>
                 <CardMedia
                   component="img"
                   height="400"
-                  image="/sgtrust/media/images/endownmentfundimages/WhatsApp Image 2025-08-05 at 16.26.39.jpeg"
+                  image="/media/images/endownmentfundimages/WhatsApp Image 2025-08-05 at 16.26.39.jpeg"
                   alt="Endowment Fund Establishment Document"
                   sx={{ objectFit: 'contain', borderRadius: 1 }}
                 />
@@ -145,11 +145,11 @@ const AccountabilityPage: React.FC = () => {
             </Grid>
 
             <Grid size={{ xs: 12, md: 4 }}>
-              <Card sx={{ cursor: 'pointer', border: 'none', boxShadow: 'none' }} onClick={() => window.open('/sgtrust/media/images/endownmentfundimages/WhatsApp Image 2025-08-05 at 16.26.39 (1).jpeg', '_blank')}>
+              <Card sx={{ cursor: 'pointer', border: 'none', boxShadow: 'none' }} onClick={() => window.open('/media/images/endownmentfundimages/WhatsApp Image 2025-08-05 at 16.26.39 (1).jpeg', '_blank')}>
                 <CardMedia
                   component="img"
                   height="400"
-                  image="/sgtrust/media/images/endownmentfundimages/WhatsApp Image 2025-08-05 at 16.26.39 (1).jpeg"
+                  image="/media/images/endownmentfundimages/WhatsApp Image 2025-08-05 at 16.26.39 (1).jpeg"
                   alt="Endowment Fund Establishment Document"
                   sx={{ objectFit: 'contain', borderRadius: 1 }}
                 />
@@ -157,11 +157,11 @@ const AccountabilityPage: React.FC = () => {
             </Grid>
 
             <Grid size={{ xs: 12, md: 4 }}>
-              <Card sx={{ cursor: 'pointer', border: 'none', boxShadow: 'none' }} onClick={() => window.open('/sgtrust/media/images/endownmentfundimages/WhatsApp Image 2025-08-05 at 16.26.39 (2).jpeg', '_blank')}>
+              <Card sx={{ cursor: 'pointer', border: 'none', boxShadow: 'none' }} onClick={() => window.open('/media/images/endownmentfundimages/WhatsApp Image 2025-08-05 at 16.26.39 (2).jpeg', '_blank')}>
                 <CardMedia
                   component="img"
                   height="400"
-                  image="/sgtrust/media/images/endownmentfundimages/WhatsApp Image 2025-08-05 at 16.26.39 (2).jpeg"
+                  image="/media/images/endownmentfundimages/WhatsApp Image 2025-08-05 at 16.26.39 (2).jpeg"
                   alt="Endowment Fund Establishment Document"
                   sx={{ objectFit: 'contain', borderRadius: 1 }}
                 />

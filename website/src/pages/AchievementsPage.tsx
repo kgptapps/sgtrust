@@ -495,7 +495,7 @@ const articlesData: Article[] = [
     id: 1,
     title: 'Drug Proven Correct',
     description: 'Drug research validation coverage',
-    image: '/sgtrust/media/newspapers/drugprovencorrect.JPG',
+    image: '/media/newspapers/drugprovencorrect.JPG',
     date: 'Research Coverage',
     category: 'newspaper',
     content: 'Newspaper coverage of Professor Govindasamy\'s drug research validation work...'
@@ -504,7 +504,7 @@ const articlesData: Article[] = [
     id: 2,
     title: 'Educational Trust',
     description: 'Educational trust coverage',
-    image: '/sgtrust/media/newspapers/educationaltrust.JPG',
+    image: '/media/newspapers/educationaltrust.JPG',
     date: 'Community Service',
     category: 'newspaper',
     content: 'Coverage of Professor Govindasamy\'s educational trust initiatives...'
@@ -513,7 +513,7 @@ const articlesData: Article[] = [
     id: 3,
     title: 'Felicitation',
     description: 'Felicitation ceremony coverage',
-    image: '/sgtrust/media/newspapers/felicitation.JPG',
+    image: '/media/newspapers/felicitation.JPG',
     date: 'Recognition',
     category: 'newspaper',
     content: 'Newspaper coverage of felicitation ceremony honoring Professor Govindasamy...'
@@ -522,7 +522,7 @@ const articlesData: Article[] = [
     id: 4,
     title: 'First Trial Result',
     description: 'First trial result announcement',
-    image: '/sgtrust/media/newspapers/firsttrialresult.JPG',
+    image: '/media/newspapers/firsttrialresult.JPG',
     date: 'Research Milestone',
     category: 'newspaper',
     content: 'Coverage of significant research trial results...'
@@ -531,7 +531,7 @@ const articlesData: Article[] = [
     id: 5,
     title: 'Magazine Feature',
     description: 'Magazine feature article',
-    image: '/sgtrust/media/newspapers/magazine.JPG',
+    image: '/media/newspapers/magazine.JPG',
     date: 'Profile',
     category: 'magazine',
     content: 'In-depth magazine profile of Professor Govindasamy\'s contributions...'
@@ -540,7 +540,7 @@ const articlesData: Article[] = [
     id: 6,
     title: 'Newspaper Article',
     description: 'General newspaper article coverage',
-    image: '/sgtrust/media/newspapers/newspaperarticle.JPG',
+    image: '/media/newspapers/newspaperarticle.JPG',
     date: 'Media Coverage',
     category: 'newspaper',
     content: 'General newspaper article about Professor Govindasamy\'s work...'
@@ -549,7 +549,7 @@ const articlesData: Article[] = [
     id: 7,
     title: 'Newspaper Award',
     description: 'Award recognition in newspaper',
-    image: '/sgtrust/media/newspapers/newspaperaward.JPG',
+    image: '/media/newspapers/newspaperaward.JPG',
     date: 'Award Recognition',
     category: 'newspaper',
     content: 'Newspaper coverage of award recognition for Professor Govindasamy...'
@@ -558,7 +558,7 @@ const articlesData: Article[] = [
     id: 8,
     title: 'Statue Request',
     description: 'Request for memorial statue coverage',
-    image: '/sgtrust/media/newspapers/statuerequest.JPG',
+    image: '/media/newspapers/statuerequest.JPG',
     date: 'Memorial Request',
     category: 'newspaper',
     content: 'Newspaper coverage of request for memorial statue...'
@@ -567,7 +567,7 @@ const articlesData: Article[] = [
     id: 9,
     title: '2 Day Fasting for Pay Raise',
     description: 'Article about 2-day fasting for pay raise',
-    image: '/sgtrust/media/images/articles/2dayfastingforpayraise.jpeg',
+    image: '/media/images/articles/2dayfastingforpayraise.jpeg',
     date: 'Social Action',
     category: 'article',
     content: 'Article coverage of 2-day fasting protest for pay raise...'
@@ -576,7 +576,7 @@ const articlesData: Article[] = [
     id: 10,
     title: 'Muta Article 1',
     description: 'Muta publication article - Part 1',
-    image: '/sgtrust/media/images/articles/Muta1.jpg',
+    image: '/media/images/articles/Muta1.jpg',
     date: 'Publication',
     category: 'article',
     content: 'Muta publication article coverage - Part 1...'
@@ -585,7 +585,7 @@ const articlesData: Article[] = [
     id: 11,
     title: 'Muta Article 2',
     description: 'Muta publication article - Part 2',
-    image: '/sgtrust/media/images/articles/Muta2.jpg',
+    image: '/media/images/articles/Muta2.jpg',
     date: 'Publication',
     category: 'article',
     content: 'Muta publication article coverage - Part 2...'
@@ -594,7 +594,7 @@ const articlesData: Article[] = [
     id: 12,
     title: 'Muta Article 3',
     description: 'Muta publication article - Part 3',
-    image: '/sgtrust/media/images/articles/Muta3.jpg',
+    image: '/media/images/articles/Muta3.jpg',
     date: 'Publication',
     category: 'article',
     content: 'Muta publication article coverage - Part 3...'
@@ -603,7 +603,7 @@ const articlesData: Article[] = [
     id: 13,
     title: 'Muta Article 4',
     description: 'Muta publication article - Part 4',
-    image: '/sgtrust/media/images/articles/Muta4.jpg',
+    image: '/media/images/articles/Muta4.jpg',
     date: 'Publication',
     category: 'article',
     content: 'Muta publication article coverage - Part 4...'
@@ -612,7 +612,7 @@ const articlesData: Article[] = [
     id: 14,
     title: 'Muta Article 5',
     description: 'Muta publication article - Part 5',
-    image: '/sgtrust/media/images/articles/Muta5.jpg',
+    image: '/media/images/articles/Muta5.jpg',
     date: 'Publication',
     category: 'article',
     content: 'Muta publication article coverage - Part 5...'

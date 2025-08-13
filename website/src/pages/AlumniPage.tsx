@@ -28,7 +28,7 @@ const alumniProfiles: AlumniProfile[] = [
     title: "Alumni Profile",
     department: "Information to be updated",
     institution: "India",
-    image: "/sgtrust/media/images/placeholder-alumni.png"
+    image: "/media/images/placeholder-alumni.png"
   },
   {
     id: 2,
@@ -36,7 +36,7 @@ const alumniProfiles: AlumniProfile[] = [
     title: "Alumni Profile",
     department: "Information to be updated",
     institution: "USA",
-    image: "/sgtrust/media/images/placeholder-alumni.png"
+    image: "/media/images/placeholder-alumni.png"
   },
   {
     id: 3,
@@ -44,7 +44,7 @@ const alumniProfiles: AlumniProfile[] = [
     title: "Alumni Profile",
     department: "Information to be updated",
     institution: "USA",
-    image: "/sgtrust/media/images/placeholder-alumni.png"
+    image: "/media/images/placeholder-alumni.png"
   },
   {
     id: 4,
@@ -52,7 +52,7 @@ const alumniProfiles: AlumniProfile[] = [
     title: "Alumni Profile",
     department: "Information to be updated",
     institution: "USA",
-    image: "/sgtrust/media/images/placeholder-alumni.png"
+    image: "/media/images/placeholder-alumni.png"
   },
   {
     id: 5,
@@ -60,7 +60,7 @@ const alumniProfiles: AlumniProfile[] = [
     title: "Associate Professor",
     department: "University of Colorado Anschutz Medical Campus",
     institution: "Aurora, CO 80045",
-    image: "/sgtrust/media/images/alumni/N. Balasubramanian.jpeg"
+    image: "/media/images/alumni/N. Balasubramanian.jpeg"
   },
   {
     id: 6,
@@ -68,7 +68,7 @@ const alumniProfiles: AlumniProfile[] = [
     title: "Alumni Profile",
     department: "Information to be updated",
     institution: "USA",
-    image: "/sgtrust/media/images/placeholder-alumni.png"
+    image: "/media/images/placeholder-alumni.png"
   },
   {
     id: 7,
@@ -76,7 +76,7 @@ const alumniProfiles: AlumniProfile[] = [
     title: "Alumni Profile",
     department: "Information to be updated",
     institution: "India",
-    image: "/sgtrust/media/images/placeholder-alumni.png"
+    image: "/media/images/placeholder-alumni.png"
   },
   {
     id: 8,
@@ -84,7 +84,7 @@ const alumniProfiles: AlumniProfile[] = [
     title: "Alumni Profile",
     department: "Information to be updated",
     institution: "USA",
-    image: "/sgtrust/media/images/placeholder-alumni.png"
+    image: "/media/images/placeholder-alumni.png"
   },
   {
     id: 9,
@@ -93,7 +93,7 @@ const alumniProfiles: AlumniProfile[] = [
     department: "Department of Biochemistry",
     institution: "University of Madras",
     tenure: "Since 2007 to till date",
-    image: "/sgtrust/media/images/alumni/professorv.elangovan.jpeg"
+    image: "/media/images/alumni/professorv.elangovan.jpeg"
   },
   {
     id: 10,
@@ -102,7 +102,7 @@ const alumniProfiles: AlumniProfile[] = [
     department: "Centre for Distance and Online Education",
     institution: "Bharathidasan University",
     location: "Tiruchirapalli - 620024, Tamil Nadu, India",
-    image: "/sgtrust/media/images/alumni/professors.maneemegalai.png"
+    image: "/media/images/alumni/professors.maneemegalai.png"
   },
   {
     id: 11,
@@ -110,7 +110,7 @@ const alumniProfiles: AlumniProfile[] = [
     title: "Alumni Profile",
     department: "Information to be updated",
     institution: "India",
-    image: "/sgtrust/media/images/placeholder-alumni.png"
+    image: "/media/images/placeholder-alumni.png"
   },
   {
     id: 12,
@@ -118,7 +118,7 @@ const alumniProfiles: AlumniProfile[] = [
     title: "Alumni Profile",
     department: "Information to be updated",
     institution: "USA",
-    image: "/sgtrust/media/images/placeholder-alumni.png"
+    image: "/media/images/placeholder-alumni.png"
   },
   {
     id: 13,
@@ -126,7 +126,7 @@ const alumniProfiles: AlumniProfile[] = [
     title: "Alumni Profile",
     department: "Information to be updated",
     institution: "India",
-    image: "/sgtrust/media/images/placeholder-alumni.png"
+    image: "/media/images/placeholder-alumni.png"
   },
   {
     id: 14,
@@ -134,7 +134,7 @@ const alumniProfiles: AlumniProfile[] = [
     title: "Alumni Profile",
     department: "Information to be updated",
     institution: "USA",
-    image: "/sgtrust/media/images/placeholder-alumni.png"
+    image: "/media/images/placeholder-alumni.png"
   },
   {
     id: 15,
@@ -142,7 +142,7 @@ const alumniProfiles: AlumniProfile[] = [
     title: "Alumni Profile",
     department: "Information to be updated",
     institution: "India",
-    image: "/sgtrust/media/images/placeholder-alumni.png"
+    image: "/media/images/placeholder-alumni.png"
   },
   {
     id: 16,
@@ -150,7 +150,7 @@ const alumniProfiles: AlumniProfile[] = [
     title: "Alumni Profile",
     department: "Information to be updated",
     institution: "USA",
-    image: "/sgtrust/media/images/placeholder-alumni.png"
+    image: "/media/images/placeholder-alumni.png"
   },
   {
     id: 17,
@@ -158,7 +158,7 @@ const alumniProfiles: AlumniProfile[] = [
     title: "Staff Scientist · Research specialist · GUEST FACULTY",
     department: "Woman scientist",
     institution: "DST, Delhi",
-    image: "/sgtrust/media/images/alumni/rsaraswathi.jpeg"
+    image: "/media/images/alumni/rsaraswathi.jpeg"
   },
   {
     id: 18,
@@ -166,7 +166,7 @@ const alumniProfiles: AlumniProfile[] = [
     title: "Alumni Profile",
     department: "Information to be updated",
     institution: "India",
-    image: "/sgtrust/media/images/placeholder-alumni.png"
+    image: "/media/images/placeholder-alumni.png"
   },
   {
     id: 19,
@@ -174,7 +174,7 @@ const alumniProfiles: AlumniProfile[] = [
     title: "Alumni Profile",
     department: "Information to be updated",
     institution: "India",
-    image: "/sgtrust/media/images/placeholder-alumni.png"
+    image: "/media/images/placeholder-alumni.png"
   },
   {
     id: 20,
@@ -182,7 +182,7 @@ const alumniProfiles: AlumniProfile[] = [
     title: "Alumni Profile",
     department: "Information to be updated",
     institution: "Singapore",
-    image: "/sgtrust/media/images/placeholder-alumni.png"
+    image: "/media/images/placeholder-alumni.png"
   },
   {
     id: 21,
@@ -190,7 +190,7 @@ const alumniProfiles: AlumniProfile[] = [
     title: "Alumni Profile",
     department: "Information to be updated",
     institution: "India",
-    image: "/sgtrust/media/images/placeholder-alumni.png"
+    image: "/media/images/placeholder-alumni.png"
   },
   {
     id: 22,
@@ -198,7 +198,7 @@ const alumniProfiles: AlumniProfile[] = [
     title: "Alumni Profile",
     department: "Information to be updated",
     institution: "USA",
-    image: "/sgtrust/media/images/placeholder-alumni.png"
+    image: "/media/images/placeholder-alumni.png"
   }
 ];
 
