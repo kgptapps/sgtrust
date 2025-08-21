@@ -46,10 +46,10 @@ const ContactPage: React.FC = () => {
   return (
     <Container maxWidth="lg" sx={{ py: 6 }}>
       <Typography variant="h3" component="h1" gutterBottom textAlign="center">
-        {t('content:contactTitle')}
+        Contact & Information
       </Typography>
       <Typography variant="body1" textAlign="center" color="text.secondary" sx={{ mb: 6 }}>
-        {t('content:contactDescription')}
+        For more information about Professor S. Govindasamy's legacy, academic contributions, or to share memories and testimonials, please reach out through the following channels.
       </Typography>
 
       {/* Contact Information Cards */}

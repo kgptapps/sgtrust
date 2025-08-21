@@ -170,18 +170,18 @@ const HomePage: React.FC = () => {
           </Box>
 
           <Typography variant="body1" sx={{ mb: 4, fontSize: '1.2rem', maxWidth: '800px', mx: 'auto' }}>
-            {t('content:memorialDescription')}
+            Join us in honoring Professor S. Govindasamy's remarkable legacy with the unveiling of his memorial statue, celebrating his 80th birthday and lifetime of dedication to education.
           </Typography>
           <Box sx={{ display: 'flex', gap: 3, justifyContent: 'center', flexWrap: 'wrap' }}>
             <Box sx={{ textAlign: 'center', minWidth: '200px' }}>
               <Typography variant="h6" sx={{ fontWeight: 600, minHeight: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                📅 {t('content:dateLabel')}
+                📅 Date
               </Typography>
-              <Typography variant="body1" sx={{ minHeight: '24px' }}>{t('content:ceremonyDate')}</Typography>
+              <Typography variant="body1" sx={{ minHeight: '24px' }}>December 15, 2024</Typography>
             </Box>
             <Box sx={{ textAlign: 'center', minWidth: '250px' }}>
               <Typography variant="h6" sx={{ fontWeight: 600, minHeight: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                📍 {t('content:locationLabel')}
+                📍 Location
               </Typography>
               <Typography
                 variant="body1"
@@ -210,14 +210,14 @@ const HomePage: React.FC = () => {
                   }
                 }}
               >
-                {t('content:ceremonyLocation')}
+                University of Madras, Chennai
               </Typography>
             </Box>
             <Box sx={{ textAlign: 'center', minWidth: '200px' }}>
               <Typography variant="h6" sx={{ fontWeight: 600, minHeight: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                🎯 {t('content:purposeLabel')}
+                🎯 Purpose
               </Typography>
-              <Typography variant="body1" sx={{ minHeight: '24px' }}>{t('content:ceremonyPurpose')}</Typography>
+              <Typography variant="body1" sx={{ minHeight: '24px' }}>Memorial Statue Unveiling</Typography>
             </Box>
           </Box>
         </Card>
@@ -228,10 +228,10 @@ const HomePage: React.FC = () => {
         <Container maxWidth="lg">
           <Box sx={{ textAlign: 'center' }}>
             <Typography variant="h4" component="h2" gutterBottom>
-              {t('content:exploreJourneyTitle')}
+              Explore His Journey
             </Typography>
             <Typography variant="body1" sx={{ mb: 4, color: 'text.secondary' }}>
-              {t('content:exploreJourneyDescription')}
+              Discover the remarkable life and achievements of Professor S. Govindasamy through different aspects of his legacy.
             </Typography>
             <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', md: 'repeat(4, 1fr)' }, gap: 3 }}>
               <Button
@@ -242,7 +242,7 @@ const HomePage: React.FC = () => {
                 onClick={() => trackExploreJourneyClick('/about')}
                 sx={{ py: 2 }}
               >
-                {t('content:aboutHisLife')}
+                About His Life
               </Button>
               <Button
                 variant="outlined"
@@ -252,7 +252,7 @@ const HomePage: React.FC = () => {
                 onClick={() => trackExploreJourneyClick('/students')}
                 sx={{ py: 2 }}
               >
-                {t('content:communityImpact')}
+                Community Impact
               </Button>
               <Button
                 variant="outlined"
@@ -262,7 +262,7 @@ const HomePage: React.FC = () => {
                 onClick={() => trackExploreJourneyClick('/achievements')}
                 sx={{ py: 2 }}
               >
-                {t('content:achievements')}
+                Achievements
               </Button>
               <Button
                 variant="outlined"
@@ -272,7 +272,7 @@ const HomePage: React.FC = () => {
                 onClick={() => trackExploreJourneyClick('/timeline')}
                 sx={{ py: 2 }}
               >
-                {t('content:lifeTimeline')}
+                Life Timeline
               </Button>
             </Box>
           </Box>

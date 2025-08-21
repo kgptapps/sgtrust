@@ -138,7 +138,6 @@ const createTimelineFromAchievements = () => {
 const timelineEvents: TimelineEvent[] = createTimelineFromAchievements();
 
 const TimelinePage: React.FC = () => {
-  const { t } = useTranslation(['content']);
 
   return (
     <Container maxWidth="lg" sx={{ py: 6 }}>

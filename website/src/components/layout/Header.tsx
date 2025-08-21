@@ -34,23 +34,23 @@ const Header: React.FC = () => {
   };
 
   const navigationItems = [
-    { key: 'home', path: '/', label: t('navigation:home') },
-    { key: 'about', path: '/about', label: t('navigation:about') },
-    { key: 'timeline', path: '/timeline', label: t('navigation:timeline') },
-    { key: 'achievements', path: '/achievements', label: t('navigation:achievements') },
-    { key: 'gallery', path: '/gallery', label: t('navigation:gallery') },
-    { key: 'alumni', path: '/students', label: t('navigation:alumni') },
-    { key: 'endowment-fund', path: '/accountability', label: t('navigation:endowmentFund') },
-    { key: 'sgtrust', path: '/sgtrust', label: t('navigation:sgtrust') },
-    { key: 'acknowledgements', path: '/acknowledgements', label: t('navigation:acknowledgements') },
-    { key: 'contact', path: '/contact', label: t('navigation:contact') }
+    { key: 'home', path: '/', label: 'Home' },
+    { key: 'about', path: '/about', label: 'About' },
+    { key: 'timeline', path: '/timeline', label: 'Timeline' },
+    { key: 'achievements', path: '/achievements', label: 'Achievements' },
+    { key: 'gallery', path: '/gallery', label: 'Gallery' },
+    { key: 'alumni', path: '/students', label: 'Alumni' },
+    { key: 'endowment-fund', path: '/accountability', label: 'Endowment Fund' },
+    { key: 'sgtrust', path: '/sgtrust', label: 'SG Trust' },
+    { key: 'acknowledgements', path: '/acknowledgements', label: 'Acknowledgements' },
+    { key: 'contact', path: '/contact', label: 'Contact' }
   ];
 
   const drawer = (
     <Box sx={{ width: 250 }} role="presentation">
       <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', p: 2 }}>
         <Typography variant="h6" sx={{ color: 'primary.main' }}>
-          {t('navigation:menu')}
+          Menu
         </Typography>
         <IconButton onClick={handleDrawerToggle}>
           <CloseIcon />
@@ -120,7 +120,7 @@ const Header: React.FC = () => {
               mr: 4
             }}
           >
-            {t('navigation:professorName')}
+            Professor S. Govindasamy
           </Typography>
 
           {/* Desktop Navigation */}

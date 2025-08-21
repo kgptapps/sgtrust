@@ -334,7 +334,6 @@ const galleryPhotos: Photo[] = [
 ];
 
 const GalleryPage: React.FC = () => {
-  const { t } = useTranslation(['content']);
   const [selectedImage, setSelectedImage] = useState<Photo | null>(null);
   const [dialogOpen, setDialogOpen] = useState(false);
 

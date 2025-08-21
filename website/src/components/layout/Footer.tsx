@@ -23,30 +23,30 @@ const Footer: React.FC = () => {
           {/* About Section */}
           <Box>
             <Typography variant="h6" gutterBottom sx={{ color: 'white' }}>
-              {t('navigation:professorName')}
+              Professor S. Govindasamy
             </Typography>
             <Typography variant="body2" sx={{ color: 'grey.300', mb: 2 }}>
-              {t('common:footerDescription')}
+              Celebrating the legacy of a distinguished educator and mentor who guided 50+ PhD students to success worldwide.
             </Typography>
           </Box>
 
           {/* Quick Links */}
           <Box>
             <Typography variant="h6" gutterBottom sx={{ color: 'white' }}>
-              {t('navigation:quickLinks')}
+              Quick Links
             </Typography>
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
               <Link href="/about" color="inherit" underline="hover">
-                {t('navigation:about')}
+                About
               </Link>
               <Link href="/students" color="inherit" underline="hover">
-                {t('navigation:students')}
+                Alumni
               </Link>
               <Link href="/achievements" color="inherit" underline="hover">
-                {t('navigation:achievements')}
+                Achievements
               </Link>
               <Link href="/accountability" color="inherit" underline="hover">
-                {t('navigation:accountability')}
+                Endowment Fund
               </Link>
             </Box>
           </Box>
@@ -54,13 +54,13 @@ const Footer: React.FC = () => {
           {/* Contact Info */}
           <Box>
             <Typography variant="h6" gutterBottom sx={{ color: 'white' }}>
-              {t('navigation:contact')}
+              Contact
             </Typography>
             <Typography variant="body2" sx={{ color: 'grey.300', mb: 1 }}>
-              {t('common:academicLegacy')}
+              Academic Legacy
             </Typography>
             <Typography variant="body2" sx={{ color: 'grey.300' }}>
-              {t('common:inspireGenerations')}
+              Inspiring Future Generations
             </Typography>
           </Box>
         </Box>
@@ -70,10 +70,10 @@ const Footer: React.FC = () => {
         {/* Copyright */}
         <Box sx={{ textAlign: 'center' }}>
           <Typography variant="body2" sx={{ color: 'grey.400' }}>
-            © {new Date().getFullYear()} {t('navigation:professorName')}. {t('common:allRightsReserved')}
+            © {new Date().getFullYear()} Professor S. Govindasamy. All rights reserved.
           </Typography>
           <Typography variant="body2" sx={{ color: 'grey.400', mt: 1 }}>
-            {t('common:academicExcellence')} | {t('common:studentSuccess')}
+            Academic Excellence | Student Success
           </Typography>
         </Box>
       </Container>
