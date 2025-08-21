@@ -350,10 +350,10 @@ const GalleryPage: React.FC = () => {
   return (
     <Container maxWidth="lg" sx={{ py: 6 }}>
       <Typography variant="h3" component="h1" gutterBottom textAlign="center">
-        {t('content:galleryTitle')}
+        Photo Gallery
       </Typography>
       <Typography variant="body1" textAlign="center" color="text.secondary" sx={{ mb: 6 }}>
-        {t('content:galleryDescription')}
+        A collection of memorable moments from Professor S. Govindasamy's life and career
       </Typography>
 
       {/* Photo Grid */}

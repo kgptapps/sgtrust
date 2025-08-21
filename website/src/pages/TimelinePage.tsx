@@ -142,10 +142,10 @@ const TimelinePage: React.FC = () => {
   return (
     <Container maxWidth="lg" sx={{ py: 6 }}>
       <Typography variant="h3" component="h1" gutterBottom textAlign="center">
-        {t('content:timelineTitle')}
+        Life Timeline
       </Typography>
       <Typography variant="body1" textAlign="center" color="text.secondary" sx={{ mb: 6 }}>
-        {t('content:timelineDescription')}
+        Journey through the key milestones and achievements in Professor S. Govindasamy's remarkable career
       </Typography>
 
       {/* Timeline */}
