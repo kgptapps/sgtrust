@@ -49,6 +49,13 @@ const galleryPhotos: Photo[] = [
     year: "Early Career"
   },
   {
+    id: 4,
+    src: "/media/images/gallery/withhisgrandmaandolderbrother.jpg",
+    title: "With Grandma and Older Brother",
+    description: "Professor with his grandmother and older brother",
+    year: "Family"
+  },
+  {
     id: 5,
     src: "/media/images/gallery/familyphoto.jpg",
     title: "Family Photo",
@@ -120,211 +127,295 @@ const galleryPhotos: Photo[] = [
   },
   {
     id: 15,
+    src: "/media/images/gallery/addressingguest.jpg",
+    title: "Addressing Guest",
+    description: "Professor addressing distinguished guests at university event",
+    year: "Academic"
+  },
+  {
+    id: 16,
     src: "/media/images/gallery/athisoffice.jpg",
     title: "At His Office",
     description: "Professor at his university office",
     year: "Professional"
   },
   {
-    id: 16,
+    id: 17,
     src: "/media/images/gallery/attendingexecutivemeeting.jpg",
     title: "Executive Meeting",
     description: "Attending university executive meeting",
     year: "Administrative"
   },
   {
-    id: 17,
+    id: 18,
+    src: "/media/images/gallery/committeespeech.jpg",
+    title: "Committee Speech",
+    description: "Delivering speech at committee meeting",
+    year: "Administrative"
+  },
+  {
+    id: 19,
     src: "/media/images/gallery/debate.jpg",
     title: "Academic Debate",
     description: "Participating in academic debate or discussion",
     year: "Academic"
   },
   {
-    id: 18,
+    id: 20,
     src: "/media/images/gallery/discussion.jpg",
     title: "Discussion",
     description: "Engaged in academic discussion with peers",
     year: "Academic"
   },
   {
-    id: 19,
+    id: 21,
     src: "/media/images/gallery/vistingprofessor.jpg",
     title: "Visiting Professor",
     description: "With visiting professor at university",
     year: "Academic"
   },
   {
-    id: 20,
+    id: 22,
     src: "/media/images/gallery/withdelegate.jpg",
     title: "With Delegate",
     description: "Meeting with academic delegate",
     year: "Professional"
   },
   {
-    id: 21,
+    id: 23,
     src: "/media/images/gallery/valedictoryfunction.jpg",
     title: "Valedictory Function",
     description: "At university valedictory function",
     year: "Academic"
   },
   {
-    id: 22,
+    id: 24,
     src: "/media/images/gallery/awardscermony.jpg",
     title: "Awards Ceremony",
     description: "Receiving academic recognition and awards",
     year: "Recognition"
   },
   {
-    id: 23,
+    id: 25,
+    src: "/media/images/gallery/felicitation.jpg",
+    title: "Felicitation",
+    description: "Being felicitated for academic achievements",
+    year: "Recognition"
+  },
+  {
+    id: 26,
+    src: "/media/images/gallery/honoring.jpg",
+    title: "Honoring Ceremony",
+    description: "Being honored for contributions to education",
+    year: "Recognition"
+  },
+  {
+    id: 27,
     src: "/media/images/gallery/congratulations.jpg",
     title: "Congratulations",
     description: "Receiving congratulations from colleagues",
     year: "Achievement"
   },
   {
-    id: 24,
+    id: 28,
+    src: "/media/images/gallery/congratulationsagain.jpg",
+    title: "Congratulations Again",
+    description: "Another moment of receiving congratulations",
+    year: "Achievement"
+  },
+  {
+    id: 29,
     src: "/media/images/gallery/celebration.jpg",
     title: "Celebration",
     description: "Academic celebration with colleagues",
     year: "Events"
   },
   {
-    id: 25,
+    id: 30,
     src: "/media/images/gallery/unniversitycelebration.jpg",
     title: "University Celebration",
     description: "University celebration and festivities",
     year: "Events"
   },
   {
-    id: 26,
+    id: 31,
     src: "/media/images/gallery/distinguishedguest.jpg",
     title: "Distinguished Guest",
     description: "With distinguished guests at university event",
     year: "Events"
   },
   {
-    id: 27,
+    id: 32,
+    src: "/media/images/gallery/speech.jpg",
+    title: "Delivering Speech",
+    description: "Professor delivering an important speech",
+    year: "Academic"
+  },
+  {
+    id: 33,
+    src: "/media/images/gallery/speech2.jpg",
+    title: "Another Speech",
+    description: "Professor delivering another academic speech",
+    year: "Academic"
+  },
+  {
+    id: 34,
     src: "/media/images/gallery/playingvolleyball.jpg",
     title: "Playing Volleyball",
     description: "Professor enjoying volleyball game",
     year: "Sports"
   },
   {
-    id: 28,
+    id: 35,
     src: "/media/images/gallery/longjump.jpg",
     title: "Long Jump",
     description: "Professor participating in sports - long jump",
     year: "Sports"
   },
   {
-    id: 29,
+    id: 36,
     src: "/media/images/gallery/shotput.jpg",
     title: "Shot Put",
     description: "Professor participating in shot put event",
     year: "Sports"
   },
   {
-    id: 30,
+    id: 37,
     src: "/media/images/newgalleryphotos/badminton.jpeg",
     title: "Playing Badminton",
     description: "Professor enjoying a game of badminton",
     year: "Sports"
   },
   {
-    id: 31,
+    id: 38,
     src: "/media/images/newgalleryphotos/cricket.jpeg",
     title: "Playing Cricket",
     description: "Professor participating in a cricket match",
     year: "Sports"
   },
   {
-    id: 32,
+    id: 39,
     src: "/media/images/newgalleryphotos/asastageactor.jpeg",
     title: "As a Stage Actor",
     description: "Professor showcasing his theatrical talents as a stage actor",
     year: "Arts & Culture"
   },
   {
-    id: 33,
+    id: 40,
     src: "/media/images/gallery/cyclingthroughtown.jpg",
     title: "Cycling Through Town",
     description: "Professor cycling through the town",
     year: "Personal"
   },
   {
-    id: 34,
+    id: 41,
     src: "/media/images/gallery/funtimewithfriends.jpg",
     title: "Fun Time with Friends",
     description: "Enjoying leisure time with friends and colleagues",
     year: "Social"
   },
   {
-    id: 35,
+    id: 42,
     src: "/media/images/gallery/hangoutwithprof.jpg",
     title: "Hangout with Professor",
     description: "Casual time with fellow professors",
     year: "Social"
   },
   {
-    id: 36,
+    id: 43,
     src: "/media/images/gallery/tripwithfriends.jpg",
     title: "Trip with Friends",
     description: "Enjoying trip with friends and colleagues",
     year: "Travel"
   },
+  {
+    id: 44,
+    src: "/media/images/gallery/oldneighbourhoodbuddies.jpg",
+    title: "Old Neighbourhood Buddies",
+    description: "With old friends from the neighbourhood",
+    year: "Social"
+  },
+  {
+    id: 45,
+    src: "/media/images/gallery/relatives.jpg",
+    title: "With Relatives",
+    description: "Family gathering with relatives",
+    year: "Family"
+  },
+  {
+    id: 46,
+    src: "/media/images/gallery/withhisrelatives.jpg",
+    title: "With His Relatives",
+    description: "Another family moment with relatives",
+    year: "Family"
+  },
+  {
+    id: 47,
+    src: "/media/images/gallery/singaporefriends.jpg",
+    title: "Singapore Friends",
+    description: "With friends during Singapore visit",
+    year: "International"
+  },
+  {
+    id: 48,
+    src: "/media/images/gallery/standingindinerhall.jpg",
+    title: "Standing in Diner Hall",
+    description: "Professor in the university dining hall",
+    year: "Campus Life"
+  },
 
   // COLORED PHOTOS (More Recent Photos)
   {
-    id: 37,
+    id: 49,
     src: "/media/images/newgalleryphotos/withformergovernoroftamilnadu.jpeg",
     title: "With Former Governor of Tamil Nadu",
     description: "Professor with the former Governor of Tamil Nadu",
     year: "Public Service"
   },
   {
-    id: 38,
+    id: 50,
     src: "/media/images/newgalleryphotos/withcongressmanARM.jpeg",
     title: "With Congressman ARM",
     description: "Meeting with distinguished Congressman ARM",
     year: "Public Service"
   },
   {
-    id: 39,
+    id: 51,
     src: "/media/images/gallery/politicalleader.jpg",
     title: "With Political Leader",
     description: "Meeting with political leader",
     year: "Public Service"
   },
   {
-    id: 40,
+    id: 52,
     src: "/media/images/gallery/politicalpartyleader.jpg",
     title: "Political Party Leader",
     description: "With political party leader",
     year: "Public Service"
   },
   {
-    id: 41,
+    id: 53,
     src: "/media/images/gallery/anotherpoliticalleader.jpeg",
     title: "Another Political Leader",
     description: "Meeting with another distinguished political leader",
     year: "Public Service"
   },
   {
-    id: 42,
+    id: 54,
     src: "/media/images/gallery/ataconfrenceinsingapore.jpg",
     title: "Conference in Singapore",
     description: "At an academic conference in Singapore",
     year: "International"
   },
   {
-    id: 43,
+    id: 55,
     src: "/media/images/gallery/withhisstudentinsingapore.jpg",
     title: "With Student in Singapore",
     description: "With his student during Singapore visit",
     year: "International"
   },
   {
-    id: 44,
+    id: 56,
     src: "/media/images/gallery/wholecampus.jpeg",
     title: "Whole Campus",
     description: "View of the entire university campus",

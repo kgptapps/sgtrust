@@ -42,8 +42,7 @@ const Header: React.FC = () => {
     { key: 'alumni', path: '/students', label: 'Alumni' },
     { key: 'endowment-fund', path: '/accountability', label: 'Endowment Fund' },
     { key: 'sgtrust', path: '/sgtrust', label: 'SG Trust' },
-    { key: 'acknowledgements', path: '/acknowledgements', label: 'Acknowledgements' },
-    { key: 'contact', path: '/contact', label: 'Contact' }
+    { key: 'acknowledgements', path: '/acknowledgements', label: 'Acknowledgements' }
   ];
 
   const drawer = (

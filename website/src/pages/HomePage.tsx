@@ -106,7 +106,7 @@ const HomePage: React.FC = () => {
                       boxShadow: `0 12px 40px ${theme.palette.primary.main}40`
                     }
                   }}
-                  src="/sgtrust/media/images/professor-portrait.png"
+                  src="/media/images/professor-portrait.png"
                   alt="Professor S. Govindasamy"
                 />
                 <Typography variant="h6" sx={{ fontWeight: 600 }}>

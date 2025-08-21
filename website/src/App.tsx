@@ -17,7 +17,7 @@ import AchievementsPage from './pages/AchievementsPage';
 import AccountabilityPage from './pages/AccountabilityPage';
 import SGTrustPage from './pages/SGTrustPage';
 import AcknowledgementsPage from './pages/AcknowledgementsPage';
-import ContactPage from './pages/ContactPage';
+
 
 function App() {
   return (
@@ -38,7 +38,7 @@ function App() {
               <Route path="/accountability" element={<AccountabilityPage />} />
               <Route path="/sgtrust" element={<SGTrustPage />} />
               <Route path="/acknowledgements" element={<AcknowledgementsPage />} />
-              <Route path="/contact" element={<ContactPage />} />
+
             </Routes>
           </main>
           <Footer />
