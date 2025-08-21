@@ -8,10 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test": "vitest",
-    "test:translations": "vitest src/tests/translation-coverage.test.ts",
-    "audit:translations": "tsx src/scripts/translation-audit.ts",
-    "fix:translations": "tsx src/scripts/translation-audit.ts --fix"
+    "test": "vitest"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -20,12 +17,8 @@
     "@mui/lab": "^7.0.0-beta.14",
     "@mui/material": "^7.2.0",
     "framer-motion": "^12.23.12",
-    "i18next": "^25.3.2",
-    "i18next-browser-languagedetector": "^8.2.0",
-    "i18next-http-backend": "^3.0.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-i18next": "^15.6.1",
     "react-intersection-observer": "^9.16.0",
     "react-router-dom": "^7.7.1"
   },

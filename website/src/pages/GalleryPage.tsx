@@ -13,7 +13,7 @@ import {
 import {
   Close as CloseIcon
 } from '@mui/icons-material';
-import { useTranslation } from 'react-i18next';
+
 
 // Photo interface
 interface Photo {
@@ -48,13 +48,7 @@ const galleryPhotos: Photo[] = [
     description: "Professor S. Govindasamy in his younger days",
     year: "Early Career"
   },
-  {
-    id: 4,
-    src: "/sgtrust/media/images/gallery/withhisgrandmaandolderbrother.jpg",
-    title: "With Grandma and Older Brother",
-    description: "Precious family moment with grandmother and brother",
-    year: "Family"
-  },
+
   {
     id: 5,
     src: "/sgtrust/media/images/gallery/familyphoto.jpg",

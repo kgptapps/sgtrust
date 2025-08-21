@@ -15,17 +15,14 @@ import {
 } from '@mui/material';
 import {
   Menu as MenuIcon,
-  Close as CloseIcon,
-  Language as LanguageIcon
+  Close as CloseIcon
 } from '@mui/icons-material';
 import { Link, useLocation } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
 import ThemeSelector from '../ThemeSelector';
-import { trackNavigation, trackLanguageToggle, trackMobileMenuInteraction } from '../../utils/analytics';
+import { trackNavigation, trackMobileMenuInteraction } from '../../utils/analytics';
 
 const Header: React.FC = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const { t, i18n } = useTranslation(['navigation', 'common']);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const location = useLocation();
@@ -34,11 +31,6 @@ const Header: React.FC = () => {
     const action = mobileOpen ? 'menu_close' : 'menu_open';
     trackMobileMenuInteraction(action);
     setMobileOpen(!mobileOpen);
-  };
-
-  const handleLanguageChange = (language: string) => {
-    trackLanguageToggle(language);
-    i18n.changeLanguage(language);
   };
 
   const navigationItems = [
@@ -93,24 +85,6 @@ const Header: React.FC = () => {
             Theme
           </Typography>
           <ThemeSelector />
-        </Box>
-        <Box sx={{ display: 'flex', gap: 1 }}>
-          <Button
-            variant={i18n.language === 'en' ? 'contained' : 'outlined'}
-            size="small"
-            onClick={() => handleLanguageChange('en')}
-            sx={{ flex: 1, fontSize: '0.75rem' }}
-          >
-            English
-          </Button>
-          <Button
-            variant={i18n.language === 'ta' ? 'contained' : 'outlined'}
-            size="small"
-            onClick={() => handleLanguageChange('ta')}
-            sx={{ flex: 1, fontSize: '0.75rem' }}
-          >
-            தமிழ்
-          </Button>
         </Box>
       </Box>
     </Box>
@@ -173,29 +147,10 @@ const Header: React.FC = () => {
             </Box>
           )}
 
-          {/* Theme Selector & Language Buttons */}
+          {/* Theme Selector */}
           {!isMobile && (
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
               <ThemeSelector />
-              <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                <LanguageIcon sx={{ color: 'text.secondary', mr: 1 }} />
-                <Button
-                  variant={i18n.language === 'en' ? 'contained' : 'outlined'}
-                  size="small"
-                  onClick={() => handleLanguageChange('en')}
-                  sx={{ minWidth: '60px', fontSize: '0.75rem' }}
-                >
-                  English
-                </Button>
-                <Button
-                  variant={i18n.language === 'ta' ? 'contained' : 'outlined'}
-                  size="small"
-                  onClick={() => handleLanguageChange('ta')}
-                  sx={{ minWidth: '60px', fontSize: '0.75rem' }}
-                >
-                  தமிழ்
-                </Button>
-              </Box>
             </Box>
           )}
         </Toolbar>

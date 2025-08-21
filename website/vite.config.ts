@@ -13,8 +13,7 @@ export default defineConfig({
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom'],
-          mui: ['@mui/material', '@mui/icons-material'],
-          i18n: ['react-i18next', 'i18next']
+          mui: ['@mui/material', '@mui/icons-material']
         }
       }
     }

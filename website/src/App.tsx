@@ -2,10 +2,8 @@
 // Build trigger: 2025-08-05
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { CssBaseline } from '@mui/material';
-import { useTranslation } from 'react-i18next';
 import { ThemeProvider } from './contexts/ThemeContext';
 import GoogleAnalytics from './components/GoogleAnalytics';
-import './i18n';
 
 // Components
 import Header from './components/layout/Header';
@@ -22,15 +20,12 @@ import AcknowledgementsPage from './pages/AcknowledgementsPage';
 import ContactPage from './pages/ContactPage';
 
 function App() {
-  const { i18n } = useTranslation();
-  const currentLanguage = i18n.language;
-
   return (
     <ThemeProvider>
       <CssBaseline />
       <Router basename="/sgtrust">
         <GoogleAnalytics />
-        <div className={`min-h-screen flex flex-col ${currentLanguage === 'ta' ? 'lang-ta' : ''}`}>
+        <div className="min-h-screen flex flex-col">
           <Header />
           <main className="flex-grow">
             <Routes>

@@ -9,12 +9,10 @@ import {
   useTheme
 } from '@mui/material';
 
-import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { trackHeroInteraction, trackMemorialCeremonyInteraction, trackExploreJourneyClick } from '../utils/analytics';
 
 const HomePage: React.FC = () => {
-  const { t } = useTranslation(['content', 'navigation']);
   const theme = useTheme();
 
 
@@ -45,13 +43,13 @@ const HomePage: React.FC = () => {
           <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '2fr 1fr' }, gap: 4, alignItems: 'center' }}>
             <Box>
               <Typography variant="h2" component="h1" gutterBottom>
-                {t('content:welcomeTitle')}
+                Remembering Professor S. Govindasamy
               </Typography>
               <Typography variant="h5" sx={{ mb: 3, opacity: 0.9 }}>
-                {t('content:welcomeSubtitle')}
+                A Distinguished Educator and Mentor
               </Typography>
               <Typography variant="body1" sx={{ mb: 3, fontSize: '1.1rem', opacity: 0.8 }}>
-                {t('content:heroDescription')}
+                Celebrating the life and legacy of a remarkable professor who guided 50+ PhD students to success worldwide.
               </Typography>
 
               {/* Memorial and Statue Commemoration */}
@@ -63,10 +61,10 @@ const HomePage: React.FC = () => {
                 border: `1px solid ${theme.palette.primary.main}30`
               }}>
                 <Typography variant="body1" sx={{ fontSize: '1.1rem', fontWeight: 500, mb: 1 }}>
-                  {t('content:memorialMessage')}
+                  Memorial Statue Unveiled
                 </Typography>
                 <Typography variant="body2" sx={{ opacity: 0.9 }}>
-                  {t('content:memorialStatueDescription')}
+                  Honoring his 80th birthday and lasting contributions to education
                 </Typography>
               </Box>
               <Box sx={{ display: 'flex', justifyContent: 'center' }}>
@@ -88,7 +86,7 @@ const HomePage: React.FC = () => {
                     document.getElementById('explore-section')?.scrollIntoView({ behavior: 'smooth' });
                   }}
                 >
-                  {t('content:exploreHisLegacy')}
+                  Explore His Legacy
                 </Button>
               </Box>
             </Box>
@@ -109,13 +107,13 @@ const HomePage: React.FC = () => {
                     }
                   }}
                   src="/sgtrust/media/images/professor-portrait.png"
-                  alt={t('content:professorName')}
+                  alt="Professor S. Govindasamy"
                 />
                 <Typography variant="h6" sx={{ fontWeight: 600 }}>
-                  {t('content:professorName')}
+                  Professor S. Govindasamy
                 </Typography>
                 <Typography variant="body2" sx={{ opacity: 0.8 }}>
-                  {t('content:professorTitle')}
+                  Distinguished Educator & Mentor
                 </Typography>
               </Box>
             </Box>
@@ -134,10 +132,10 @@ const HomePage: React.FC = () => {
           border: `1px solid ${theme.palette.primary.main}20`
         }}>
           <Typography variant="h3" component="h2" gutterBottom sx={{ fontWeight: 600 }}>
-            🏛️ {t('content:memorialTitle')}
+            🏛️ Memorial Statue Unveiling
           </Typography>
           <Typography variant="h5" sx={{ mb: 3, opacity: 0.9 }}>
-            {t('content:memorialSubtitle')}
+            Celebrating 80 Years of Educational Excellence
           </Typography>
 
           {/* Memorial Statue Image with 3D Effect */}

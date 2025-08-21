@@ -14,10 +14,7 @@ import {
   School as SchoolIcon,
   GitHub as GitHubIcon
 } from '@mui/icons-material';
-import { useTranslation } from 'react-i18next';
-
 const ContactPage: React.FC = () => {
-  const { t } = useTranslation(['content']);
 
   const contactInfo = [
     {

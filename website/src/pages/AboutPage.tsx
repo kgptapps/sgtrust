@@ -7,10 +7,7 @@ import {
   CardContent,
   Avatar
 } from '@mui/material';
-import { useTranslation } from 'react-i18next';
-
 const AboutPage: React.FC = () => {
-  const { t } = useTranslation(['content']);
 
   return (
     <Container maxWidth="lg" sx={{ py: 6 }}>

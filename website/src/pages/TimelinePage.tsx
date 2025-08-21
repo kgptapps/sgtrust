@@ -16,7 +16,7 @@ import {
   Business as BusinessIcon,
   Psychology as PsychologyIcon
 } from '@mui/icons-material';
-import { useTranslation } from 'react-i18next';
+
 
 // Import achievements data
 const achievementsData = {
