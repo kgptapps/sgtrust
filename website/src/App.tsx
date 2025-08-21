@@ -23,7 +23,7 @@ function App() {
   return (
     <ThemeProvider>
       <CssBaseline />
-      <Router basename="/sgtrust">
+      <Router>
         <GoogleAnalytics />
         <div className="min-h-screen flex flex-col">
           <Header />

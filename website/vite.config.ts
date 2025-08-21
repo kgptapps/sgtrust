@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/sgtrust/', // Repository name for GitHub Pages (kgptapps/sgtrust)
+  base: '/', // Root path for AWS S3/CloudFront deployment (profsg.org)
   build: {
     outDir: 'dist',
     assetsDir: 'assets',

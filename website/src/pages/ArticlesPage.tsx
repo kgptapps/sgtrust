@@ -42,7 +42,7 @@ const articlesData = {
       id: 1,
       title: 'Drug Proven Correct',
       description: 'Drug research validation coverage',
-      image: '/sgtrust/media/newspapers/drugprovencorrect.JPG',
+      image: '/media/newspapers/drugprovencorrect.JPG',
       date: 'Research Coverage',
       category: 'newspaper',
       content: 'Newspaper coverage of Professor Govindasamy\'s drug research validation work...'
@@ -51,7 +51,7 @@ const articlesData = {
       id: 2,
       title: 'Educational Trust',
       description: 'Educational trust coverage',
-      image: '/sgtrust/media/newspapers/educationaltrust.JPG',
+      image: '/media/newspapers/educationaltrust.JPG',
       date: 'Community Service',
       category: 'newspaper',
       content: 'Coverage of Professor Govindasamy\'s educational trust initiatives...'
@@ -60,7 +60,7 @@ const articlesData = {
       id: 3,
       title: 'Felicitation',
       description: 'Felicitation ceremony coverage',
-      image: '/sgtrust/media/newspapers/felicitation.JPG',
+      image: '/media/newspapers/felicitation.JPG',
       date: 'Recognition',
       category: 'newspaper',
       content: 'Newspaper coverage of felicitation ceremony honoring Professor Govindasamy...'
@@ -69,7 +69,7 @@ const articlesData = {
       id: 4,
       title: 'First Trial Result',
       description: 'First trial result announcement',
-      image: '/sgtrust/media/newspapers/firsttrialresult.JPG',
+      image: '/media/newspapers/firsttrialresult.JPG',
       date: 'Research Milestone',
       category: 'newspaper',
       content: 'Coverage of significant research trial results...'
@@ -78,7 +78,7 @@ const articlesData = {
       id: 5,
       title: 'Magazine Feature',
       description: 'Magazine feature article',
-      image: '/sgtrust/media/newspapers/magazine.JPG',
+      image: '/media/newspapers/magazine.JPG',
       date: 'Profile',
       category: 'magazine',
       content: 'In-depth magazine profile of Professor Govindasamy\'s contributions...'
@@ -87,7 +87,7 @@ const articlesData = {
       id: 6,
       title: 'Newspaper Article',
       description: 'Newspaper article feature',
-      image: '/sgtrust/media/newspapers/newspaperarticle.JPG',
+      image: '/media/newspapers/newspaperarticle.JPG',
       date: 'Feature Story',
       category: 'newspaper',
       content: 'Feature newspaper article highlighting Professor Govindasamy\'s work...'
@@ -96,7 +96,7 @@ const articlesData = {
       id: 7,
       title: 'Newspaper Award',
       description: 'Newspaper award coverage',
-      image: '/sgtrust/media/newspapers/newspaperaward.JPG',
+      image: '/media/newspapers/newspaperaward.JPG',
       date: 'Award Recognition',
       category: 'newspaper',
       content: 'Newspaper coverage of award recognition for Professor Govindasamy...'
@@ -105,7 +105,7 @@ const articlesData = {
       id: 8,
       title: 'Statue Request',
       description: 'Statue request coverage',
-      image: '/sgtrust/media/newspapers/statuerequest.JPG',
+      image: '/media/newspapers/statuerequest.JPG',
       date: 'Memorial Initiative',
       category: 'newspaper',
       content: 'Coverage of community request for memorial statue...'
@@ -114,7 +114,7 @@ const articlesData = {
       id: 9,
       title: '2-Day Fasting for Pay Raise',
       description: 'Professor\'s protest for academic justice and fair compensation',
-      image: '/sgtrust/media/images/articles/2dayfastingforpayraise.jpeg',
+      image: '/media/images/articles/2dayfastingforpayraise.jpeg',
       date: 'Academic Protest',
       category: 'newspaper',
       content: 'Documentation of Professor S. Govindasamy\'s principled stand through a 2-day fasting protest demanding fair pay raise and academic justice. This demonstrates his commitment to fighting for the rights of educators and his unwavering dedication to academic principles even in the face of institutional challenges.'
@@ -127,7 +127,7 @@ const articlesData = {
       id: 12,
       title: "MUTA 1",
       description: "",
-      image: "/sgtrust/media/images/articles/Muta1.jpg",
+      image: "/media/images/articles/Muta1.jpg",
       date: "Family Heritage",
       category: "family",
       content: "A cherished family document showing Professor S. Govindasamy with his father (Appa) and family members, capturing precious moments of family bonds and heritage."
@@ -136,7 +136,7 @@ const articlesData = {
       id: 13,
       title: "MUTA 2",
       description: "",
-      image: "/sgtrust/media/images/articles/Muta2.jpg",
+      image: "/media/images/articles/Muta2.jpg",
       date: "Family Heritage",
       category: "family",
       content: "Family documentation showing the close-knit family relationships and the importance of family in Professor's life."
@@ -145,7 +145,7 @@ const articlesData = {
       id: 14,
       title: "MUTA 3",
       description: "",
-      image: "/sgtrust/media/images/articles/Muta3.jpg",
+      image: "/media/images/articles/Muta3.jpg",
       date: "Family Heritage",
       category: "family",
       content: "Family celebration documentation showing the joy and togetherness that characterized Professor's family life and values."
@@ -154,7 +154,7 @@ const articlesData = {
       id: 15,
       title: "MUTA 4",
       description: "",
-      image: "/sgtrust/media/images/articles/Muta4.jpg",
+      image: "/media/images/articles/Muta4.jpg",
       date: "Family Heritage",
       category: "family",
       content: "Multi-generational family documentation highlighting the strong family traditions and bonds that shaped Professor's character and values."
@@ -163,7 +163,7 @@ const articlesData = {
       id: 16,
       title: "MUTA 5",
       description: "",
-      image: "/sgtrust/media/images/articles/Muta5.jpg",
+      image: "/media/images/articles/Muta5.jpg",
       date: "Family Heritage",
       category: "family",
       content: "Family legacy documentation representing the enduring heritage that influenced Professor's journey from humble beginnings to academic excellence."

@@ -25,7 +25,7 @@ const AboutPage: React.FC = () => {
             mb: 3,
             boxShadow: 4
           }}
-          src="/sgtrust/media/images/professor-about-photo.png"
+          src="/media/images/professor-about-photo.png"
           alt="Professor S. Govindasamy"
         />
         <Typography variant="h3" gutterBottom color="primary" sx={{ fontWeight: 'bold' }}>

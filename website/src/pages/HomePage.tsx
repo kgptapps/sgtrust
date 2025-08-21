@@ -147,7 +147,7 @@ const HomePage: React.FC = () => {
           }}>
             <Box
               component="img"
-              src="/sgtrust/media/images/memorial/memorialsketch.jpeg"
+              src="/media/images/memorial/memorialsketch.jpeg"
               alt="Memorial Statue Design"
               onClick={() => trackMemorialCeremonyInteraction('statue_image_click')}
               onMouseEnter={() => trackMemorialCeremonyInteraction('statue_image_hover')}

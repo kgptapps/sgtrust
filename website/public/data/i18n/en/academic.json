@@ -1,0 +1,16 @@
+{
+  "title": "Academic Excellence",
+  "subtitle": "Dedicated to Educational Leadership",
+  "achievements": {
+    "title": "Academic Achievements",
+    "description": "Recognition and accomplishments in the field of education"
+  },
+  "research": {
+    "title": "Research & Publications",
+    "description": "Scholarly contributions and research work"
+  },
+  "teaching": {
+    "title": "Teaching Philosophy",
+    "description": "Commitment to educational excellence and student development"
+  }
+}
