@@ -49,7 +49,7 @@ const HomePage: React.FC = () => {
                 A Distinguished Educator and Mentor
               </Typography>
               <Typography variant="body1" sx={{ mb: 3, fontSize: '1.1rem', opacity: 0.8 }}>
-                Celebrating the life and legacy of a remarkable professor who guided 50+ PhD students to success worldwide.
+                Celebrating the life and legacy of a remarkable professor who dedicated his career to education and mentorship.
               </Typography>
 
               {/* Memorial and Statue Commemoration */}
