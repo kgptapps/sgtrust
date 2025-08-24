@@ -177,7 +177,7 @@ const HomePage: React.FC = () => {
               <Typography variant="h6" sx={{ fontWeight: 600, minHeight: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 📅 Date
               </Typography>
-              <Typography variant="body1" sx={{ minHeight: '24px' }}>December 15, 2024</Typography>
+              <Typography variant="body1" sx={{ minHeight: '24px' }}>September 6, 2025</Typography>
             </Box>
             <Box sx={{ textAlign: 'center', minWidth: '250px' }}>
               <Typography variant="h6" sx={{ fontWeight: 600, minHeight: '32px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
