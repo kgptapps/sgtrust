@@ -186,7 +186,7 @@ const HomePage: React.FC = () => {
               <Typography
                 variant="body1"
                 component="a"
-                href="https://maps.app.goo.gl/DDLsY7XYDS6es3Pv9"
+                href="https://maps.app.goo.gl/search/Vendakottai+Village+Patakottai"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => trackMemorialCeremonyInteraction('location_map_click')}
@@ -210,7 +210,7 @@ const HomePage: React.FC = () => {
                   }
                 }}
               >
-                University of Madras, Chennai
+                Vendakottai Village, Patakottai
               </Typography>
             </Box>
             <Box sx={{ textAlign: 'center', minWidth: '200px' }}>
