@@ -186,7 +186,7 @@ const HomePage: React.FC = () => {
               <Typography
                 variant="body1"
                 component="a"
-                href="https://maps.app.goo.gl/search/Vendakottai+Village+Pattukottai"
+                href="https://maps.app.goo.gl/btoU8MA1NnD5Q9f9A"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => trackMemorialCeremonyInteraction('location_map_click')}
