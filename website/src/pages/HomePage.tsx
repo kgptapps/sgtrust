@@ -186,7 +186,7 @@ const HomePage: React.FC = () => {
               <Typography
                 variant="body1"
                 component="a"
-                href="https://maps.app.goo.gl/search/Vendakottai+Village+Patakottai"
+                href="https://maps.app.goo.gl/search/Vendakottai+Village+Pattukottai"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => trackMemorialCeremonyInteraction('location_map_click')}
@@ -210,7 +210,7 @@ const HomePage: React.FC = () => {
                   }
                 }}
               >
-                Vendakottai Village, Patakottai
+                Vendakottai Village, Pattukottai
               </Typography>
             </Box>
             <Box sx={{ textAlign: 'center', minWidth: '200px' }}>
