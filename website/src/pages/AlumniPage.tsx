@@ -26,7 +26,7 @@ const alumniProfiles: AlumniProfile[] = [
     id: 1,
     name: "S. Subramanian",
     title: "Alumni Profile",
-    department: "Information to be updated",
+    department: "Information coming soon",
     institution: "India",
     image: "/media/images/placeholder-alumni.png"
   },
@@ -34,7 +34,7 @@ const alumniProfiles: AlumniProfile[] = [
     id: 2,
     name: "A. Kandasamy",
     title: "Alumni Profile",
-    department: "Information to be updated",
+    department: "Information coming soon",
     institution: "USA",
     image: "/media/images/placeholder-alumni.png"
   },
@@ -42,7 +42,7 @@ const alumniProfiles: AlumniProfile[] = [
     id: 3,
     name: "Samuel William",
     title: "Alumni Profile",
-    department: "Information to be updated",
+    department: "Information coming soon",
     institution: "USA",
     image: "/media/images/placeholder-alumni.png"
   },
@@ -50,7 +50,7 @@ const alumniProfiles: AlumniProfile[] = [
     id: 4,
     name: "N. Sekar",
     title: "Alumni Profile",
-    department: "Information to be updated",
+    department: "Information coming soon",
     institution: "USA",
     image: "/media/images/placeholder-alumni.png"
   },
@@ -66,7 +66,7 @@ const alumniProfiles: AlumniProfile[] = [
     id: 6,
     name: "P. Kamaraj",
     title: "Alumni Profile",
-    department: "Information to be updated",
+    department: "Information coming soon",
     institution: "USA",
     image: "/media/images/placeholder-alumni.png"
   },
@@ -74,7 +74,7 @@ const alumniProfiles: AlumniProfile[] = [
     id: 7,
     name: "S. Manonmani",
     title: "Alumni Profile",
-    department: "Information to be updated",
+    department: "Information coming soon",
     institution: "India",
     image: "/media/images/placeholder-alumni.png"
   },
@@ -82,7 +82,7 @@ const alumniProfiles: AlumniProfile[] = [
     id: 8,
     name: "V. Bhuvaragamurthy",
     title: "Alumni Profile",
-    department: "Information to be updated",
+    department: "Information coming soon",
     institution: "USA",
     image: "/media/images/placeholder-alumni.png"
   },
@@ -108,7 +108,7 @@ const alumniProfiles: AlumniProfile[] = [
     id: 11,
     name: "D. Nandini",
     title: "Alumni Profile",
-    department: "Information to be updated",
+    department: "Information coming soon",
     institution: "India",
     image: "/media/images/placeholder-alumni.png"
   },
@@ -116,7 +116,7 @@ const alumniProfiles: AlumniProfile[] = [
     id: 12,
     name: "S. Balasubramanian",
     title: "Alumni Profile",
-    department: "Information to be updated",
+    department: "Information coming soon",
     institution: "USA",
     image: "/media/images/placeholder-alumni.png"
   },
@@ -124,7 +124,7 @@ const alumniProfiles: AlumniProfile[] = [
     id: 13,
     name: "G. Vijayan Siva",
     title: "Alumni Profile",
-    department: "Information to be updated",
+    department: "Information coming soon",
     institution: "India",
     image: "/media/images/placeholder-alumni.png"
   },
@@ -132,7 +132,7 @@ const alumniProfiles: AlumniProfile[] = [
     id: 14,
     name: "P. Ravichandran",
     title: "Alumni Profile",
-    department: "Information to be updated",
+    department: "Information coming soon",
     institution: "USA",
     image: "/media/images/placeholder-alumni.png"
   },
@@ -140,7 +140,7 @@ const alumniProfiles: AlumniProfile[] = [
     id: 15,
     name: "P. Latha",
     title: "Alumni Profile",
-    department: "Information to be updated",
+    department: "Information coming soon",
     institution: "India",
     image: "/media/images/placeholder-alumni.png"
   },
@@ -148,7 +148,7 @@ const alumniProfiles: AlumniProfile[] = [
     id: 16,
     name: "V. Saraswathi",
     title: "Alumni Profile",
-    department: "Information to be updated",
+    department: "Information coming soon",
     institution: "USA",
     image: "/media/images/placeholder-alumni.png"
   },
@@ -164,7 +164,7 @@ const alumniProfiles: AlumniProfile[] = [
     id: 18,
     name: "V. Palani",
     title: "Alumni Profile",
-    department: "Information to be updated",
+    department: "Information coming soon",
     institution: "India",
     image: "/media/images/placeholder-alumni.png"
   },
@@ -172,7 +172,7 @@ const alumniProfiles: AlumniProfile[] = [
     id: 19,
     name: "R. Ravi",
     title: "Alumni Profile",
-    department: "Information to be updated",
+    department: "Information coming soon",
     institution: "India",
     image: "/media/images/placeholder-alumni.png"
   },
@@ -180,7 +180,7 @@ const alumniProfiles: AlumniProfile[] = [
     id: 20,
     name: "K. Karthikeyan",
     title: "Alumni Profile",
-    department: "Information to be updated",
+    department: "Information coming soon",
     institution: "Singapore",
     image: "/media/images/placeholder-alumni.png"
   },
@@ -188,7 +188,7 @@ const alumniProfiles: AlumniProfile[] = [
     id: 21,
     name: "R. K. Senthilkumaran",
     title: "Alumni Profile",
-    department: "Information to be updated",
+    department: "Information coming soon",
     institution: "India",
     image: "/media/images/placeholder-alumni.png"
   },
@@ -196,7 +196,7 @@ const alumniProfiles: AlumniProfile[] = [
     id: 22,
     name: "Shamaladevi",
     title: "Alumni Profile",
-    department: "Information to be updated",
+    department: "Information coming soon",
     institution: "USA",
     image: "/media/images/placeholder-alumni.png"
   }
@@ -255,7 +255,7 @@ const AlumniPage: React.FC = () => {
                 }}
               >
                 <Typography variant="body1" color="text.secondary" sx={{ textAlign: 'center' }}>
-                  Image needed
+                  Image coming soon
                 </Typography>
               </Box>
             ) : (
