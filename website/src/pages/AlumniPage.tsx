@@ -72,10 +72,10 @@ const alumniProfiles: AlumniProfile[] = [
   },
   {
     id: 7,
-    name: "S. Manonmani",
-    title: "Alumni Profile",
-    department: "Information coming soon",
-    institution: "India",
+    name: "Dr. G. Manonmani",
+    title: "PhD",
+    department: "Biochemistry (Transferred to Professor C.S. Shyamaladevi)",
+    institution: "USA",
     image: "/media/images/placeholder-alumni.png"
   },
   {
@@ -241,6 +241,30 @@ const alumniProfiles: AlumniProfile[] = [
     department: "School of Medicine",
     institution: "Case Western Reserve University, Cleveland, Ohio, USA 44124",
     location: "From: Vattakudi North, Pattukkottai, Thanjavur",
+    image: "/media/images/placeholder-alumni.png"
+  },
+  {
+    id: 28,
+    name: "Dr. Vijayalakshmi Mohan",
+    title: "PhD",
+    department: "Biochemistry (Transferred to Professor S. Niranjali Devaraj)",
+    institution: "USA",
+    image: "/media/images/placeholder-alumni.png"
+  },
+  {
+    id: 29,
+    name: "Dr. Bavapriya Vaithyanathan",
+    title: "PhD",
+    department: "Biochemistry (Transferred to Professor C.S. Shyamaladevi)",
+    institution: "USA",
+    image: "/media/images/placeholder-alumni.png"
+  },
+  {
+    id: 30,
+    name: "Dr. S. Kalpana",
+    title: "PhD",
+    department: "Biochemistry (Transferred to Professor S. Niranjali Devaraj)",
+    institution: "Taiwan",
     image: "/media/images/placeholder-alumni.png"
   }
 ];
