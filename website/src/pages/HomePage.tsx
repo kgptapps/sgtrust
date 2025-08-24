@@ -135,7 +135,7 @@ const HomePage: React.FC = () => {
             🏛️ Memorial Statue Unveiling
           </Typography>
           <Typography variant="h5" sx={{ mb: 3, opacity: 0.9 }}>
-            Celebrating 80 Years of Educational Excellence
+            Celebrating the Legacy of Professor S. Govindasamy
           </Typography>
 
           {/* Memorial Statue Image with 3D Effect */}
