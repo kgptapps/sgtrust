@@ -187,8 +187,8 @@ const alumniProfiles: AlumniProfile[] = [
   {
     id: 21,
     name: "R. K. Senthilkumaran",
-    title: "Alumni Profile",
-    department: "Information coming soon",
+    title: "PhD",
+    department: "Biochemistry",
     institution: "India",
     image: "/media/images/placeholder-alumni.png"
   },
@@ -198,6 +198,49 @@ const alumniProfiles: AlumniProfile[] = [
     title: "Alumni Profile",
     department: "Information coming soon",
     institution: "USA",
+    image: "/media/images/placeholder-alumni.png"
+  },
+  {
+    id: 23,
+    name: "Dr. Vallikkannu Govindaraj",
+    title: "Retd Professor",
+    department: "Kaithemillath College of Arts and Science",
+    institution: "Chennai, India",
+    image: "/media/images/placeholder-alumni.png"
+  },
+  {
+    id: 24,
+    name: "Gulnaz Begam",
+    title: "PhD",
+    department: "Biochemistry",
+    institution: "India",
+    image: "/media/images/placeholder-alumni.png"
+  },
+  {
+    id: 25,
+    name: "Dr. Kalaiarasi Kaliappan",
+    title: "Associate Professor, MPhil., PhD",
+    department: "Department of Home Science (Textile and Clothing)",
+    institution: "Avinashilingam University, Coimbatore, Tamil Nadu",
+    location: "From: Namakkal, Tamil Nadu",
+    image: "/media/images/placeholder-alumni.png"
+  },
+  {
+    id: 26,
+    name: "Dr. Sundaravel Sengodan",
+    title: "Assistant Professor, MPhil., PhD",
+    department: "Department of Zoology",
+    institution: "Government Arts and Science College, Salem, Tamil Nadu",
+    location: "From: Komarapalayam, Namakkal District, Tamil Nadu",
+    image: "/media/images/placeholder-alumni.png"
+  },
+  {
+    id: 27,
+    name: "Dr. Palanivel Rengasamy",
+    title: "Research Scientist, MPhil, PhD",
+    department: "School of Medicine",
+    institution: "Case Western Reserve University, Cleveland, Ohio, USA 44124",
+    location: "From: Vattakudi North, Pattukkottai, Thanjavur",
     image: "/media/images/placeholder-alumni.png"
   }
 ];
