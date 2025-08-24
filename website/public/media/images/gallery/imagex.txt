@@ -8,7 +8,6 @@ awardscermony.jpg
 celebration.jpg
 committeespeech.jpg
 congratulations.jpg
-congratulationsagain.jpg
 cyclingthroughtown.jpg
 debate.jpg
 discussion.jpg
@@ -24,10 +23,7 @@ photowithcousin.jpg
 playingvolleyball.jpg
 politicalleader.jpg
 politicalpartyleader.jpg
-relatives.jpg
 shotput.jpg
-singaporefriends.jpg
-standingindinerhall.jpg
 tripwithfriends.jpg
 unniversitycelebration.jpg
 valedictoryfunction.jpg

@@ -196,178 +196,154 @@ const galleryPhotos: Photo[] = [
     description: "Receiving congratulations from colleagues",
     year: "Achievement"
   },
+
   {
     id: 25,
-    src: "/media/images/gallery/congratulationsagain.jpg",
-    title: "Congratulations Again",
-    description: "Another moment of receiving congratulations",
-    year: "Achievement"
-  },
-  {
-    id: 26,
     src: "/media/images/gallery/celebration.jpg",
     title: "Celebration",
     description: "Academic celebration with colleagues",
     year: "Events"
   },
   {
-    id: 27,
+    id: 26,
     src: "/media/images/gallery/unniversitycelebration.jpg",
     title: "University Celebration",
     description: "University celebration and festivities",
     year: "Events"
   },
   {
-    id: 28,
+    id: 27,
     src: "/media/images/gallery/distinguishedguest.jpg",
     title: "Distinguished Guest",
     description: "With distinguished guests at university event",
     year: "Events"
   },
   {
-    id: 29,
+    id: 28,
     src: "/media/images/gallery/playingvolleyball.jpg",
     title: "Playing Volleyball",
     description: "Professor enjoying volleyball game",
     year: "Sports"
   },
   {
-    id: 30,
+    id: 29,
     src: "/media/images/gallery/longjump.jpg",
     title: "Long Jump",
     description: "Professor participating in sports - long jump",
     year: "Sports"
   },
   {
-    id: 31,
+    id: 30,
     src: "/media/images/gallery/shotput.jpg",
     title: "Shot Put",
     description: "Professor participating in shot put event",
     year: "Sports"
   },
   {
-    id: 32,
+    id: 31,
     src: "/media/images/newgalleryphotos/badminton.jpeg",
     title: "Playing Badminton",
     description: "Professor enjoying a game of badminton",
     year: "Sports"
   },
   {
-    id: 33,
+    id: 32,
     src: "/media/images/newgalleryphotos/cricket.jpeg",
     title: "Playing Cricket",
     description: "Professor participating in a cricket match",
     year: "Sports"
   },
   {
-    id: 34,
+    id: 33,
     src: "/media/images/newgalleryphotos/asastageactor.jpeg",
     title: "As a Stage Actor",
     description: "Professor showcasing his theatrical talents as a stage actor",
     year: "Arts & Culture"
   },
   {
-    id: 35,
+    id: 34,
     src: "/media/images/gallery/cyclingthroughtown.jpg",
     title: "Cycling Through Town",
     description: "Professor cycling through the town",
     year: "Personal"
   },
   {
-    id: 36,
+    id: 35,
     src: "/media/images/gallery/funtimewithfriends.jpg",
     title: "Fun Time with Friends",
     description: "Enjoying leisure time with friends and colleagues",
     year: "Social"
   },
   {
-    id: 37,
+    id: 36,
     src: "/media/images/gallery/hangoutwithprof.jpg",
     title: "Hangout with Professor",
     description: "Casual time with fellow professors",
     year: "Social"
   },
   {
-    id: 38,
+    id: 37,
     src: "/media/images/gallery/tripwithfriends.jpg",
     title: "Trip with Friends",
     description: "Enjoying trip with friends and colleagues",
     year: "Travel"
   },
-  {
-    id: 39,
-    src: "/media/images/gallery/relatives.jpg",
-    title: "With Relatives",
-    description: "Family gathering with relatives",
-    year: "Family"
-  },
-  {
-    id: 40,
-    src: "/media/images/gallery/singaporefriends.jpg",
-    title: "Singapore Friends",
-    description: "With friends during Singapore visit",
-    year: "International"
-  },
-  {
-    id: 41,
-    src: "/media/images/gallery/standingindinerhall.jpg",
-    title: "Standing in Diner Hall",
-    description: "Professor in the university dining hall",
-    year: "Campus Life"
-  },
+
+
+
 
   // COLORED PHOTOS (More Recent Photos)
   {
-    id: 42,
+    id: 38,
     src: "/media/images/newgalleryphotos/withformergovernoroftamilnadu.jpeg",
     title: "With Former Governor of Tamil Nadu",
     description: "Professor with the former Governor of Tamil Nadu",
     year: "Public Service"
   },
   {
-    id: 43,
+    id: 39,
     src: "/media/images/newgalleryphotos/withcongressmanARM.jpeg",
     title: "With Congressman ARM",
     description: "Meeting with distinguished Congressman ARM",
     year: "Public Service"
   },
   {
-    id: 44,
+    id: 40,
     src: "/media/images/gallery/politicalleader.jpg",
     title: "With Political Leader",
     description: "Meeting with political leader",
     year: "Public Service"
   },
   {
-    id: 45,
+    id: 41,
     src: "/media/images/gallery/politicalpartyleader.jpg",
     title: "Political Party Leader",
     description: "With political party leader",
     year: "Public Service"
   },
   {
-    id: 46,
+    id: 42,
     src: "/media/images/gallery/anotherpoliticalleader.jpeg",
     title: "Another Political Leader",
     description: "Meeting with another distinguished political leader",
     year: "Public Service"
   },
   {
-    id: 47,
+    id: 43,
     src: "/media/images/gallery/ataconfrenceinsingapore.jpg",
     title: "Conference in Singapore",
     description: "At an academic conference in Singapore",
     year: "International"
   },
   {
-    id: 48,
+    id: 44,
     src: "/media/images/gallery/withhisstudentinsingapore.jpg",
     title: "With Student in Singapore",
     description: "With his student during Singapore visit",
     year: "International"
   },
   {
-    id: 49,
+    id: 45,
     src: "/media/images/gallery/wholecampus.jpeg",
     title: "Whole Campus",
     description: "View of the entire university campus",
